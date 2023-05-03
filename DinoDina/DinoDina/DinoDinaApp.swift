@@ -11,7 +11,7 @@ import SwiftUI
 struct DinoDinaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuestHearView()
         }
     }
 }
