@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import UIKit
+
 
 struct MainView: View {
     //색깔별로 게이지 하나씩, 카운트 값에 따라 생성
@@ -27,99 +27,185 @@ struct MainView: View {
     //진화할 때 카운트 값 리셋?
     @State var bubbleOn = false
     @State var vegeOn = false
-    
+    //하트뿅뿅
+    @State var heartBB = false
+    @State var heartNum:Int = 0
+   
     var body: some View {
+        
         VStack{
             Spacer().frame(height: 20)
-            HStack{
-//                Circle().foregroundColor(.black)
-//                    .frame(width: UIScreen.main.bounds.width * 0.05)
-                ZStack{
-                    Rectangle().frame(width: 250,height: 40)
-                        .foregroundColor(.gray)
-                        .cornerRadius(15)
-                    HStack{
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.green)
-                            .cornerRadius(15)
-                            .opacity(turnGreen1 ? 1 : 0)
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.green)
-                            .cornerRadius(15)
-                            .opacity(turnGreen2 ? 1 : 0)
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.green)
-                            .cornerRadius(15)
-                            .opacity(turnGreen3 ? 1 : 0)
-                    }
-                }
+            HStack{ //각 게이지와 레벨 상태 표시 상태창 스택
+                Circle().foregroundColor(.clear)
+                    .frame(width: UIScreen.width * 0.08)
+                    .overlay(Circle().stroke())
                 
-                ZStack{
-                    Rectangle().frame(width: 250,height: 40)
-                        .foregroundColor(.gray)
-                        .cornerRadius(15)
-                    HStack{
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.red)
-                            .cornerRadius(15)
-                            .opacity(turnRed1 ? 1 : 0)
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.red)
-                            .cornerRadius(15)
-                            .opacity(turnRed2 ? 1 : 0)
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.red)
-                            .cornerRadius(15)
-                            .opacity(turnRed3 ? 1 : 0)
-                    }
-                }
-                ZStack{
-                    Rectangle().frame(width: 250,height: 40)
-                        .foregroundColor(.gray)
-                        .cornerRadius(15)
-                    HStack{
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.orange)
-                            .cornerRadius(15)
-                            .opacity(turnOrange1 ? 1 : 0)
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.orange)
-                            .cornerRadius(15)
-                            .opacity(turnOrange2 ? 1 : 0)
-                        Rectangle().frame(width: 70,height: 25)
-                            .foregroundColor(.orange)
-                            .cornerRadius(15)
-                            .opacity(turnOrange3 ? 1 : 0)
-                    }
-                }
+                VStack{ //음식 대표 이미지와 게이지를 쌓는 스택
+                    Image(systemName: "carrot")
+                        .font(.system(size: 30))
+                    
+                    HStack(spacing:3){ //녹색게이지칸스택
+                        ZStack{
+                            Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.green)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnGreen1 ? .green : .white)
+                        }
+                        ZStack{
+                                Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.green)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnGreen2 ? .green : .white)
+                        }
+                        ZStack{
+                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.green)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnGreen3 ? .green : .white)
+                        }
+                    } //Hstack
+                } //vstack
 
+                VStack{
+                    Image(systemName: "carrot")
+                        .font(.system(size: 30))
+                    HStack(spacing:3){ //빨강 게이지 스택
+                        ZStack{
+                            Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.red)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnRed1 ? .red : .white)
+                        }
+                        ZStack{
+                                Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.red)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnRed2 ? .red : .white)
+                        }
+                        ZStack{
+                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.red)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnRed3 ? .red : .white)
+                        }//zstack
+                    } //Hstack
+                } //vstack
+                
+                VStack{
+                    Image(systemName: "carrot")
+                        .font(.system(size: 30))
+                    
+                    HStack(spacing:3){ //오렌지 게이지 스택
+                        ZStack{
+                            Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.orange)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnOrange1 ? .orange : .white)
+                        }
+                        ZStack{
+                                Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.orange)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnOrange2 ? .orange : .white)
+                        }
+                        ZStack{
+                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
+                                .foregroundColor(.orange)
+                                .cornerRadius(15)
+                            Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
+                                
+                                .cornerRadius(15)
+                                .foregroundColor(turnOrange3 ? .orange : .white)
+                        }
+                    } //Hstack
+                } //vstack
+            
+                Spacer().frame(width: UIScreen.width * 0.45)
             }
-            Spacer()
+            
+            Spacer() //상태창과 도감공룡먹이 스택 사이 공간
+            
+            //도감, 공룡, 먹이 내용 들어가는 스택
             HStack{
-                VStack{                    Spacer().frame(height: 150)
+                //도감 이미지
+                VStack{
+                    Spacer().frame(height: 150)
                     Button{}label: {
                         Text("도감❤️")
                             .font(.system(size:30))
                     }
                     
                 }
+                
                 Spacer().frame(width: 130)
+                
                 ZStack{
-                    
-                    
+                    //공룡터치시 하트나오는 ForEach
                     ZStack{
+                        ForEach(0 ..< heartNum, id: \.self){ _ in
+                            Image(systemName: "heart.fill")
+                                .resizable()
+                                .foregroundColor(.red)
+                                .frame(width: 30, height: 30)
+                                .offset(x: 80, y: -130)
+                                .modifier(HeartModifier())
+                                .padding()
+                            Image(systemName: "heart.fill")
+                                .resizable()
+                                .foregroundColor(.red)
+                                .frame(width: 30, height: 30)
+                                .offset(x: 60, y: -150)
+                                .modifier(HeartModifier())
+                                .padding()
+                            Image(systemName: "heart.fill")
+                                .resizable()
+                                .foregroundColor(.red)
+                                .frame(width: 30, height: 30)
+                                .offset(x: 75, y: -110)
+                                .modifier(HeartModifier())
+                                .padding()
+                        }
+                    //공룡이미지 탭하는 경우 하트 뿅뿅
                         Image("Dino")//킹룡짱룡 위치
+                            .onTapGesture {
+                                heartNum += 1
+                            }
+                        //공룡이 먹고싶은 음식 말풍선
                         Image(systemName: "bubble.left")
                             .opacity(bubbleOn ? 1 : 0)
                             .animation(.default, value: bubbleOn)
                             .font(.system(size:100))
                             .offset(x:170,y:-130)
+                        //공룡이 먹고싶은 음식 이미지
                         Image(systemName: "leaf")
                             .opacity(vegeOn ? 1 : 0)
                             .animation(.default, value: vegeOn)
                             .font(.system(size:50))
                             .offset(x:170,y:-140)
-                        
                     }
                     
                     
@@ -141,10 +227,7 @@ struct MainView: View {
                                     vegeOn = false
                                 }
                                 
-//                                greenCount = 0
-//                                turnGreen1 = false
-//                                turnGreen2 = false
-//                                turnGreen3 = false
+                          
                             }
                         }label: {
                             Text("vegetable Up")
@@ -163,10 +246,7 @@ struct MainView: View {
                                     bubbleOn = false
                                     vegeOn = false
                                 }
-//                                redCount = 0
-//                                turnRed1 = false
-//                                turnRed2 = false
-//                                turnRed3 = false
+                              
                             }
                         }label: {
                             Text("meat Up")
@@ -185,10 +265,7 @@ struct MainView: View {
                                     bubbleOn = false
                                     vegeOn = false
                                 }
-//                                orangeCount = 0
-//                                turnOrange1 = false
-//                                turnOrange2 = false
-//                                turnOrange3 = false
+                               
                             }
                         }label: {
                             Text("fruit Up")
@@ -201,18 +278,58 @@ struct MainView: View {
                     
                 }
                 Spacer().frame(width: 130)
+                //먹이주는 곳
                 VStack{
-                    
                     Spacer().frame(height: 150)
-                    Button{}label: {
+                    Button{
+                    }label: {
                         Text("먹이🤌")
                             .font(.system(size:30))
                     }
                 }
             }
+            
         }
     }
 }
+
+struct HeartEffect : GeometryEffect {
+    var time : Double
+    var speed = Double.random(in: 100...200)
+    var xDirection = Double.random(in: -0.1 ... 0.2)
+    var yDirection = Double.random(in: -Double.pi ... 0)
+    
+    var animatableData: Double {
+        get { time }
+        set { time = newValue }
+    }
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        let xTranslation = speed * xDirection
+        let yTranslation = speed * sin(yDirection) *  time
+        let affineTranslation = CGAffineTransform(translationX: xTranslation, y: yTranslation)
+        return ProjectionTransform(affineTranslation)
+    }
+}
+
+struct HeartModifier: ViewModifier {
+    @State var time = 0.0
+    let duration = 1.0
+    
+    func body(content: Content) -> some View {
+        ZStack{
+            content
+                .foregroundColor(.red)
+                .modifier(HeartEffect(time: time))
+                .opacity(time == 1 ? 0 : 1)
+        }
+        .onAppear {
+            withAnimation(.easeOut(duration: duration)){
+                self.time = duration
+            }
+                          
+            }
+        }
+    }
 
 
 struct MainView_Previews: PreviewProvider {
