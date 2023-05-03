@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60842FAF2A01FB45007BE4A8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60842FAE2A01FB45007BE4A8 /* MainView.swift */; };
+		60842FBD2A020516007BE4A8 /* Extension+UIscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60842FBC2A020516007BE4A8 /* Extension+UIscreen.swift */; };
 		BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */; };
 		BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D2612A00D18A00F9F225 /* ContentView.swift */; };
 		BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2632A00D18B00F9F225 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		60842FAE2A01FB45007BE4A8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		60842FBC2A020516007BE4A8 /* Extension+UIscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIscreen.swift"; sourceTree = "<group>"; };
 		BF07D25C2A00D18A00F9F225 /* DinoDina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoDina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoDinaApp.swift; sourceTree = "<group>"; };
 		BF07D2612A00D18A00F9F225 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60842FBA2A020497007BE4A8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				60842FBB2A0204A3007BE4A8 /* Extension  */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		60842FBB2A0204A3007BE4A8 /* Extension  */ = {
+			isa = PBXGroup;
+			children = (
+				60842FBC2A020516007BE4A8 /* Extension+UIscreen.swift */,
+			);
+			path = "Extension ";
+			sourceTree = "<group>";
+		};
 		BF07D2532A00D18A00F9F225 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +71,7 @@
 		BF07D25E2A00D18A00F9F225 /* DinoDina */ = {
 			isa = PBXGroup;
 			children = (
+				60842FBA2A020497007BE4A8 /* Util */,
 				BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */,
 				BF07D2612A00D18A00F9F225 /* ContentView.swift */,
 				60842FAE2A01FB45007BE4A8 /* MainView.swift */,
@@ -141,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */,
+				60842FBD2A020516007BE4A8 /* Extension+UIscreen.swift in Sources */,
 				60842FAF2A01FB45007BE4A8 /* MainView.swift in Sources */,
 				BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */,
 			);
