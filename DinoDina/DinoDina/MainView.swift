@@ -24,18 +24,20 @@ struct MainView: View {
     @State var turnOrange2 = false
     @State var turnOrange3 = false
     @State var orangeCount:Int = 0
-    //진화할 때 카운트 값 리셋?
+    //진화할 때 카운트 값 리셋
+    //말풍선 on/off
     @State var bubbleOn = false
     @State var vegeOn = false
     //하트뿅뿅
     @State var heartBB = false
     @State var heartNum:Int = 0
-   
+    @State var moveHeart:CGFloat = -80
     var body: some View {
         
         VStack{
             Spacer().frame(height: 20)
-            HStack{ //각 게이지와 레벨 상태 표시 상태창 스택
+            
+            HStack{
                 Circle().foregroundColor(.clear)
                     .frame(width: UIScreen.width * 0.08)
                     .overlay(Circle().stroke())
@@ -145,11 +147,11 @@ struct MainView: View {
                 } //vstack
             
                 Spacer().frame(width: UIScreen.width * 0.45)
-            }
+            } //각 게이지와 레벨 상태 표시 상태창 스택
             
             Spacer() //상태창과 도감공룡먹이 스택 사이 공간
             
-            //도감, 공룡, 먹이 내용 들어가는 스택
+            
             HStack{
                 //도감 이미지
                 VStack{
@@ -166,26 +168,40 @@ struct MainView: View {
                 ZStack{
                     //공룡터치시 하트나오는 ForEach
                     ZStack{
-                        ForEach(0 ..< heartNum, id: \.self){ _ in
+                        ForEach(0 ..< 2 * heartNum, id: \.self){ _ in
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .foregroundColor(.red)
                                 .frame(width: 30, height: 30)
-                                .offset(x: 80, y: -130)
+                                .offset(x: 65 + moveHeart, y: -130)
                                 .modifier(HeartModifier())
                                 .padding()
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .foregroundColor(.red)
                                 .frame(width: 30, height: 30)
-                                .offset(x: 60, y: -150)
+                                .offset(x: 120 + moveHeart, y: -150)
                                 .modifier(HeartModifier())
                                 .padding()
                             Image(systemName: "heart.fill")
                                 .resizable()
                                 .foregroundColor(.red)
                                 .frame(width: 30, height: 30)
-                                .offset(x: 75, y: -110)
+                                .offset(x: 135 + moveHeart, y: -110)
+                                .modifier(HeartModifier())
+                                .padding()
+                            Image(systemName: "heart.fill")
+                                .resizable()
+                                .foregroundColor(.red)
+                                .frame(width: 30, height: 30)
+                                .offset(x: 125 + moveHeart, y: -100)
+                                .modifier(HeartModifier())
+                                .padding()
+                            Image(systemName: "heart.fill")
+                                .resizable()
+                                .foregroundColor(.red)
+                                .frame(width: 30, height: 30)
+                                .offset(x: 105 + moveHeart, y: -110)
                                 .modifier(HeartModifier())
                                 .padding()
                         }
@@ -287,7 +303,7 @@ struct MainView: View {
                             .font(.system(size:30))
                     }
                 }
-            }
+            }//도감, 공룡, 먹이 내용 들어가는 스택
             
         }
     }
@@ -309,7 +325,7 @@ struct HeartEffect : GeometryEffect {
         let affineTranslation = CGAffineTransform(translationX: xTranslation, y: yTranslation)
         return ProjectionTransform(affineTranslation)
     }
-}
+} //하트 움직임
 
 struct HeartModifier: ViewModifier {
     @State var time = 0.0
@@ -329,7 +345,7 @@ struct HeartModifier: ViewModifier {
                           
             }
         }
-    }
+    } //하트 움직임 Viewmodifier
 
 
 struct MainView_Previews: PreviewProvider {
