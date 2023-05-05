@@ -27,7 +27,7 @@ final class AudioRecorder: NSObject, ObservableObject {
     func startRecording() {
         let recordingSession = AVAudioSession.sharedInstance()
         do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setCategory(.playAndRecord, mode: .default, policy: .default, options: .defaultToSpeaker)
             try recordingSession.setActive(true)
         } catch {
             print("Failed to set up recording session")
@@ -49,7 +49,9 @@ final class AudioRecorder: NSObject, ObservableObject {
         } catch {
             print("Could not start recording")
         }
-        // TODO: 3초 후 애니메이션이 끝나면 녹음 중지하기
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            self.stopRecording()
+        }
     }
 
     func stopRecording() {
@@ -80,5 +82,16 @@ final class AudioRecorder: NSObject, ObservableObject {
             print("File could not be deleted!")
         }
         fetchRecording()
+    }
+
+    func reRecording(url: URL) {
+        deleteRecording(url: url)
+        readyRecording()
+    }
+
+    func readyRecording() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            self.startRecording()
+        }
     }
 }

@@ -12,19 +12,13 @@ struct QuestHearView: View {
 
     var body: some View {
         VStack {
-            Text("토마토에서 어떤 소리가 나나요?")
+            Text("파프리카로 어떤 소리를 낼 수 있을까요?")
                 .font(.title)
                 .fontWeight(.heavy)
                 .padding()
 
             HStack {
                 RecordingButton(audioRecorder: audioRecorder)
-
-                if let recording = audioRecorder.recordingFile {
-                    Button(action: {self.audioRecorder.deleteRecording(url: recording)}) {
-                        Text("삭제")
-                    }
-                }
             }
         }
     }

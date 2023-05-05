@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "circle_recoding.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Tomato.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

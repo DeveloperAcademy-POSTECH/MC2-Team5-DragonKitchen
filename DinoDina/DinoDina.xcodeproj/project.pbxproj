@@ -15,6 +15,7 @@
 		BF70ECD92A013CDF00075776 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70ECD82A013CDF00075776 /* AudioRecorder.swift */; };
 		BF70ECDF2A013EA900075776 /* RecordingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70ECDE2A013EA900075776 /* RecordingButton.swift */; };
 		BF70ECE42A01423400075776 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70ECE32A01423400075776 /* AudioPlayer.swift */; };
+		BFEDB13E2A02BC5F009B3964 /* PaprikaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDB13D2A02BC5F009B3964 /* PaprikaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BF70ECD82A013CDF00075776 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		BF70ECDE2A013EA900075776 /* RecordingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButton.swift; sourceTree = "<group>"; };
 		BF70ECE32A01423400075776 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		BFEDB13D2A02BC5F009B3964 /* PaprikaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaprikaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				BF70ECAB2A00F83B00075776 /* QuestHearView.swift */,
 				BF70ECDE2A013EA900075776 /* RecordingButton.swift */,
+				BFEDB13D2A02BC5F009B3964 /* PaprikaView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEDB13E2A02BC5F009B3964 /* PaprikaView.swift in Sources */,
 				BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */,
 				BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */,
 				BF70ECE42A01423400075776 /* AudioPlayer.swift in Sources */,
