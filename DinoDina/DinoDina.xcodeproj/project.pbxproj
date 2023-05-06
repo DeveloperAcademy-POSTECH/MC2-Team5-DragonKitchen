@@ -9,35 +9,35 @@
 /* Begin PBXBuildFile section */
 		1B1D41652A025D01000C9B2B /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 1B1D41642A025D01000C9B2B /* NavigationStack */; };
 		1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41662A02642B000C9B2B /* FoodResultView.swift */; };
-		1B1D41692A033325000C9B2B /* ChosenFruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41682A033325000C9B2B /* ChosenFruit.swift */; };
+		1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41682A033325000C9B2B /* ChosenFood.swift */; };
 		1B848D722A0206910099F726 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B848D712A0206910099F726 /* Classifier.swift */; };
-		1B92DED02A01E84400AFB363 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DECF2A01E84400AFB363 /* CameraView.swift */; };
 		1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DED12A0201ED00AFB363 /* ImagePicker.swift */; };
 		1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */; };
 		1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */; };
-		1BDB8FC32A0245DF0044A2DB /* TestMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC22A0245DF0044A2DB /* TestMainView.swift */; };
-		1BF6609F2A024FCB003FCF90 /* FoodCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF6609E2A024FCB003FCF90 /* FoodCameraView.swift */; };
+		1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */; };
+		1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F0FE2A060FC40021BBF0 /* MainView.swift */; };
+		1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */; };
+		1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */; };
 		BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */; };
 		BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D2612A00D18A00F9F225 /* ContentView.swift */; };
 		BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2632A00D18B00F9F225 /* Assets.xcassets */; };
-		BF07D2672A00D18B00F9F225 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2662A00D18B00F9F225 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B1D41662A02642B000C9B2B /* FoodResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultView.swift; sourceTree = "<group>"; };
-		1B1D41682A033325000C9B2B /* ChosenFruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenFruit.swift; sourceTree = "<group>"; };
+		1B1D41682A033325000C9B2B /* ChosenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenFood.swift; sourceTree = "<group>"; };
 		1B848D712A0206910099F726 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
-		1B92DECF2A01E84400AFB363 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		1B92DED12A0201ED00AFB363 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodClassifier.mlmodel; sourceTree = "<group>"; };
 		1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
-		1BDB8FC22A0245DF0044A2DB /* TestMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainView.swift; sourceTree = "<group>"; };
-		1BF6609E2A024FCB003FCF90 /* FoodCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCameraView.swift; sourceTree = "<group>"; };
+		1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButton.swift; sourceTree = "<group>"; };
+		1BE1F0FE2A060FC40021BBF0 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIscreen.swift"; sourceTree = "<group>"; };
+		1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF07D25C2A00D18A00F9F225 /* DinoDina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoDina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoDinaApp.swift; sourceTree = "<group>"; };
 		BF07D2612A00D18A00F9F225 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF07D2662A00D18B00F9F225 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +52,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1501142A0684BF00CA9502 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1BE1F0FE2A060FC40021BBF0 /* MainView.swift */,
+				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B1501152A0684D300CA9502 /* ViewAssets */ = {
+			isa = PBXGroup;
+			children = (
+				1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */,
+				1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */,
+				1B92DED12A0201ED00AFB363 /* ImagePicker.swift */,
+			);
+			path = ViewAssets;
+			sourceTree = "<group>";
+		};
 		1B92DECC2A01E05100AFB363 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */,
-				1B1D41682A033325000C9B2B /* ChosenFruit.swift */,
+				1B1D41682A033325000C9B2B /* ChosenFood.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1BE1F1002A060FCB0021BBF0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1B1501152A0684D300CA9502 /* ViewAssets */,
+				1BE1F1012A060FCB0021BBF0 /* Extension  */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		1BE1F1012A060FCB0021BBF0 /* Extension  */ = {
+			isa = PBXGroup;
+			children = (
+				1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */,
+			);
+			path = "Extension ";
 			sourceTree = "<group>";
 		};
 		BF07D2532A00D18A00F9F225 = {
@@ -80,16 +116,12 @@
 		BF07D25E2A00D18A00F9F225 /* DinoDina */ = {
 			isa = PBXGroup;
 			children = (
+				1B1501142A0684BF00CA9502 /* Views */,
 				1B92DECC2A01E05100AFB363 /* Models */,
 				BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */,
 				BF07D2612A00D18A00F9F225 /* ContentView.swift */,
-				1B92DECF2A01E84400AFB363 /* CameraView.swift */,
-				1BDB8FC22A0245DF0044A2DB /* TestMainView.swift */,
-				1BF6609E2A024FCB003FCF90 /* FoodCameraView.swift */,
-				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
-				1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */,
-				1B92DED12A0201ED00AFB363 /* ImagePicker.swift */,
 				1B848D712A0206910099F726 /* Classifier.swift */,
+				1BE1F1002A060FCB0021BBF0 /* Util */,
 				BF07D2632A00D18B00F9F225 /* Assets.xcassets */,
 				BF07D2652A00D18B00F9F225 /* Preview Content */,
 			);
@@ -99,7 +131,7 @@
 		BF07D2652A00D18B00F9F225 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				BF07D2662A00D18B00F9F225 /* Preview Assets.xcassets */,
+				1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -168,7 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF07D2672A00D18B00F9F225 /* Preview Assets.xcassets in Resources */,
+				1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,13 +213,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */,
+				1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */,
 				BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */,
 				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
-				1BF6609F2A024FCB003FCF90 /* FoodCameraView.swift in Sources */,
-				1B92DED02A01E84400AFB363 /* CameraView.swift in Sources */,
-				1B1D41692A033325000C9B2B /* ChosenFruit.swift in Sources */,
+				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
+				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
-				1BDB8FC32A0245DF0044A2DB /* TestMainView.swift in Sources */,
+				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
 				1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */,
 				1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */,
@@ -326,7 +358,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +391,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
