@@ -6,7 +6,12 @@
 //
 
 import SwiftUI
-
+import CoreML
+//import CreateMLComponents
+//class ImageModel{
+//    let defaultConfig = MLModelConfiguration()
+//    let imageClassifierWrapper = try? MyImageClassifier(configuration: defaultConfig)
+//}
 struct ContentView: View {
     var body: some View {
         VStack {
