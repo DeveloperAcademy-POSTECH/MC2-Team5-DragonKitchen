@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FoodResultView: View {
-    @ObservedObject var chosen: chosenFruit
+    @EnvironmentObject var chosen: chosenFruit
     
     var body: some View {
         Text(chosen.chosenfruit)
@@ -17,7 +17,7 @@ struct FoodResultView: View {
 
 struct FoodResultView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodResultView(chosen: chosenFruit())
+        FoodResultView()
             .environmentObject(chosenFruit())
     }
 }

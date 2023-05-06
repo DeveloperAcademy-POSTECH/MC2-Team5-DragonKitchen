@@ -7,6 +7,6 @@
 
 import Foundation
 
-class chosenFruit: ObservableObject{
+class chosenFruit: ObservableObject {
     @Published var chosenfruit: String = ""
 }

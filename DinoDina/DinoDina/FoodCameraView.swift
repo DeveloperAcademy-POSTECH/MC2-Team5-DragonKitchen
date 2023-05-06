@@ -12,10 +12,9 @@ struct FoodCameraView: View {
     @State var isPresenting: Bool = false
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .camera
-    var classifier: ImageClassifier
-    @ObservedObject var chosen: chosenFruit
-        var body: some View
-    {
+    @ObservedObject var classifier: ImageClassifier
+    @EnvironmentObject var chosen: chosenFruit
+    var body: some View {
         VStack {
             Button {
                 isPresenting = true
@@ -24,9 +23,10 @@ struct FoodCameraView: View {
                 Image(systemName: "camera.fill")
                     .font(.largeTitle)
             }
-//            PushView(destination: FoodResultView()) {
-//                Text("next View")
-//            }
+            PushView(destination: FoodResultView().environmentObject(chosenFruit())) {
+                Text("next View")
+            }
+            .environmentObject(chosenFruit())
         }
         .fullScreenCover(isPresented: $isPresenting) {
             ImagePicker(uiImage: $uiImage, isPresenting: $isPresenting, sourceType: $sourceType)
@@ -35,6 +35,7 @@ struct FoodCameraView: View {
                     if uiImage != nil {
                         classifier.detect(uiImage: uiImage!)
                     }
+                    chosen.chosenfruit = classifier.imageClass!
                 }
         }
     }
@@ -42,6 +43,7 @@ struct FoodCameraView: View {
 
 struct FoodCameraView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodCameraView(classifier: ImageClassifier(), chosen: chosenFruit())
+        FoodCameraView(classifier: ImageClassifier())
+            .environmentObject(chosenFruit())
     }
 }
