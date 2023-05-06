@@ -14,7 +14,7 @@ class Classifier {
     private(set) var results: String?
     // core image 형식인 CIImage를 받아서, 가장 비슷한 분류 결과를 results로 세팅해주는 함수
     func detect(ciImage: CIImage) {
-        guard let model = try? VNCoreMLModel(for: MyImageClassifier(configuration: MLModelConfiguration()).model)
+        guard let model = try? VNCoreMLModel(for: FoodClassifier(configuration: MLModelConfiguration()).model)
         else {
             print("model load failed")
             return

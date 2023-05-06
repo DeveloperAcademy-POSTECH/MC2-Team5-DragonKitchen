@@ -12,9 +12,9 @@
 		1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41662A02642B000C9B2B /* FoodResultView.swift */; };
 		1B1D41692A033325000C9B2B /* ChosenFruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41682A033325000C9B2B /* ChosenFruit.swift */; };
 		1B848D722A0206910099F726 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B848D712A0206910099F726 /* Classifier.swift */; };
-		1B848D732A020A4C0099F726 /* MyImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DECD2A01E05E00AFB363 /* MyImageClassifier.mlmodel */; };
 		1B92DED02A01E84400AFB363 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DECF2A01E84400AFB363 /* CameraView.swift */; };
 		1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DED12A0201ED00AFB363 /* ImagePicker.swift */; };
+		1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */; };
 		1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */; };
 		1BDB8FC32A0245DF0044A2DB /* TestMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC22A0245DF0044A2DB /* TestMainView.swift */; };
 		1BF6609F2A024FCB003FCF90 /* FoodCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF6609E2A024FCB003FCF90 /* FoodCameraView.swift */; };
@@ -29,9 +29,9 @@
 		1B1D41662A02642B000C9B2B /* FoodResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultView.swift; sourceTree = "<group>"; };
 		1B1D41682A033325000C9B2B /* ChosenFruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenFruit.swift; sourceTree = "<group>"; };
 		1B848D712A0206910099F726 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
-		1B92DECD2A01E05E00AFB363 /* MyImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyImageClassifier.mlmodel; sourceTree = "<group>"; };
 		1B92DECF2A01E84400AFB363 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		1B92DED12A0201ED00AFB363 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodClassifier.mlmodel; sourceTree = "<group>"; };
 		1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		1BDB8FC22A0245DF0044A2DB /* TestMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainView.swift; sourceTree = "<group>"; };
 		1BF6609E2A024FCB003FCF90 /* FoodCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCameraView.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		1B92DECC2A01E05100AFB363 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1B92DECD2A01E05E00AFB363 /* MyImageClassifier.mlmodel */,
+				1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */,
 				1B1D41682A033325000C9B2B /* ChosenFruit.swift */,
 			);
 			path = Models;
@@ -184,9 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */,
-				1B848D732A020A4C0099F726 /* MyImageClassifier.mlmodel in Sources */,
 				BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */,
 				1B1D41622A0255E5000C9B2B /* CustomCameraPhotoView.swift in Sources */,
+				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
 				1BF6609F2A024FCB003FCF90 /* FoodCameraView.swift in Sources */,
 				1B92DED02A01E84400AFB363 /* CameraView.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFruit.swift in Sources */,
