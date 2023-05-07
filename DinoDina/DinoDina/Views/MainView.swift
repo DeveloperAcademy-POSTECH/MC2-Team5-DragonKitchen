@@ -71,30 +71,30 @@ struct MainView: View {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.vegiGreen)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnGreen1 ? .vegiGreen : .white)
                                     }
                                     ZStack {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.vegiGreen)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnGreen2 ? .vegiGreen : .white)
                                     }
                                     ZStack {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.vegiGreen)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnGreen3 ? .vegiGreen : .white)
                                     }
                                 } // Hstack
@@ -109,30 +109,30 @@ struct MainView: View {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.fruitRed)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnRed1 ? .fruitRed : .white)
                                     }
                                     ZStack {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.fruitRed)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnRed2 ? .fruitRed : .white)
                                     }
                                     ZStack {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.fruitRed)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnRed3 ? .fruitRed : .white)
                                     }
                                     
@@ -149,30 +149,30 @@ struct MainView: View {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.meatYellow)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnOrange1 ? .meatYellow : .white)
                                     }
                                     ZStack {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.meatYellow)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnOrange2 ? .meatYellow : .white)
                                     }
                                     ZStack {
                                         
                                         Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                            .foregroundColor(.meatYellow)
-                                            .cornerRadius(6)
+                                            .cornerRadius(8)
                                         Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
                                         
-                                            .cornerRadius(4)
+                                            .cornerRadius(6)
                                             .foregroundColor(turnOrange3 ? .meatYellow : .white)
                                     }
                                 } // Hstack
