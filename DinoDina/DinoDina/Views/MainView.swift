@@ -32,9 +32,11 @@ struct MainView: View {
     @State var heartBB = false
     @State var heartNum: Int = 0
     @State var moveHeart: CGFloat = -80
+    @State var isPresenting: Bool = false
+    @State var isCameraPresenting: Bool = false
 
     var body: some View {
-        NavigationStackView {
+        NavigationStackView(transitionType: .none) {
             ZStack {
                 Image("Background")
                     .resizable()
@@ -144,7 +146,6 @@ struct MainView: View {
                                         .foregroundColor(.orange)
                                         .cornerRadius(15)
                                     Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-
                                         .cornerRadius(15)
                                         .foregroundColor(turnOrange3 ? .orange : .white)
                                 }
@@ -159,14 +160,14 @@ struct MainView: View {
                     HStack {
                         // 도감 이미지
                         VStack {
-                            Spacer().frame(height: UIScreen.height*0.1)
+                            Spacer().frame(height: UIScreen.height * 0.1)
                             Button {} label: {
                                 Image("Book")
 //                                    .font(.system(size: 30))
                             }
                         }
 
-                        Spacer().frame(width: UIScreen.width*0.4)
+                        Spacer().frame(width: UIScreen.width * 0.4)
 
                         ZStack {
                             // 공룡터치시 하트나오는 ForEach
@@ -290,14 +291,19 @@ struct MainView: View {
                             }
                         }
                         // 먹이주는 곳
-                        FeedButton(classifier: ImageClassifier())
+                        FeedButton(isPresenting: $isPresenting)
                         Spacer()
                     } // 도감, 공룡, 먹이 내용 들어가는 스택
+                }
+                .overlay {
+                    PopupView(isPresenting: $isPresenting, classifier: ImageClassifier())
                 }
             }
         }
     }
 }
+
+
 
 struct HeartEffect: GeometryEffect {
     var time: Double
