@@ -18,6 +18,7 @@
 		1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F0FE2A060FC40021BBF0 /* MainView.swift */; };
 		1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */; };
 		1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */; };
+		609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */; };
 		BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */; };
 		BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D2612A00D18A00F9F225 /* ContentView.swift */; };
 		BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2632A00D18B00F9F225 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		1BE1F0FE2A060FC40021BBF0 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIscreen.swift"; sourceTree = "<group>"; };
 		1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		BF07D25C2A00D18A00F9F225 /* DinoDina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoDina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoDinaApp.swift; sourceTree = "<group>"; };
 		BF07D2612A00D18A00F9F225 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */,
+				609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */,
 			);
 			path = "Extension ";
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
+				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
 				1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */,
