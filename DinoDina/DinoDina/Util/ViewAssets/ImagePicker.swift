@@ -10,7 +10,7 @@ import UIKit
 
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var uiImage: UIImage?
-    @Binding var isPresenting: Bool
+    @Binding var isCameraPresenting: Bool
     @Binding var sourceType: UIImagePickerController.SourceType
     // 여기서는 UIImagePickerController를 리턴해 줘야 합니다. 여기서 카메라를 보여줄지, 이미지 선택 뷰를 보여줄지 선택할 수 있습니다.
     func makeUIViewController(context: Context) -> UIImagePickerController {
@@ -42,11 +42,11 @@ struct ImagePicker: UIViewControllerRepresentable {
         // 이 함수는 이미지가 선택되었을 때 이미지 데이터를 delegate에게 전해줍니다. 여기서 delegate는 데이터를 전달해 주는 역할을 한다고 생각하면 됩니다.
         func imagePickerController(_: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             parent.uiImage = info[.originalImage] as? UIImage
-            parent.isPresenting = false
+            parent.isCameraPresenting = false
         }
 
         func imagePickerControllerDidCancel(_: UIImagePickerController) {
-            parent.isPresenting = false
+            parent.isCameraPresenting = false
         }
     }
 }
