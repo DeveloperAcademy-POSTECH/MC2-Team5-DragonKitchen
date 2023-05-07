@@ -12,8 +12,9 @@ struct DinoDinaApp: App {
     var body: some Scene {
         WindowGroup {
 //            TestMainView(classifier: ImageClassifier())
-            FoodCameraView(classifier: ImageClassifier())
-                .environmentObject(chosenFruit())
+//            FoodCameraView(classifier: ImageClassifier())
+            MainView()
+                .environmentObject(ChosenFood())
 //            TestMainView(classifier: ImageClassifier())
 //                .environmentObject(chosenFruit())
         }

@@ -5,19 +5,21 @@
 //  Created by 박상원 on 2023/05/03.
 //
 
+import NavigationStack
 import SwiftUI
 
 struct FoodResultView: View {
-    @EnvironmentObject var chosen: chosenFruit
-    
+    @EnvironmentObject var chosen: ChosenFood
     var body: some View {
-        Text(chosen.chosenfruit)
+        VStack {
+            Text(chosen.chosenFood)
+        }
     }
 }
 
 struct FoodResultView_Previews: PreviewProvider {
     static var previews: some View {
         FoodResultView()
-            .environmentObject(chosenFruit())
+            .environmentObject(ChosenFood())
     }
 }
