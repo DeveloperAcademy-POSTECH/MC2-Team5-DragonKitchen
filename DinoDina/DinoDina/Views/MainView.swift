@@ -37,9 +37,12 @@ struct MainView: View {
     @State var gageWidthIn: CGFloat = UIScreen.width * 0.02
     @State var gageHeightOut: CGFloat = UIScreen.width * 0.025
     @State var gageHeightIn: CGFloat = UIScreen.width * 0.02
+    
+    @State var isPresenting: Bool = false
+    @State var isCameraPresenting: Bool = false
 
     var body: some View {
-        NavigationStackView {
+        NavigationStackView(transitionType: .none) {
             ZStack {
                 Image("Background")
                     .resizable()
@@ -181,12 +184,13 @@ struct MainView: View {
                             Spacer().frame(width: UIScreen.width * 0.35)
                         } // 각 게이지와 레벨 상태 표시 상태창 스택
                     }
+
                     Spacer() // 상태창과 도감공룡먹이 스택 사이 공간
 
                     HStack {
                         // 도감 이미지
                         VStack {
-                            Spacer().frame(height: UIScreen.height*0.1)
+                            Spacer().frame(height: UIScreen.height * 0.1)
                             Button {} label: {
                                 Image("Book")
 //                                    .font(.system(size: 30))
@@ -194,6 +198,7 @@ struct MainView: View {
                         }
 
                         Spacer().frame(width: UIScreen.width*0.35)
+
 
                         ZStack {
                             // 공룡터치시 하트나오는 ForEach
@@ -317,14 +322,18 @@ struct MainView: View {
                             }
                         }
                         // 먹이주는 곳
-                        FeedButton(classifier: ImageClassifier())
-                        
+                        FeedButton(isPresenting: $isPresenting)
                     } // 도감, 공룡, 먹이 내용 들어가는 스택
+                }
+                .overlay {
+                    PopupView(isPresenting: $isPresenting, classifier: ImageClassifier())
                 }
             }
         }
     }
 }
+
+
 
 struct HeartEffect: GeometryEffect {
     var time: Double

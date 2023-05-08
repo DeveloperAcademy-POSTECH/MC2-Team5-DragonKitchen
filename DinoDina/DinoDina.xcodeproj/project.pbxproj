@@ -12,6 +12,9 @@
 		1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41682A033325000C9B2B /* ChosenFood.swift */; };
 		1B848D722A0206910099F726 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B848D712A0206910099F726 /* Classifier.swift */; };
 		1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DED12A0201ED00AFB363 /* ImagePicker.swift */; };
+		1B99A68B2A07ABE400EB6A18 /* ColorManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68A2A07ABE400EB6A18 /* ColorManage.swift */; };
+		1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */; };
+		1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68E2A07E41400EB6A18 /* PopupView.swift */; };
 		1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */; };
 		1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */; };
 		1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */; };
@@ -29,6 +32,9 @@
 		1B1D41682A033325000C9B2B /* ChosenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenFood.swift; sourceTree = "<group>"; };
 		1B848D712A0206910099F726 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		1B92DED12A0201ED00AFB363 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1B99A68A2A07ABE400EB6A18 /* ColorManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManage.swift; sourceTree = "<group>"; };
+		1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		1B99A68E2A07E41400EB6A18 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodClassifier.mlmodel; sourceTree = "<group>"; };
 		1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButton.swift; sourceTree = "<group>"; };
@@ -59,6 +65,7 @@
 			children = (
 				1BE1F0FE2A060FC40021BBF0 /* MainView.swift */,
 				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
+				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -69,6 +76,8 @@
 				1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */,
 				1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */,
 				1B92DED12A0201ED00AFB363 /* ImagePicker.swift */,
+				1B99A68A2A07ABE400EB6A18 /* ColorManage.swift */,
+				1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */,
 			);
 			path = ViewAssets;
 			sourceTree = "<group>";
@@ -223,10 +232,13 @@
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
 				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
+				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
+				1B99A68B2A07ABE400EB6A18 /* ColorManage.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
 				1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */,
 				1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */,
+				1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +374,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -395,7 +407,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
