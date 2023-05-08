@@ -39,16 +39,12 @@ struct PopupView: View {
                         isPresenting = false
                     }
                 }
-            Button {
-                isCameraPresenting = true
-            } label: {
                 ZStack {
-                    RoundedButton(widthScale: 0.3, heightScale: 0.148)
-                    Text("좋아요!")
-                        .font(.system(size: 25))
-                        .foregroundColor(ColorManage.TextColor)
+                    RoundedButton(widthScale: 0.3, heightScale: 0.148, content: "좋아요!", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
                 }
-            }
+                .onTapGesture {
+                    isCameraPresenting = true
+                }
             .padding(.top, isPresenting ? UIScreen.height * 0.75 : UIScreen.height * 3)
         }
         .foregroundColor(.black)
@@ -72,7 +68,7 @@ struct PopupView: View {
 
 struct PopupView_Previews: PreviewProvider {
     static var previews: some View {
-        PopupView(isPresenting: .constant(false), classifier: ImageClassifier())
+        PopupView(isPresenting: .constant(true), classifier: ImageClassifier())
             .environmentObject(ChosenFood())
     }
 }
