@@ -32,6 +32,12 @@ struct MainView: View {
     @State var heartBB = false
     @State var heartNum: Int = 0
     @State var moveHeart: CGFloat = -80
+    
+    @State var gageWidthOut: CGFloat = UIScreen.width * 0.025
+    @State var gageWidthIn: CGFloat = UIScreen.width * 0.02
+    @State var gageHeightOut: CGFloat = UIScreen.width * 0.025
+    @State var gageHeightIn: CGFloat = UIScreen.width * 0.02
+    
     @State var isPresenting: Bool = false
     @State var isCameraPresenting: Bool = false
 
@@ -44,116 +50,140 @@ struct MainView: View {
                     .ignoresSafeArea()
                 VStack {
                     Spacer().frame(height: 20)
-
-                    HStack {
-                        Circle().foregroundColor(.clear)
-                            .frame(width: UIScreen.width * 0.08)
-                            .overlay(Circle().stroke())
-
-                        VStack { // 음식 대표 이미지와 게이지를 쌓는 스택
-                            Image(systemName: "carrot")
-                                .font(.system(size: 30))
-
-                            HStack(spacing: 3) { // 녹색게이지칸스택
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.green)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnGreen1 ? .green : .white)
-                                }
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.green)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnGreen2 ? .green : .white)
-                                }
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.green)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnGreen3 ? .green : .white)
-                                }
-                            } // Hstack
-                        } // vstack
-
-                        VStack {
-                            Image(systemName: "hare")
-                                .font(.system(size: 30))
-                            HStack(spacing: 3) { // 빨강 게이지 스택
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.red)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnRed1 ? .red : .white)
-                                }
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.red)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnRed2 ? .red : .white)
-                                }
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.red)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnRed3 ? .red : .white)
-                                } // zstack
-                            } // Hstack
-                        } // vstack
-
-                        VStack {
-                            Image(systemName: "fish")
-                                .font(.system(size: 30))
-
-                            HStack(spacing: 3) { // 오렌지 게이지 스택
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.orange)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnOrange1 ? .orange : .white)
-                                }
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.orange)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnOrange2 ? .orange : .white)
-                                }
-                                ZStack {
-                                    Rectangle().frame(width: UIScreen.width * 0.038, height: UIScreen.height * 0.05)
-                                        .foregroundColor(.orange)
-                                        .cornerRadius(15)
-                                    Rectangle().frame(width: UIScreen.width * 0.035, height: UIScreen.height * 0.04)
-                                        .cornerRadius(15)
-                                        .foregroundColor(turnOrange3 ? .orange : .white)
-                                }
-                            } // Hstack
-                        } // vstack
-
-                        Spacer().frame(width: UIScreen.width * 0.45)
-                    } // 각 게이지와 레벨 상태 표시 상태창 스택
+                    ZStack{
+                        Rectangle()
+                            .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.13)
+                            .foregroundColor(.white)
+                            .cornerRadius(15)
+                            .opacity(0.5)
+                            .offset(x:UIScreen.width * -0.14)
+                        HStack {
+                            
+                            
+                            Circle().foregroundColor(.gray)
+                                .frame(width: UIScreen.width * 0.08)
+                                .overlay(Circle().stroke())
+                            
+                            VStack { // 음식 대표 이미지와 게이지를 쌓는 스택
+                                
+                                
+                                HStack(spacing: 3) { // 녹색게이지칸스택
+                                    Image(systemName: "carrot")
+                                        .font(.system(size: 30))
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.vegiGreen)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnGreen1 ? .vegiGreen : .white)
+                                    }
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.vegiGreen)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnGreen2 ? .vegiGreen : .white)
+                                    }
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.vegiGreen)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnGreen3 ? .vegiGreen : .white)
+                                    }
+                                } // Hstack
+                            } // vstack
+                            
+                            VStack {
+                                
+                                HStack(spacing: 3) { // 빨강 게이지 스택
+                                    Image(systemName: "hare")
+                                        .font(.system(size: 30))
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.fruitRed)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnRed1 ? .fruitRed : .white)
+                                    }
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.fruitRed)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnRed2 ? .fruitRed : .white)
+                                    }
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.fruitRed)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnRed3 ? .fruitRed : .white)
+                                    }
+                                    
+                                } // Hstack
+                            } // vstack
+                            
+                            VStack {
+                                
+                                
+                                HStack(spacing: 3) { // 오렌지 게이지 스택
+                                    Image(systemName: "fish")
+                                        .font(.system(size: 30))
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.meatYellow)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnOrange1 ? .meatYellow : .white)
+                                    }
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.meatYellow)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnOrange2 ? .meatYellow : .white)
+                                    }
+                                    ZStack {
+                                        
+                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
+//                                            .foregroundColor(.meatYellow)
+                                            .cornerRadius(8)
+                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
+                                        
+                                            .cornerRadius(6)
+                                            .foregroundColor(turnOrange3 ? .meatYellow : .white)
+                                    }
+                                } // Hstack
+                            } // vstack
+                            
+                            Spacer().frame(width: UIScreen.width * 0.35)
+                        } // 각 게이지와 레벨 상태 표시 상태창 스택
+                    }
 
                     Spacer() // 상태창과 도감공룡먹이 스택 사이 공간
 
@@ -167,7 +197,8 @@ struct MainView: View {
                             }
                         }
 
-                        Spacer().frame(width: UIScreen.width * 0.4)
+                        Spacer().frame(width: UIScreen.width*0.35)
+
 
                         ZStack {
                             // 공룡터치시 하트나오는 ForEach
@@ -213,7 +244,7 @@ struct MainView: View {
                                 Image("StandingDino") // 킹룡짱룡 위치
                                     .resizable()
                                     .scaledToFit()
-//                                    .minimumScaleFactor(0.1)
+////                                    .minimumScaleFactor(0.1)
                                     .onTapGesture {
                                         heartNum += 1
                                     }
@@ -292,7 +323,6 @@ struct MainView: View {
                         }
                         // 먹이주는 곳
                         FeedButton(isPresenting: $isPresenting)
-                        Spacer()
                     } // 도감, 공룡, 먹이 내용 들어가는 스택
                 }
                 .overlay {
