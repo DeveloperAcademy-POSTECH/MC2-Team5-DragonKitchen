@@ -142,7 +142,9 @@ struct StatusView: View {
                                 .cornerRadius(6)
                                 .foregroundColor(gageVar.turnOrange3 ? .meatYellow : .white)
                         }
+                       
                     } // Hstack
+                    
                 } // vstack
                 
                 Spacer().frame(width: UIScreen.width * 0.35)

@@ -4,12 +4,12 @@
 //
 //  Created by 김기영 on 2023/05/08.
 //
-
+import NavigationStack
 import SwiftUI
 
 struct DummyView: View {
     @StateObject var gageVar = gageVariables()
- 
+
     @State var bubbleOn = false
     @State var vegeOn = false
     @State var gageWidthOut: CGFloat = UIScreen.width * 0.025
@@ -19,72 +19,22 @@ struct DummyView: View {
 
     var body: some View {
         VStack{
+            StatusView(gageVar: gageVar)
+                
             Text("Green gage Count is \(gageVar.greenCount)")
             Text("Red gage Count is \(gageVar.redCount)")
             Text("Orange gage Count is \(gageVar.orangeCount)")
-            GreenButtonView()
+            ButtonView()
                 .environmentObject(gageVar)
-            ZStack{
-                Rectangle()
-                    .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.13)
-                    .foregroundColor(.white)
-                    .cornerRadius(15)
-                    .opacity(0.5)
-                    .offset(x:UIScreen.width * -0.14)
-                HStack {
-                    
-                    
-                    Circle().foregroundColor(.gray)
-                        .frame(width: UIScreen.width * 0.08)
-                        .overlay(Circle().stroke())
-                    
-                    VStack { // 음식 대표 이미지와 게이지를 쌓는 스택
-                        
-                        
-                        HStack(spacing: 3) { // 녹색게이지칸스택
-                            Image(systemName: "carrot")
-                                .font(.system(size: 30))
-                            ZStack {
-                                
-                                Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-                                //                                            .foregroundColor(.vegiGreen)
-                                    .cornerRadius(8)
-                                Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-                                
-                                    .cornerRadius(6)
-                                    .foregroundColor(gageVar.turnGreen1 ? .vegiGreen : .white)
-                            }
-                            ZStack {
-                                
-                                Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-                                //                                            .foregroundColor(.vegiGreen)
-                                    .cornerRadius(8)
-                                Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-                                
-                                    .cornerRadius(6)
-                                    .foregroundColor(gageVar.turnGreen2 ? .vegiGreen : .white)
-                            }
-                            ZStack {
-                                
-                                Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-                                //                                            .foregroundColor(.vegiGreen)
-                                    .cornerRadius(8)
-                                Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-                                
-                                    .cornerRadius(6)
-                                    .foregroundColor(gageVar.turnGreen3 ? .vegiGreen : .white)
-                            }
-                        } // Hstack
-                    } // vstack
-                    
-                    Spacer().frame(width: UIScreen.width * 0.35)
-                } // 각 게이지와 레벨 상태 표시 상태창 스택
+            PopView{
+                Text("go back")
+            }
             }
         }
     }
-}
 
-struct GreenButtonView: View{
+
+struct ButtonView: View{
     @EnvironmentObject var gageVar : gageVariables
     var body: some View{
         Button{
@@ -105,7 +55,7 @@ struct GreenButtonView: View{
     } label: {
         ZStack{
             
-            RoundedButton(widthScale: 0.15, heightScale: 0.1)
+            RoundedButton(widthScale: 0.3, heightScale: 0.05)
             Text("Green Up!")
                 .foregroundColor(.white)
         }
@@ -128,7 +78,7 @@ struct GreenButtonView: View{
     } label: {
         ZStack{
             
-            RoundedButton(widthScale: 0.15, heightScale: 0.1)
+            RoundedButton(widthScale: 0.3, heightScale: 0.05)
             Text("Red Up!")
                 .foregroundColor(.white)
         }
@@ -151,7 +101,7 @@ struct GreenButtonView: View{
     } label: {
         ZStack{
             
-            RoundedButton(widthScale: 0.15, heightScale: 0.1)
+            RoundedButton(widthScale: 0.3, heightScale: 0.05)
             Text("Orange Up!")
                 .foregroundColor(.white)
         }
