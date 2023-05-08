@@ -14,7 +14,6 @@ extension Color {
         )
     }
     
-    
     static let vegiGreen:Color = Color(hex: 0x41AF39)
     static let fruitRed:Color = Color(hex: 0xE20000)
     static let meatYellow:Color = Color(hex: 0xFFBA00)
