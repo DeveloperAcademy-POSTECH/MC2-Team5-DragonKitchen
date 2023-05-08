@@ -10,17 +10,22 @@ import SwiftUI
 struct RoundedButton: View {
     var widthScale: CGFloat
     var heightScale: CGFloat
+    var content: String
+    var contentSize: CGFloat
+    var contentColor: Color
+    var isActive: Bool
     var body: some View {
         ZStack {
             ZStack {
-                ColorManage.ButtonShadowColor.cornerRadius(20)
+                isActive ? Color.buttonShadowColor.cornerRadius(20) : Color.disabledButtonShadowColor.cornerRadius(20)
                 RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 1.5).foregroundColor(.black)
             }
             .frame(width: UIScreen.width * widthScale, height: UIScreen.height * heightScale)
             .padding([.top, .leading], 10)
             ZStack {
-                ColorManage.ButtonColor.cornerRadius(20)
+                isActive ? Color.buttonColor.cornerRadius(20) : Color.disabledButtonColor.cornerRadius(20)
                 RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 1.5).foregroundColor(.black)
+                Text(content).font(.system(size: contentSize)).foregroundColor(contentColor)
             }
             .frame(width: UIScreen.width * widthScale, height: UIScreen.height * heightScale)
         }
@@ -29,6 +34,6 @@ struct RoundedButton: View {
 
 struct RoundedButton_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedButton(widthScale: 0.3, heightScale: 0.148)
+        RoundedButton(widthScale: 0.3, heightScale: 0.148, content: "좋아요!", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
     }
 }
