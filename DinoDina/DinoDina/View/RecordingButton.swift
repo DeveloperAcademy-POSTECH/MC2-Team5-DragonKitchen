@@ -61,7 +61,7 @@ struct RecordingButton: View {
         // 녹음중일 때
         } else if audioRecorder.isRecording {
             ZStack {
-                ProgressBar(progress: self.$progressValue)
+                ProgressCircle(progress: self.$progressValue)
                     .frame(width: 190.0, height: 190.0)
                     .padding(20.0)
                     .onAppear() {
@@ -178,7 +178,7 @@ struct RecordingButton: View {
         }
 }
 
-struct ProgressBar: View {
+struct ProgressCircle: View {
     @Binding var progress: Float
     var color: Color = Color.red
 
