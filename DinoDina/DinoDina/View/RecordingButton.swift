@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct RecordingButton: View {
     @ObservedObject var audioRecorder: AudioRecorder
@@ -93,7 +94,7 @@ struct RecordingButton: View {
                         }
                     }
             }
-        // 시작화면 🍅
+        // 시작화면
         } else {
             ZStack {
                 Circle()
@@ -104,17 +105,77 @@ struct RecordingButton: View {
 
                 PaprikaView()
                     .onTapGesture {
-                        isCounting = true
-                        self.audioRecorder.readyRecording()
-                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-                            isCounting = false
-                            remainingSecond = 3
-                            progressValue = 0.0
+                        guard checkMicrophonePermission() else {
+                            askMicroPhonePermission()
+                            return
                         }
+                        self.tappedButton()
                     }
             }
         }
     }
+
+    func tappedButton() {
+        isCounting = true
+        self.audioRecorder.readyRecording()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            isCounting = false
+            remainingSecond = 3
+            progressValue = 0.0
+        }
+    }
+
+    func askMicroPhonePermission() {
+        guard let microphoneUsageDescription = Bundle.main.object(forInfoDictionaryKey: "NSMicrophoneUsageDescription") as? String else {
+            fatalError("NSMicrophoneUsageDescription not found in Info.plist")
+        }
+        switch AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) {
+        case .authorized:
+            print("마이크 권한이 허용되어 있습니다.")
+        case .denied, .restricted:
+            print("마이크 권한이 거부되어 있습니다.")
+            showPermissionAlert(with: microphoneUsageDescription)
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: AVMediaType.audio) { _ in
+                DispatchQueue.main.async {
+                    if AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) == .authorized {
+                        self.tappedButton()
+                    }
+                }
+            }
+        @unknown default:
+            fatalError("Unknown authorization status for microphone.")
+        }
+    }
+
+    func checkMicrophonePermission() -> Bool {
+        guard nil != Bundle.main.object(forInfoDictionaryKey: "NSMicrophoneUsageDescription") as? String else {
+            fatalError("NSMicrophoneUsageDescription not found in Info.plist")
+        }
+        switch AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) {
+        case .authorized:
+            return true
+        case .denied, .restricted, .notDetermined:
+            return false
+        @unknown default:
+            fatalError("Unknown authorization status for microphone.")
+        }
+    }
+
+    func showPermissionAlert(with message: String) {
+            let alert = UIAlertController(
+                title: "마이크 권한 요청",
+                message: message,
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "설정", style: .default, handler: { _ in
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }))
+            alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
+            UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
+        }
 }
 
 struct ProgressBar: View {
