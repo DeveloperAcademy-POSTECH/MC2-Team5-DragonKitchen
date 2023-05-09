@@ -12,34 +12,39 @@ struct FoodResultView: View {
     @EnvironmentObject var chosen: ChosenFood
     @State private var zoomed = false
     @Namespace private var smooth
-    @State var heights: CGFloat = 200
     var body: some View {
         VStack {
-            if !zoomed {
-                ZStack {
-                    Image(chosen.chosenFood)
-                        .resizable()
-                        .matchedGeometryEffect(id: "morph", in: smooth)
-//                        .frame(height: heights)
-                        .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
-                }
-            } else {
-                ZStack {
-                    Image(chosen.chosenFood)
-                        .resizable()
-                        .matchedGeometryEffect(id: "morph", in: smooth)
-                        .scaledToFit()
-                        .frame(height: heights)
-                        .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
+            ZStack{
+                Image("Doma")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 500)
+                    .offset(y: 80)
+                if !zoomed {
+                    ZStack {
+                        Image("tomato")
+                            .resizable()
+                            .matchedGeometryEffect(id: "morph", in: smooth)
+                            .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
+                    }
+                } else {
+                    ZStack {
+                        Image("tomato")
+                            .resizable()
+                            .matchedGeometryEffect(id: "morph", in: smooth)
+                            .scaledToFit()
+                            .frame(height: 200)
+                            .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
+                    }
                 }
             }
+           
             Text("tap!")
                 .onTapGesture {
                     withAnimation(
-                        .interpolatingSpring(mass: 1, stiffness: 200, damping: 10, initialVelocity: 0)
+                        .interpolatingSpring(mass: 1, stiffness: 100, damping: 10, initialVelocity: 0.4)
                     ) {
                         zoomed.toggle()
-//                        heights = 300
                     }
                 }
         }
