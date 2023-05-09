@@ -100,17 +100,6 @@ struct MainView: View {
                                     .onTapGesture {
                                         heartNum += 1
                                     }
-                                // 공룡이 먹고싶은 음식 말풍선
-                                Image("Bubble")
-                                    .opacity(bubbleOn ? 1 : 0)
-                                    .animation(.default, value: bubbleOn)
-                                    .offset(x: 170, y: -130)
-                                // 공룡이 먹고싶은 음식 이미지
-                                Image(systemName: "leaf")
-                                    .opacity(vegeOn ? 1 : 0)
-                                    .animation(.default, value: vegeOn)
-                                    .font(.system(size: 50))
-                                    .offset(x: 170, y: -140)
                             }
 
 
