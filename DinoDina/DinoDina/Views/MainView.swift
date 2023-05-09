@@ -33,9 +33,7 @@ struct MainView: View {
                 VStack {
                     Spacer().frame(height: UIScreen.height * 0.025)
                     StatusView(gageVar: _gageVar)
-                    PushView(destination: DummyView(gageVar: gageVar)){
-                        Text("dd")
-                    }
+
 
                     Spacer() // 상태창과 도감공룡먹이 스택 사이 공간
 
