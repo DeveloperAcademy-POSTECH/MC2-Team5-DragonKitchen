@@ -11,12 +11,12 @@
 		1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41662A02642B000C9B2B /* FoodResultView.swift */; };
 		1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41682A033325000C9B2B /* ChosenFood.swift */; };
 		1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6471B82A09DCFE0083599D /* NavigationBar.swift */; };
-		1B6471C12A09EC830083599D /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6471C02A09EC830083599D /* Progress.swift */; };
 		1B848D722A0206910099F726 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B848D712A0206910099F726 /* Classifier.swift */; };
 		1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DED12A0201ED00AFB363 /* ImagePicker.swift */; };
 		1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */; };
 		1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68E2A07E41400EB6A18 /* PopupView.swift */; };
 		1B99A6912A09272C00EB6A18 /* BounceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A6902A09272C00EB6A18 /* BounceAnimationView.swift */; };
+		1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A37852A0A1A9B00C63FB0 /* DummView.swift */; };
 		1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */; };
 		1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */; };
 		1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */; };
@@ -36,12 +36,12 @@
 		1B1D41662A02642B000C9B2B /* FoodResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultView.swift; sourceTree = "<group>"; };
 		1B1D41682A033325000C9B2B /* ChosenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenFood.swift; sourceTree = "<group>"; };
 		1B6471B82A09DCFE0083599D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		1B6471C02A09EC830083599D /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		1B848D712A0206910099F726 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		1B92DED12A0201ED00AFB363 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		1B99A68E2A07E41400EB6A18 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		1B99A6902A09272C00EB6A18 /* BounceAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationView.swift; sourceTree = "<group>"; };
+		1B9A37852A0A1A9B00C63FB0 /* DummView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummView.swift; sourceTree = "<group>"; };
 		1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodClassifier.mlmodel; sourceTree = "<group>"; };
 		1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButton.swift; sourceTree = "<group>"; };
@@ -76,8 +76,6 @@
 				1BE1F0FE2A060FC40021BBF0 /* MainView.swift */,
 				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
 				1B99A6902A09272C00EB6A18 /* BounceAnimationView.swift */,
-				1B6471B82A09DCFE0083599D /* NavigationBar.swift */,
-				1B6471C02A09EC830083599D /* Progress.swift */,
 				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
 			);
 			path = Views;
@@ -86,6 +84,7 @@
 		1B1501152A0684D300CA9502 /* ViewAssets */ = {
 			isa = PBXGroup;
 			children = (
+				1B6471B82A09DCFE0083599D /* NavigationBar.swift */,
 				1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */,
 				1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */,
 				1B92DED12A0201ED00AFB363 /* ImagePicker.swift */,
@@ -104,6 +103,14 @@
 				1B1D41682A033325000C9B2B /* ChosenFood.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1B9A37872A0A1F0400C63FB0 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				1B9A37852A0A1A9B00C63FB0 /* DummView.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		1BE1F1002A060FCB0021BBF0 /* Util */ = {
@@ -143,6 +150,7 @@
 		BF07D25E2A00D18A00F9F225 /* DinoDina */ = {
 			isa = PBXGroup;
 			children = (
+				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
 				1B92DECC2A01E05100AFB363 /* Models */,
 				BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */,
@@ -246,11 +254,11 @@
 				1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */,
 				BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */,
 				1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */,
+				1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */,
 				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
 				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
-				1B6471C12A09EC830083599D /* Progress.swift in Sources */,
 				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
 				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
