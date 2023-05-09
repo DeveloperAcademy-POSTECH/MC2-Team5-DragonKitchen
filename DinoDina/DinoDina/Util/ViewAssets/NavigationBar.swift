@@ -46,7 +46,7 @@ struct NavigationBar: View {
                 }
                 Spacer()
             }
-            .frame(width: UIScreen.width*0.6, height: 120)
+            .frame(width: UIScreen.width * 0.6, height: 80)
             Spacer()
             Image(isCleared ? "GoButton" : "DisabledGoButton")
                 .resizable()
