@@ -13,13 +13,18 @@ struct FeedButton: View {
 
     var body: some View {
         VStack {
-            Button {
-                withAnimation(.easeInOut(duration: 0.5)) {
-                    isPresenting = true
-                }
-            } label: {
+//            Button {
+//                withAnimation(.easeInOut(duration: 0.5)) {
+//                    isPresenting = true
+//                }
+//            } label: {
                 Image("Dish")
                     .frame(width: 100, height: 100)
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            isPresenting = true
+                        }
+//                    }
             }
         }
         // 카메라 화면

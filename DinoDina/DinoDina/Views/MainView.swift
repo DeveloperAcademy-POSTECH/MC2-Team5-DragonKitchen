@@ -19,7 +19,7 @@ struct MainView: View {
     let gageWidthIn: CGFloat = UIScreen.width * 0.02
     let gageHeightOut: CGFloat = UIScreen.width * 0.025
     let gageHeightIn: CGFloat = UIScreen.width * 0.02
-    
+
     @State var isPresenting: Bool = false
     @State var isCameraPresenting: Bool = false
 
@@ -33,8 +33,6 @@ struct MainView: View {
                 VStack {
                     Spacer().frame(height: UIScreen.height * 0.025)
                     StatusView(gageVar: _gageVar)
-
-
                     Spacer() // 상태창과 도감공룡먹이 스택 사이 공간
 
                     HStack {
@@ -48,7 +46,6 @@ struct MainView: View {
                         }
 
                         Spacer().frame(width: UIScreen.width*0.04)
-
 
                         ZStack {
                             // 공룡터치시 하트나오는 ForEach
@@ -94,7 +91,7 @@ struct MainView: View {
                                 Image("StandingDino") // 킹룡짱룡 위치
                                     .resizable()
                                     .scaledToFit()
-////                                    .minimumScaleFactor(0.1)
+                                    ////                                    .minimumScaleFactor(0.1)
                                     .onTapGesture {
                                         heartNum += 1
                                     }
@@ -114,8 +111,6 @@ struct MainView: View {
         }
     }
 }
-
-
 
 struct HeartEffect: GeometryEffect {
     var time: Double
