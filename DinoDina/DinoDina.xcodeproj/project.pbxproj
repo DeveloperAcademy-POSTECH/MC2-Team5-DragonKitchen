@@ -24,6 +24,7 @@
 		1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F0FE2A060FC40021BBF0 /* MainView.swift */; };
 		1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */; };
 		1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */; };
+		1BFECA402A0A907D009A68D4 /* TasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFECA3F2A0A907D009A68D4 /* TasteView.swift */; };
 		6080550E2A08835E00A2F499 /* GageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080550D2A08835E00A2F499 /* GageButton.swift */; };
 		608055102A0884B600A2F499 /* GageVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080550F2A0884B600A2F499 /* GageVariables.swift */; };
 		608055122A08D93100A2F499 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608055112A08D93100A2F499 /* StatusView.swift */; };
@@ -54,6 +55,7 @@
 		1BE1F0FE2A060FC40021BBF0 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = DinoDina/Views/MainView.swift; sourceTree = SOURCE_ROOT; };
 		1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extension+UIscreen.swift"; path = "DinoDina/Util/Extension /Extension+UIscreen.swift"; sourceTree = SOURCE_ROOT; };
 		1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1BFECA3F2A0A907D009A68D4 /* TasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteView.swift; sourceTree = "<group>"; };
 		6080550D2A08835E00A2F499 /* GageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GageButton.swift; path = DinoDina/Util/ViewAssets/GageButton.swift; sourceTree = SOURCE_ROOT; };
 		6080550F2A0884B600A2F499 /* GageVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GageVariables.swift; path = DinoDina/Models/GageVariables.swift; sourceTree = SOURCE_ROOT; };
 		608055112A08D93100A2F499 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusView.swift; path = DinoDina/Util/ViewAssets/StatusView.swift; sourceTree = SOURCE_ROOT; };
@@ -86,6 +88,7 @@
 				1BE1F0FE2A060FC40021BBF0 /* MainView.swift */,
 				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
 				1B99A6902A09272C00EB6A18 /* BounceAnimationView.swift */,
+				1BFECA3F2A0A907D009A68D4 /* TasteView.swift */,
 				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
 				BF65D7E32A0A32E100B44877 /* QuestHear */,
 			);
@@ -297,6 +300,7 @@
 				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */,
+				1BFECA402A0A907D009A68D4 /* TasteView.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
 				1B36A8862A0A7A1B007B01A2 /* ProgressCircle.swift in Sources */,
 				1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */,

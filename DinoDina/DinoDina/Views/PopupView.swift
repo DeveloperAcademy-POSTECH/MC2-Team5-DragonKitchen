@@ -10,6 +10,7 @@ import NavigationStack
 
 struct PopupView: View {
     @Binding var isPresenting: Bool
+    @Binding var isClicked: Bool
     @State var isCameraPresenting: Bool = false
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .camera
@@ -43,6 +44,7 @@ struct PopupView: View {
                 .foregroundColor(Color(red: 153 / 255, green: 153 / 255, blue: 153 / 255))
                 .onTapGesture {
                     withAnimation(.easeIn(duration: 0.3)) {
+                        isClicked = false
                         isPresenting = false
                     }
                 }
@@ -75,7 +77,7 @@ struct PopupView: View {
 
 struct PopupView_Previews: PreviewProvider {
     static var previews: some View {
-        PopupView(isPresenting: .constant(true), classifier: ImageClassifier())
+        PopupView(isPresenting: .constant(true), isClicked: .constant(false), classifier: ImageClassifier())
             .environmentObject(ChosenFood())
     }
 }
