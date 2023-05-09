@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct RecordingButton: View {
-    @ObservedObject var audioRecorder: AudioRecorder
+    @ObservedObject var audioRecorder = AudioRecorder()
     @ObservedObject var audioPlayer = AudioPlayer()
     @State private var remainingSecond = 3
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -194,6 +194,6 @@ struct ProgressCircle: View {
 
 struct RecordingButton_Previews: PreviewProvider {
     static var previews: some View {
-        RecordingButton(audioRecorder: AudioRecorder())
+        RecordingButton()
     }
 }

@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct QuestHearView: View {
-    @ObservedObject var audioRecorder = AudioRecorder()
-
     var body: some View {
         ZStack {
             Color.questBackgroundColor
@@ -21,7 +19,7 @@ struct QuestHearView: View {
                     .fontWeight(.heavy)
                     .padding()
 
-                RecordingButton(audioRecorder: audioRecorder)
+                RecordingButton()
             }
         }
 
@@ -30,6 +28,6 @@ struct QuestHearView: View {
 
 struct QuestEarView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestHearView(audioRecorder: AudioRecorder())
+        QuestHearView()
     }
 }
