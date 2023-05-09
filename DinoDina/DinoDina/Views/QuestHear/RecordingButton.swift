@@ -85,7 +85,7 @@ struct RecordingButton: View {
 
                 PaprikaView()
 
-                Text("\(remainingSecond)")
+                Text(remainingSecond > 0 ? "\(remainingSecond)" : "시작")
                     .foregroundColor(.white)
                     .font(.largeTitle)
                     .onReceive(timer) { _ in
