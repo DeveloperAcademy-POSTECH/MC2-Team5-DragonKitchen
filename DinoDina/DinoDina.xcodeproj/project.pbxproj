@@ -30,6 +30,12 @@
 		BF07D2602A00D18A00F9F225 /* DinoDinaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */; };
 		BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D2612A00D18A00F9F225 /* ContentView.swift */; };
 		BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2632A00D18B00F9F225 /* Assets.xcassets */; };
+		BF07D2672A00D18B00F9F225 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2662A00D18B00F9F225 /* Preview Assets.xcassets */; };
+		BF70ECAC2A00F83B00075776 /* QuestHearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70ECAB2A00F83B00075776 /* QuestHearView.swift */; };
+		BF70ECD92A013CDF00075776 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70ECD82A013CDF00075776 /* AudioRecorder.swift */; };
+		BF70ECDF2A013EA900075776 /* RecordingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70ECDE2A013EA900075776 /* RecordingButton.swift */; };
+		BF70ECE42A01423400075776 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70ECE32A01423400075776 /* AudioPlayer.swift */; };
+		BFEDB13E2A02BC5F009B3964 /* PaprikaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDB13D2A02BC5F009B3964 /* PaprikaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoDinaApp.swift; sourceTree = "<group>"; };
 		BF07D2612A00D18A00F9F225 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF07D2662A00D18B00F9F225 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BF70ECAB2A00F83B00075776 /* QuestHearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestHearView.swift; sourceTree = "<group>"; };
+		BF70ECD82A013CDF00075776 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		BF70ECDE2A013EA900075776 /* RecordingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButton.swift; sourceTree = "<group>"; };
+		BF70ECE32A01423400075776 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		BFEDB13D2A02BC5F009B3964 /* PaprikaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaprikaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +169,8 @@
 				BF07D2612A00D18A00F9F225 /* ContentView.swift */,
 				1B848D712A0206910099F726 /* Classifier.swift */,
 				1BE1F1002A060FCB0021BBF0 /* Util */,
+				BF70ECDA2A013D2000075776 /* View */,
+				BF70ECD52A013C6000075776 /* Model */,
 				BF07D2632A00D18B00F9F225 /* Assets.xcassets */,
 				BF07D2652A00D18B00F9F225 /* Preview Content */,
 			);
@@ -169,6 +183,25 @@
 				1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF70ECD52A013C6000075776 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF70ECD82A013CDF00075776 /* AudioRecorder.swift */,
+				BF70ECE32A01423400075776 /* AudioPlayer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF70ECDA2A013D2000075776 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF70ECAB2A00F83B00075776 /* QuestHearView.swift */,
+				BF70ECDE2A013EA900075776 /* RecordingButton.swift */,
+				BFEDB13D2A02BC5F009B3964 /* PaprikaView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEDB13E2A02BC5F009B3964 /* PaprikaView.swift in Sources */,
 				BF07D2622A00D18A00F9F225 /* ContentView.swift in Sources */,
 				6080550E2A08835E00A2F499 /* GageButton.swift in Sources */,
 				608055122A08D93100A2F499 /* StatusView.swift in Sources */,
@@ -267,6 +301,10 @@
 				1B99A6912A09272C00EB6A18 /* BounceAnimationView.swift in Sources */,
 				1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */,
 				1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */,
+				BF70ECE42A01423400075776 /* AudioPlayer.swift in Sources */,
+				BF70ECDF2A013EA900075776 /* RecordingButton.swift in Sources */,
+				BF70ECAC2A00F83B00075776 /* QuestHearView.swift in Sources */,
+				BF70ECD92A013CDF00075776 /* AudioRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,9 +437,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "using camera to take pictures";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,9 +472,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "using camera to take pictures";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
