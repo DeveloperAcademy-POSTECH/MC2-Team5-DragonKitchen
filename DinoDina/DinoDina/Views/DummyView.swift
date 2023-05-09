@@ -19,7 +19,7 @@ struct DummyView: View {
 
     var body: some View {
         VStack{
-            StatusView(gageVar: gageVar)
+            
                 
             Text("Green gage Count is \(gageVar.greenCount)")
             Text("Red gage Count is \(gageVar.redCount)")
@@ -45,12 +45,7 @@ struct ButtonView: View{
             case 3: gageVar.turnGreen3 = true
             default:
                 gageVar.greenCount = 3
-//                                bubbleOn = true
-//                                vegeOn = true
-//                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-//                                    bubbleOn = false
-//                                    vegeOn = false
-//            }
+
         }
     } label: {
         ZStack{
@@ -68,12 +63,7 @@ struct ButtonView: View{
             case 3: gageVar.turnRed3 = true
             default:
                 gageVar.redCount = 3
-//                                bubbleOn = true
-//                                vegeOn = true
-//                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-//                                    bubbleOn = false
-//                                    vegeOn = false
-//            }
+
         }
     } label: {
         ZStack{
@@ -91,12 +81,6 @@ struct ButtonView: View{
             case 3: gageVar.turnOrange3 = true
             default:
                 gageVar.orangeCount = 3
-//                                bubbleOn = true
-//                                vegeOn = true
-//                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-//                                    bubbleOn = false
-//                                    vegeOn = false
-//            }
         }
     } label: {
         ZStack{
@@ -108,6 +92,56 @@ struct ButtonView: View{
     }
         }
     }
+
+struct GageButton: View{
+    @EnvironmentObject var gageVar : gageVariables
+    @State var whatFood:String = "" 
+    var body: some View{
+        
+        Button{
+            
+            if whatFood == "Vegi" {
+                gageVar.greenCount += 1
+                switch gageVar.greenCount {
+                case 1: gageVar.turnGreen1 = true
+                case 2: gageVar.turnGreen2 = true
+                case 3: gageVar.turnGreen3 = true
+                default:
+                    gageVar.greenCount = 3
+                }
+            }
+            else if whatFood == "Fruit" {
+                
+                gageVar.redCount += 1
+                switch gageVar.redCount {
+                case 1: gageVar.turnRed1 = true
+                case 2: gageVar.turnRed2 = true
+                case 3: gageVar.turnRed3 = true
+                default:
+                    gageVar.redCount = 3
+                }
+            }
+            else if whatFood == "Meat" {
+                    gageVar.orangeCount += 1
+                    switch gageVar.orangeCount {
+                    case 1: gageVar.turnOrange1 = true
+                    case 2: gageVar.turnOrange2 = true
+                    case 3: gageVar.turnOrange3 = true
+                    default:
+                        gageVar.orangeCount = 3
+                    }
+                }
+            } label: {
+                ZStack{
+                    
+                    RoundedButton(widthScale: 0.3, heightScale: 0.05)
+                    Text("무엇일까요")
+                        .foregroundColor(.white)
+                }
+            }
+        }
+    }
+
 
 
 struct DummyView_Previews: PreviewProvider {

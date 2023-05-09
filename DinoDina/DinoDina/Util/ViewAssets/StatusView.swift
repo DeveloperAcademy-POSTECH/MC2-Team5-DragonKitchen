@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StatusView: View {
-    @StateObject var gageVar = gageVariables()
+    @EnvironmentObject var gageVar : gageVariables
     @State var gageWidthOut: CGFloat = UIScreen.width * 0.025
     @State var gageWidthIn: CGFloat = UIScreen.width * 0.02
     @State var gageHeightOut: CGFloat = UIScreen.width * 0.025
@@ -156,5 +156,6 @@ struct StatusView: View {
 struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
         StatusView()
+            .environmentObject(gageVariables())
     }
 }

@@ -94,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */,
+				6080550F2A0884B600A2F499 /* GageVariables.swift */,
 				1B1D41682A033325000C9B2B /* ChosenFood.swift */,
 			);
 			path = Models;
@@ -139,7 +140,6 @@
 				1B1501142A0684BF00CA9502 /* Views */,
 				1B92DECC2A01E05100AFB363 /* Models */,
 				BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */,
-				6080550F2A0884B600A2F499 /* GageVariables.swift */,
 				BF07D2612A00D18A00F9F225 /* ContentView.swift */,
 				1B848D712A0206910099F726 /* Classifier.swift */,
 				1BE1F1002A060FCB0021BBF0 /* Util */,
