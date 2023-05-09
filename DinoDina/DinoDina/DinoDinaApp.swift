@@ -11,13 +11,10 @@ import SwiftUI
 struct DinoDinaApp: App {
     var body: some Scene {
         WindowGroup {
-//            TestMainView(classifier: ImageClassifier())
-//            FoodCameraView(classifier: ImageClassifier())
-            MainView()
-                .environmentObject(ChosenFood())
-                .environmentObject(gageVariables())
-//            TestMainView(classifier: ImageClassifier())
-//                .environmentObject(chosenFruit())
+//            MainView()
+//                .environmentObject(ChosenFood())
+//                .environmentObject(gageVariables())
+            TasteView()
         }
     }
 }

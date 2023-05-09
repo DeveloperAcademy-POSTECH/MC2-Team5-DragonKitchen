@@ -12,9 +12,9 @@ struct RoundedButton: View {
     var heightScale: CGFloat
     var sfSymbolName: String?
     var content: String
-    var contentSize: CGFloat
-    var contentColor: Color
-    var isActive: Bool
+    var contentSize: CGFloat = 25
+    var contentColor: Color = .buttonTextColor
+    var isActive: Bool = true
 
     var body: some View {
         ZStack {
