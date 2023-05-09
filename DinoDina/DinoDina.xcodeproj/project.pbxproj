@@ -34,6 +34,7 @@
 		BF65D7E92A0A32E100B44877 /* QuestHearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7E62A0A32E100B44877 /* QuestHearView.swift */; };
 		BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */; };
 		BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */; };
+		BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		BF65D7E62A0A32E100B44877 /* QuestHearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestHearView.swift; sourceTree = "<group>"; };
 		BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		BF65D7E32A0A32E100B44877 /* QuestHear */ = {
 			isa = PBXGroup;
 			children = (
+				BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */,
 				BF65D7E42A0A32E100B44877 /* PaprikaView.swift */,
 				BF65D7E62A0A32E100B44877 /* QuestHearView.swift */,
 			);
@@ -294,6 +297,7 @@
 				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
+				BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */,
 				1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */,
 				1B99A6912A09272C00EB6A18 /* BounceAnimationView.swift in Sources */,
 				1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */,
