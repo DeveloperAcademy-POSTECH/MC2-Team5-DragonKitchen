@@ -9,34 +9,16 @@ import NavigationStack
 import SwiftUI
 
 struct MainView: View {
-    // 색깔별로 게이지 하나씩, 카운트 값에 따라 생성
-    @State var turnGreen1 = false
-    @State var turnGreen2 = false
-    @State var turnGreen3 = false
-    @State var greenCount: Int = 0
+    @EnvironmentObject var gageVar : gageVariables
 
-    @State var turnRed1 = false
-    @State var turnRed2 = false
-    @State var turnRed3 = false
-    @State var redCount: Int = 0
-
-    @State var turnOrange1 = false
-    @State var turnOrange2 = false
-    @State var turnOrange3 = false
-    @State var orangeCount: Int = 0
-    // 진화할 때 카운트 값 리셋
-    // 말풍선 on/off
-    @State var bubbleOn = false
-    @State var vegeOn = false
     // 하트뿅뿅
     @State var heartBB = false
     @State var heartNum: Int = 0
-    @State var moveHeart: CGFloat = -80
-
-    @State var gageWidthOut: CGFloat = UIScreen.width * 0.025
-    @State var gageWidthIn: CGFloat = UIScreen.width * 0.02
-    @State var gageHeightOut: CGFloat = UIScreen.width * 0.025
-    @State var gageHeightIn: CGFloat = UIScreen.width * 0.02
+    let moveHeart: CGFloat = -120
+    let gageWidthOut: CGFloat = UIScreen.width * 0.025
+    let gageWidthIn: CGFloat = UIScreen.width * 0.02
+    let gageHeightOut: CGFloat = UIScreen.width * 0.025
+    let gageHeightIn: CGFloat = UIScreen.width * 0.02
 
     @State var isPresenting: Bool = false
     @State var isCameraPresenting: Bool = false
@@ -49,125 +31,8 @@ struct MainView: View {
                     .scaledToFill()
                     .ignoresSafeArea()
                 VStack {
-                    Spacer().frame(height: 20)
-                    ZStack {
-                        Rectangle()
-                            .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.13)
-                            .foregroundColor(.white)
-                            .cornerRadius(15)
-                            .opacity(0.5)
-                            .offset(x: UIScreen.width * -0.14)
-                        HStack {
-                            Circle().foregroundColor(.gray)
-                                .frame(width: UIScreen.width * 0.08)
-                                .overlay(Circle().stroke())
-
-                            VStack { // 음식 대표 이미지와 게이지를 쌓는 스택
-                                HStack(spacing: 3) { // 녹색게이지칸스택
-                                    Image(systemName: "carrot")
-                                        .font(.system(size: 30))
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.vegiGreen)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnGreen1 ? .vegiGreen : .white)
-                                    }
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.vegiGreen)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnGreen2 ? .vegiGreen : .white)
-                                    }
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.vegiGreen)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnGreen3 ? .vegiGreen : .white)
-                                    }
-                                } // Hstack
-                            } // vstack
-
-                            VStack {
-                                HStack(spacing: 3) { // 빨강 게이지 스택
-                                    Image(systemName: "hare")
-                                        .font(.system(size: 30))
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.fruitRed)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnRed1 ? .fruitRed : .white)
-                                    }
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.fruitRed)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnRed2 ? .fruitRed : .white)
-                                    }
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.fruitRed)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnRed3 ? .fruitRed : .white)
-                                    }
-                                } // Hstack
-                            } // vstack
-
-                            VStack {
-                                HStack(spacing: 3) { // 오렌지 게이지 스택
-                                    Image(systemName: "fish")
-                                        .font(.system(size: 30))
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.meatYellow)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnOrange1 ? .meatYellow : .white)
-                                    }
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.meatYellow)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnOrange2 ? .meatYellow : .white)
-                                    }
-                                    ZStack {
-                                        Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
-//                                            .foregroundColor(.meatYellow)
-                                            .cornerRadius(8)
-                                        Rectangle().frame(width: gageWidthIn, height: gageHeightIn)
-
-                                            .cornerRadius(6)
-                                            .foregroundColor(turnOrange3 ? .meatYellow : .white)
-                                    }
-                                } // Hstack
-                            } // vstack
-
-                            Spacer().frame(width: UIScreen.width * 0.35)
-                        } // 각 게이지와 레벨 상태 표시 상태창 스택
-                    }
-
+                    Spacer().frame(height: UIScreen.height * 0.025)
+                    StatusView(gageVar: _gageVar)
                     Spacer() // 상태창과 도감공룡먹이 스택 사이 공간
 
                     HStack {
@@ -180,7 +45,7 @@ struct MainView: View {
                             }
                         }
 
-                        Spacer().frame(width: UIScreen.width * 0.35)
+                        Spacer().frame(width: UIScreen.width*0.04)
 
                         ZStack {
                             // 공룡터치시 하트나오는 ForEach
@@ -230,79 +95,11 @@ struct MainView: View {
                                     .onTapGesture {
                                         heartNum += 1
                                     }
-                                // 공룡이 먹고싶은 음식 말풍선
-                                Image(systemName: "bubble.left")
-                                    .opacity(bubbleOn ? 1 : 0)
-                                    .animation(.default, value: bubbleOn)
-                                    .font(.system(size: 100))
-                                    .offset(x: 170, y: -130)
-                                // 공룡이 먹고싶은 음식 이미지
-                                Image(systemName: "leaf")
-                                    .opacity(vegeOn ? 1 : 0)
-                                    .animation(.default, value: vegeOn)
-                                    .font(.system(size: 50))
-                                    .offset(x: 170, y: -140)
                             }
 
-//                             더미버튼(실험용)
-                            VStack {
-                                Button {
-                                    greenCount += 1
-                                    switch greenCount {
-                                    case 1: turnGreen1 = true
-                                    case 2: turnGreen2 = true
-                                    case 3: turnGreen3 = true
-                                    default:
 
-                                        bubbleOn = true
-                                        vegeOn = true
-                                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-                                            bubbleOn = false
-                                            vegeOn = false
-                                        }
-                                    }
-                                } label: {
-                                    Text("vegetable Up")
-                                }
-                                .offset(x: -250)
-                                Button {
-                                    redCount += 1
-                                    switch redCount {
-                                    case 1: turnRed1 = true
-                                    case 2: turnRed2 = true
-                                    case 3: turnRed3 = true
-                                    default:
-                                        bubbleOn = true
-                                        vegeOn = true
-                                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-                                            bubbleOn = false
-                                            vegeOn = false
-                                        }
-                                    }
-                                } label: {
-                                    Text("meat Up")
-                                }
-                                .offset(x: -250)
-                                Button {
-                                    orangeCount += 1
-                                    switch orangeCount {
-                                    case 1: turnOrange1 = true
-                                    case 2: turnOrange2 = true
-                                    case 3: turnOrange3 = true
-                                    default:
-                                        bubbleOn = true
-                                        vegeOn = true
-                                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-                                            bubbleOn = false
-                                            vegeOn = false
-                                        }
-                                    }
-                                } label: {
-                                    Text("fruit Up")
-                                }
-                                .offset(x: -250)
-                            }
                         }
+                        Spacer().frame(width: UIScreen.width*0.04)
                         // 먹이주는 곳
                         FeedButton(isPresenting: $isPresenting)
                     } // 도감, 공룡, 먹이 내용 들어가는 스택
@@ -357,5 +154,6 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView().previewInterfaceOrientation(.landscapeRight)
             .environmentObject(ChosenFood())
+            .environmentObject(gageVariables())
     }
 }
