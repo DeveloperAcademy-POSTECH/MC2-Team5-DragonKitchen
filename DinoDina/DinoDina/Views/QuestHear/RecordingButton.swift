@@ -34,12 +34,13 @@ struct RecordingButton: View {
                     PaprikaView()
                 }
                 VStack {
-                    Text("들어보기")
+                    RoundedButton(widthScale: 0.3, heightScale: 0.148, sfSymbolName: "speaker.wave.2", content: "들어보기", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
+                        .padding()
                         .onTapGesture {
                             self.audioPlayer.startPlayback(audio: recording)
                         }
 
-                    Text("다시 녹음하기")
+                    RoundedButton(widthScale: 0.3, heightScale: 0.148, sfSymbolName: "arrow.counterclockwise", content: "다시 녹음하기", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
                         .onTapGesture {
                             isCounting = true
                             self.audioRecorder.deleteRecording(url: recording)
@@ -50,9 +51,8 @@ struct RecordingButton: View {
                                 progressValue = 0.0
                             }
                         }
-
-                    // 삭제 예정
-                    Text("삭제")
+                    // TODO: 발표 때는 삭제
+                    Text("개발용 삭제 버튼")
                         .onTapGesture {
                             self.audioRecorder.deleteRecording(url: recording)
                         }
