@@ -11,16 +11,20 @@ struct QuestHearView: View {
     @ObservedObject var audioRecorder = AudioRecorder()
 
     var body: some View {
-        VStack {
-            Text("파프리카로 어떤 소리를 낼 수 있을까요?")
-                .font(.title)
-                .fontWeight(.heavy)
-                .padding()
+        ZStack {
+            Color.questBackgroundColor
+                .ignoresSafeArea()
 
-            HStack {
+            VStack {
+                Text("파프리카로 어떤 소리를 낼 수 있을까요?")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .padding()
+
                 RecordingButton(audioRecorder: audioRecorder)
             }
         }
+
     }
 }
 
