@@ -53,7 +53,7 @@ struct ColorButton : View {
                 GridItem(.fixed(100))
             ],
             spacing: 13) {
-                ForEach(colors.indices, id: \.self) { _ in
+                ForEach(colors.indices, id: \.self) { index in
                     Button(action: {
                         isCleared = true
                         paprikaImage = "paprika"
