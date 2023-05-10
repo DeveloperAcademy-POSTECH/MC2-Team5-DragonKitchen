@@ -53,7 +53,7 @@ struct ColorButton : View {
                 GridItem(.fixed(100))
             ],
             spacing: 13) {
-                ForEach(colors.indices, id: \.self) { index in
+                ForEach(colors.indices, id: \.self) { _ in
                     Button(action: {
                         isCleared = true
 //                        selectedColor = index
