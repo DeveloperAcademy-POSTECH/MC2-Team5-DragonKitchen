@@ -36,6 +36,7 @@
 		BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */; };
 		BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */; };
 		DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */; };
+		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
 		DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorQuestVIew.swift; sourceTree = "<group>"; };
+		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				1B99A6902A09272C00EB6A18 /* BounceAnimationView.swift */,
 				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
 				DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */,
+				DAA445522A0BF969007F6B50 /* TextureQuestView.swift */,
 				6045F14A2A0BA561005B134B /* TitleView.swift */,
 				BF65D7E32A0A32E100B44877 /* QuestHear */,
 			);
@@ -292,6 +295,7 @@
 				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
 				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
 				BF65D7E92A0A32E100B44877 /* QuestHearView.swift in Sources */,
+				DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */,
 				6045F14B2A0BA561005B134B /* TitleView.swift in Sources */,
 				BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */,
 				DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */,
