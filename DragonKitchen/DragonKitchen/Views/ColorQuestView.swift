@@ -27,16 +27,21 @@ struct ColorQuestView: View {
                 
                 HStack {
                     // 파프리카 이미지 변경 및 위치 설정
-                    PaprikaImage(paprikaImage: $paprikaImage)
+                    Image(paprikaImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250)
+                        .padding(.leading, UIScreen.width/30)
+                        .padding(.bottom, UIScreen.height/30)
                 
                     Spacer()
                     
                     // 색상 버튼 6개
                     ColorButton(isCleared: $isCleared, paprikaImage: $paprikaImage)
                     
-                } // -------- HStack
-            } // --------- VStack
-        } // --------- ZStack
+                }
+            }
+        }
     }
 }
 
@@ -78,21 +83,6 @@ struct ColorButton : View {
             .padding(.bottom, UIScreen.height/30)
     }
 }
-
-struct PaprikaImage : View {
-    
-    @Binding var paprikaImage: String
-    
-    var body: some View {
-        Image(paprikaImage)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 250)
-            .padding(.leading, UIScreen.width/30)
-            .padding(.bottom, UIScreen.height/30)
-    }
-}
-
 
 struct ColorQuestView_Previews: PreviewProvider {
     static var previews: some View {
