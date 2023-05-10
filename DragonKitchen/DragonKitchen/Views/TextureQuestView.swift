@@ -11,6 +11,7 @@ struct TextureQuestView: View {
     let textures: [String] = ["basketballButton", "glassButton", "sandButton", "golfButton", "woodButton", "woolButton"]
     @State var selectedColor : Int = 0
     @State var isCleared: Bool = false
+    @State var paprikaImage: String = "paprikaGray_shadow"
        
        var body: some View {
            
@@ -28,6 +29,8 @@ struct TextureQuestView: View {
                    
                    HStack {
                        Image(paprikaImage)
+                           .resizable()
+                           .scaledToFit()
                        
                        Spacer()
                        
