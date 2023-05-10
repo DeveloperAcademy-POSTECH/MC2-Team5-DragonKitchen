@@ -61,6 +61,9 @@ struct TasteView: View {
                             }
                         }
                 }
+                Text("안녕하세요!!!")
+                    .font(.cookierun(.regular))
+//                CustomFont.text(hi: "안녕하세요!!")
             }
             .ignoresSafeArea()
             .offset(y: UIScreen.height * 0.1)

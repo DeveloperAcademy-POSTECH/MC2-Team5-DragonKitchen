@@ -5,6 +5,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>CookieRun-Regular.ttf</string>
+		<string>CookieRun-Bold.ttf</string>
+		<string>CookieRun-Black.ttf</string>
 	</array>
 </dict>
 </plist>

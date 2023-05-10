@@ -36,7 +36,7 @@ struct FoodResultView: View {
                     }
                 if !zoomed {
                     ZStack {
-                        Image("paprika")
+                        Image(chosen.chosenFood)
                             .resizable()
                             .matchedGeometryEffect(id: "morph", in: smooth)
                             .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)

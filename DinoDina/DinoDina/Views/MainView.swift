@@ -92,7 +92,7 @@ struct MainView: View {
                                 Image("StandingPlu") // 킹룡짱룡 위치
                                     .resizable()
                                     .scaledToFit()
-                                    ////                                    .minimumScaleFactor(0.1)
+                                    ////                                   .minimumScaleFactor(0.1)
                                     .onTapGesture {
                                         heartNum += 1
                                     }
@@ -103,9 +103,12 @@ struct MainView: View {
                         FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
                     } // 도감, 공룡, 먹이 내용 들어가는 스택
                 }
-                .overlay {
-                    PopupView(isPresenting: $isPresenting, isClicked: $isClicked, classifier: ImageClassifier())
+                if isClicked{
+                    Color.black.opacity(0.2).ignoresSafeArea()
                 }
+            }
+            .overlay {
+                PopupView(isPresenting: $isPresenting, isClicked: $isClicked, classifier: ImageClassifier())
             }
         }
     }
