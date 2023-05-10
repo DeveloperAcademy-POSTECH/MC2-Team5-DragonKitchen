@@ -24,4 +24,10 @@ extension Color {
     static let disabledProgressBarColor: Color = .init(hex: 0xD8D8D8)
     static let ProgressBarColor: Color = .init(hex: 0xFFBA00)
     static let questBackgroundColor: Color = .init(hex: 0xFFF4E7)
+    static let paprikaRed: Color = .init(hex: 0xE50000)
+    static let paprikaGreen: Color = .init(hex: 0x188406)
+    static let paprikaBurgundy: Color = .init(hex: 0x960A00)
+    static let paprikaOrange: Color = .init(hex: 0xFF6F00)
+    static let paprikaYellow: Color = .init(hex: 0xF6DA00)
+    static let paprikaBrown: Color = .init(hex: 0x6A2901)
 }

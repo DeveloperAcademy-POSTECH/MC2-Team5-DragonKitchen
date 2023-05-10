@@ -4,8 +4,6 @@
 //
 //  Created by Seohyun Hwang on 2023/05/09.
 //
-
-
 import SwiftUI
 
 struct ColorQuestView: View {
@@ -20,7 +18,7 @@ struct ColorQuestView: View {
             // 테이블 배경
             Image("tableBG1")
                 .resizable()
-                .frame(width: UIScreen.width, height: UIScreen.height,alignment: .center)
+                .ignoresSafeArea()
             
             VStack {
                 // 네비게이션바
@@ -30,9 +28,7 @@ struct ColorQuestView: View {
                 
                 HStack {
                     Image(paprikaImage)
-                    
-                    
-                    
+                
                     // 색 버튼 6개
                     ColorButton(isCleared: $isCleared, paprikaImage: $paprikaImage, selectedColor: $selectedColor)
                 } // -------- HStack
@@ -47,7 +43,7 @@ struct ColorButton : View {
     @Binding var paprikaImage: String
     @Binding var selectedColor : Int
     
-    let colors: [Color] = [Color.fruitRed, Color.vegiGreen, Color.meatYellow, .orange, .blue, .brown]
+    let colors: [Color] = [Color.paprikaRed, Color.vegiGreen, Color.paprikaBurgundy, Color.paprikaOrange, Color.paprikaYellow, Color.paprikaBrown]
     
     var body: some View {
         LazyVGrid(
@@ -57,10 +53,9 @@ struct ColorButton : View {
                 GridItem(.fixed(100))
             ],
             spacing: 13) {
-                ForEach(colors.indices) { index in
+                ForEach(colors.indices, id: \.self) { _ in
                     Button(action: {
                         isCleared = true
-                        selectedColor = index
                         paprikaImage = "paprika"
                     }) {
                         Circle()
