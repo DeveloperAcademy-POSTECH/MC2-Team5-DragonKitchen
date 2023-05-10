@@ -32,9 +32,9 @@ struct MainView: View {
                         StatusView(gageVar: _gageVar)
                             .offset(x: UIScreen.width * 0.13)
                         Button{
-                            if gageVar.isEvolution || gageVar.isEvolution2 {
+                            if gageVar.isEvolution {
                                 
-                                isTransform.toggle()
+                                isTransform = true
                                 gageVar.turnGreen1 = false
                                 gageVar.turnGreen2 = false
                                 gageVar.turnGreen3 = false
@@ -48,14 +48,14 @@ struct MainView: View {
                                 gageVar.redCount = 0
                                 gageVar.orangeCount = 0
                                 gageVar.isEvolution = false
-                                gageVar.isEvolution2 = false
+                                
                           
                             }
                             else {
                                 
                             }
                         } label: {
-                            RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution || gageVar.isEvolution2)
+                            RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution )
                         }
                        
                         Spacer().frame(width: UIScreen.width * 0.25)
@@ -135,7 +135,6 @@ struct MainView: View {
                                     .onTapGesture {
                                         heartNum += 1
                                     }
-                                    .shadow(color:.buttonColor ,radius:gageVar.isEvolution2 ? 15 : 0)
                                     .opacity(isTransform ? 1 : 0)
                                     .scaleEffect(isTransform ? 1 : 0)
                                     .animation(.easeOut.repeatCount(5), value: isTransform)

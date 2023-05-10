@@ -40,13 +40,7 @@ struct GageButton: View{
                     if  ((gageVar.greenCount == 2) && (gageVar.redCount == 3) && (gageVar.orangeCount == 3)) {
                         gageVar.greenCount += 1
                         gageVar.turnGreen3 = true
-                        if gageVar.evolutionCount == 0 {
-                            gageVar.isEvolution = true
-                            gageVar.evolutionCount += 1
-                        }
-                        else{
-                            gageVar.isEvolution2 = true
-                        }
+                        gageVar.isEvolution = true
                         
                         
                     }
@@ -65,13 +59,7 @@ struct GageButton: View{
                     if  ((gageVar.greenCount == 3) && (gageVar.redCount == 2) && (gageVar.orangeCount == 3)) {
                         gageVar.redCount += 1
                         gageVar.turnRed3 = true
-                        if gageVar.evolutionCount == 0 {
-                            gageVar.isEvolution = true
-                            gageVar.evolutionCount += 1
-                        }
-                        else{
-                            gageVar.isEvolution2 = true
-                        }
+                        gageVar.isEvolution = true
                     }
                     else{
                         gageVar.redCount += 1
@@ -88,13 +76,7 @@ struct GageButton: View{
                     if  ((gageVar.greenCount == 3) && (gageVar.redCount == 3) && (gageVar.orangeCount == 2)) {
                         gageVar.orangeCount += 1
                         gageVar.turnOrange3 = true
-                        if gageVar.evolutionCount == 0 {
-                            gageVar.isEvolution = true
-                            gageVar.evolutionCount += 1
-                        }
-                        else{
-                            gageVar.isEvolution2 = true
-                        }
+                        gageVar.isEvolution = true
                     }
                     else {
                         gageVar.orangeCount += 1
@@ -129,13 +111,7 @@ struct GageButton: View{
                 gageVar.greenCount = 3
                 gageVar.redCount = 3
                 gageVar.orangeCount = 3
-                if gageVar.evolutionCount == 0{
-                    gageVar.isEvolution = true
-                    gageVar.evolutionCount += 1
-                }
-                else {
-                    gageVar.isEvolution2 = true
-                }
+                gageVar.isEvolution = true
                 
             } label: {
                 Text("Full")
