@@ -23,6 +23,7 @@
 		1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F0FE2A060FC40021BBF0 /* MainView.swift */; };
 		1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */; };
 		1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */; };
+		6045F14B2A0BA561005B134B /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6045F14A2A0BA561005B134B /* TitleView.swift */; };
 		6080550E2A08835E00A2F499 /* GageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080550D2A08835E00A2F499 /* GageButton.swift */; };
 		608055102A0884B600A2F499 /* GageVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080550F2A0884B600A2F499 /* GageVariables.swift */; };
 		608055122A08D93100A2F499 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608055112A08D93100A2F499 /* StatusView.swift */; };
@@ -53,6 +54,7 @@
 		1BE1F0FE2A060FC40021BBF0 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIscreen.swift"; sourceTree = "<group>"; };
 		1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6045F14A2A0BA561005B134B /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		6080550D2A08835E00A2F499 /* GageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GageButton.swift; sourceTree = "<group>"; };
 		6080550F2A0884B600A2F499 /* GageVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GageVariables.swift; sourceTree = "<group>"; };
 		608055112A08D93100A2F499 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				1B99A6902A09272C00EB6A18 /* BounceAnimationView.swift */,
 				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
 				DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */,
+				6045F14A2A0BA561005B134B /* TitleView.swift */,
 				BF65D7E32A0A32E100B44877 /* QuestHear */,
 			);
 			path = Views;
@@ -289,6 +292,7 @@
 				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
 				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
 				BF65D7E92A0A32E100B44877 /* QuestHearView.swift in Sources */,
+				6045F14B2A0BA561005B134B /* TitleView.swift in Sources */,
 				BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */,
 				DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
