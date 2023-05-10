@@ -8,9 +8,8 @@ import SwiftUI
 
 struct ColorQuestView: View {
 
-    @State var selectedColor : Int = 0
     @State var isCleared: Bool = false
-    @State var paprikaImage: String = "paprikaGray"
+    @State var paprikaImage: String = "paprikaGray_shadow"
     
     var body: some View {
         
@@ -27,10 +26,17 @@ struct ColorQuestView: View {
                 Spacer()
                 
                 HStack {
+                    // 파프리카 크기 & 위치
                     Image(paprikaImage)
-                
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250)
+                        .padding(.leading, UIScreen.width/30)
+                        .padding(.bottom, UIScreen.height/30)
+                    Spacer()
+                    
                     // 색 버튼 6개
-                    ColorButton(isCleared: $isCleared, paprikaImage: $paprikaImage, selectedColor: $selectedColor)
+                    ColorButton(isCleared: $isCleared, paprikaImage: $paprikaImage)
                 } // -------- HStack
             } // --------- VStack
         } // --------- ZStack
@@ -41,22 +47,23 @@ struct ColorButton : View {
     
     @Binding var isCleared: Bool
     @Binding var paprikaImage: String
-    @Binding var selectedColor : Int
     
     let colors: [Color] = [Color.paprikaRed, Color.vegiGreen, Color.paprikaBurgundy, Color.paprikaOrange, Color.paprikaYellow, Color.paprikaBrown]
     
+    let paprikaColor : [String] = ["paprikaRed_shadow", "paprikaGreen_shadow", "paprikaBurgundy_shadow", "paprikaOrange_shadow", "paprikaYellow_shadow", "paprikaBrown_shadow"]
+    
     var body: some View {
         LazyVGrid(
-            columns: [
+            columns : [
                 GridItem(.fixed(100), spacing: 23),
                 GridItem(.fixed(100), spacing: 23),
                 GridItem(.fixed(100))
             ],
             spacing: 13) {
-                ForEach(colors.indices, id: \.self) { _ in
+                ForEach(colors.indices, id: \.self) { index in
                     Button(action: {
                         isCleared = true
-                        paprikaImage = "paprika"
+                        paprikaImage = paprikaColor[index]
                     }) {
                         Circle()
                             .fill(colors[index])
@@ -66,12 +73,15 @@ struct ColorButton : View {
                     }
                 }
             }
+            .padding(.trailing, UIScreen.width/15)
+            .padding(.bottom, UIScreen.height/30)
     }
 }
+
 
 struct ColorQuestView_Previews: PreviewProvider {
     static var previews: some View {
         
-        ColorQuestView()
+        ColorQuestView().previewInterfaceOrientation(.landscapeRight)
     }
 }
