@@ -14,13 +14,13 @@ struct TitleView: View {
             ZStack{
                 Image("TitleBackground")
                     .resizable()
-                    .frame(width: UIScreen.width, height: UIScreen.height * 1.1)
+                    .ignoresSafeArea()
                 VStack{
                     Image("Title")
                         .resizable()
                         .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.4)
                         .padding()
-                    RoundedButton(widthScale: 0.2, heightScale: 0.12, content: "시작", contentSize: 15, contentColor: .buttonTextColor , isActive: true)
+                    RoundedButton(widthScale: 0.2, heightScale: 0.12, content: "시작하기", contentSize: 15, contentColor: .buttonTextColor , isActive: true)
                 }
                 
             }
