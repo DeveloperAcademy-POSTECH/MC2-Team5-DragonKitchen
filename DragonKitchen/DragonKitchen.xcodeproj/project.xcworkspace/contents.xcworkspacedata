@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/jun/Xcode/MC2-Team5-DragonKitchen/DragonKitchen/DragonKitchen.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
