@@ -19,7 +19,6 @@ struct ColorQuestView: View {
             Image("tableBG1")
                 .resizable()
                 .ignoresSafeArea()
-//                .frame(width: UIScreen.width, height: UIScreen.height,alignment: .center)
             
             VStack {
                 // 네비게이션바
@@ -29,9 +28,7 @@ struct ColorQuestView: View {
                 
                 HStack {
                     Image(paprikaImage)
-                    
-                    
-                    
+                
                     // 색 버튼 6개
                     ColorButton(isCleared: $isCleared, paprikaImage: $paprikaImage, selectedColor: $selectedColor)
                 } // -------- HStack
