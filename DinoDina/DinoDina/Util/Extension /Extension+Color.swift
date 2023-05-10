@@ -23,4 +23,5 @@ extension Color {
     static let disabledButtonShadowColor: Color = .init(hex: 0x6A7878)
     static let disabledProgressBarColor: Color = .init(hex: 0xD8D8D8)
     static let ProgressBarColor: Color = .init(hex: 0xFFBA00)
+    static let questBackgroundColor: Color = .init(hex: 0xFFF4E7)
 }
