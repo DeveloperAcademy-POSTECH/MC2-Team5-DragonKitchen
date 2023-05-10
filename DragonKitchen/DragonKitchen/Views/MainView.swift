@@ -1,4 +1,4 @@
-//
+
 //  MainView.swift
 //  DinoDina
 //
@@ -11,15 +11,11 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var gageVar : gageVariables
 
-    // 하트뿅뿅
-    @State var heartBB = false
-    @State var heartNum: Int = 0
-    let moveHeart: CGFloat = -120
-    let gageWidthOut: CGFloat = UIScreen.width * 0.025
-    let gageWidthIn: CGFloat = UIScreen.width * 0.02
-    let gageHeightOut: CGFloat = UIScreen.width * 0.025
-    let gageHeightIn: CGFloat = UIScreen.width * 0.02
+    
 
+    @State var heartNum: Int = 0
+    let heartXOffset: CGFloat = -120
+    @State var isTransform: Bool = false
     @State var isPresenting: Bool = false
     @State var isCameraPresenting: Bool = false
 
@@ -32,9 +28,42 @@ struct MainView: View {
                     .ignoresSafeArea()
                 VStack {
                     Spacer().frame(height: UIScreen.height * 0.025)
-                    StatusView(gageVar: _gageVar)
+                    HStack{
+                        StatusView(gageVar: _gageVar)
+                            .offset(x: UIScreen.width * 0.13)
+                        Button{
+                            if gageVar.isEvolution || gageVar.isEvolution2 {
+                                
+                                isTransform.toggle()
+                                gageVar.turnGreen1 = false
+                                gageVar.turnGreen2 = false
+                                gageVar.turnGreen3 = false
+                                gageVar.turnRed1 = false
+                                gageVar.turnRed2 = false
+                                gageVar.turnRed3 = false
+                                gageVar.turnOrange1 = false
+                                gageVar.turnOrange2 = false
+                                gageVar.turnOrange3 = false
+                                gageVar.greenCount = 0
+                                gageVar.redCount = 0
+                                gageVar.orangeCount = 0
+                                gageVar.isEvolution = false
+                                gageVar.isEvolution2 = false
+                          
+                            }
+                            else {
+                                
+                            }
+                        } label: {
+                            RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution || gageVar.isEvolution2)
+                        }
+                       
+                        Spacer().frame(width: UIScreen.width * 0.25)
+                    }
+                    PushView(destination:GageButton()){
+                        Text("test")
+                    }
                     Spacer() // 상태창과 도감공룡먹이 스택 사이 공간
-
                     HStack {
                         // 도감 이미지
                         VStack {
@@ -50,42 +79,42 @@ struct MainView: View {
                         ZStack {
                             // 공룡터치시 하트나오는 ForEach
                             ZStack {
-                                ForEach(0 ..< 2 * heartNum, id: \.self) { _ in
+                                ForEach(0 ..< 1 * heartNum, id: \.self) { _ in
                                     Image(systemName: "heart.fill")
                                         .resizable()
                                         .foregroundColor(.red)
                                         .frame(width: 30, height: 30)
-                                        .offset(x: 65 + moveHeart, y: -130)
+                                        .offset(x: 65 + heartXOffset, y: -130)
                                         .modifier(HeartModifier())
                                         .padding()
                                     Image(systemName: "heart.fill")
                                         .resizable()
                                         .foregroundColor(.red)
                                         .frame(width: 30, height: 30)
-                                        .offset(x: 120 + moveHeart, y: -150)
+                                        .offset(x: 120 + heartXOffset, y: -150)
                                         .modifier(HeartModifier())
                                         .padding()
                                     Image(systemName: "heart.fill")
                                         .resizable()
                                         .foregroundColor(.red)
                                         .frame(width: 30, height: 30)
-                                        .offset(x: 135 + moveHeart, y: -110)
+                                        .offset(x: 135 + heartXOffset, y: -110)
                                         .modifier(HeartModifier())
                                         .padding()
                                     Image(systemName: "heart.fill")
                                         .resizable()
                                         .foregroundColor(.red)
                                         .frame(width: 30, height: 30)
-                                        .offset(x: 125 + moveHeart, y: -100)
+                                        .offset(x: 125 + heartXOffset, y: -100)
                                         .modifier(HeartModifier())
                                         .padding()
-                                    Image(systemName: "heart.fill")
-                                        .resizable()
-                                        .foregroundColor(.red)
-                                        .frame(width: 30, height: 30)
-                                        .offset(x: 105 + moveHeart, y: -110)
-                                        .modifier(HeartModifier())
-                                        .padding()
+//                                    Image(systemName: "heart.fill")
+//                                        .resizable()
+//                                        .foregroundColor(.red)
+//                                        .frame(width: 30, height: 30)
+//                                        .offset(x: 105 + moveHeart, y: -110)
+//                                        .modifier(HeartModifier())
+//                                        .padding()
                                 }
                                 // 공룡이미지 탭하는 경우 하트 뿅뿅
                                 Image("StandingPlu") // 킹룡짱룡 위치
@@ -95,6 +124,22 @@ struct MainView: View {
                                     .onTapGesture {
                                         heartNum += 1
                                     }
+                                    .shadow(color:.buttonColor ,radius:gageVar.isEvolution ? 15 : 0)
+                                    .opacity(isTransform ? 0 : 1)
+                                    .scaleEffect(isTransform ? 0 : 1)
+                                    .animation(.easeOut.repeatCount(5), value: isTransform)
+                                Image("StandingHiel") // 킹룡짱룡 위치
+                                    .resizable()
+                                    .scaledToFit()
+                                    ////                                    .minimumScaleFactor(0.1)
+                                    .onTapGesture {
+                                        heartNum += 1
+                                    }
+                                    .shadow(color:.buttonColor ,radius:gageVar.isEvolution2 ? 15 : 0)
+                                    .opacity(isTransform ? 1 : 0)
+                                    .scaleEffect(isTransform ? 1 : 0)
+                                    .animation(.easeOut.repeatCount(5), value: isTransform)
+                                
                             }
 
 
@@ -112,43 +157,6 @@ struct MainView: View {
     }
 }
 
-struct HeartEffect: GeometryEffect {
-    var time: Double
-    var speed = Double.random(in: 100 ... 200)
-    var xDirection = Double.random(in: -0.1 ... 0.2)
-    var yDirection = Double.random(in: -Double.pi ... 0)
-
-    var animatableData: Double {
-        get { time }
-        set { time = newValue }
-    }
-
-    func effectValue(size _: CGSize) -> ProjectionTransform {
-        let xTranslation = speed * xDirection
-        let yTranslation = speed * sin(yDirection) * time
-        let affineTranslation = CGAffineTransform(translationX: xTranslation, y: yTranslation)
-        return ProjectionTransform(affineTranslation)
-    }
-} // 하트 움직임
-
-struct HeartModifier: ViewModifier {
-    @State var time = 0.0
-    let duration = 1.0
-
-    func body(content: Content) -> some View {
-        ZStack {
-            content
-                .foregroundColor(.red)
-                .modifier(HeartEffect(time: time))
-                .opacity(time == 1 ? 0 : 1)
-        }
-        .onAppear {
-            withAnimation(.easeOut(duration: duration)) {
-                self.time = duration
-            }
-        }
-    }
-} // 하트 움직임 Viewmodifier
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

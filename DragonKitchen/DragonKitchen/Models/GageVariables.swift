@@ -20,4 +20,7 @@ class gageVariables: ObservableObject {
     @Published var turnOrange2 = false
     @Published var turnOrange3 = false
     @Published var orangeCount: Int = 0
+    @Published var isEvolution = false
+    @Published var isEvolution2 = false
+    @Published var evolutionCount = 0
 }
