@@ -23,6 +23,7 @@
 		1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F0FE2A060FC40021BBF0 /* MainView.swift */; };
 		1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */; };
 		1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */; };
+		603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */; };
 		6045F14B2A0BA561005B134B /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6045F14A2A0BA561005B134B /* TitleView.swift */; };
 		6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6045F14C2A0BCAAA005B134B /* SelectView.swift */; };
 		6080550E2A08835E00A2F499 /* GageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080550D2A08835E00A2F499 /* GageButton.swift */; };
@@ -55,6 +56,7 @@
 		1BE1F0FE2A060FC40021BBF0 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIscreen.swift"; sourceTree = "<group>"; };
 		1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenDragon.swift; sourceTree = "<group>"; };
 		6045F14A2A0BA561005B134B /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		6045F14C2A0BCAAA005B134B /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		6080550D2A08835E00A2F499 /* GageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GageButton.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */,
 				6080550F2A0884B600A2F499 /* GageVariables.swift */,
 				1B1D41682A033325000C9B2B /* ChosenFood.swift */,
+				603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */,
 				BF65D7EA2A0A32F400B44877 /* QuestHear */,
 			);
 			path = Models;
@@ -300,6 +303,7 @@
 				DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
+				603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */,
 				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
 				6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */,
 				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,

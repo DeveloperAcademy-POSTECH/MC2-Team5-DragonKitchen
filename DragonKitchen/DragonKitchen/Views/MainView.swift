@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var gageVar : gageVariables
-
+    @EnvironmentObject var chosen : ChosenDragon
     // 하트뿅뿅
     @State var heartBB = false
     @State var heartNum: Int = 0
@@ -87,7 +87,7 @@ struct MainView: View {
                                         .padding()
                                 }
                                 // 공룡이미지 탭하는 경우 하트 뿅뿅
-                                Image("StandingPlu") // 킹룡짱룡 위치
+                                Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
                                     .resizable()
                                     .scaledToFit()
                                     ////                                    .minimumScaleFactor(0.1)

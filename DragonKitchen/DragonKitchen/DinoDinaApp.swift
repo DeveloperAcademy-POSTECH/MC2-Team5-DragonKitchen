@@ -18,6 +18,7 @@ struct DinoDinaApp: App {
 //                .environmentObject(gageVariables())
             TitleView()
                 .environmentObject(ChosenFood())
+                .environmentObject(ChosenDragon())
                 .environmentObject(gageVariables())
 //            TestMainView(classifier: ImageClassifier())
 //                .environmentObject(chosenFruit())
