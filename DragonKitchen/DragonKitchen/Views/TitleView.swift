@@ -20,7 +20,12 @@ struct TitleView: View {
                         .resizable()
                         .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.4)
                         .padding()
-                    RoundedButton(widthScale: 0.2, heightScale: 0.12, content: "시작하기", contentSize: 15, contentColor: .buttonTextColor , isActive: true)
+                    Button{
+                        
+                    } label: {
+                        RoundedButton(widthScale: 0.2, heightScale: 0.12, content: "시작하기", contentSize: 15, contentColor: .buttonTextColor , isActive: true)
+                    }
+                    
                 }
                 
             }
