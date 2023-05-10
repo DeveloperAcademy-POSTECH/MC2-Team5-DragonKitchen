@@ -24,7 +24,7 @@ struct MainView: View {
     @State var isCameraPresenting: Bool = false
 
     var body: some View {
-        NavigationStackView(transitionType: .none) {
+//        NavigationStackView(transitionType: .none) {
             ZStack {
                 Image("Background")
                     .resizable()
@@ -110,7 +110,7 @@ struct MainView: View {
             }
         }
     }
-}
+
 
 struct HeartEffect: GeometryEffect {
     var time: Double
