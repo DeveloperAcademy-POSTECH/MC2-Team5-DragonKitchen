@@ -57,7 +57,7 @@
 		6080550F2A0884B600A2F499 /* GageVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GageVariables.swift; sourceTree = "<group>"; };
 		608055112A08D93100A2F499 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
-		BF07D25C2A00D18A00F9F225 /* DinoDina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoDina.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DinoDinaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoDinaApp.swift; sourceTree = "<group>"; };
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF65D7E42A0A32E100B44877 /* PaprikaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaprikaView.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		BF07D2532A00D18A00F9F225 = {
 			isa = PBXGroup;
 			children = (
-				BF07D25E2A00D18A00F9F225 /* DinoDina */,
+				BF07D25E2A00D18A00F9F225 /* DragonKitchen */,
 				BF07D25D2A00D18A00F9F225 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 		BF07D25D2A00D18A00F9F225 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF07D25C2A00D18A00F9F225 /* DinoDina.app */,
+				BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF07D25E2A00D18A00F9F225 /* DinoDina */ = {
+		BF07D25E2A00D18A00F9F225 /* DragonKitchen */ = {
 			isa = PBXGroup;
 			children = (
 				1B9A37872A0A1F0400C63FB0 /* Test */,
@@ -172,7 +172,7 @@
 				BF07D2632A00D18B00F9F225 /* Assets.xcassets */,
 				BF07D2652A00D18B00F9F225 /* Preview Content */,
 			);
-			path = DinoDina;
+			path = DragonKitchen;
 			sourceTree = "<group>";
 		};
 		BF07D2652A00D18B00F9F225 /* Preview Content */ = {
@@ -205,9 +205,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF07D25B2A00D18A00F9F225 /* DinoDina */ = {
+		BF07D25B2A00D18A00F9F225 /* DragonKitchen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF07D26A2A00D18B00F9F225 /* Build configuration list for PBXNativeTarget "DinoDina" */;
+			buildConfigurationList = BF07D26A2A00D18B00F9F225 /* Build configuration list for PBXNativeTarget "DragonKitchen" */;
 			buildPhases = (
 				BF07D2582A00D18A00F9F225 /* Sources */,
 				BF07D2592A00D18A00F9F225 /* Frameworks */,
@@ -217,12 +217,12 @@
 			);
 			dependencies = (
 			);
-			name = DinoDina;
+			name = DragonKitchen;
 			packageProductDependencies = (
 				1B1D41642A025D01000C9B2B /* NavigationStack */,
 			);
 			productName = DinoDina;
-			productReference = BF07D25C2A00D18A00F9F225 /* DinoDina.app */;
+			productReference = BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -240,7 +240,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF07D2572A00D18A00F9F225 /* Build configuration list for PBXProject "DinoDina" */;
+			buildConfigurationList = BF07D2572A00D18A00F9F225 /* Build configuration list for PBXProject "DragonKitchen" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -256,7 +256,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF07D25B2A00D18A00F9F225 /* DinoDina */,
+				BF07D25B2A00D18A00F9F225 /* DragonKitchen */,
 			);
 		};
 /* End PBXProject section */
@@ -496,7 +496,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF07D2572A00D18A00F9F225 /* Build configuration list for PBXProject "DinoDina" */ = {
+		BF07D2572A00D18A00F9F225 /* Build configuration list for PBXProject "DragonKitchen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF07D2682A00D18B00F9F225 /* Debug */,
@@ -505,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF07D26A2A00D18B00F9F225 /* Build configuration list for PBXNativeTarget "DinoDina" */ = {
+		BF07D26A2A00D18B00F9F225 /* Build configuration list for PBXNativeTarget "DragonKitchen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF07D26B2A00D18B00F9F225 /* Debug */,
