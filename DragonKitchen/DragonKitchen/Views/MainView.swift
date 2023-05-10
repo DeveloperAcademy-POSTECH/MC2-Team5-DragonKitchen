@@ -24,7 +24,6 @@ struct MainView: View {
     @State var isCameraPresenting: Bool = false
 
     var body: some View {
-//        NavigationStackView(transitionType: .none) {
             ZStack {
                 Image("Background")
                     .resizable()

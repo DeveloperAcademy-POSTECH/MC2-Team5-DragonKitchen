@@ -27,7 +27,7 @@ struct SelectView: View {
                     Text("어떤 공룡을 키울까요?")
                         .font(.system(size: 35))
                     Spacer()
-                    PushView(destination:MainView()){
+                    PushView(destination: MainView()){
                         Image("GoButton")
                             .resizable()
                             .scaledToFit()
@@ -82,5 +82,6 @@ struct SelectView_Previews: PreviewProvider {
     static var previews: some View {
         SelectView()
             .previewInterfaceOrientation(.landscapeRight)
+            
     }
 }

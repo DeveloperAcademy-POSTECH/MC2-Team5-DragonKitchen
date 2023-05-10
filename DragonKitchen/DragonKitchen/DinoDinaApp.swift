@@ -13,7 +13,10 @@ struct DinoDinaApp: App {
         WindowGroup {
 //            TestMainView(classifier: ImageClassifier())
 //            FoodCameraView(classifier: ImageClassifier())
-            MainView()
+//            MainView()
+//                .environmentObject(ChosenFood())
+//                .environmentObject(gageVariables())
+            TitleView()
                 .environmentObject(ChosenFood())
                 .environmentObject(gageVariables())
 //            TestMainView(classifier: ImageClassifier())
