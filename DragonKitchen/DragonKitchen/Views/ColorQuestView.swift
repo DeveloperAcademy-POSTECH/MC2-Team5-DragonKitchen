@@ -56,7 +56,6 @@ struct ColorButton : View {
                 ForEach(colors.indices, id: \.self) { _ in
                     Button(action: {
                         isCleared = true
-//                        selectedColor = index
                         paprikaImage = "paprika"
                     }) {
                         Circle()
