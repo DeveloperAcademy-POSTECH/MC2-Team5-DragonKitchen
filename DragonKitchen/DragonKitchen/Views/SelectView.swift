@@ -28,7 +28,7 @@ struct SelectView: View {
                     Text("어떤 드래곤을 키울까요?")
                         .font(.system(size: 35))
                     Spacer()
-                    if chosen.chosenDragon == "" {
+                    if chosen.chosenDragon == ("", "") {
                         Image("DisabledGoButton")
                             .resizable()
                             .scaledToFit()
@@ -56,9 +56,9 @@ struct SelectView: View {
                                 isHielGray = true
                                 isPluGray = false
                                 isPluGlow = true
-                                chosen.chosenDragon = "Plu"
+                                chosen.chosenDragon = ("Plu", "플루")
                             }
-                        Text("플루")
+                        Text(chosen.chosenDragon.1)
                             .font(.system(size: 25))
 //
                     }
@@ -75,9 +75,9 @@ struct SelectView: View {
                                 isPluGray = true
                                 isHielGray = false
                                 isHielGlow = true
-                                chosen.chosenDragon = "Hiel"
+                                chosen.chosenDragon = ("Hiel", "이엘")
                             }
-                        Text("이엘")
+                        Text(chosen.chosenDragon.1)
                             .font(.system(size: 25))
 //
                     }

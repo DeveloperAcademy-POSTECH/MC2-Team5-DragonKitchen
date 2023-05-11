@@ -9,16 +9,16 @@ import NavigationStack
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var gageVar : gageVariables
-    @EnvironmentObject var chosen : ChosenDragon
-    
+    @EnvironmentObject var gageVar: gageVariables
+    @EnvironmentObject var chosen: ChosenDragon
+
     @State var heartNum: Int = 0
     let heartXOffset: CGFloat = -120
     @State var isTransform: Bool = false
     @State var isPresenting: Bool = false
     @State var isCameraPresenting: Bool = false
     @State var isClicked: Bool = false
-    
+
     var body: some View {
         ZStack {
             Image("Background")
@@ -27,12 +27,11 @@ struct MainView: View {
                 .ignoresSafeArea()
             VStack {
                 Spacer().frame(height: UIScreen.height * 0.025)
-                HStack{
+                HStack {
                     StatusView(gageVar: _gageVar)
                         .offset(x: UIScreen.width * 0.13)
-                    Button{
+                    Button {
                         if gageVar.isEvolution {
-                            
                             isTransform = true
                             gageVar.turnGreen1 = false
                             gageVar.turnGreen2 = false
@@ -47,24 +46,19 @@ struct MainView: View {
                             gageVar.redCount = 0
                             gageVar.orangeCount = 0
                             gageVar.isEvolution = false
-                            
-                            
                         }
-                        else {
-                            
-                        }
+                        else {}
                     } label: {
-                        RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution )
+                        RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution)
                     }
-                    
-                    
+
                     Spacer().frame(width: UIScreen.width * 0.25)
                 }
-                PushView(destination:GageButton()){
+                PushView(destination: GageButton()) {
                     Text("test")
                 }
                 Spacer() // 상태창과 도감공룡먹이 스택 사이 공간
-                ZStack{
+                ZStack {
                     HStack {
                         // 도감 이미지
                         VStack {
@@ -74,14 +68,13 @@ struct MainView: View {
                                 //                                    .font(.system(size: 30))
                             }
                         }
-                        
-                        Spacer().frame(width: UIScreen.width*0.55)
-                        
-                        
+
+                        Spacer().frame(width: UIScreen.width * 0.55)
+
                         // 먹이주는 곳
                         FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
                     } // 도감, 공룡, 먹이 내용 들어가는 스택
-                    
+
                     ZStack {
                         // 공룡터치시 하트나오는 ForEach
                         ZStack {
@@ -126,30 +119,27 @@ struct MainView: View {
                             Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
-                            ////                                   .minimumScaleFactor(0.1)
+                                ////                                   .minimumScaleFactor(0.1)
                                 .onTapGesture {
                                     heartNum += 1
                                 }
-                                .shadow(color:.buttonColor ,radius:gageVar.isEvolution ? 15 : 0)
+                                .shadow(color: .buttonColor, radius: gageVar.isEvolution ? 15 : 0)
                                 .opacity(isTransform ? 0 : 1)
                                 .scaleEffect(isTransform ? 0 : 1)
                                 .animation(.easeOut.repeatCount(5), value: isTransform)
                             Image("StandingHiel") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
-                            ////                                    .minimumScaleFactor(0.1)
+                                ////                                    .minimumScaleFactor(0.1)
                                 .onTapGesture {
                                     heartNum += 1
                                 }
                                 .opacity(isTransform ? 1 : 0)
                                 .scaleEffect(isTransform ? 1 : 0)
                                 .animation(.easeOut.repeatCount(5), value: isTransform)
-                            
                         }
                     }
-                    
                 }
-                
             }
             if isClicked {
                 Color.black.opacity(0.2).ignoresSafeArea()
@@ -161,12 +151,11 @@ struct MainView: View {
     }
 }
 
-
-
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView().previewInterfaceOrientation(.landscapeRight)
             .environmentObject(ChosenFood())
             .environmentObject(gageVariables())
+            .environmentObject(ChosenDragon())
     }
 }
