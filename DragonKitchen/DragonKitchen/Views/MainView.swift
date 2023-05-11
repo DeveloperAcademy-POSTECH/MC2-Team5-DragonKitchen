@@ -55,57 +55,44 @@ struct MainView: View {
                     } label: {
                         RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution )
                     }
-                    
-                    
+                    PushView(destination: GageButton()){
+                        Text("dioj")
+                    }
                     Spacer().frame(width: UIScreen.width * 0.25)
                 }
-                PushView(destination:GageButton()){
-                    Text("test")
-                }
-                Spacer() // 상태창과 도감공룡먹이 스택 사이 공간
-                ZStack{
+                Spacer().frame(height: UIScreen.height * 0.3)
                     HStack {
                         // 도감 이미지
                         VStack {
-                            Spacer().frame(height: UIScreen.height * 0.1)
+                            
                             Button {} label: {
                                 Image("Book")
-                                //                                    .font(.system(size: 30))
+                               
                             }
                         }
                         
-                        Spacer().frame(width: UIScreen.width*0.55)
-                        
-                        
+                        Spacer().frame(width: UIScreen.width*0.5)
+
                         // 먹이주는 곳
                         FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
                     } // 도감, 공룡, 먹이 내용 들어가는 스택
                     
-                    ZStack {
-                        // 공룡터치시 하트나오는 ForEach
-                        ZStack {
-                            ForEach(0 ..< 2 * heartNum, id: \.self) { _ in
-                                HeartImage(xOffset: -55, yOffset: -130, heartColor: .red)
-                                HeartImage(xOffset: 15, yOffset: -150, heartColor: .blue)
-                                HeartImage(xOffset: 25, yOffset: -110, heartColor: .green)
-                                HeartImage(xOffset: 10, yOffset: -100, heartColor: .orange)
+                        
+            }
+            // 공룡터치시 하트나오는 ForEach
+            ZStack {
+                ForEach(0 ..< 2 * heartNum, id: \.self) { _ in
+                    HeartImage(xOffset: -55, yOffset: -120, heartColor: .red)
+                    HeartImage(xOffset: 15, yOffset: -140, heartColor: .red)
+                    HeartImage(xOffset: 25, yOffset: -100, heartColor: .red)
+                    HeartImage(xOffset: 10, yOffset: -90, heartColor: .red)
 
-                            }
+                }
 //                             공룡이미지 탭하는 경우 하트 뿅뿅
-//                            Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
-//                                .resizable()
-//                                .scaledToFit()
-//                            ////                                   .minimumScaleFactor(0.1)
-//                                .onTapGesture {
-//                                    heartNum += 1
-//                                }
-//                                .shadow(color:.buttonColor ,radius:gageVar.isEvolution ? 15 : 0)
-//                                .opacity(isTransform ? 0 : 1)
-//                                .scaleEffect(isTransform ? 0 : 1)
-//                                .animation(.easeOut.repeatCount(5), value: isTransform)
-                            Image("StandingPlu") // 임시
+                            Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
+                                .frame(width: UIScreen.width * 0.5)
                             ////                                   .minimumScaleFactor(0.1)
                                 .onTapGesture {
                                     heartNum += 1
@@ -114,7 +101,9 @@ struct MainView: View {
                                 .opacity(isTransform ? 0 : 1)
                                 .scaleEffect(isTransform ? 0 : 1)
                                 .animation(.easeOut.repeatCount(5), value: isTransform)
-                            Image("StandingHiel") // 킹룡짱룡 위치
+                                .offset(y: UIScreen.height * 0.1)
+                           
+                            Image("EggHiel") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
                             ////                                    .minimumScaleFactor(0.1)
@@ -124,11 +113,6 @@ struct MainView: View {
                                 .opacity(isTransform ? 1 : 0)
                                 .scaleEffect(isTransform ? 1 : 0)
                                 .animation(.easeOut.repeatCount(5), value: isTransform)
-                            
-                        }
-                    }
-                    
-                }
                 
             }
             if isClicked {
