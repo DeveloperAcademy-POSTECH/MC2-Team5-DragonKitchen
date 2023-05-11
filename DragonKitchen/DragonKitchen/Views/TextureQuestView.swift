@@ -47,6 +47,7 @@ struct TextureButton : View {
     @Binding var isCleared: Bool
     @State var selectedButton : Int?
     @Binding var foodImage: String
+    @EnvironmentObject var color: ChosenFood // 시각에서 선택한 색을 불러오는 변수
     @State var selectedTexture : String = ""
     
     let textures: [String] = ["basketball", "glass", "sand", "golf", "wood", "wool"]
@@ -58,12 +59,13 @@ struct TextureButton : View {
                 GridItem(.fixed(100), spacing: 23),
                 GridItem(.fixed(100))
             ],
-            spacing: 13) {
+            spacing: 13) { // 색상버튼 여섯 개의 동작
                 ForEach(textures.indices, id: \.self) { index in
                     Button(action: {
                         isCleared = true
                         selectedTexture = textures[index]
-                        foodImage = "\(selectedTexture)_red"
+                        // 음식 이미지를 "재질_색" 으로 바꾸기
+                        foodImage = "\(selectedTexture)_\(color.chosenColor)"
                         selectedButton = index
                     }) {
                         // 색상 버튼 모양
@@ -84,7 +86,6 @@ struct TextureButton : View {
 
 
 struct TextureQuestView_Previews: PreviewProvider {
-    
     
     static var previews: some View {
         TextureQuestView().previewInterfaceOrientation(.landscapeRight)
