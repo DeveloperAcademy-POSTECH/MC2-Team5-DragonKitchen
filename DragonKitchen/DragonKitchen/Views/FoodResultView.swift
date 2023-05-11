@@ -36,23 +36,20 @@ struct FoodResultView: View {
                     }
                 if !zoomed {
                     ZStack {
-                        Image("paprika")
+                        Image(chosen.chosenFood.0)
                             .resizable()
                             .matchedGeometryEffect(id: "morph", in: smooth)
                             .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
                     }
                 } else {
                     ZStack {
-                        Image("paprika")
+                        Image(chosen.chosenFood.0)
                             .resizable()
                             .matchedGeometryEffect(id: "morph", in: smooth)
                             .scaledToFit()
                             .frame(height: 200)
                             .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
                     }
-//                    .onAppear {
-//
-//                    }
                 }
             }
         }
