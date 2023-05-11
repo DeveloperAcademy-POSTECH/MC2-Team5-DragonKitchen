@@ -45,7 +45,7 @@ struct ColorQuestView: View {
         }
         .onAppear{
             if foodImage == "" {
-                foodImage = name.chosenFood + "Gray_shadow"
+//                foodImage = name.chosenFood + "Gray_shadow"
             }
         }
     }

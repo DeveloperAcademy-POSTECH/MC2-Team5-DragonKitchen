@@ -58,7 +58,7 @@ struct SelectView: View {
                                 isPluGlow = true
                                 chosen.chosenDragon = ("Plu", "플루")
                             }
-                        Text(chosen.chosenDragon.1)
+                        Text("플루")
                             .font(.system(size: 25))
 //
                     }
@@ -77,7 +77,7 @@ struct SelectView: View {
                                 isHielGlow = true
                                 chosen.chosenDragon = ("Hiel", "이엘")
                             }
-                        Text(chosen.chosenDragon.1)
+                        Text("이엘")
                             .font(.system(size: 25))
 //
                     }

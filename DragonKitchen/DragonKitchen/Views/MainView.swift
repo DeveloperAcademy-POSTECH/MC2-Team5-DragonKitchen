@@ -111,7 +111,7 @@ struct MainView: View {
                 Image("Final\(chosen.chosenDragon.0)") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: UIScreen.width * 0.6)
+                                .frame(width: UIScreen.width * 0.65)
                             ////                                    .minimumScaleFactor(0.1)
                                 .onTapGesture {
                                     heartNum += 1

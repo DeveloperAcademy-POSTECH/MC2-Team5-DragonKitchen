@@ -12,16 +12,16 @@ struct StatusView: View {
     @EnvironmentObject var gageVar: gageVariables
     @EnvironmentObject var chosen: ChosenDragon
 
-    @State var gageWidthOut: CGFloat = UIScreen.width * 0.028
+//    @State var gageWidthOut: CGFloat = UIScreen.width * 0.028
     @State var gageWidthIn: CGFloat = UIScreen.width * 0.025
-    @State var gageHeightOut: CGFloat = UIScreen.width * 0.028
+//    @State var gageHeightOut: CGFloat = UIScreen.width * 0.028
     @State var gageHeightIn: CGFloat = UIScreen.width * 0.025
 
    
     var body: some View {
         ZStack(alignment: .leading) {
             Rectangle()
-                .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.13)
+                .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.09)
                 .foregroundColor(.white)
                 .cornerRadius(15)
                 .opacity(0.5)
@@ -29,11 +29,11 @@ struct StatusView: View {
             HStack {
                 VStack{
                     ZStack{
-                        Image("MaskHiel")
+                        Image("Mask\(chosen.chosenDragon.0)")
                             .resizable()
                             .scaledToFit()
                             .frame(width: UIScreen.width * 0.089)
-                        Image("ProfileHiel")
+                        Image("Profile\(chosen.chosenDragon.0)")
                             .resizable()
                             .scaledToFit()
                             .frame(width: UIScreen.width * 0.055)
@@ -43,7 +43,7 @@ struct StatusView: View {
                         
                         
                     
-                    Text("Lv.1")
+                    Text("Lv.\(chosen.levelCount)")
                 }.offset(y:UIScreen.height * 0.04)
                     
 
