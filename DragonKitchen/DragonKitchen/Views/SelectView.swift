@@ -25,7 +25,7 @@ struct SelectView: View {
                 Spacer()
                 HStack(){
                     Spacer().frame(width: UIScreen.width * 0.25)
-                    Text("어떤 공룡을 키울까요?")
+                    Text("어떤 드래곤을 키울까요?")
                         .font(.system(size: 35))
                     Spacer()
                     if chosen.chosenDragon == "" {
