@@ -15,6 +15,7 @@ struct DragonKitchenApp: App {
                 .environmentObject(ChosenFood())
                 .environmentObject(ChosenDragon())
                 .environmentObject(gageVariables())
+                .environmentObject(CurrentPageModel())
         }
     }
 }

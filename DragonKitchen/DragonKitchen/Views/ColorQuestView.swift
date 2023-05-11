@@ -21,7 +21,7 @@ struct ColorQuestView: View {
             
             VStack {
                 // 네비게이션바
-                NavigationBar(isCleared: $isCleared)
+//                NavigationBar(isCleared: $isCleared)
 
                 Spacer()
                 

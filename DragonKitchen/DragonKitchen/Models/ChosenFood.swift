@@ -8,5 +8,5 @@
 import Foundation
 
 class ChosenFood: ObservableObject {
-    @Published var chosenFood: String = ""
+    @Published var chosenFood: (String, String) = ("", "")
 }

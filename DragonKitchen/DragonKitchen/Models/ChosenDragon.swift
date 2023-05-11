@@ -7,5 +7,5 @@
 
 import Foundation
 class ChosenDragon: ObservableObject {
-    @Published var chosenDragon: String = ""
+    @Published var chosenDragon: (String, String) = ("", "")
 }

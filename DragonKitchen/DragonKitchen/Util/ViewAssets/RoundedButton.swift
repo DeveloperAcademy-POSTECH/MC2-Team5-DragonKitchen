@@ -30,14 +30,14 @@ struct RoundedButton: View {
                 HStack {
                     if let sfSymbolName = sfSymbolName {
                         Image(systemName: sfSymbolName)
-                            .font(.system(size: contentSize, weight: .semibold))
-                            .foregroundColor(contentColor)
                     }
-                    Text(content).font(.system(size: contentSize)).foregroundColor(contentColor)
+                    Text(content)
                 }
             }
             .frame(width: UIScreen.width * widthScale, height: UIScreen.height * heightScale)
         }
+        .font(.cookierun(.regular))
+        .foregroundColor(contentColor)
     }
 }
 

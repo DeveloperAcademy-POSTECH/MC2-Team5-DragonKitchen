@@ -21,12 +21,12 @@ struct TextureQuestView: View {
                
                VStack {
                    // 네비게이션바
-                   NavigationBar(isCleared: $isCleared)
+//                   NavigationBar(isCleared: $isCleared)
                    
                    Spacer()
                    
                    HStack {
-                       Image(chosen.chosenFood)
+                       Image(chosen.chosenFood.0)
                            .resizable()
                            .scaledToFit()
                            .frame(width: 250)
@@ -63,7 +63,7 @@ struct TextureButton : View {
                     Button(action: {
                         isCleared = true
                         selectedTexture = textures[index]
-                        chosen.chosenFood = "\(selectedTexture)_red"
+                        chosen.chosenFood.0 = "\(selectedTexture)_red"
                         selectedButton = index
                     }) {
                         // 색상 버튼 모양
