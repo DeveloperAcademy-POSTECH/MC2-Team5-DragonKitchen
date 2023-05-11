@@ -9,7 +9,8 @@ import SwiftUI
 struct ColorQuestView: View {
 
     @State var isCleared: Bool = false
-    @State var paprikaImage: String = "paprikaGray_shadow"
+    @State var foodImage: String = "paprikaGray_shadow"
+    @EnvironmentObject var chosen: ChosenFood
     
     var body: some View {
         
@@ -27,7 +28,7 @@ struct ColorQuestView: View {
                 
                 HStack {
                     // 파프리카 이미지 변경 및 위치 설정
-                    Image(paprikaImage)
+                    Image(foodImage)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 250)
@@ -37,20 +38,22 @@ struct ColorQuestView: View {
                     Spacer()
                     
                     // 색상 버튼 6개
-                    ColorButton(isCleared: $isCleared, paprikaImage: $paprikaImage)
+                    ColorButton(isCleared: $isCleared, foodImage: $foodImage)
                     
                 }
             }
         }
+//        .onAppear{
+//            paprikaImage = chosen.chosenFood
+        
     }
 }
 
 struct ColorButton : View {
     
     @Binding var isCleared: Bool
-    @Binding var paprikaImage: String
+    @Binding var foodImage: String
     @State var selectedButton : Int?
-    let buttons = [0, 1, 2, 3, 4, 5]
     
     let colors: [Color] = [Color.paprikaRed, Color.vegiGreen, Color.paprikaBurgundy, Color.paprikaOrange, Color.paprikaYellow, Color.paprikaBrown]
     
@@ -67,7 +70,7 @@ struct ColorButton : View {
                 ForEach(colors.indices, id: \.self) { index in
                     Button(action: {
                         isCleared = true
-                        paprikaImage = paprikaColor[index]
+                        foodImage = paprikaColor[index]
                         selectedButton = index
                     }) {
                         // 색상 버튼 모양
@@ -85,8 +88,9 @@ struct ColorButton : View {
 }
 
 struct ColorQuestView_Previews: PreviewProvider {
+//    @Binding var paprikaImage: String
+    
     static var previews: some View {
-        
         ColorQuestView().previewInterfaceOrientation(.landscapeRight)
     }
 }
