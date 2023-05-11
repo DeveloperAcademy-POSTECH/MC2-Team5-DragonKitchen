@@ -63,12 +63,12 @@
 		1B99A68E2A07E41400EB6A18 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		1B9A37852A0A1A9B00C63FB0 /* DummView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummView.swift; sourceTree = "<group>"; };
 		1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodClassifier.mlmodel; sourceTree = "<group>"; };
-		1BD198EF2A0C913200702151 /* Extension+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extension+Font.swift"; path = "../../../../../../Downloads/Extension+Font.swift"; sourceTree = "<group>"; };
-		1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CookieRun-Bold.ttf"; path = "../../../../../Downloads/CookieRunFont_TTF/CookieRun-Bold.ttf"; sourceTree = "<group>"; };
-		1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CookieRun-Black.ttf"; path = "../../../../../Downloads/CookieRunFont_TTF/CookieRun-Black.ttf"; sourceTree = "<group>"; };
-		1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CookieRun-Regular.ttf"; path = "../../../../../Downloads/CookieRunFont_TTF/CookieRun-Regular.ttf"; sourceTree = "<group>"; };
+		1BD198EF2A0C913200702151 /* Extension+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
+		1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Bold.ttf"; sourceTree = "<group>"; };
+		1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Black.ttf"; sourceTree = "<group>"; };
+		1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Regular.ttf"; sourceTree = "<group>"; };
 		1BD198F62A0C970400702151 /* CurrentPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPageModel.swift; sourceTree = "<group>"; };
-		1BD198F82A0CF15E00702151 /* TasteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasteView.swift; path = ../../../../../Downloads/TasteView.swift; sourceTree = "<group>"; };
+		1BD198F82A0CF15E00702151 /* TasteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasteView.swift; sourceTree = "<group>"; };
 		1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButton.swift; sourceTree = "<group>"; };
 		1BE1F0FE2A060FC40021BBF0 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -165,11 +165,9 @@
 		1BE15F552A0BF19A003EC65B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-
 				1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */,
 				1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */,
 				1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */,
-
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -186,7 +184,6 @@
 		1BE1F1012A060FCB0021BBF0 /* Extension  */ = {
 			isa = PBXGroup;
 			children = (
-
 				1BD198EF2A0C913200702151 /* Extension+Font.swift */,
 				1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */,
 				609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */,
@@ -342,7 +339,6 @@
 				1BD198F02A0C913200702151 /* Extension+Font.swift in Sources */,
 				BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */,
 				1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */,
-
 				60B719012A0C9C2500C7CA9C /* HeartImage.swift in Sources */,
 				1BE15F512A0BF06D003EC65B /* (null) in Sources */,
 				BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */,
