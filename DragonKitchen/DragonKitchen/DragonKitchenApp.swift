@@ -11,8 +11,9 @@ import SwiftUI
 struct DragonKitchenApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            TitleView()
                 .environmentObject(ChosenFood())
+                .environmentObject(ChosenDragon())
                 .environmentObject(gageVariables())
         }
     }
