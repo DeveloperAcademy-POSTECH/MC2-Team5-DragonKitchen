@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TextureQuestView: View {
-    let textures: [String] = ["basketball", "glass", "sand", "golf", "wood", "wool"]
     @State var selectedColor : Int = 0
     @State var isCleared: Bool = false
     @EnvironmentObject var chosen: ChosenFood
@@ -45,14 +44,12 @@ struct TextureQuestView: View {
 
 struct TextureButton : View {
     
-    let textures: [String] = ["basketball", "glass", "sand", "golf", "wood", "wool"]
-    
     @Binding var isCleared: Bool
     @State var selectedButton : Int?
     @EnvironmentObject var chosen: ChosenFood
-//    let buttons = [0, 1, 2, 3, 4, 5]
+    @State var selectedTexture : String = ""
     
-    let paprikaTexture : [String] = ["sand_red", "sand_green", "sand_burgundy", "sand_orange", "sand_yellow", "sand_brown"]
+    let textures: [String] = ["basketball", "glass", "sand", "golf", "wood", "wool"]
     
     var body: some View {
         LazyVGrid(
@@ -65,7 +62,8 @@ struct TextureButton : View {
                 ForEach(textures.indices, id: \.self) { index in
                     Button(action: {
                         isCleared = true
-                        chosen.chosenFood = paprikaTexture[index]
+                        selectedTexture = textures[index]
+                        chosen.chosenFood = "\(selectedTexture)_red"
                         selectedButton = index
                     }) {
                         // 색상 버튼 모양
