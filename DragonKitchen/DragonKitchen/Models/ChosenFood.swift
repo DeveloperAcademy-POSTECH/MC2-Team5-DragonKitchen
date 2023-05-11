@@ -9,4 +9,5 @@ import Foundation
 
 class ChosenFood: ObservableObject {
     @Published var chosenFood: String = ""
+    @Published var chosenColor: String = ""
 }
