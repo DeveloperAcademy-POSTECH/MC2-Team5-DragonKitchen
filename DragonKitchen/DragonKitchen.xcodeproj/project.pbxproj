@@ -20,19 +20,19 @@
 		1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */; };
 		1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */; };
 		1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */; };
-		1BE15F4A2A0BEF15003EC65B /* (null) in Sources */ = {isa = PBXBuildFile; };
-		1BE15F4B2A0BEF15003EC65B /* (null) in Sources */ = {isa = PBXBuildFile; };
-		1BE15F4F2A0BF045003EC65B /* (null) in Sources */ = {isa = PBXBuildFile; };
-		1BE15F512A0BF06D003EC65B /* (null) in Sources */ = {isa = PBXBuildFile; };
-		1BE15F572A0BF33E003EC65B /* (null) in Resources */ = {isa = PBXBuildFile; };
-		1BE15F582A0BF340003EC65B /* (null) in Resources */ = {isa = PBXBuildFile; };
-		1BE15F592A0BF342003EC65B /* (null) in Resources */ = {isa = PBXBuildFile; };
+		1BE15F4A2A0BEF15003EC65B /* NavigationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE15F482A0BEF15003EC65B /* NavigationTest.swift */; };
+		1BE15F4B2A0BEF15003EC65B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE15F492A0BEF15003EC65B /* TestView.swift */; };
+		1BE15F4F2A0BF045003EC65B /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE15F4E2A0BF045003EC65B /* Extension+Font.swift */; };
+		1BE15F512A0BF06D003EC65B /* TasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE15F502A0BF06D003EC65B /* TasteView.swift */; };
+		1BE15F572A0BF33E003EC65B /* CookieRun-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BE15F522A0BF190003EC65B /* CookieRun-Black.ttf */; };
+		1BE15F582A0BF340003EC65B /* CookieRun-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BE15F542A0BF190003EC65B /* CookieRun-Regular.ttf */; };
+		1BE15F592A0BF342003EC65B /* CookieRun-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BE15F532A0BF190003EC65B /* CookieRun-Bold.ttf */; };
 		1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F0FE2A060FC40021BBF0 /* MainView.swift */; };
 		1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */; };
 		1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */; };
+		603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */; };
 		603036402A0B8A70004F4D0C /* HeartModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6030363F2A0B8A70004F4D0C /* HeartModifier.swift */; };
 		603036422A0B8A82004F4D0C /* HeartEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603036412A0B8A82004F4D0C /* HeartEffect.swift */; };
-		603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */; };
 		6045F14B2A0BA561005B134B /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6045F14A2A0BA561005B134B /* TitleView.swift */; };
 		6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6045F14C2A0BCAAA005B134B /* SelectView.swift */; };
 		6080550E2A08835E00A2F499 /* GageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080550D2A08835E00A2F499 /* GageButton.swift */; };
@@ -48,10 +48,10 @@
 		BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */; };
 		DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */; };
 		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
-		DAF1CDA12A0CF3EB002AB6DF /* TextureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1CDA02A0CF3EB002AB6DF /* TextureButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
 		1B1D41662A02642B000C9B2B /* FoodResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultView.swift; sourceTree = "<group>"; };
 		1B1D41682A033325000C9B2B /* ChosenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenFood.swift; sourceTree = "<group>"; };
 		1B6471B82A09DCFE0083599D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -67,14 +67,15 @@
 		1BE1F0FE2A060FC40021BBF0 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIscreen.swift"; sourceTree = "<group>"; };
 		1BE1F1082A06101C0021BBF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenDragon.swift; sourceTree = "<group>"; };
+		6045F14A2A0BA561005B134B /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		6045F14C2A0BCAAA005B134B /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		6030363F2A0B8A70004F4D0C /* HeartModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartModifier.swift; sourceTree = "<group>"; };
 		603036412A0B8A82004F4D0C /* HeartEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartEffect.swift; sourceTree = "<group>"; };
-		603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenDragon.swift; sourceTree = "<group>"; };
-		6045F14A2A0BA561005B134B /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleView.swift; path = DragonKitchen/Views/TitleView.swift; sourceTree = SOURCE_ROOT; };
-		6045F14C2A0BCAAA005B134B /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		6080550D2A08835E00A2F499 /* GageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GageButton.swift; sourceTree = "<group>"; };
 		6080550F2A0884B600A2F499 /* GageVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GageVariables.swift; sourceTree = "<group>"; };
-		608055112A08D93100A2F499 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		6045F14A2A0BA561005B134B /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleView.swift; path = DragonKitchen/Views/TitleView.swift; sourceTree = SOURCE_ROOT; };
+    608055112A08D93100A2F499 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragonKitchenApp.swift; path = DragonKitchen/DragonKitchenApp.swift; sourceTree = SOURCE_ROOT; };
@@ -86,7 +87,6 @@
 		BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressCircle.swift; path = DragonKitchen/Views/QuestHear/ProgressCircle.swift; sourceTree = SOURCE_ROOT; };
 		DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestVIew.swift; path = DragonKitchen/Views/ColorQuestVIew.swift; sourceTree = SOURCE_ROOT; };
 		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
-		DAF1CDA02A0CF3EB002AB6DF /* TextureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +107,10 @@
 				1BE1F0FE2A060FC40021BBF0 /* MainView.swift */,
 				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
 				1B99A6902A09272C00EB6A18 /* BounceAnimationView.swift */,
+				1BE15F502A0BF06D003EC65B /* TasteView.swift */,
 				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
 				DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */,
 				DAA445522A0BF969007F6B50 /* TextureQuestView.swift */,
-				DAF1CDA02A0CF3EB002AB6DF /* TextureButton.swift */,
 				6045F14A2A0BA561005B134B /* TitleView.swift */,
 				6045F14C2A0BCAAA005B134B /* SelectView.swift */,
 				BF65D7E32A0A32E100B44877 /* QuestHear */,
@@ -148,6 +148,8 @@
 		1B9A37872A0A1F0400C63FB0 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				1BE15F482A0BEF15003EC65B /* NavigationTest.swift */,
+				1BE15F492A0BEF15003EC65B /* TestView.swift */,
 				1B9A37852A0A1A9B00C63FB0 /* DummView.swift */,
 				6080550D2A08835E00A2F499 /* GageButton.swift */,
 			);
@@ -157,6 +159,9 @@
 		1BE15F552A0BF19A003EC65B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				1BE15F522A0BF190003EC65B /* CookieRun-Black.ttf */,
+				1BE15F532A0BF190003EC65B /* CookieRun-Bold.ttf */,
+				1BE15F542A0BF190003EC65B /* CookieRun-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 		1BE1F1012A060FCB0021BBF0 /* Extension  */ = {
 			isa = PBXGroup;
 			children = (
+				1BE15F4E2A0BF045003EC65B /* Extension+Font.swift */,
 				1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */,
 				609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */,
 			);
@@ -198,6 +204,7 @@
 		BF07D25E2A00D18A00F9F225 /* DragonKitchen */ = {
 			isa = PBXGroup;
 			children = (
+				1BE15F562A0BF1AD003EC65B /* Info.plist */,
 				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
 				1B92DECC2A01E05100AFB363 /* Models */,
@@ -303,10 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */,
-				1BE15F592A0BF342003EC65B /* (null) in Resources */,
-				1BE15F572A0BF33E003EC65B /* (null) in Resources */,
+				1BE15F592A0BF342003EC65B /* CookieRun-Bold.ttf in Resources */,
+				1BE15F572A0BF33E003EC65B /* CookieRun-Black.ttf in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
-				1BE15F582A0BF340003EC65B /* (null) in Resources */,
+				1BE15F582A0BF340003EC65B /* CookieRun-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,16 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE15F4B2A0BEF15003EC65B /* (null) in Sources */,
+				1BE15F4B2A0BEF15003EC65B /* TestView.swift in Sources */,
 				6080550E2A08835E00A2F499 /* GageButton.swift in Sources */,
 				608055122A08D93100A2F499 /* StatusView.swift in Sources */,
-				DAF1CDA12A0CF3EB002AB6DF /* TextureButton.swift in Sources */,
 				603036422A0B8A82004F4D0C /* HeartEffect.swift in Sources */,
 				608055102A0884B600A2F499 /* GageVariables.swift in Sources */,
 				603036402A0B8A70004F4D0C /* HeartModifier.swift in Sources */,
 				BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */,
 				1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */,
-				1BE15F512A0BF06D003EC65B /* (null) in Sources */,
+				1BE15F512A0BF06D003EC65B /* TasteView.swift in Sources */,
 				BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */,
 				1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */,
 				1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */,
@@ -340,11 +346,11 @@
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
 				603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */,
-				1BE15F4A2A0BEF15003EC65B /* (null) in Sources */,
+				1BE15F4A2A0BEF15003EC65B /* NavigationTest.swift in Sources */,
 				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
 				6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */,
 				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,
-				1BE15F4F2A0BF045003EC65B /* (null) in Sources */,
+				1BE15F4F2A0BF045003EC65B /* Extension+Font.swift in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
 				BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */,
