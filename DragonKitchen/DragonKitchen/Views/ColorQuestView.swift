@@ -9,7 +9,8 @@ import SwiftUI
 struct ColorQuestView: View {
 
     @State var isCleared: Bool = false
-    @State var paprikaImage: String = "paprikaGray_shadow"
+    @EnvironmentObject var name: ChosenFood
+    @State var foodImage: String = ""
     
     var body: some View {
         
@@ -27,7 +28,7 @@ struct ColorQuestView: View {
                 
                 HStack {
                     // 파프리카 이미지 변경 및 위치 설정
-                    Image(paprikaImage)
+                    Image(foodImage)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 250)
@@ -37,9 +38,14 @@ struct ColorQuestView: View {
                     Spacer()
                     
                     // 색상 버튼 6개
-                    ColorButton(isCleared: $isCleared, paprikaImage: $paprikaImage)
+                    ColorButton(isCleared: $isCleared, foodImage: $foodImage)
                     
                 }
+            }
+        }
+        .onAppear{
+            if foodImage == "" {
+                foodImage = name.chosenFood + "Gray_shadow"
             }
         }
     }
@@ -48,13 +54,13 @@ struct ColorQuestView: View {
 struct ColorButton : View {
     
     @Binding var isCleared: Bool
-    @Binding var paprikaImage: String
+    @Binding var foodImage: String
     @State var selectedButton : Int?
-    let buttons = [0, 1, 2, 3, 4, 5]
+    @EnvironmentObject var color: ChosenFood // 선택한 색상을 저장해두는 변수
     
     let colors: [Color] = [Color.paprikaRed, Color.vegiGreen, Color.paprikaBurgundy, Color.paprikaOrange, Color.paprikaYellow, Color.paprikaBrown]
     
-    let paprikaColor : [String] = ["paprikaRed_shadow", "paprikaGreen_shadow", "paprikaBurgundy_shadow", "paprikaOrange_shadow", "paprikaYellow_shadow", "paprikaBrown_shadow"]
+    let foodColor : [String] = ["paprikaRed_shadow", "paprikaGreen_shadow", "paprikaBurgundy_shadow", "paprikaOrange_shadow", "paprikaYellow_shadow", "paprikaBrown_shadow"]
     
     var body: some View {
         LazyVGrid(
@@ -67,8 +73,28 @@ struct ColorButton : View {
                 ForEach(colors.indices, id: \.self) { index in
                     Button(action: {
                         isCleared = true
-                        paprikaImage = paprikaColor[index]
+                        foodImage = foodColor[index]
                         selectedButton = index
+                        
+                        if(index == 0) { // 첫번째 버튼 : 빨강
+                            color.chosenColor = "red"
+                        }
+                        else if(index == 1) { // 두번째 버튼 : 초록
+                            color.chosenColor = "green"
+                        }
+                        else if(index == 2) { // 세번째 버튼 : 버건디
+                            color.chosenColor = "burgundy"
+                        }
+                        else if(index == 3) { // 네번째 버튼 : 주황
+                            color.chosenColor = "orange"
+                        }
+                        else if(index == 4) { // 다섯번째 버튼 : 노랑
+                            color.chosenColor = "yellow"
+                        }
+                        else { // 여섯번째 버튼 : 갈색
+                            color.chosenColor = "brown"
+                        }
+                        
                     }) {
                         // 색상 버튼 모양
                         Circle()
@@ -85,8 +111,8 @@ struct ColorButton : View {
 }
 
 struct ColorQuestView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        
         ColorQuestView().previewInterfaceOrientation(.landscapeRight)
     }
 }
