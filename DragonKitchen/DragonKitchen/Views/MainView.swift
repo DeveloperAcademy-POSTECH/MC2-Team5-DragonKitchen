@@ -11,7 +11,6 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var gageVar : gageVariables
     @EnvironmentObject var chosen : ChosenDragon
-    
     @State var heartNum: Int = 0
     let heartXOffset: CGFloat = -120
     @State var isTransform: Bool = false
@@ -85,45 +84,26 @@ struct MainView: View {
                     ZStack {
                         // 공룡터치시 하트나오는 ForEach
                         ZStack {
-                            ForEach(0 ..< 1 * heartNum, id: \.self) { _ in
-                                Image(systemName: "heart.fill")
-                                    .resizable()
-                                    .foregroundColor(.red)
-                                    .frame(width: 30, height: 30)
-                                    .offset(x: 65 + heartXOffset, y: -130)
-                                    .modifier(HeartModifier())
-                                    .padding()
-                                Image(systemName: "heart.fill")
-                                    .resizable()
-                                    .foregroundColor(.red)
-                                    .frame(width: 30, height: 30)
-                                    .offset(x: 120 + heartXOffset, y: -150)
-                                    .modifier(HeartModifier())
-                                    .padding()
-                                Image(systemName: "heart.fill")
-                                    .resizable()
-                                    .foregroundColor(.red)
-                                    .frame(width: 30, height: 30)
-                                    .offset(x: 135 + heartXOffset, y: -110)
-                                    .modifier(HeartModifier())
-                                    .padding()
-                                Image(systemName: "heart.fill")
-                                    .resizable()
-                                    .foregroundColor(.red)
-                                    .frame(width: 30, height: 30)
-                                    .offset(x: 125 + heartXOffset, y: -100)
-                                    .modifier(HeartModifier())
-                                    .padding()
-                                //                                    Image(systemName: "heart.fill")
-                                //                                        .resizable()
-                                //                                        .foregroundColor(.red)
-                                //                                        .frame(width: 30, height: 30)
-                                //                                        .offset(x: 105 + moveHeart, y: -110)
-                                //                                        .modifier(HeartModifier())
-                                //                                        .padding()
+                            ForEach(0 ..< 2 * heartNum, id: \.self) { _ in
+                                HeartImage(xOffset: -55, yOffset: -130, heartColor: .red)
+                                HeartImage(xOffset: 15, yOffset: -150, heartColor: .blue)
+                                HeartImage(xOffset: 25, yOffset: -110, heartColor: .green)
+                                HeartImage(xOffset: 10, yOffset: -100, heartColor: .orange)
+
                             }
-                            // 공룡이미지 탭하는 경우 하트 뿅뿅
-                            Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
+//                             공룡이미지 탭하는 경우 하트 뿅뿅
+//                            Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
+//                                .resizable()
+//                                .scaledToFit()
+//                            ////                                   .minimumScaleFactor(0.1)
+//                                .onTapGesture {
+//                                    heartNum += 1
+//                                }
+//                                .shadow(color:.buttonColor ,radius:gageVar.isEvolution ? 15 : 0)
+//                                .opacity(isTransform ? 0 : 1)
+//                                .scaleEffect(isTransform ? 0 : 1)
+//                                .animation(.easeOut.repeatCount(5), value: isTransform)
+                            Image("StandingPlu") // 임시
                                 .resizable()
                                 .scaledToFit()
                             ////                                   .minimumScaleFactor(0.1)
@@ -160,6 +140,7 @@ struct MainView: View {
         }
     }
 }
+
 
 
 
