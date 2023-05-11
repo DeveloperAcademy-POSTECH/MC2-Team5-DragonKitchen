@@ -10,6 +10,7 @@ import SwiftUI
 
 struct StatusView: View {
     @EnvironmentObject var gageVar: gageVariables
+    @EnvironmentObject var chosen: ChosenDragon
 
     @State var gageWidthOut: CGFloat = UIScreen.width * 0.028
     @State var gageWidthIn: CGFloat = UIScreen.width * 0.025
@@ -24,11 +25,26 @@ struct StatusView: View {
                 .foregroundColor(.white)
                 .cornerRadius(15)
                 .opacity(0.5)
+                .offset(x:UIScreen.width * 0.02)
             HStack {
-                Circle().foregroundColor(.gray)
-                    .frame(width: UIScreen.width * 0.08)
-                    .overlay(Circle().stroke(.black))
-
+                VStack{
+                    ZStack{
+                        Image("MaskHiel")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.width * 0.089)
+                        Image("ProfileHiel")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.width * 0.055)
+                    }
+                    
+                        
+                        
+                        
+                    
+                    Text("Lv.1")
+                }.offset(y:UIScreen.height * 0.04)
                     
 
                 VStack { // 음식 대표 이미지와 게이지를 쌓는 스택
@@ -47,6 +63,7 @@ struct StatusView: View {
                                 .foregroundColor(gageVar.turnGreen1 ? .vegiGreen : .white)
 
                                 .overlay(RoundedRectangle(cornerRadius: 6).stroke(.black, lineWidth: 2))
+                                
                         
                         
 //                            Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
@@ -167,5 +184,6 @@ struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
         StatusView()
             .environmentObject(gageVariables())
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }

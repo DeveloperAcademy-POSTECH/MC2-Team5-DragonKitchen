@@ -19,7 +19,7 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            Image("Background")
+            Image("MainBackground")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
@@ -44,7 +44,7 @@ struct MainView: View {
                             gageVar.redCount = 0
                             gageVar.orangeCount = 0
                             gageVar.isEvolution = false
-                            
+                            chosen.levelCount += 1
                         }
                         else {
                             
@@ -55,7 +55,7 @@ struct MainView: View {
                     PushView(destination: GageButton()){
                         Text("dioj")
                     }
-                    Spacer().frame(width: UIScreen.width * 0.25)
+                    Spacer().frame(width: UIScreen.width * 0.20)
                 }
                 Spacer().frame(height: UIScreen.height * 0.3)
                     HStack {
@@ -86,10 +86,10 @@ struct MainView: View {
 
                 }
 //                             공룡이미지 탭하는 경우 하트 뿅뿅
-                            Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
+                Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: UIScreen.width * 0.5)
+                                .frame(width: UIScreen.width * 0.4)
                             ////                                   .minimumScaleFactor(0.1)
                                 .onTapGesture {
                                     heartNum += 1
@@ -98,11 +98,12 @@ struct MainView: View {
                                 .opacity(gageVar.isTransform ? 0 : 1)
                                 .scaleEffect(gageVar.isTransform ? 0 : 1)
                                 .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
-                                .offset(y: UIScreen.height * 0.1)
+                                .offset(y: UIScreen.height * 0.15)
                            
-                            Image("EggHiel") // 킹룡짱룡 위치
+                Image("Final\(chosen.chosenDragon)") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
+                                .frame(width: UIScreen.width * 0.6)
                             ////                                    .minimumScaleFactor(0.1)
                                 .onTapGesture {
                                     heartNum += 1
@@ -110,6 +111,7 @@ struct MainView: View {
                                 .opacity(gageVar.isTransform ? 1 : 0)
                                 .scaleEffect(gageVar.isTransform ? 1 : 0)
                                 .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
+                                .offset(x:UIScreen.width * -0.02 ,y: UIScreen.height * 0.1)
                 
             }
             if isClicked {
