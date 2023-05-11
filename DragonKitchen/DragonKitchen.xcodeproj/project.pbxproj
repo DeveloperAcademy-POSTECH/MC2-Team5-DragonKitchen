@@ -41,6 +41,7 @@
 		608055102A0884B600A2F499 /* GageVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080550F2A0884B600A2F499 /* GageVariables.swift */; };
 		608055122A08D93100A2F499 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608055112A08D93100A2F499 /* StatusView.swift */; };
 		609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */; };
+		60B719012A0C9C2500C7CA9C /* HeartImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B719002A0C9C2500C7CA9C /* HeartImage.swift */; };
 		BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */; };
 		BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2632A00D18B00F9F225 /* Assets.xcassets */; };
 		BF65D7E72A0A32E100B44877 /* PaprikaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7E42A0A32E100B44877 /* PaprikaView.swift */; };
@@ -82,6 +83,7 @@
 		6080550F2A0884B600A2F499 /* GageVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GageVariables.swift; sourceTree = "<group>"; };
 		608055112A08D93100A2F499 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
+		60B719002A0C9C2500C7CA9C /* HeartImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartImage.swift; sourceTree = "<group>"; };
 		BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragonKitchenApp.swift; path = DragonKitchen/DragonKitchenApp.swift; sourceTree = SOURCE_ROOT; };
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DragonKitchen/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -133,6 +135,7 @@
 				608055112A08D93100A2F499 /* StatusView.swift */,
 				6030363F2A0B8A70004F4D0C /* HeartModifier.swift */,
 				603036412A0B8A82004F4D0C /* HeartEffect.swift */,
+				60B719002A0C9C2500C7CA9C /* HeartImage.swift */,
 			);
 			path = ViewAssets;
 			sourceTree = "<group>";
@@ -162,9 +165,11 @@
 		1BE15F552A0BF19A003EC65B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+
 				1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */,
 				1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */,
 				1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */,
+
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 		1BE1F1012A060FCB0021BBF0 /* Extension  */ = {
 			isa = PBXGroup;
 			children = (
+
 				1BD198EF2A0C913200702151 /* Extension+Font.swift */,
 				1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */,
 				609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */,
@@ -336,6 +342,8 @@
 				1BD198F02A0C913200702151 /* Extension+Font.swift in Sources */,
 				BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */,
 				1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */,
+
+				60B719012A0C9C2500C7CA9C /* HeartImage.swift in Sources */,
 				1BE15F512A0BF06D003EC65B /* (null) in Sources */,
 				BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */,
 				1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */,
