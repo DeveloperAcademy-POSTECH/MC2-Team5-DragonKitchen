@@ -8,16 +8,12 @@
 import SwiftUI
 
 @main
-struct DinoDinaApp: App {
+struct DragonKitchenApp: App {
     var body: some Scene {
         WindowGroup {
-//            TestMainView(classifier: ImageClassifier())
-//            FoodCameraView(classifier: ImageClassifier())
             MainView()
                 .environmentObject(ChosenFood())
                 .environmentObject(gageVariables())
-//            TestMainView(classifier: ImageClassifier())
-//                .environmentObject(chosenFruit())
         }
     }
 }

@@ -9,7 +9,7 @@ import NavigationStack
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var gageVar : gageVariables
+    @EnvironmentObject var gageVar: gageVariables
 
     
 
@@ -18,6 +18,7 @@ struct MainView: View {
     @State var isTransform: Bool = false
     @State var isPresenting: Bool = false
     @State var isCameraPresenting: Bool = false
+    @State var isClicked: Bool = false
 
     var body: some View {
         NavigationStackView(transitionType: .none) {
@@ -57,6 +58,7 @@ struct MainView: View {
                         } label: {
                             RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution )
                         }
+
                        
                         Spacer().frame(width: UIScreen.width * 0.25)
                     }
@@ -81,6 +83,7 @@ struct MainView: View {
                             // 먹이주는 곳
                             FeedButton(isPresenting: $isPresenting)
                         } // 도감, 공룡, 먹이 내용 들어가는 스택
+
                         ZStack {
                             // 공룡터치시 하트나오는 ForEach
                             ZStack {
@@ -125,7 +128,7 @@ struct MainView: View {
                                 Image("StandingPlu") // 킹룡짱룡 위치
                                     .resizable()
                                     .scaledToFit()
-                                    ////                                    .minimumScaleFactor(0.1)
+                                    ////                                   .minimumScaleFactor(0.1)
                                     .onTapGesture {
                                         heartNum += 1
                                     }
@@ -145,14 +148,17 @@ struct MainView: View {
                                     .animation(.easeOut.repeatCount(5), value: isTransform)
                                 
                             }
-
-
                         }
+
                     }
+
                 }
-                .overlay {
-                    PopupView(isPresenting: $isPresenting, classifier: ImageClassifier())
+                if isClicked {
+                    Color.black.opacity(0.2).ignoresSafeArea()
                 }
+            }
+            .overlay {
+                PopupView(isPresenting: $isPresenting, isClicked: $isClicked, classifier: ImageClassifier())
             }
         }
     }
