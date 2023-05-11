@@ -109,7 +109,6 @@
 				1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */,
 				1B92DED12A0201ED00AFB363 /* ImagePicker.swift */,
 				1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */,
-				6080550D2A08835E00A2F499 /* GageButton.swift */,
 				608055112A08D93100A2F499 /* StatusView.swift */,
 			);
 			path = ViewAssets;
@@ -131,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				1B9A37852A0A1A9B00C63FB0 /* DummView.swift */,
+				6080550D2A08835E00A2F499 /* GageButton.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
