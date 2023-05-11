@@ -13,7 +13,6 @@ struct MainView: View {
     @EnvironmentObject var chosen : ChosenDragon
     @State var heartNum: Int = 0
     let heartXOffset: CGFloat = -120
-    @State var isTransform: Bool = false
     @State var isPresenting: Bool = false
     @State var isCameraPresenting: Bool = false
     @State var isClicked: Bool = false
@@ -31,8 +30,7 @@ struct MainView: View {
                         .offset(x: UIScreen.width * 0.13)
                     Button{
                         if gageVar.isEvolution {
-                            
-                            isTransform = true
+                            gageVar.isTransform = true
                             gageVar.turnGreen1 = false
                             gageVar.turnGreen2 = false
                             gageVar.turnGreen3 = false
@@ -46,7 +44,6 @@ struct MainView: View {
                             gageVar.redCount = 0
                             gageVar.orangeCount = 0
                             gageVar.isEvolution = false
-                            
                             
                         }
                         else {
@@ -98,9 +95,9 @@ struct MainView: View {
                                     heartNum += 1
                                 }
                                 .shadow(color:.buttonColor ,radius:gageVar.isEvolution ? 15 : 0)
-                                .opacity(isTransform ? 0 : 1)
-                                .scaleEffect(isTransform ? 0 : 1)
-                                .animation(.easeOut.repeatCount(5), value: isTransform)
+                                .opacity(gageVar.isTransform ? 0 : 1)
+                                .scaleEffect(gageVar.isTransform ? 0 : 1)
+                                .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
                                 .offset(y: UIScreen.height * 0.1)
                            
                             Image("EggHiel") // 킹룡짱룡 위치
@@ -110,9 +107,9 @@ struct MainView: View {
                                 .onTapGesture {
                                     heartNum += 1
                                 }
-                                .opacity(isTransform ? 1 : 0)
-                                .scaleEffect(isTransform ? 1 : 0)
-                                .animation(.easeOut.repeatCount(5), value: isTransform)
+                                .opacity(gageVar.isTransform ? 1 : 0)
+                                .scaleEffect(gageVar.isTransform ? 1 : 0)
+                                .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
                 
             }
             if isClicked {
