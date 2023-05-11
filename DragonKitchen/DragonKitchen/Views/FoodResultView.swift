@@ -12,36 +12,49 @@ struct FoodResultView: View {
     @EnvironmentObject var chosen: ChosenFood
     @State private var zoomed = false
     @Namespace private var smooth
-    @State var heights: CGFloat = 200
+    @State private var paprikaOn = false
     var body: some View {
         VStack {
-            if !zoomed {
-                ZStack {
-                    Image(chosen.chosenFood)
-                        .resizable()
-                        .matchedGeometryEffect(id: "morph", in: smooth)
-//                        .frame(height: heights)
-                        .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
-                }
-            } else {
-                ZStack {
-                    Image(chosen.chosenFood)
-                        .resizable()
-                        .matchedGeometryEffect(id: "morph", in: smooth)
-                        .scaledToFit()
-                        .frame(height: heights)
-                        .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
+            ZStack {
+                Image("Doma")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 500)
+                    .offset(y: 80)
+                    .offset(x: paprikaOn ? -UIScreen.width : 0)
+                    .onAppear {
+                        if !zoomed {
+                            withAnimation(
+                                .interpolatingSpring(mass: 1, stiffness: 100, damping: 10, initialVelocity: 0.4)
+                            ) {
+                                zoomed = true
+                            }
+                            withAnimation(.easeIn(duration: 1.5).delay(0.8)) {
+                                paprikaOn = true
+                            }
+                        }
+                    }
+                if !zoomed {
+                    ZStack {
+                        Image("paprika")
+                            .resizable()
+                            .matchedGeometryEffect(id: "morph", in: smooth)
+                            .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
+                    }
+                } else {
+                    ZStack {
+                        Image("paprika")
+                            .resizable()
+                            .matchedGeometryEffect(id: "morph", in: smooth)
+                            .scaledToFit()
+                            .frame(height: 200)
+                            .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
+                    }
+//                    .onAppear {
+//
+//                    }
                 }
             }
-            Text("tap!")
-                .onTapGesture {
-                    withAnimation(
-                        .interpolatingSpring(mass: 1, stiffness: 200, damping: 10, initialVelocity: 0)
-                    ) {
-                        zoomed.toggle()
-//                        heights = 300
-                    }
-                }
         }
     }
 }
