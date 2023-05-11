@@ -53,7 +53,7 @@ struct MainView: View {
                             
 
                         }
-                        else {}
+                        
                     } label: {
                         RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution)
                     }
