@@ -10,6 +10,7 @@ import NavigationStack
 
 struct PopupView: View {
     @Binding var isPresenting: Bool
+    @Binding var isClicked: Bool
     @State var isCameraPresenting: Bool = false
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .camera
@@ -21,9 +22,15 @@ struct PopupView: View {
             ZStack {
                 Color.white.cornerRadius(20)
                 RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 2.0)
-                VStack {
-                    Text("내가 가진 식재료의 사진을 찍어\n디나에게 맛있는 밥을 줄까요?")
-                    Image(systemName: "hand.tap").frame(height: 200)
+                VStack(alignment: .center, spacing: 0) {
+                    Text("내가 가진 식재료의 사진을 찍어")
+                        .padding(.top, 20)
+                        .font(.system(size: 20))
+                    Text("이엘에게 맛있는 밥을 줄까요?")
+                        .font(.system(size: 20))
+                    Image("guide").resizable().scaledToFit()
+                        .padding(.bottom, 20)
+                    
                 }
             }
             .frame(width: UIScreen.width * 0.6, height: UIScreen.height * 0.76)
@@ -36,6 +43,7 @@ struct PopupView: View {
                 .foregroundColor(Color(red: 153 / 255, green: 153 / 255, blue: 153 / 255))
                 .onTapGesture {
                     withAnimation(.easeIn(duration: 0.3)) {
+                        isClicked = false
                         isPresenting = false
                     }
                 }
@@ -68,7 +76,7 @@ struct PopupView: View {
 
 struct PopupView_Previews: PreviewProvider {
     static var previews: some View {
-        PopupView(isPresenting: .constant(true), classifier: ImageClassifier())
+        PopupView(isPresenting: .constant(true), isClicked: .constant(false), classifier: ImageClassifier())
             .environmentObject(ChosenFood())
     }
 }
