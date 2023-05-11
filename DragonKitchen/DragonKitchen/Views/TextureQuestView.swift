@@ -10,9 +10,9 @@ import SwiftUI
 struct TextureQuestView: View {
     @State var selectedColor : Int = 0
     @State var isCleared: Bool = false
-    @EnvironmentObject var chosen: ChosenFood
+    @State private var foodImage: String = ""
+    
        var body: some View {
-           
            ZStack {
                // 테이블 배경
                Image("tableBG1")
@@ -26,7 +26,7 @@ struct TextureQuestView: View {
                    Spacer()
                    
                    HStack {
-                       Image(chosen.chosenFood)
+                       Image(foodImage)
                            .resizable()
                            .scaledToFit()
                            .frame(width: 250)
@@ -36,7 +36,7 @@ struct TextureQuestView: View {
                        Spacer()
                            
                        // 색상 버튼 6개
-                       TextureButton(isCleared: $isCleared)
+                       TextureButton(isCleared: $isCleared, foodImage: $foodImage)
                    } // -------- HStack
                } // --------- VStack
            } // --------- ZStack
@@ -46,7 +46,7 @@ struct TextureButton : View {
     
     @Binding var isCleared: Bool
     @State var selectedButton : Int?
-    @EnvironmentObject var chosen: ChosenFood
+    @Binding var foodImage: String
     @State var selectedTexture : String = ""
     
     let textures: [String] = ["basketball", "glass", "sand", "golf", "wood", "wool"]
@@ -63,7 +63,7 @@ struct TextureButton : View {
                     Button(action: {
                         isCleared = true
                         selectedTexture = textures[index]
-                        chosen.chosenFood = "\(selectedTexture)_red"
+                        foodImage = "\(selectedTexture)_red"
                         selectedButton = index
                     }) {
                         // 색상 버튼 모양
@@ -84,9 +84,10 @@ struct TextureButton : View {
 
 
 struct TextureQuestView_Previews: PreviewProvider {
+    
+    
     static var previews: some View {
         TextureQuestView().previewInterfaceOrientation(.landscapeRight)
-            .environmentObject(ChosenFood())
     }
 }
 
