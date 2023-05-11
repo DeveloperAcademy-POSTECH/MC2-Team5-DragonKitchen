@@ -33,7 +33,7 @@ struct StatusView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: UIScreen.width * 0.089)
-                        Image("Profile\(chosen.chosenDragon.0)")
+                        Image(gageVar.isTransform ? "ProfilePlu" : "Profile\(chosen.chosenDragon.0)") //true 부분에 진화체 프로필 넣으면 됨
                             .resizable()
                             .scaledToFit()
                             .frame(width: UIScreen.width * 0.055)

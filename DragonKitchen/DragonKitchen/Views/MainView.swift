@@ -19,6 +19,7 @@ struct MainView: View {
     @State var isClicked: Bool = false
 
     var body: some View {
+        
         ZStack {
             Image("MainBackground")
                 .resizable()
@@ -109,9 +110,9 @@ struct MainView: View {
                                 .offset(y: UIScreen.height * 0.15)
                            
                 Image("Final\(chosen.chosenDragon.0)") // 킹룡짱룡 위치
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.width * 0.65)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: UIScreen.width * 0.6)
                             ////                                    .minimumScaleFactor(0.1)
                                 .onTapGesture {
                                     heartNum += 1
