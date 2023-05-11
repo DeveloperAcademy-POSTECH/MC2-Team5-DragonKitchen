@@ -11,6 +11,7 @@ struct TextureQuestView: View {
     @State var selectedColor : Int = 0
     @State var isCleared: Bool = false
     @State private var foodImage: String = ""
+    @EnvironmentObject var color: ChosenFood // 시각에서 선택한 색을 불러오는 변수
     
        var body: some View {
            ZStack {
@@ -40,6 +41,11 @@ struct TextureQuestView: View {
                    } // -------- HStack
                } // --------- VStack
            } // --------- ZStack
+           .onAppear() {
+               if foodImage == "" {
+                   foodImage = "paprika" + color.chosenColor + "_shadow"
+               }
+           }
        }
 
 struct TextureButton : View {
