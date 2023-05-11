@@ -46,14 +46,13 @@ struct MainView: View {
                             gageVar.redCount = 0
                             gageVar.orangeCount = 0
                             gageVar.isEvolution = false
-
                             chosen.levelCount += 1
                         }
                         else {
                             
 
                         }
-                        else {}
+                       
                     } label: {
                         RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution)
                     }
@@ -95,7 +94,7 @@ struct MainView: View {
 
                 }
 //                             공룡이미지 탭하는 경우 하트 뿅뿅
-                Image("Standing\(chosen.chosenDragon)") // 킹룡짱룡 위치
+                Image("Standing\(chosen.chosenDragon.0)") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.width * 0.4)
@@ -109,7 +108,7 @@ struct MainView: View {
                                 .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
                                 .offset(y: UIScreen.height * 0.15)
                            
-                Image("Final\(chosen.chosenDragon)") // 킹룡짱룡 위치
+                Image("Final\(chosen.chosenDragon.0)") // 킹룡짱룡 위치
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.width * 0.6)
