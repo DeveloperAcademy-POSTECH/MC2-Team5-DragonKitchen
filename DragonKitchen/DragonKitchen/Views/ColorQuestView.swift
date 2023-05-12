@@ -60,7 +60,8 @@ struct ColorButton : View {
     
     let colors: [Color] = [Color.paprikaRed, Color.vegiGreen, Color.paprikaBurgundy, Color.paprikaOrange, Color.paprikaYellow, Color.paprikaBrown]
     
-    let foodColor : [String] = ["paprikaRed_shadow", "paprikaGreen_shadow", "paprikaBurgundy_shadow", "paprikaOrange_shadow", "paprikaYellow_shadow", "paprikaBrown_shadow"]
+    @State var foodColor : [String] = ["Red_shadow", "Green_shadow", "Burgundy_shadow", "Orange_shadow", "Yellow_shadow", "Brown_shadow"]
+//    ["paprikaRed_shadow", "paprikaGreen_shadow", "paprikaBurgundy_shadow", "paprikaOrange_shadow", "paprikaYellow_shadow", "paprikaBrown_shadow"]
     
     var body: some View {
         LazyVGrid(
@@ -105,6 +106,12 @@ struct ColorButton : View {
                     }
                 }
             } // 색상 버튼 위치 조정
+            .onAppear{
+                foodColor = foodColor.map{color.chosenFood + $0}
+            }
+            .onDisappear{
+                foodColor = ["Red_shadow", "Green_shadow", "Burgundy_shadow", "Orange_shadow", "Yellow_shadow", "Brown_shadow"]
+            }
             .padding(.trailing, UIScreen.width/15)
             .padding(.bottom, UIScreen.height/30)
     }
@@ -114,5 +121,6 @@ struct ColorQuestView_Previews: PreviewProvider {
     
     static var previews: some View {
         ColorQuestView().previewInterfaceOrientation(.landscapeRight)
+            .environmentObject(ChosenFood())
     }
 }
