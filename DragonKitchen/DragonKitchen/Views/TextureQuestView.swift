@@ -95,6 +95,7 @@ struct TextureQuestView_Previews: PreviewProvider {
     
     static var previews: some View {
         TextureQuestView().previewInterfaceOrientation(.landscapeRight)
+            .environmentObject(ChosenFood())
     }
 }
 

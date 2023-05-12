@@ -20,11 +20,11 @@ struct NavigationBar: View {
                 .scaledToFit()
                 .frame(width: UIScreen.width * 0.078)
                 .onTapGesture {
-                    switch CurrentPage.CurrentPage.rawValue {
-                    case 2: CurrentPage.CurrentPage = .Eye
-                    case 3: CurrentPage.CurrentPage = .Hand
-                    case 4: CurrentPage.CurrentPage = .Ear
-                    case 5: CurrentPage.CurrentPage = .Nose
+                    switch CurrentPage.currentPage.rawValue {
+                    case 2: CurrentPage.currentPage = .eye
+                    case 3: CurrentPage.currentPage = .hand
+                    case 4: CurrentPage.currentPage = .ear
+                    case 5: CurrentPage.currentPage = .nose
                     default:
                         break
                     }
@@ -40,15 +40,15 @@ struct NavigationBar: View {
                         .frame(width: 300)
                         .offset(y: -UIScreen.height * 0.1)
                     Group {
-                        switch CurrentPage.CurrentPage {
-                        case .Eye: Text("파프리카의 색은 무슨 색인가요?").lineLimit(1)
-                        case .Hand: Text("파프리카를 만졌을 때 어떤 느낌인가요?").lineLimit(1)
-                        case .Ear: Text("파프리카로 어떤 소리를 낼 수 있을까요?")
+                        switch CurrentPage.currentPage {
+                        case .eye: Text("파프리카의 색은 무슨 색인가요?").lineLimit(1)
+                        case .hand: Text("파프리카를 만졌을 때 어떤 느낌인가요?").lineLimit(1)
+                        case .ear: Text("파프리카로 어떤 소리를 낼 수 있을까요?")
                             .lineLimit(1)
-                        case .Nose:
+                        case .nose:
                             Text("파프리카의 냄새를 맡고\n이엘은 어떤 표정을 지을까요?")
                                 .multilineTextAlignment(.center)
-                        case .Mouth: Text("자, 이제 파프리카를 이엘에게 줄 시간이에요!"
+                        case .mouth: Text("자, 이제 파프리카를 이엘에게 줄 시간이에요!"
                             )
                         }
                     }
@@ -56,7 +56,7 @@ struct NavigationBar: View {
                     .offset(y: UIScreen.height * 0.06)
                 }
             }
-            .font(.cookierun(.regular))
+            .font(.cookierun(.regular, size: 28))
             .frame(width: UIScreen.width * 0.6, height: 80)
             Spacer()
             Image(isCleared ? "GoButton" : "DisabledGoButton")
@@ -64,11 +64,11 @@ struct NavigationBar: View {
                 .scaledToFit()
                 .frame(width: UIScreen.width * 0.078)
                 .onTapGesture {
-                    switch CurrentPage.CurrentPage.rawValue {
-                    case 1: CurrentPage.CurrentPage = .Hand
-                    case 2: CurrentPage.CurrentPage = .Ear
-                    case 3: CurrentPage.CurrentPage = .Nose
-                    case 4: CurrentPage.CurrentPage = .Mouth
+                    switch CurrentPage.currentPage.rawValue {
+                    case 1: CurrentPage.currentPage = .hand
+                    case 2: CurrentPage.currentPage = .ear
+                    case 3: CurrentPage.currentPage = .nose
+                    case 4: CurrentPage.currentPage = .mouth
                     default:
                         break
                     }
