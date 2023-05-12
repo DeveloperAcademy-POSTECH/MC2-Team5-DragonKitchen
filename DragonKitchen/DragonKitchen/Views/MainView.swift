@@ -29,9 +29,9 @@ struct MainView: View {
             ZStack {
                 ForEach(0 ..< 2 * heartNum, id: \.self) { _ in
                     HeartImage(xOffset: -55, yOffset: -120, heartColor: .red)
-                    HeartImage(xOffset: 15, yOffset: -140, heartColor: .red)
+                    HeartImage(xOffset: 15, yOffset: -140, heartColor: .fruitRed)
                     HeartImage(xOffset: 25, yOffset: -100, heartColor: .red)
-                    HeartImage(xOffset: 10, yOffset: -90, heartColor: .red)
+                    HeartImage(xOffset: 10, yOffset: -90, heartColor: .fruitRed)
 
                 }
 //                             공룡이미지 탭하는 경우 하트 뿅뿅
