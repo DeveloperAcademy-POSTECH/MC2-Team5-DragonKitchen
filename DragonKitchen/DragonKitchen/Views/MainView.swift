@@ -25,66 +25,6 @@ struct MainView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-            VStack {
-                Spacer().frame(height: UIScreen.height * 0.025)
-                HStack {
-                    StatusView(gageVar: _gageVar)
-                        .offset(x: UIScreen.width * 0.13)
-                    Button {
-                        if gageVar.isEvolution {
-
-                            gageVar.isTransform = true
-                            gageVar.turnGreen1 = false
-                            gageVar.turnGreen2 = false
-                            gageVar.turnGreen3 = false
-                            gageVar.turnRed1 = false
-                            gageVar.turnRed2 = false
-                            gageVar.turnRed3 = false
-                            gageVar.turnOrange1 = false
-                            gageVar.turnOrange2 = false
-                            gageVar.turnOrange3 = false
-                            gageVar.greenCount = 0
-                            gageVar.redCount = 0
-                            gageVar.orangeCount = 0
-                            gageVar.isEvolution = false
-                            chosen.levelCount += 1
-                        }
-                        else {
-                            
-
-                        }
-                        
-                    } label: {
-                        RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution)
-                    }
-
-                    PushView(destination: GageButton()){
-                        Text("test")
-                    }
-                    Spacer().frame(width: UIScreen.width * 0.20)
-                }
-                Spacer().frame(height: UIScreen.height * 0.3)
-
-                    HStack {
-                        // 도감 이미지
-                        VStack {
-                            
-                            Button {} label: {
-                                Image("Book")
-                               
-                            }
-                        }
-
-                        
-                        Spacer().frame(width: UIScreen.width*0.53)
-
-                        // 먹이주는 곳
-                        FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
-                    } // 도감, 공룡, 먹이 내용 들어가는 스택
-
-                    
-                        
-            }
             // 공룡터치시 하트나오는 ForEach
             ZStack {
                 ForEach(0 ..< 2 * heartNum, id: \.self) { _ in
@@ -124,6 +64,68 @@ struct MainView: View {
                 
 
             }
+            VStack {
+                Spacer().frame(height: UIScreen.height * 0.025)
+                HStack {
+                    StatusView(gageVar: _gageVar)
+                        .offset(x: UIScreen.width * 0.13)
+                    Button {
+                        if gageVar.isEvolution {
+
+                            gageVar.isTransform = true
+                            gageVar.turnGreen1 = false
+                            gageVar.turnGreen2 = false
+                            gageVar.turnGreen3 = false
+                            gageVar.turnRed1 = false
+                            gageVar.turnRed2 = false
+                            gageVar.turnRed3 = false
+                            gageVar.turnOrange1 = false
+                            gageVar.turnOrange2 = false
+                            gageVar.turnOrange3 = false
+                            gageVar.greenCount = 0
+                            gageVar.redCount = 0
+                            gageVar.orangeCount = 0
+                            gageVar.isEvolution = false
+                            chosen.levelCount += 1
+                        }
+                        else {
+                            
+
+                        }
+                        
+                    } label: {
+                        RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution)
+                    }
+
+                    PushView(destination: GageButton()){
+                        Text("test")
+                    }
+                    Spacer().frame(width: UIScreen.width * 0.20)
+                }
+                Spacer().frame(height: UIScreen.height * 0.3)
+                
+                    
+                    HStack {
+                        // 도감 이미지
+                        VStack {
+                            
+                            Button {} label: {
+                                Image("Book")
+                                
+                            }
+                        }
+                        
+                        
+                        Spacer().frame(width: UIScreen.width*0.53)
+                        
+                        // 먹이주는 곳
+                        FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
+                    } // 도감, 공룡, 먹이 내용 들어가는 스택
+                    
+                
+                        
+            }
+          
             if isClicked {
                 Color.black.opacity(0.2).ignoresSafeArea()
             }
