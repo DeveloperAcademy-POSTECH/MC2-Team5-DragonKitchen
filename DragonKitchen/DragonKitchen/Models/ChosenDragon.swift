@@ -7,5 +7,8 @@
 
 import Foundation
 class ChosenDragon: ObservableObject {
+
+    @Published var levelCount: Int = 1
     @Published var chosenDragon: (String, String) = ("", "")
+
 }

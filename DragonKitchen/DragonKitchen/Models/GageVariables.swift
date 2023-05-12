@@ -21,5 +21,5 @@ class gageVariables: ObservableObject {
     @Published var turnOrange3 = false
     @Published var orangeCount: Int = 0
     @Published var isEvolution = false
- 
+    @Published var isTransform = false
 }
