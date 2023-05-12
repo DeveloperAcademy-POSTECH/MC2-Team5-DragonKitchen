@@ -13,6 +13,8 @@ struct NavigationBar: View {
     @State var isOn = [true, false, false, false, false]
     @Binding var isCleared: Bool
     @EnvironmentObject var CurrentPage: CurrentPageModel
+    @EnvironmentObject var chosenDragon: ChosenDragon
+    @EnvironmentObject var chosenFood: ChosenFood
     var body: some View {
         HStack(alignment: .top) {
             Image("BackButton")
@@ -48,8 +50,7 @@ struct NavigationBar: View {
                         case .nose:
                             Text("파프리카의 냄새를 맡고\n이엘은 어떤 표정을 지을까요?")
                                 .multilineTextAlignment(.center)
-                        case .mouth: Text("자, 이제 파프리카를 이엘에게 줄 시간이에요!"
-                            )
+                        case .mouth: Text("에게 어떤 요리를 줄까요?")
                         }
                     }
                     .frame(height: UIScreen.height * 0.2, alignment: .top)
@@ -128,5 +129,7 @@ struct NavigationBar_Previews: PreviewProvider {
     static var previews: some View {
         NavigationBar(isCleared: .constant(true))
             .environmentObject(CurrentPageModel())
+            .environmentObject(ChosenDragon())
+            .environmentObject(ChosenFood())
     }
 }

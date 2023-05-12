@@ -13,6 +13,7 @@
 		1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6471B82A09DCFE0083599D /* NavigationBar.swift */; };
 		1B848D722A0206910099F726 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B848D712A0206910099F726 /* Classifier.swift */; };
 		1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DED12A0201ED00AFB363 /* ImagePicker.swift */; };
+		1B942A3C2A0EB28700B1D664 /* FoodColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */; };
 		1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */; };
 		1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68E2A07E41400EB6A18 /* PopupView.swift */; };
 		1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A37852A0A1A9B00C63FB0 /* DummView.swift */; };
@@ -21,6 +22,7 @@
 		1BD198F72A0C970400702151 /* CurrentPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198F62A0C970400702151 /* CurrentPageModel.swift */; };
 		1BD198F92A0CF15E00702151 /* TasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198F82A0CF15E00702151 /* TasteView.swift */; };
 		1BD198FB2A0D23E100702151 /* NavigatingTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198FA2A0D23E100702151 /* NavigatingTestView.swift */; };
+		1BD198FD2A0DEE0200702151 /* FoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198FC2A0DEE0200702151 /* FoodImageView.swift */; };
 		1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */; };
 		1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */; };
 		1BE15F4A2A0BEF15003EC65B /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -59,6 +61,7 @@
 		1B6471B82A09DCFE0083599D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		1B848D712A0206910099F726 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		1B92DED12A0201ED00AFB363 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodColorModel.swift; sourceTree = "<group>"; };
 		1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		1B99A68E2A07E41400EB6A18 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		1B9A37852A0A1A9B00C63FB0 /* DummView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummView.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		1BD198F62A0C970400702151 /* CurrentPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPageModel.swift; sourceTree = "<group>"; };
 		1BD198F82A0CF15E00702151 /* TasteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasteView.swift; path = ../../../../../Downloads/TasteView.swift; sourceTree = "<group>"; };
 		1BD198FA2A0D23E100702151 /* NavigatingTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatingTestView.swift; sourceTree = "<group>"; };
+		1BD198FC2A0DEE0200702151 /* FoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImageView.swift; sourceTree = "<group>"; };
 		1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButton.swift; sourceTree = "<group>"; };
 		1BE1F0FE2A060FC40021BBF0 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				1B1D41682A033325000C9B2B /* ChosenFood.swift */,
 				603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */,
 				1BD198F62A0C970400702151 /* CurrentPageModel.swift */,
+				1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */,
 				BF65D7EA2A0A32F400B44877 /* QuestHear */,
 			);
 			path = Models;
@@ -158,6 +163,7 @@
 				1B9A37852A0A1A9B00C63FB0 /* DummView.swift */,
 				6080550D2A08835E00A2F499 /* GageButton.swift */,
 				1BD198FA2A0D23E100702151 /* NavigatingTestView.swift */,
+				1BD198FC2A0DEE0200702151 /* FoodImageView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -345,12 +351,14 @@
 				1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */,
 				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
 				1BD198F92A0CF15E00702151 /* TasteView.swift in Sources */,
+				1BD198FD2A0DEE0200702151 /* FoodImageView.swift in Sources */,
 				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
 				BF65D7E92A0A32E100B44877 /* QuestHearView.swift in Sources */,
 				DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */,
 				6045F14B2A0BA561005B134B /* TitleView.swift in Sources */,
 				BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */,
 				DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */,
+				1B942A3C2A0EB28700B1D664 /* FoodColorModel.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
 				603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */,

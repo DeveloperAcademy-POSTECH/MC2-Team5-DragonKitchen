@@ -13,12 +13,15 @@ struct NavigatingTestView: View {
         ZStack{
             VStack{
                 NavigationBar(isCleared: .constant(true))
+                    .padding(.horizontal, UIScreen.width*0.1)
+                    .ignoresSafeArea()
                 Spacer()
             }
-            .zIndex(1)
+            .zIndex(1000)
             switch currentPage.currentPage{
             case .eye:
-                ColorQuestView()
+                TasteView()
+//                ColorQuestView()
             case .hand:
                 TextureQuestView()
             case .ear:
