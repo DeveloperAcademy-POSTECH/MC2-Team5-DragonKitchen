@@ -20,8 +20,8 @@ struct NavigatingTestView: View {
             .zIndex(1000)
             switch currentPage.currentPage{
             case .eye:
-                TasteView()
-//                ColorQuestView()
+//                TasteView()
+                ColorQuestView()
             case .hand:
                 TextureQuestView()
             case .ear:
@@ -40,5 +40,6 @@ struct NavigatingTestView_Previews: PreviewProvider {
             .environmentObject(CurrentPageModel())
             .environmentObject(ChosenFood())
             .environmentObject(ChosenDragon())
+            .environmentObject(VegetableColor())
     }
 }

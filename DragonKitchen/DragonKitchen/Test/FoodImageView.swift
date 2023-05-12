@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoodImageView: View {
+struct CarrotImageView: View {
     @EnvironmentObject var colors: VegetableColor
     @EnvironmentObject var food: ChosenFood
     var body: some View {
@@ -27,23 +27,40 @@ struct FoodImageView: View {
                     .renderingMode(.template).foregroundColor(colors.carrotColor.pattern)
             }
             .scaledToFit()
-            HStack {
-                Text("red")
-                    .onTapGesture {
-                       colors.carrotColor = CarrotColor().burgundy
-                    }
-                Text("orange")
-                    .onTapGesture {
-                        colors.carrotColor = CarrotColor().orange
-                    }
+        }
+    }
+}
+
+struct PaprikaImageView: View {
+    @EnvironmentObject var colors: VegetableColor
+    @EnvironmentObject var food: ChosenFood
+    var body: some View {
+        VStack {
+            ZStack {
+                Image("\(food.chosenFood.0)_shadow")
+                    .resizable()
+                    .renderingMode(.template).foregroundColor(colors.paprikaColor.shadow)
+                Image("\(food.chosenFood.0)_stem")
+                    .resizable()
+                    .renderingMode(.template).foregroundColor(colors.paprikaColor.stem)
+                Image("\(food.chosenFood.0)_stemHead")
+                    .resizable()
+                    .renderingMode(.template).foregroundColor(colors.paprikaColor.stemHead)
+                Image("\(food.chosenFood.0)_body")
+                    .resizable()
+                    .renderingMode(.template).foregroundColor(colors.paprikaColor.body)
+                Image("\(food.chosenFood.0)_pattern")
+                    .resizable()
+                    .renderingMode(.template).foregroundColor(colors.paprikaColor.pattern)
             }
+            .scaledToFit()
         }
     }
 }
 
 struct CarrotTestView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodImageView()
+        CarrotImageView()
             .environmentObject(VegetableColor())
             .environmentObject(ChosenFood())
     }

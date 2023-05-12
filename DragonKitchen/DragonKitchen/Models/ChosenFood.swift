@@ -5,8 +5,8 @@
 //  Created by 박상원 on 2023/05/04.
 //
 
-import SwiftUI
 import Foundation
+import SwiftUI
 
 class ChosenFood: ObservableObject {
     @Published var chosenFood: (String, String) = ("paprika", "")
