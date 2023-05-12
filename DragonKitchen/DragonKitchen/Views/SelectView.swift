@@ -27,6 +27,7 @@ struct SelectView: View {
                     Spacer().frame(width: UIScreen.width * 0.25)
                     Text("어떤 드래곤을 키울까요?")
                         .font(.system(size: 35))
+                        .font(.cookierun(.regular))
                     Spacer()
                     if chosen.chosenDragon == ("", "") {
                         Image("DisabledGoButton")
@@ -60,6 +61,7 @@ struct SelectView: View {
                             }
                         Text("플루")
                             .font(.system(size: 25))
+                            .font(.cookierun(.regular))
 //
                     }
                     Spacer().frame(width: UIScreen.width * 0.11)
@@ -79,11 +81,13 @@ struct SelectView: View {
                             }
                         Text("이엘")
                             .font(.system(size: 25))
+                            .font(.cookierun(.regular))
 //
                     }
                 }
 
             }
+            .font(.cookierun(.regular))
         }
     }
 }

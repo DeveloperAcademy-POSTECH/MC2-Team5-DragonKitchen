@@ -44,6 +44,8 @@ struct StatusView: View {
                         
                     
                     Text("Lv.\(chosen.levelCount)")
+                        .font(.cookierun(.regular))
+                        .foregroundColor(.white)
                 }.offset(y:UIScreen.height * 0.04)
                     
 

@@ -76,7 +76,7 @@ struct MainView: View {
                         }
 
                         
-                        Spacer().frame(width: UIScreen.width*0.5)
+                        Spacer().frame(width: UIScreen.width*0.53)
 
                         // 먹이주는 곳
                         FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
@@ -118,7 +118,7 @@ struct MainView: View {
                                     heartNum += 1
                                 }
                                 .opacity(gageVar.isTransform ? 1 : 0)
-                                .scaleEffect(gageVar.isTransform ? 1 : 0)
+                                .scaleEffect(gageVar.isTransform ? 1.1 : 0)
                                 .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
                                 .offset(x:UIScreen.width * -0.02 ,y: UIScreen.height * 0.1)
                 
