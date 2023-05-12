@@ -16,7 +16,7 @@ struct StatusView: View {
     @State var gageWidthIn: CGFloat = UIScreen.width * 0.025
 //    @State var gageHeightOut: CGFloat = UIScreen.width * 0.028
     @State var gageHeightIn: CGFloat = UIScreen.width * 0.025
-
+    let statusYOffset: CGFloat = UIScreen.height * -0.01
    
     var body: some View {
         ZStack(alignment: .leading) {
@@ -24,8 +24,10 @@ struct StatusView: View {
                 .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.09)
                 .foregroundColor(.white)
                 .cornerRadius(15)
+                .shadow(radius: 5)
+//                .animation(.easeOut.repeatForever(), value: gageVar.isEvolution)
                 .opacity(0.5)
-                .offset(x:UIScreen.width * 0.02)
+                .offset(x:UIScreen.width * 0.02, y:statusYOffset)
             HStack {
                 VStack{
                     ZStack{
@@ -50,7 +52,7 @@ struct StatusView: View {
                 }.offset(y:UIScreen.height * 0.04)
                     
 
-                VStack { // 음식 대표 이미지와 게이지를 쌓는 스택
+               
                     HStack(spacing: 5) { // 녹색게이지칸스택
 //                        Image(systemName: "carrot")
                         Text("🥕")
@@ -91,9 +93,9 @@ struct StatusView: View {
                                 .overlay(RoundedRectangle(cornerRadius: 6).stroke(.black, lineWidth: 2))
                         
                     } // Hstack
-                } // vstack
+                    .offset(y:statusYOffset)
 
-                VStack {
+                
 
                     HStack(spacing: 5) { // 빨강 게이지 스택
 //                        Image(systemName: "hare")
@@ -135,9 +137,9 @@ struct StatusView: View {
                                 .overlay(RoundedRectangle(cornerRadius: 6).stroke(.black, lineWidth: 2))
                         
                     } // Hstack
-                } // vstack
+                    .offset(y:statusYOffset)
 
-                VStack {
+                
 
                     HStack(spacing: 5) { // 오렌지 게이지 스택
 //                        Image(systemName: "fish")
@@ -177,7 +179,7 @@ struct StatusView: View {
                                 .overlay(RoundedRectangle(cornerRadius: 6).stroke(.black, lineWidth: 2))
                         }
                     } // Hstack
-                } // vstack
+                    .offset(y:statusYOffset)
             } // 각 게이지와 레벨 상태 표시 상태창 스택
         }.offset(x: UIScreen.width * -0.14)
     }

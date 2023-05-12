@@ -94,8 +94,21 @@ struct MainView: View {
                         }
                         
                     } label: {
-                        RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution)
+                        ZStack {
+                            Color.buttonColor.cornerRadius(20)
+                            RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 1.5).foregroundColor(.black)
+                            Text("진화시키기")
+                                .font(.system(size: 15))
+                                .foregroundColor(.white)
+                        }
+                        .font(.cookierun(.regular))
+                        .frame(width: UIScreen.width * 0.1, height: UIScreen.height * 0.08)
+                        .shadow(radius: 5)
+                        .padding([.top, .leading], 10)
+                        .offset(y: 2 * StatusView().statusYOffset)
+//                        RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution)
                     }
+                   
 
                     PushView(destination: GageButton()){
                         Text("test")
