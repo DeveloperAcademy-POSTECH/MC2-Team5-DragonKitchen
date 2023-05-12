@@ -49,6 +49,12 @@
 		BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */; };
 		BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */; };
 		BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */; };
+		BF939E982A0E2E20009E29E9 /* CustomCameraPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939E972A0E2E20009E29E9 /* CustomCameraPhotoView.swift */; };
+		BF939E9A2A0E2E35009E29E9 /* MissionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939E992A0E2E35009E29E9 /* MissionCompleteView.swift */; };
+		BF939E9C2A0E2E5F009E29E9 /* PolaroidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939E9B2A0E2E5F009E29E9 /* PolaroidView.swift */; };
+		BF939E9E2A0E2E95009E29E9 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939E9D2A0E2E95009E29E9 /* Extension+UIImage.swift */; };
+		BF939EA12A0E2ED4009E29E9 /* CustomCameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */; };
+		BF939EA32A0E2EE8009E29E9 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */; };
 		DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */; };
 		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +98,12 @@
 		BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = DragonKitchen/Models/QuestHear/AudioPlayer.swift; sourceTree = SOURCE_ROOT; };
 		BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecorder.swift; path = DragonKitchen/Models/QuestHear/AudioRecorder.swift; sourceTree = SOURCE_ROOT; };
 		BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressCircle.swift; path = DragonKitchen/Views/QuestHear/ProgressCircle.swift; sourceTree = SOURCE_ROOT; };
+		BF939E972A0E2E20009E29E9 /* CustomCameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraPhotoView.swift; sourceTree = "<group>"; };
+		BF939E992A0E2E35009E29E9 /* MissionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCompleteView.swift; sourceTree = "<group>"; };
+		BF939E9B2A0E2E5F009E29E9 /* PolaroidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidView.swift; sourceTree = "<group>"; };
+		BF939E9D2A0E2E95009E29E9 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
+		BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
+		BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestVIew.swift; path = DragonKitchen/Views/ColorQuestVIew.swift; sourceTree = SOURCE_ROOT; };
 		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +132,7 @@
 				1BD198F82A0CF15E00702151 /* TasteView.swift */,
 				6045F14C2A0BCAAA005B134B /* SelectView.swift */,
 				BF65D7E32A0A32E100B44877 /* QuestHear */,
+				BF939E962A0E2DB4009E29E9 /* PictureWithIngredient */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +162,7 @@
 				603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */,
 				1BD198F62A0C970400702151 /* CurrentPageModel.swift */,
 				BF65D7EA2A0A32F400B44877 /* QuestHear */,
+				BF939E9F2A0E2EAC009E29E9 /* PictureWithIngredient */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +201,7 @@
 				1BD198EF2A0C913200702151 /* Extension+Font.swift */,
 				1BE1F1022A060FCB0021BBF0 /* Extension+UIscreen.swift */,
 				609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */,
+				BF939E9D2A0E2E95009E29E9 /* Extension+UIImage.swift */,
 			);
 			path = "Extension ";
 			sourceTree = "<group>";
@@ -248,6 +263,25 @@
 				BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */,
 			);
 			path = QuestHear;
+			sourceTree = "<group>";
+		};
+		BF939E962A0E2DB4009E29E9 /* PictureWithIngredient */ = {
+			isa = PBXGroup;
+			children = (
+				BF939E972A0E2E20009E29E9 /* CustomCameraPhotoView.swift */,
+				BF939E992A0E2E35009E29E9 /* MissionCompleteView.swift */,
+				BF939E9B2A0E2E5F009E29E9 /* PolaroidView.swift */,
+			);
+			path = PictureWithIngredient;
+			sourceTree = "<group>";
+		};
+		BF939E9F2A0E2EAC009E29E9 /* PictureWithIngredient */ = {
+			isa = PBXGroup;
+			children = (
+				BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */,
+				BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */,
+			);
+			path = PictureWithIngredient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +364,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BE15F4B2A0BEF15003EC65B /* (null) in Sources */,
+				BF939EA12A0E2ED4009E29E9 /* CustomCameraRepresentable.swift in Sources */,
+				BF939E9C2A0E2E5F009E29E9 /* PolaroidView.swift in Sources */,
 				6080550E2A08835E00A2F499 /* GageButton.swift in Sources */,
 				608055122A08D93100A2F499 /* StatusView.swift in Sources */,
 				603036422A0B8A82004F4D0C /* HeartEffect.swift in Sources */,
@@ -344,10 +380,13 @@
 				BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */,
 				1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */,
 				1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */,
+				BF939E982A0E2E20009E29E9 /* CustomCameraPhotoView.swift in Sources */,
 				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
 				1BD198F92A0CF15E00702151 /* TasteView.swift in Sources */,
 				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
 				BF65D7E92A0A32E100B44877 /* QuestHearView.swift in Sources */,
+				BF939E9E2A0E2E95009E29E9 /* Extension+UIImage.swift in Sources */,
+				BF939EA32A0E2EE8009E29E9 /* CustomCameraController.swift in Sources */,
 				DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */,
 				6045F14B2A0BA561005B134B /* TitleView.swift in Sources */,
 				BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */,
@@ -362,6 +401,7 @@
 				1BE15F4F2A0BF045003EC65B /* (null) in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
+				BF939E9A2A0E2E35009E29E9 /* MissionCompleteView.swift in Sources */,
 				BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */,
 				1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */,
 				1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */,
