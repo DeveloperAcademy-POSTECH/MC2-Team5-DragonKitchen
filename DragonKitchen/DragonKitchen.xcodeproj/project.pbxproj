@@ -63,6 +63,8 @@
 		BFD088362A0F265800058816 /* BookFruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088352A0F265800058816 /* BookFruit.swift */; };
 		BFD088382A0F266200058816 /* BookMeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088372A0F266200058816 /* BookMeat.swift */; };
 		BFD0883C2A0F2F6800058816 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883B2A0F2F6800058816 /* BookView.swift */; };
+		BFD0883E2A0F327000058816 /* VegetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883D2A0F327000058816 /* VegetableView.swift */; };
+		BFD088402A0F38AC00058816 /* BookPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */; };
 		DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */; };
 		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
 /* End PBXBuildFile section */
@@ -120,6 +122,8 @@
 		BFD088352A0F265800058816 /* BookFruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFruit.swift; sourceTree = "<group>"; };
 		BFD088372A0F266200058816 /* BookMeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMeat.swift; sourceTree = "<group>"; };
 		BFD0883B2A0F2F6800058816 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		BFD0883D2A0F327000058816 /* VegetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableView.swift; sourceTree = "<group>"; };
+		BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPopUpView.swift; sourceTree = "<group>"; };
 		DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestVIew.swift; path = DragonKitchen/Views/ColorQuestVIew.swift; sourceTree = SOURCE_ROOT; };
 		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -312,6 +316,8 @@
 				BFD088352A0F265800058816 /* BookFruit.swift */,
 				BFD088372A0F266200058816 /* BookMeat.swift */,
 				BFD0883B2A0F2F6800058816 /* BookView.swift */,
+				BFD0883D2A0F327000058816 /* VegetableView.swift */,
+				BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */,
 				1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */,
 				BF939E982A0E2E20009E29E9 /* CustomCameraPhotoView.swift in Sources */,
+				BFD0883E2A0F327000058816 /* VegetableView.swift in Sources */,
 				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
 				1BD198FD2A0DEE0200702151 /* FoodImageView.swift in Sources */,
 				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
@@ -446,6 +453,7 @@
 				1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */,
 				BF65D7E72A0A32E100B44877 /* PaprikaView.swift in Sources */,
 				BFD088362A0F265800058816 /* BookFruit.swift in Sources */,
+				BFD088402A0F38AC00058816 /* BookPopUpView.swift in Sources */,
 				BFD088322A0F261200058816 /* BookModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

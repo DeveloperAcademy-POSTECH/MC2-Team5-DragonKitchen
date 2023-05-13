@@ -30,4 +30,5 @@ extension Color {
     static let paprikaOrange: Color = .init(hex: 0xFF6F00)
     static let paprikaYellow: Color = .init(hex: 0xF6DA00)
     static let paprikaBrown: Color = .init(hex: 0x6A2901)
+    static let bookNameBackground: Color = .init(hex: 0xF2F2F2)
 }

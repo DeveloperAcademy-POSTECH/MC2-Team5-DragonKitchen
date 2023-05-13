@@ -25,6 +25,21 @@ struct BookView: View {
                             .frame(width: UIScreen.width * 0.078)
                     }
                 }
+                .background(Color.vegiGreen.opacity(0.5))
+
+                HStack {
+                    ScrollView(showsIndicators: false, content: {
+                        VegetableView()
+                            .frame(width: 800)
+                    })
+//                    .background(Color.red)
+
+//                    Spacer() 
+
+                    Text("야채")
+                        .background(Color.blue)
+                }
+//                .background(Color.yellow)
             }
         }
     }

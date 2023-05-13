@@ -23,22 +23,14 @@ struct BookVegetable: View {
         NavigationView {
             VStack{
                 ScrollView(showsIndicators: false, content: {
-
-                    HStack {
-                        Text("야채")
-                            .font(.system(size: 47, weight: .semibold))
-
-                        Spacer()
-
-                        NavigationLink(destination: MainView()) {
-                            Image("BackButton")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 64.42, height: 64.42, alignment: .center)
-                                .foregroundColor(.blue)
-                                .imageScale(.large)
-                                .foregroundColor(.accentColor)
-                        }
+                    NavigationLink(destination: MainView()) {
+                        Image("BackButton")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 64.42, height: 64.42, alignment: .center)
+                            .foregroundColor(.blue)
+                            .imageScale(.large)
+                            .foregroundColor(.accentColor)
                     }
                     HStack {
                         VStack(alignment: .center) {
