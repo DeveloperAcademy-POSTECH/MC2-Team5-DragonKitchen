@@ -18,7 +18,7 @@ struct FoodResultView: View {
 
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+            Color.questBackgroundColor.ignoresSafeArea()
             ZStack {
                 Image("Doma")
                     .resizable()

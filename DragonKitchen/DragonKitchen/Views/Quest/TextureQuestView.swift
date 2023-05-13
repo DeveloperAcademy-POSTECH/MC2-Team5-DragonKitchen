@@ -10,7 +10,7 @@ import SwiftUI
 struct TextureQuestView: View {
     @State var selectedColor: Int = 0
     @Binding var isCleared: Bool
-    @State private var foodImage: String = ""
+    @State private var foodImage: String = "basketball_red"
     @EnvironmentObject var chosen: ChosenFood // 시각에서 선택한 색을 불러오는 변수
 
     var body: some View {
@@ -22,29 +22,25 @@ struct TextureQuestView: View {
             VStack {
                 Spacer()
                 HStack(spacing: UIScreen.width * 0.05) {
-//                    switch chosen.chosenFood.0 {
-//                    case "paprika": PaprikaImageView()
-//                    case "carrot": CarrotImageView()
-//                    default: PaprikaImageView()
-//                    }
+                    if !isCleared {
+                        switch chosen.chosenFood.0 {
+                        case "paprika": PaprikaImageView().scaleEffect(0.8)
+                        case "carrot": CarrotImageView().scaleEffect(0.8)
+                        default: PaprikaImageView().scaleEffect(0.8)
+                        }
+                    } else {
                     Image(foodImage)
-                    //                    Image(foodImage)
-                    //                        .resizable()
-                    //                        .scaledToFit()
-                    //                        .frame(width: 250)
-                    //                        .padding(.leading, UIScreen.width / 30)
-                    //                        .padding(.bottom, UIScreen.height / 30)
+                        .resizable()
+                        .scaledToFit()
+                        .scaleEffect(0.82)
+                        .padding(.leading, 20)
+                    }
                     // 색상 버튼 6개
                     TextureButton(isCleared: $isCleared, foodImage: $foodImage)
                 } // -------- HStack
                 .frame(height: UIScreen.height * 0.7)
             } // --------- VStack
         } // --------- ZStack
-        .onAppear {
-            if foodImage == "" {
-                foodImage = "\(chosen.chosenFood)_\(chosen.chosenColor)"
-            }
-        }
     }
 }
 
@@ -84,8 +80,6 @@ struct TextureButton: View {
                 }
             }
         } // 색상 버튼 위치 조정
-        .padding(.trailing, UIScreen.width / 15)
-        .padding(.bottom, UIScreen.height / 30)
     }
 }
 

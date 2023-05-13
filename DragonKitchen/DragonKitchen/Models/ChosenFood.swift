@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class ChosenFood: ObservableObject {
-    @Published var chosenFood: (String, String) = ("paprika", "")
+    @Published var chosenFood: (String, String) = ("", "")
     @Published var chosenColor: String = ""
     @Published var pictureWithIngredient: UIImage?
 }

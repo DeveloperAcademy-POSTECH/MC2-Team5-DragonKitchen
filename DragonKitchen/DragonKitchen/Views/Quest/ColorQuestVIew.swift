@@ -24,12 +24,8 @@ struct ColorQuestView: View {
                         switch chosenFood.chosenFood.0 {
                         case "paprika":
                             PaprikaImageView()
-                                .environmentObject(VegetableColor())
-                                .environmentObject(ChosenFood())
                         case "carrot":
                             CarrotImageView()
-                                .environmentObject(VegetableColor())
-                                .environmentObject(ChosenFood())
                         default:
                             Image("")
                         }
@@ -64,7 +60,7 @@ struct ColorButton: View {
                 Button(action: {
                     isCleared = true
                     selectedButton = index
-
+                    print("clickeD!\(index)")
                     if index == 0 { // 첫번째 버튼 : 빨강
                         chosen.chosenColor = "red"
                         switch chosen.chosenFood.0 {
@@ -135,8 +131,6 @@ struct ColorButton: View {
                 }
             }
         } // 색상 버튼 위치 조정
-        .padding(.trailing, UIScreen.width / 15)
-        .padding(.bottom, UIScreen.height / 30)
     }
 }
 

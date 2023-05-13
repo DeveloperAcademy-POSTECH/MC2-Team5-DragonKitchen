@@ -5,8 +5,8 @@
 //  Created by 허준혁 on 2023/05/02.
 //
 
-import SwiftUI
 import AVFoundation
+import SwiftUI
 
 struct QuestHearView: View {
     @ObservedObject var audioRecorder = AudioRecorder()
@@ -54,13 +54,13 @@ struct QuestHearView: View {
                                 }
                         }
                     }
-                // 녹음중일 때
+                    // 녹음중일 때
                 } else if audioRecorder.isRecording {
                     ZStack {
                         ProgressCircle(progress: self.$progressValue)
                             .frame(width: 190.0, height: 190.0)
                             .padding(20.0)
-                            .onAppear() {
+                            .onAppear {
                                 progressValue = 1.0
                             }
 
@@ -71,7 +71,7 @@ struct QuestHearView: View {
 
                         PaprikaView()
                     }
-                // 카운트다운 중일 때
+                    // 카운트다운 중일 때
                 } else if isCounting {
                     ZStack {
                         Image("circle_countdown")
@@ -90,7 +90,7 @@ struct QuestHearView: View {
                                 }
                             }
                     }
-                // 시작화면
+                    // 시작화면
                 } else {
                     ZStack {
                         Circle()
@@ -108,16 +108,15 @@ struct QuestHearView: View {
                                 self.tappedButton()
                             }
                     }
-                    .padding(.top, UIScreen.height*0.2)
                 }
-
             }
+            .padding(.top, UIScreen.height * 0.2)
         }
     }
 
     func tappedButton() {
         isCounting = true
-        self.audioRecorder.readyRecording()
+        audioRecorder.readyRecording()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             isCounting = false
             remainingSecond = 3
@@ -149,7 +148,7 @@ struct QuestHearView: View {
     }
 
     func checkMicrophonePermission() -> Bool {
-        guard nil != Bundle.main.object(forInfoDictionaryKey: "NSMicrophoneUsageDescription") as? String else {
+        guard Bundle.main.object(forInfoDictionaryKey: "NSMicrophoneUsageDescription") as? String != nil else {
             fatalError("NSMicrophoneUsageDescription not found in Info.plist")
         }
         switch AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) {
@@ -178,8 +177,8 @@ struct QuestHearView: View {
     }
 }
 
-//struct QuestEarView_Previews: PreviewProvider {
+// struct QuestEarView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        QuestHearView(isCleared: .constant(false))
 //    }
-//}
+// }

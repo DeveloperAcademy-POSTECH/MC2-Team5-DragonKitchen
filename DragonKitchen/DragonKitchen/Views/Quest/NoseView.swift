@@ -8,31 +8,24 @@
 import SwiftUI
 
 struct NoseView: View {
-    let images = ["Normal 2","Smile", "Close", "Dizz", "Sad", "Strange"]
+    let images = ["Normal 2", "Smile", "Close", "Dizz", "Sad", "Strange"]
 
     @State private var currentImageIndex = 0
-
-    @State var isCleared: Bool = false
     @State var isImageVisible = false
     @State private var isAnimating = false
+    @Binding var isCleared: Bool
 
     var body: some View {
-        ZStack{
+        ZStack {
             Color.questBackgroundColor
                 .ignoresSafeArea()
-
             ZStack {
-                VStack {
-//                    NavigationBar(isCleared: $isCleared)
-                    Spacer()
-                }
-
                 GIFView(name: images[currentImageIndex])
                     .frame(width: 620)
-                    .position(x:UIScreen.width * 0.45, y: UIScreen.height * 0.65)
+                    .position(x: UIScreen.width * 0.45, y: UIScreen.height * 0.65)
             }
             .onTapGesture {
-                currentImageIndex += currentImageIndex == images.count-1 ? -(images.count - 1) : 1
+                currentImageIndex += currentImageIndex == images.count - 1 ? -(images.count - 1) : 1
                 self.isImageVisible = false
             }
 
@@ -41,7 +34,7 @@ struct NoseView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 70)
-                    .position(x:UIScreen.width * 0.6, y: UIScreen.height * 0.65)
+                    .position(x: UIScreen.width * 0.6, y: UIScreen.height * 0.65)
                     .opacity(isAnimating ? 1.0 : 0.0)
                     .animation(Animation.easeOut(duration: 0.5).repeatForever())
                     .onAppear {
@@ -72,6 +65,6 @@ struct NoseView: View {
 
 struct NoseView_Previews: PreviewProvider {
     static var previews: some View {
-        NoseView()
+        NoseView(isCleared: .constant(false))
     }
 }

@@ -5,14 +5,16 @@
 //  Created by 박상원 on 2023/05/09.
 //
 
-import SwiftUI
 import NavigationStack
+import SwiftUI
 
 struct NavigationBar: View {
     @State var page: Int = 1
     @State var pageText: Int = 1
     @State var isOn = [true, false, false, false, false]
     @Binding var isCleared: [Bool]
+    @Binding var isPopupActive: Bool
+    @Binding var isDimmed: Bool
     @EnvironmentObject var CurrentPage: CurrentPageModel
     @EnvironmentObject var chosenDragon: ChosenDragon
     @EnvironmentObject var chosenFood: ChosenFood
@@ -33,10 +35,11 @@ struct NavigationBar: View {
                     default:
                         break
                     }
+                    isCleared[CurrentPage.currentPage.rawValue] = false
                     withAnimation(.easeInOut(duration: 0.5)) {
-                        if page == 1{
+                        if page == 1 {
                             self.navigationStack.pop(to: .view(withId: "mainViewId"))
-                        }else{
+                        } else {
                             page -= 1
                             isOn[page] = false
                         }
@@ -73,24 +76,32 @@ struct NavigationBar: View {
                 .scaledToFit()
                 .frame(width: UIScreen.width * 0.078)
                 .onTapGesture {
-                    switch CurrentPage.currentPage.rawValue {
-                    case 1: CurrentPage.currentPage = .hand
-                    case 2: CurrentPage.currentPage = .ear
-                    case 3: CurrentPage.currentPage = .nose
-                    case 4: CurrentPage.currentPage = .mouth
-                    default:
-                        break
-                    }
-                    if isCleared[0] {
-                        withAnimation(.easeInOut(duration: 0.5)) {
-                            if page == 5{
-                                
-                            }else{
-                                page += 1
-                                isOn[page - 1] = true
+                    if isCleared[CurrentPage.currentPage.rawValue - 1] {
+                        switch CurrentPage.currentPage.rawValue {
+                        case 1: CurrentPage.currentPage = .hand
+                        case 2: CurrentPage.currentPage = .ear
+                        case 3: CurrentPage.currentPage = .nose
+                        case 4: CurrentPage.currentPage = .mouth
+                        case 5:
+                            isDimmed = true
+                            withAnimation(.linear(duration: 0.3)) {
+                                isPopupActive = true
+                            }
+                        default:
+                            break
+                        }
+                        if isCleared[0] {
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                if page == 5 {
+                                } else {
+                                    page += 1
+                                    isOn[page - 1] = true
+                                }
                             }
                         }
                     }
+//                    isDimmed = true
+                    
                 }
         }
         .padding(.top, 30)
@@ -139,7 +150,7 @@ struct ProgressLine: View {
 
 struct NavigationBar_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationBar(isCleared: .constant([true, true, true, true, true]))
+        NavigationBar(isCleared: .constant([true, true, true, true, true]), isPopupActive: .constant(false), isDimmed: .constant(false))
             .environmentObject(CurrentPageModel())
             .environmentObject(ChosenDragon())
             .environmentObject(ChosenFood())
