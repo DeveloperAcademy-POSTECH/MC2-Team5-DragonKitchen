@@ -12,6 +12,7 @@ struct DragonKitchenApp: App {
     var body: some Scene {
         WindowGroup {
             TitleView()
+//            MainView()
 //            NavigatingTestView()
                 .environmentObject(ChosenFood())
                 .environmentObject(ChosenDragon())

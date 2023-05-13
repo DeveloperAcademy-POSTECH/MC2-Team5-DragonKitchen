@@ -1,6 +1,6 @@
 //
-//  BookMainView.swift
-//  DinoDina
+//  BookFruit.swift
+//  DragonKitchen
 //
 //  Created by David Goggins on 2023/05/04.
 //
@@ -21,13 +21,14 @@ struct BookFruit: View {
 
     var body: some View {
         NavigationView {
-                VStack{
-                    ScrollView(showsIndicators: false, content: {
-
+            VStack {
+                ScrollView(showsIndicators: false, content: {
                     HStack {
                         Text("과일")
                             .font(.system(size: 47, weight: .semibold))
+
                         Spacer()
+
                         NavigationLink(destination: MainView()){
                             Image("BackButton")
                                 .resizable()
@@ -39,76 +40,81 @@ struct BookFruit: View {
                         }
                     }
                     HStack {
-                            VStack(alignment: .center){ // Collection Card
-                                LazyVGrid(columns: columns, alignment: .leading) {
-                                    ForEach(Fruit.allFruit, id: \.self) { fru in
-                                        ZStack {
-                                            if fru.picture != "noPicture" {
-                                                RoundedRectangle(cornerRadius: 10)
-                                                    .fill(Color(red: 255/255, green: 186/255, blue: 0/255, opacity: 0.15))
-                                                    .overlay( // 뷰를 겹치게 하여 border 설정, 라운드 처리를 할 경우 overlay를 통해 border 처리를 해주어야 한다.
-                                                        RoundedRectangle(cornerRadius: 10)
-                                                            .stroke(Color(red: 255/255, green: 186/255, blue: 0/255), lineWidth: 1.5)
-                                                    )
-                                                    .frame(width: 119, height: 140)
-                                                    .padding(8)
-                                                VStack {
-                                                    Spacer()
-                                                    Image(fru.illust)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(width:70, height: 70, alignment: .bottom)
-                                                    Spacer()
-                                                    Text(fru.name)
-                                                        .font(.system(size: 20))
-                                                        .foregroundColor(.black)
-                                                        .frame(width: 97, height: 31, alignment: .top)
-                                                        .background(Color.white.opacity(0.75))
-                                                        .cornerRadius(8)
-                                                        .font(.subheadline)
-                                                        .padding(16)
-                                                }
-                                            } else {
-                                                RoundedRectangle(cornerRadius: 10)
-                                                    .fill(Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
-                                                    .overlay( // 뷰를 겹치게 하여 border 설정, 라운드 처리를 할 경우 overlay를 통해 border 처리를 해주어야 한다.
-                                                        RoundedRectangle(cornerRadius: 10)
-                                                            .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.25), lineWidth: 1.5)
-                                                    )
-                                                    .frame(width: 119, height: 140)
-                                                    .padding(8)
-                                                VStack {
-                                                    Spacer()
-                                                    Image(fru.illust)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(width:70, height: 70, alignment: .bottom)
-                                                    Spacer()
-                                                    Text(fru.name)
-                                                        .font(.system(size: 20))
-                                                        .foregroundColor(.black)
-                                                        .frame(width: 97, height: 31, alignment: .top)
-                                                        .background(Color(red: 242/255, green: 242/255, blue: 242/255))
-                                                        .cornerRadius(8)
-                                                        .font(.subheadline)
-                                                        .padding(16)
-                                                }
-                                            } // End: if
-                                        } // End: ZStack
-                                        .onTapGesture {
-                                            print(type(of: Vegetable.allVegetable))
-                                            selectedVegiName = fru.name
-                                            selectedPictureName = fru.picture
-                                            if selectedPictureName != "noPicture" {
-                                                            isPresenting = true
+                        VStack(alignment: .center) {
+                            LazyVGrid(columns: columns, alignment: .leading) {
+                                ForEach(Ingredient.fruits, id: \.self) { fruit in
+                                    ZStack {
+                                        if fruit.picture != "noPicture" {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .fill(Color(red: 255/255, green: 186/255, blue: 0/255, opacity: 0.15))
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 10)
+                                                        .stroke(Color(red: 255/255, green: 186/255, blue: 0/255), lineWidth: 1.5)
+                                                )
+                                                .frame(width: 119, height: 140)
+                                                .padding(8)
+                                            VStack {
+                                                Spacer()
+
+                                                Image(fruit.illust)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width:70, height: 70, alignment: .bottom)
+
+                                                Spacer()
+
+                                                Text(fruit.name)
+                                                    .font(.system(size: 20))
+                                                    .foregroundColor(.black)
+                                                    .frame(width: 97, height: 31, alignment: .top)
+                                                    .background(Color.white.opacity(0.75))
+                                                    .cornerRadius(8)
+                                                    .font(.subheadline)
+                                                    .padding(16)
                                             }
-                                            print(fru)
+                                        } else {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .fill(Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 10)
+                                                        .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.25), lineWidth: 1.5)
+                                                )
+                                                .frame(width: 119, height: 140)
+                                                .padding(8)
+                                            VStack {
+                                                Spacer()
+
+                                                Image(fruit.illust)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width:70, height: 70, alignment: .bottom)
+
+                                                Spacer()
+
+                                                Text(fruit.name)
+                                                    .font(.system(size: 20))
+                                                    .foregroundColor(.black)
+                                                    .frame(width: 97, height: 31, alignment: .top)
+                                                    .background(Color(red: 242/255, green: 242/255, blue: 242/255))
+                                                    .cornerRadius(8)
+                                                    .font(.subheadline)
+                                                    .padding(16)
+                                            }
                                         }
-                                    } // End: ForEach
+                                    }
+                                    .onTapGesture {
+                                        selectedVegiName = fruit.name
+                                        selectedPictureName = fruit.picture
+                                        if selectedPictureName != "noPicture" {
+                                            isPresenting = true
+                                        }
+                                    }
                                 }
-                        } // End: VStack Collection Card
+                            }
+                        }
 
                         Spacer()
+
                         VStack() {
                             NavigationLink(destination: BookVegetable()){
                                 Text("야채")
@@ -147,17 +153,16 @@ struct BookFruit: View {
                                     )
                             }
                             Spacer()
-                        }// End VStack
-                    } // End HStack
-                    }) //End: ScrollView
-                } // End: VStack
-                .sheet(isPresented: $isPresenting){
-                    Overlay(isPresenting: $isPresenting, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
-                }
-//                .padding(25)
-        } //End: NavigationView
+                        }
+                    }
+                })
+            }
+            .sheet(isPresented: $isPresenting){
+                Overlay(isPresenting: $isPresenting, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
+            }
+        }
         .navigationBarBackButtonHidden()
-
+        
     }
 }
 

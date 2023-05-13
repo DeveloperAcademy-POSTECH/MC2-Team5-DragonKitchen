@@ -1,6 +1,6 @@
 //
-//  BookMainView.swift
-//  DinoDina
+//  BookMeat.swift
+//  DragonKitchen
 //
 //  Created by David Goggins on 2023/05/04.
 //
@@ -18,16 +18,19 @@ struct BookMeat: View {
     @State var selectedVegiName = ""
     @State var selectedVegiIllust = ""
     @State var selectedPictureName = "noPicture"
+
     var body: some View {
         NavigationView {
-                VStack{
-                    ScrollView(showsIndicators: false, content: {
+            VStack{
+                ScrollView(showsIndicators: false, content: {
 
                     HStack {
                         Text("고기")
                             .font(.system(size: 47, weight: .semibold))
+
                         Spacer()
-                        NavigationLink(destination: MainView()){
+
+                        NavigationLink(destination: MainView()) {
                             Image("BackButton")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
@@ -37,77 +40,83 @@ struct BookMeat: View {
                                 .foregroundColor(.accentColor)
                         }
                     }
+
                     HStack {
-                            VStack(alignment: .center){ // Collection Card
-                                LazyVGrid(columns: columns, alignment: .leading) {
-                                    ForEach(Meat.allMeat, id: \.self) { vegi in
-                                        ZStack {
-                                            if vegi.picture != "noPicture" {
-                                                RoundedRectangle(cornerRadius: 10)
-                                                    .fill(Color(red: 226/255, green: 0/255, blue: 0/255, opacity: 0.15))
-                                                    .overlay( // 뷰를 겹치게 하여 border 설정, 라운드 처리를 할 경우 overlay를 통해 border 처리를 해주어야 한다.
-                                                        RoundedRectangle(cornerRadius: 10)
-                                                            .stroke(Color(red: 226/255, green: 0/255, blue: 0/255), lineWidth: 1.5)
-                                                    )
-                                                    .frame(width: 119, height: 140)
-                                                    .padding(8)
-                                                VStack {
-                                                    Spacer()
-                                                    Image(vegi.illust)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(width:70, height: 70, alignment: .bottom)
-                                                    Spacer()
-                                                    Text(vegi.name)
-                                                        .font(.system(size: 20))
-                                                        .foregroundColor(.black)
-                                                        .frame(width: 97, height: 31, alignment: .top)
-                                                        .background(Color.white.opacity(0.75))
-                                                        .cornerRadius(8)
-                                                        .font(.subheadline)
-                                                        .padding(16)
-                                                }
-                                            } else {
-                                                RoundedRectangle(cornerRadius: 10)
-                                                    .fill(Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
-                                                    .overlay( // 뷰를 겹치게 하여 border 설정, 라운드 처리를 할 경우 overlay를 통해 border 처리를 해주어야 한다.
-                                                        RoundedRectangle(cornerRadius: 10)
-                                                            .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.25), lineWidth: 1.5)
-                                                    )
-                                                    .frame(width: 119, height: 140)
-                                                    .padding(8)
-                                                VStack {
-                                                    Spacer()
-                                                    Image(vegi.illust)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(width:70, height: 70, alignment: .bottom)
-                                                    Spacer()
-                                                    Text(vegi.name)
-                                                        .font(.system(size: 20))
-                                                        .foregroundColor(.black)
-                                                        .frame(width: 97, height: 31, alignment: .top)
-                                                        .background(Color(red: 242/255, green: 242/255, blue: 242/255))
-                                                        .cornerRadius(8)
-                                                        .font(.subheadline)
-                                                        .padding(16)
-                                                }
-                                            } // End: if
-                                        } // End: ZStack
-                                        .onTapGesture {
-                                            print(type(of: Vegetable.allVegetable))
-                                            selectedVegiName = vegi.name
-                                            selectedPictureName = vegi.picture
-                                            if selectedPictureName != "noPicture" {
-                                                            isPresenting = true
+                        VStack(alignment: .center) {
+                            LazyVGrid(columns: columns, alignment: .leading) {
+                                ForEach(Ingredient.meats, id: \.self) { meat in
+                                    ZStack {
+                                        if meat.picture != "noPicture" {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .fill(Color(red: 226/255, green: 0/255, blue: 0/255, opacity: 0.15))
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 10)
+                                                        .stroke(Color(red: 226/255, green: 0/255, blue: 0/255), lineWidth: 1.5)
+                                                )
+                                                .frame(width: 119, height: 140)
+                                                .padding(8)
+                                            VStack {
+                                                Spacer()
+
+                                                Image(meat.illust)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width:70, height: 70, alignment: .bottom)
+
+                                                Spacer()
+
+                                                Text(meat.name)
+                                                    .font(.system(size: 20))
+                                                    .foregroundColor(.black)
+                                                    .frame(width: 97, height: 31, alignment: .top)
+                                                    .background(Color.white.opacity(0.75))
+                                                    .cornerRadius(8)
+                                                    .font(.subheadline)
+                                                    .padding(16)
                                             }
-                                            print(vegi)
+                                        } else {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .fill(Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 10)
+                                                        .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.25), lineWidth: 1.5)
+                                                )
+                                                .frame(width: 119, height: 140)
+                                                .padding(8)
+                                            VStack {
+                                                Spacer()
+
+                                                Image(meat.illust)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width:70, height: 70, alignment: .bottom)
+
+                                                Spacer()
+
+                                                Text(meat.name)
+                                                    .font(.system(size: 20))
+                                                    .foregroundColor(.black)
+                                                    .frame(width: 97, height: 31, alignment: .top)
+                                                    .background(Color(red: 242/255, green: 242/255, blue: 242/255))
+                                                    .cornerRadius(8)
+                                                    .font(.subheadline)
+                                                    .padding(16)
+                                            }
                                         }
-                                    } // End: ForEach
+                                    }
+                                    .onTapGesture {
+                                        selectedVegiName = meat.name
+                                        selectedPictureName = meat.picture
+                                        if selectedPictureName != "noPicture" {
+                                            isPresenting = true
+                                        }
+                                    }
                                 }
-                        } // End: VStack Collection Card
+                            }
+                        }
 
                         Spacer()
+
                         VStack() {
                             NavigationLink(destination: BookVegetable()){
                                 Text("야채")
@@ -145,19 +154,17 @@ struct BookMeat: View {
                                             .stroke(Color.black, lineWidth: 2)
                                     )
                             }
+
                             Spacer()
-                        }// End VStack
-
-                    } // End HStack
-                    }) //End: ScrollView
-
-                } // End: VStack
-                .sheet(isPresented: $isPresenting){
-                    Overlay(isPresenting: $isPresenting, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
-                }
-        } //End: NavigationView
+                        }
+                    }
+                })
+            }
+            .sheet(isPresented: $isPresenting){
+                Overlay(isPresenting: $isPresenting, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
+            }
+        }
         .navigationBarBackButtonHidden()
-
     }
 }
 
