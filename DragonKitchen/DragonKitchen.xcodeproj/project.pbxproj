@@ -59,6 +59,9 @@
 		BF939EA12A0E2ED4009E29E9 /* CustomCameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */; };
 		BF939EA32A0E2EE8009E29E9 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */; };
 		BF95FE7B2A0FA33B001A99F5 /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95FE7A2A0FA33B001A99F5 /* IngredientView.swift */; };
+		BF95FE7D2A0FC24C001A99F5 /* CookieRun-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */; };
+		BF95FE7E2A0FC24E001A99F5 /* CookieRun-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */; };
+		BF95FE7F2A0FC251001A99F5 /* CookieRun-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */; };
 		BFD088322A0F261200058816 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088312A0F261200058816 /* BookModel.swift */; };
 		BFD0883C2A0F2F6800058816 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883B2A0F2F6800058816 /* BookView.swift */; };
 		BFD088402A0F38AC00058816 /* BookPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */; };
@@ -381,7 +384,10 @@
 				1BE15F592A0BF342003EC65B /* (null) in Resources */,
 				1BE15F572A0BF33E003EC65B /* (null) in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
+				BF95FE7D2A0FC24C001A99F5 /* CookieRun-Black.ttf in Resources */,
+				BF95FE7E2A0FC24E001A99F5 /* CookieRun-Bold.ttf in Resources */,
 				1BE15F582A0BF340003EC65B /* (null) in Resources */,
+				BF95FE7F2A0FC251001A99F5 /* CookieRun-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

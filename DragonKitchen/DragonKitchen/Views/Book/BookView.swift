@@ -43,12 +43,15 @@ struct BookView: View {
                     .padding()
 
                     HStack {
+                        Spacer()
+
                         ScrollView(showsIndicators: false, content: {
                             VStack(alignment: .center) {
                                 LazyVGrid(columns: columns, alignment: .leading) {
                                     ForEach(ingredientModel.data, id: \.self) { ingredient in
                                         ZStack {
                                             IngredientView(ingredientData: ingredient, ingredient: ingredientModel)
+                                                .padding(5)
                                         }
                                         .onTapGesture {
                                             selectedVegiName = ingredient.name
@@ -64,20 +67,41 @@ struct BookView: View {
                                 }
                             }
                         })
+                        .frame(width: 500)
+
+                        Spacer()
 
                         VStack {
-                            Text(Ingredient.vegetable.title)
-                                .onTapGesture {
-                                    ingredientModel = .vegetable
-                                }
-                            Text(Ingredient.fruit.title)
-                                .onTapGesture {
-                                    ingredientModel = .fruit
-                                }
-                            Text(Ingredient.meat.title)
-                                .onTapGesture {
-                                    ingredientModel = .meat
-                                }
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.vegiGreen)
+                                    .frame(width: UIScreen.width * 0.15, height: UIScreen.height * 0.1)
+                                Text(Ingredient.vegetable.title)
+                                    .font(.cookierun(.regular))
+                            }
+                            .onTapGesture {
+                                ingredientModel = .vegetable
+                            }
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.fruitRed)
+                                    .frame(width: UIScreen.width * 0.15, height: UIScreen.height * 0.1)
+                                Text(Ingredient.fruit.title)
+                                    .font(.cookierun(.regular))
+                            }
+                            .onTapGesture {
+                                ingredientModel = .fruit
+                            }
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.meatYellow)
+                                    .frame(width: UIScreen.width * 0.15, height: UIScreen.height * 0.1)
+                                Text(Ingredient.meat.title)
+                                    .font(.cookierun(.regular))
+                            }
+                            .onTapGesture {
+                                ingredientModel = .meat
+                            }
                         }
                     }
                 }
