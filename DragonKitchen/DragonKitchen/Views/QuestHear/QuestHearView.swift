@@ -23,8 +23,6 @@ struct QuestHearView: View {
                 .ignoresSafeArea()
 
             VStack {
-                NavigationBar(pageText: 3, isOn: [true, true, true, false, false], isCleared: $isCleared)
-
                 // 녹음 파일 있을 때
                 if let recording = audioRecorder.recordingFile {
                     HStack {
@@ -123,6 +121,7 @@ struct QuestHearView: View {
                                 self.tappedButton()
                             }
                     }
+                    .padding(.top, UIScreen.height*0.2)
                 }
 
             }

@@ -11,10 +11,13 @@ import SwiftUI
 struct DragonKitchenApp: App {
     var body: some Scene {
         WindowGroup {
-            TitleView()
+            ColorQuestView()
+//            TitleView()
+//            NavigatingTestView()
                 .environmentObject(ChosenFood())
-                .environmentObject(ChosenDragon())
-                .environmentObject(gageVariables())
+//                .environmentObject(ChosenDragon())
+//                .environmentObject(gageVariables())
+//                .environmentObject(CurrentPageModel())
         }
     }
 }
