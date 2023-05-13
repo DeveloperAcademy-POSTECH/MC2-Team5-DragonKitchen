@@ -15,6 +15,7 @@ struct VegetableView: View {
         GridItem(.flexible(), spacing: 125)
     ]
     @State var isPresenting: Bool = false
+    @State var isClicked: Bool = false
     @State var selectedVegiName = ""
     @State var selectedVegiIllust = ""
     @State var selectedPictureName = "noPicture"
@@ -79,14 +80,17 @@ struct VegetableView: View {
                         selectedVegiName = vegetable.name
                         selectedPictureName = vegetable.picture
                         if selectedPictureName != "noPicture" {
-                            isPresenting = true
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                isClicked = true
+                                isPresenting = true
+                            }
                         }
                     }
                 }
             }
         }
-        .sheet(isPresented: $isPresenting) {
-            BookPopUpView(isPresenting: $isPresenting, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
+        .overlay {
+            BookPopUpView(isPresenting: $isPresenting, isClicked: $isClicked, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
         }
     }
 }
