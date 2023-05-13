@@ -9,21 +9,22 @@ import SwiftUI
 
 struct IngredientView: View {
     let columns = [
-        GridItem(.flexible(), spacing: 125),
-        GridItem(.flexible(), spacing: 125),
-        GridItem(.flexible(), spacing: 125),
-        GridItem(.flexible(), spacing: 125)
+        GridItem(.flexible(), spacing: 0),
+        GridItem(.flexible(), spacing: 0),
+        GridItem(.flexible(), spacing: 0),
+        GridItem(.flexible(), spacing: 0)
     ]
     @State var isPresenting: Bool = false
     @State var isClicked: Bool = false
     @State var selectedVegiName = ""
     @State var selectedVegiIllust = ""
     @State var selectedPictureName = "noPicture"
+    @Binding var ingredients: Ingredient
 
     var body: some View {
         VStack(alignment: .center) {
             LazyVGrid(columns: columns, alignment: .leading) {
-                ForEach(Ingredient.vegetables, id: \.self) { vegetable in
+                ForEach(ingredients.data, id: \.self) { vegetable in
                     ZStack {
                         if vegetable.picture != "noPicture" {
                             RoundedRectangle(cornerRadius: 10)
@@ -33,8 +34,8 @@ struct IngredientView: View {
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.vegiGreen, lineWidth: 1.5)
                                 )
-                                .frame(width: 119, height: 140)
-                                .padding(8)
+//                                .frame(width: 119, height: 140)
+//                                .padding(8)
                         } else {
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(Color.white)
@@ -42,8 +43,8 @@ struct IngredientView: View {
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.black, lineWidth: 1.5)
                                 )
-                                .frame(width: 119, height: 140)
-                                .padding(8)
+//                                .frame(width: 119, height: 140)
+//                                .padding(8)
                         }
                         VStack {
                             Spacer()
@@ -59,20 +60,20 @@ struct IngredientView: View {
                                 Text(vegetable.name)
                                     .font(.system(size: 20))
                                     .foregroundColor(.black)
-                                    .frame(width: 97, height: 31, alignment: .top)
+//                                    .frame(width: 97, height: 31, alignment: .top)
                                     .background(Color.white.opacity(0.75))
                                     .cornerRadius(8)
                                     .font(.subheadline)
-                                    .padding(16)
+//                                    .padding(16)
                             } else {
                                 Text(vegetable.name)
                                     .font(.system(size: 20))
                                     .foregroundColor(.black)
-                                    .frame(width: 97, height: 31, alignment: .top)
+//                                    .frame(width: 97, height: 31, alignment: .top)
                                     .background(Color.bookNameBackground)
                                     .cornerRadius(8)
                                     .font(.subheadline)
-                                    .padding(16)
+//                                    .padding(16)
                             }
                         }
                     }
@@ -97,6 +98,6 @@ struct IngredientView: View {
 
 struct IngredientView_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientView()
+        IngredientView(ingredients: .constant(.vegetable))
     }
 }

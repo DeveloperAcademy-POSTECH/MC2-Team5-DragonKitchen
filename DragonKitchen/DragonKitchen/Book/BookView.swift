@@ -9,11 +9,13 @@ import SwiftUI
 import NavigationStack
 
 struct BookView: View {
+    @State var ingredient: Ingredient = .vegetable
+
     var body: some View {
         NavigationStackView(transitionType: .none) {
             VStack {
                 HStack {
-                    Text("야채")
+                    Text(ingredient.title)
                         .font(.system(size: 47, weight: .semibold))
 
                     Spacer()
@@ -29,17 +31,25 @@ struct BookView: View {
 
                 HStack {
                     ScrollView(showsIndicators: false, content: {
-                        IngredientView()
-                            .frame(width: 800)
+                        IngredientView(ingredients: $ingredient)
+                            .frame(width: 500)
                     })
-//                    .background(Color.red)
 
-//                    Spacer() 
-
-                    Text("야채")
-                        .background(Color.blue)
+                    VStack {
+                        Text(Ingredient.vegetable.title)
+                            .onTapGesture {
+                                ingredient = .vegetable
+                            }
+                        Text(Ingredient.fruit.title)
+                            .onTapGesture {
+                                ingredient = .fruit
+                            }
+                        Text(Ingredient.meat.title)
+                            .onTapGesture {
+                                ingredient = .meat
+                            }
+                    }
                 }
-//                .background(Color.yellow)
             }
         }
     }
