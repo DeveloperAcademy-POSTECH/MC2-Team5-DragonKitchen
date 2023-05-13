@@ -1,5 +1,5 @@
 //
-//  VegetableView.swift
+//  IngredientView.swift
 //  DragonKitchen
 //
 //  Created by 허준혁 on 2023/05/13.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VegetableView: View {
+struct IngredientView: View {
     let columns = [
         GridItem(.flexible(), spacing: 125),
         GridItem(.flexible(), spacing: 125),
@@ -95,8 +95,8 @@ struct VegetableView: View {
     }
 }
 
-struct VegetableView_Previews: PreviewProvider {
+struct IngredientView_Previews: PreviewProvider {
     static var previews: some View {
-        VegetableView()
+        IngredientView()
     }
 }

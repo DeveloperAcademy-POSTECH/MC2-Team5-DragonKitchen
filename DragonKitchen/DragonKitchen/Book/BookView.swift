@@ -29,7 +29,7 @@ struct BookView: View {
 
                 HStack {
                     ScrollView(showsIndicators: false, content: {
-                        VegetableView()
+                        IngredientView()
                             .frame(width: 800)
                     })
 //                    .background(Color.red)

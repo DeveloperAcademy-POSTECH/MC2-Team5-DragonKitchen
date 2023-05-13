@@ -59,9 +59,6 @@
 		BF939EA12A0E2ED4009E29E9 /* CustomCameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */; };
 		BF939EA32A0E2EE8009E29E9 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */; };
 		BFD088322A0F261200058816 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088312A0F261200058816 /* BookModel.swift */; };
-		BFD088342A0F263600058816 /* BookVegetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088332A0F263600058816 /* BookVegetable.swift */; };
-		BFD088362A0F265800058816 /* BookFruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088352A0F265800058816 /* BookFruit.swift */; };
-		BFD088382A0F266200058816 /* BookMeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088372A0F266200058816 /* BookMeat.swift */; };
 		BFD0883C2A0F2F6800058816 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883B2A0F2F6800058816 /* BookView.swift */; };
 		BFD0883E2A0F327000058816 /* VegetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883D2A0F327000058816 /* VegetableView.swift */; };
 		BFD088402A0F38AC00058816 /* BookPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */; };
@@ -118,9 +115,6 @@
 		BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
 		BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		BFD088312A0F261200058816 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
-		BFD088332A0F263600058816 /* BookVegetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVegetable.swift; sourceTree = "<group>"; };
-		BFD088352A0F265800058816 /* BookFruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFruit.swift; sourceTree = "<group>"; };
-		BFD088372A0F266200058816 /* BookMeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMeat.swift; sourceTree = "<group>"; };
 		BFD0883B2A0F2F6800058816 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		BFD0883D2A0F327000058816 /* VegetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableView.swift; sourceTree = "<group>"; };
 		BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPopUpView.swift; sourceTree = "<group>"; };
@@ -312,9 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				BFD088312A0F261200058816 /* BookModel.swift */,
-				BFD088332A0F263600058816 /* BookVegetable.swift */,
-				BFD088352A0F265800058816 /* BookFruit.swift */,
-				BFD088372A0F266200058816 /* BookMeat.swift */,
 				BFD0883B2A0F2F6800058816 /* BookView.swift */,
 				BFD0883D2A0F327000058816 /* VegetableView.swift */,
 				BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */,
@@ -437,7 +428,6 @@
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
 				603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */,
 				1BE15F4A2A0BEF15003EC65B /* (null) in Sources */,
-				BFD088382A0F266200058816 /* BookMeat.swift in Sources */,
 				1BD198FB2A0D23E100702151 /* NavigatingTestView.swift in Sources */,
 				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
 				6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */,
@@ -445,14 +435,12 @@
 				1BE15F4F2A0BF045003EC65B /* (null) in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
-				BFD088342A0F263600058816 /* BookVegetable.swift in Sources */,
 				BF939E9A2A0E2E35009E29E9 /* MissionCompleteView.swift in Sources */,
 				BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */,
 				1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */,
 				1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */,
 				1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */,
 				BF65D7E72A0A32E100B44877 /* PaprikaView.swift in Sources */,
-				BFD088362A0F265800058816 /* BookFruit.swift in Sources */,
 				BFD088402A0F38AC00058816 /* BookPopUpView.swift in Sources */,
 				BFD088322A0F261200058816 /* BookModel.swift in Sources */,
 			);
