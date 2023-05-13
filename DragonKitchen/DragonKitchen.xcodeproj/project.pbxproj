@@ -58,6 +58,14 @@
 		BF939E9E2A0E2E95009E29E9 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939E9D2A0E2E95009E29E9 /* Extension+UIImage.swift */; };
 		BF939EA12A0E2ED4009E29E9 /* CustomCameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */; };
 		BF939EA32A0E2EE8009E29E9 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */; };
+		BF95FE702A0F8F3C001A99F5 /* Smile.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE6A2A0F8F3C001A99F5 /* Smile.gif */; };
+		BF95FE712A0F8F3C001A99F5 /* Strange.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE6B2A0F8F3C001A99F5 /* Strange.gif */; };
+		BF95FE722A0F8F3C001A99F5 /* Normal 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE6C2A0F8F3C001A99F5 /* Normal 2.gif */; };
+		BF95FE732A0F8F3C001A99F5 /* Close.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE6D2A0F8F3C001A99F5 /* Close.gif */; };
+		BF95FE742A0F8F3C001A99F5 /* Sad.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE6E2A0F8F3C001A99F5 /* Sad.gif */; };
+		BF95FE752A0F8F3C001A99F5 /* Dizz.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE6F2A0F8F3C001A99F5 /* Dizz.gif */; };
+		BF95FE772A0F8F46001A99F5 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95FE762A0F8F46001A99F5 /* GIFView.swift */; };
+		BF95FE792A0F8F59001A99F5 /* NoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95FE782A0F8F59001A99F5 /* NoseView.swift */; };
 		DA763A0D2A0A4D96001A1EFC /* ColorQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestView.swift */; };
 		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +118,14 @@
 		BF939E9D2A0E2E95009E29E9 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 		BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
 		BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
+		BF95FE6A2A0F8F3C001A99F5 /* Smile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Smile.gif; sourceTree = "<group>"; };
+		BF95FE6B2A0F8F3C001A99F5 /* Strange.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Strange.gif; sourceTree = "<group>"; };
+		BF95FE6C2A0F8F3C001A99F5 /* Normal 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Normal 2.gif"; sourceTree = "<group>"; };
+		BF95FE6D2A0F8F3C001A99F5 /* Close.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Close.gif; sourceTree = "<group>"; };
+		BF95FE6E2A0F8F3C001A99F5 /* Sad.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Sad.gif; sourceTree = "<group>"; };
+		BF95FE6F2A0F8F3C001A99F5 /* Dizz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Dizz.gif; sourceTree = "<group>"; };
+		BF95FE762A0F8F46001A99F5 /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		BF95FE782A0F8F59001A99F5 /* NoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoseView.swift; sourceTree = "<group>"; };
 		DA763A0C2A0A4D96001A1EFC /* ColorQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestView.swift; path = DragonKitchen/Views/ColorQuestView.swift; sourceTree = SOURCE_ROOT; };
 		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +149,9 @@
 				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
 				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
 				DA763A0C2A0A4D96001A1EFC /* ColorQuestView.swift */,
+				BF95FE762A0F8F46001A99F5 /* GIFView.swift */,
 				DAA445522A0BF969007F6B50 /* TextureQuestView.swift */,
+				BF95FE782A0F8F59001A99F5 /* NoseView.swift */,
 				6045F14A2A0BA561005B134B /* TitleView.swift */,
 				BF12CD4E2A0F0F3400961C9B /* TasteView.swift */,
 				6045F14C2A0BCAAA005B134B /* SelectView.swift */,
@@ -241,6 +259,7 @@
 				1B848D712A0206910099F726 /* Classifier.swift */,
 				1BE1F1002A060FCB0021BBF0 /* Util */,
 				BF07D2632A00D18B00F9F225 /* Assets.xcassets */,
+				BF95FE692A0F8F3C001A99F5 /* resource */,
 				1BE15F552A0BF19A003EC65B /* Fonts */,
 				BF07D2652A00D18B00F9F225 /* Preview Content */,
 			);
@@ -291,6 +310,20 @@
 				BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */,
 			);
 			path = PictureWithIngredient;
+			sourceTree = "<group>";
+		};
+		BF95FE692A0F8F3C001A99F5 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				BF95FE6A2A0F8F3C001A99F5 /* Smile.gif */,
+				BF95FE6B2A0F8F3C001A99F5 /* Strange.gif */,
+				BF95FE6C2A0F8F3C001A99F5 /* Normal 2.gif */,
+				BF95FE6D2A0F8F3C001A99F5 /* Close.gif */,
+				BF95FE6E2A0F8F3C001A99F5 /* Sad.gif */,
+				BF95FE6F2A0F8F3C001A99F5 /* Dizz.gif */,
+			);
+			name = resource;
+			path = ../../../../Downloads/resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,8 +393,14 @@
 				1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */,
 				1BE15F592A0BF342003EC65B /* (null) in Resources */,
 				1BE15F572A0BF33E003EC65B /* (null) in Resources */,
+				BF95FE722A0F8F3C001A99F5 /* Normal 2.gif in Resources */,
+				BF95FE712A0F8F3C001A99F5 /* Strange.gif in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
 				1BE15F582A0BF340003EC65B /* (null) in Resources */,
+				BF95FE742A0F8F3C001A99F5 /* Sad.gif in Resources */,
+				BF95FE732A0F8F3C001A99F5 /* Close.gif in Resources */,
+				BF95FE752A0F8F3C001A99F5 /* Dizz.gif in Resources */,
+				BF95FE702A0F8F3C001A99F5 /* Smile.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +423,7 @@
 				1BD198F72A0C970400702151 /* CurrentPageModel.swift in Sources */,
 				1BD198F02A0C913200702151 /* Extension+Font.swift in Sources */,
 				BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */,
+				BF95FE792A0F8F59001A99F5 /* NoseView.swift in Sources */,
 				1BE1F0FF2A060FC40021BBF0 /* MainView.swift in Sources */,
 				60B719012A0C9C2500C7CA9C /* HeartImage.swift in Sources */,
 				1BE15F512A0BF06D003EC65B /* (null) in Sources */,
@@ -397,6 +437,7 @@
 				BF65D7E92A0A32E100B44877 /* QuestHearView.swift in Sources */,
 				BF939E9E2A0E2E95009E29E9 /* Extension+UIImage.swift in Sources */,
 				BF939EA32A0E2EE8009E29E9 /* CustomCameraController.swift in Sources */,
+				BF95FE772A0F8F46001A99F5 /* GIFView.swift in Sources */,
 				DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */,
 				6045F14B2A0BA561005B134B /* TitleView.swift in Sources */,
 				BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */,
