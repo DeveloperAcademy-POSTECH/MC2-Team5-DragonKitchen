@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "paprika_stemHead.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "photoWithHiel.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

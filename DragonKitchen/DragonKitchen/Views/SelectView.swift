@@ -5,25 +5,24 @@
 //  Created by 김기영 on 2023/05/10.
 //
 
-import SwiftUI
 import NavigationStack
-
+import SwiftUI
 
 struct SelectView: View {
     let eggWidth = UIScreen.width * 0.21
-    @EnvironmentObject var chosen : ChosenDragon
+    @EnvironmentObject var chosen: ChosenDragon
     @State var isHielGray = false
     @State var isPluGray = false
     @State var isHielGlow = false
     @State var isPluGlow = false
     @State var buttonWidth = UIScreen.width * 0.075
     var body: some View {
-        ZStack{
+        ZStack {
             Color.questBackgroundColor
                 .ignoresSafeArea()
-            VStack{
+            VStack {
                 Spacer()
-                HStack(){
+                HStack {
                     Spacer().frame(width: UIScreen.width * 0.25)
                     Text("어떤 드래곤을 키울까요?")
                         .font(.system(size: 35))
@@ -36,7 +35,7 @@ struct SelectView: View {
                             .frame(width: buttonWidth)
                     }
                     else {
-                        PushView(destination: MainView()){
+                        PushView(destination: MainView()) {
                             Image("GoButton")
                                 .resizable()
                                 .scaledToFit()
@@ -44,13 +43,13 @@ struct SelectView: View {
                         }
                     }
                 }
-                HStack{
-                    VStack{
+                HStack {
+                    VStack {
                         Image("EggPlu")
                             .resizable()
                             .scaledToFit()
                             .frame(width: eggWidth)
-                            .shadow(color: isPluGray ? .clear : .buttonColor ,radius: isPluGlow ? 10 : 0)
+                            .shadow(color: isPluGray ? .clear : .buttonColor, radius: isPluGlow ? 10 : 0)
                             .animation(.easeInOut.repeatForever(), value: isPluGlow)
                             .grayscale(isPluGray ? 1 : 0)
                             .onTapGesture {
@@ -65,12 +64,12 @@ struct SelectView: View {
 //
                     }
                     Spacer().frame(width: UIScreen.width * 0.11)
-                    VStack{
+                    VStack {
                         Image("EggHiel")
                             .resizable()
                             .scaledToFit()
                             .frame(width: eggWidth)
-                            .shadow(color:isHielGray ? .clear : .buttonColor ,radius: isHielGlow ? 10 : 0)
+                            .shadow(color: isHielGray ? .clear : .buttonColor, radius: isHielGlow ? 10 : 0)
                             .animation(.easeInOut.repeatForever(), value: isHielGlow)
                             .grayscale(isHielGray ? 1 : 0)
                             .onTapGesture {
@@ -85,7 +84,6 @@ struct SelectView: View {
 //
                     }
                 }
-
             }
             .font(.cookierun(.regular))
         }
@@ -97,6 +95,5 @@ struct SelectView_Previews: PreviewProvider {
         SelectView()
             .previewInterfaceOrientation(.landscapeRight)
             .environmentObject(ChosenDragon())
-            
     }
 }
