@@ -139,7 +139,6 @@
 				6045F14C2A0BCAAA005B134B /* SelectView.swift */,
 				BF65D7E32A0A32E100B44877 /* QuestHear */,
 				BF939E962A0E2DB4009E29E9 /* PictureWithIngredient */,
-				1B99A6902A09272C00EB6A18 /* BounceAnimationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,10 +234,10 @@
 		BF07D25E2A00D18A00F9F225 /* DragonKitchen */ = {
 			isa = PBXGroup;
 			children = (
+				BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */,
 				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
 				1B92DECC2A01E05100AFB363 /* Models */,
-				BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */,
 				1B848D712A0206910099F726 /* Classifier.swift */,
 				1BE1F1002A060FCB0021BBF0 /* Util */,
 				BF07D2632A00D18B00F9F225 /* Assets.xcassets */,
