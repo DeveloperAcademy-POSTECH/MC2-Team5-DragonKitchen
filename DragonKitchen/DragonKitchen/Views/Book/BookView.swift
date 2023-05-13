@@ -28,8 +28,8 @@ struct BookView: View {
             ZStack {
                 VStack {
                     HStack {
-                        Text(ingredientModel.title)
-                            .font(.system(size: 47, weight: .semibold))
+                        Text("나의 먹이 도감")
+                            .font(.cookierun(.bold, size: 47))
                         
                         Spacer()
                         
@@ -40,7 +40,7 @@ struct BookView: View {
                                 .frame(width: UIScreen.width * 0.078)
                         }
                     }
-                    .background(ingredientModel.color.opacity(0.5))
+                    .padding()
 
                     HStack {
                         ScrollView(showsIndicators: false, content: {
