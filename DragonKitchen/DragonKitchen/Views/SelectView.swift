@@ -11,6 +11,7 @@ import SwiftUI
 struct SelectView: View {
     let eggWidth = UIScreen.width * 0.21
     @EnvironmentObject var chosen: ChosenDragon
+    @EnvironmentObject var gageVar: gageVariables
     @State var isHielGray = false
     @State var isPluGray = false
     @State var isHielGlow = false
@@ -26,6 +27,7 @@ struct SelectView: View {
                     Spacer().frame(width: UIScreen.width * 0.25)
                     Text("어떤 드래곤을 키울까요?")
                         .font(.system(size: 35))
+                        .font(.cookierun(.regular))
                     Spacer()
                     if chosen.chosenDragon == ("", "") {
                         Image("DisabledGoButton")
@@ -56,9 +58,25 @@ struct SelectView: View {
                                 isPluGray = false
                                 isPluGlow = true
                                 chosen.chosenDragon = ("Plu", "플루")
+                                //User Test 용 코드
+//                                gageVar.turnRed1 = true
+//                                gageVar.turnRed2 = true
+//                                gageVar.turnRed3 = true
+//                                gageVar.turnOrange1 = true
+//                                gageVar.turnOrange2 = true
+//                                gageVar.turnOrange3 = true
+//                                gageVar.turnGreen1 = true
+//                                gageVar.turnGreen2 = true
+//                                gageVar.greenCount = 2
+//                                gageVar.redCount = 3
+//                                gageVar.orangeCount = 3
+                                //User Test 용 코드 끝
+                                
                             }
-                        Text(chosen.chosenDragon.1)
+                        Text("플루")
                             .font(.system(size: 25))
+                            .font(.cookierun(.regular))
+//
                     }
                     Spacer().frame(width: UIScreen.width * 0.11)
                     VStack {
@@ -74,12 +92,28 @@ struct SelectView: View {
                                 isHielGray = false
                                 isHielGlow = true
                                 chosen.chosenDragon = ("Hiel", "이엘")
+                                //User Test 용 코드
+//                                gageVar.turnRed1 = true
+//                                gageVar.turnRed2 = true
+//                                gageVar.turnRed3 = true
+//                                gageVar.turnOrange1 = true
+//                                gageVar.turnOrange2 = true
+//                                gageVar.turnOrange3 = true
+//                                gageVar.turnGreen1 = true
+//                                gageVar.turnGreen2 = true
+//                                gageVar.greenCount = 2
+//                                gageVar.redCount = 3
+//                                gageVar.orangeCount = 3
+                                //User Test 용 코드 끝
                             }
-                        Text(chosen.chosenDragon.1)
+                        Text("이엘")
                             .font(.system(size: 25))
+                            .font(.cookierun(.regular))
+//
                     }
                 }
             }
+            .font(.cookierun(.regular))
         }
     }
 }

@@ -17,11 +17,13 @@ struct FeedButton: View {
                 Image("Dish")
                     .resizable()
                     .scaledToFit()
+                    .shadow(radius: 10)
                     .frame(width: UIScreen.width*0.2)
                     
                 Image("DishCover")
                     .resizable()
                     .scaledToFit()
+                    .shadow(radius: 10)
                     .frame(width: UIScreen.width*0.14)
                     .offset(x:  isClicked ? -UIScreen.width * 0.025:UIScreen.width * 0.005, y: isClicked ? -UIScreen.height * 0.01 : -UIScreen.height * 0.04)
                     .rotationEffect(Angle(degrees: isClicked ? 55 : 0), anchor: .bottomTrailing)
