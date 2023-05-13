@@ -30,12 +30,16 @@ struct IngredientView: View {
 
             Spacer()
 
-            Text(ingredientData.name)
-                .font(.system(size: 20))
-                .foregroundColor(.black)
-                .background(ingredientData.picture != "noPicture" ? Color.white.opacity(0.75) : Color.bookNameBackground)
-                .cornerRadius(8)
-                .font(.subheadline)
+            ZStack {
+                RoundedRectangle(cornerRadius: 5)
+                    .fill(ingredientData.picture != "noPicture" ? Color.white.opacity(0.75) : Color.bookNameBackground)
+                    .frame(width: UIScreen.width * 0.12, height: UIScreen.height * 0.075)
+
+                Text(ingredientData.name)
+                    .foregroundColor(.black)
+                    .font(.cookierun(.regular, size: 18))
+            }
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
         }
     }
 }

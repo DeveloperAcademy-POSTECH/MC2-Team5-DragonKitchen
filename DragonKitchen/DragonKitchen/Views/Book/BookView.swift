@@ -29,7 +29,7 @@ struct BookView: View {
                 VStack {
                     HStack {
                         Text("나의 먹이 도감")
-                            .font(.cookierun(.bold, size: 47))
+                            .font(.cookierun(.bold, size: 45))
                         
                         Spacer()
                         
@@ -51,6 +51,7 @@ struct BookView: View {
                                     ForEach(ingredientModel.data, id: \.self) { ingredient in
                                         ZStack {
                                             IngredientView(ingredientData: ingredient, ingredient: ingredientModel)
+                                                .frame(height: UIScreen.height * 0.37)
                                                 .padding(5)
                                         }
                                         .onTapGesture {
