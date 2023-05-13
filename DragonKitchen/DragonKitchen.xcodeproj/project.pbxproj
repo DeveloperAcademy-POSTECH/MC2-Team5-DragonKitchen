@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B07F8E82A0FB4BC006C2691 /* CookieRun-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */; };
+		1B07F8EA2A0FB4C0006C2691 /* CookieRun-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */; };
+		1B07F8EB2A0FB4C3006C2691 /* CookieRun-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */; };
 		1B1D41652A025D01000C9B2B /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 1B1D41642A025D01000C9B2B /* NavigationStack */; };
 		1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41662A02642B000C9B2B /* FoodResultView.swift */; };
 		1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41682A033325000C9B2B /* ChosenFood.swift */; };
@@ -16,13 +19,12 @@
 		1B942A3C2A0EB28700B1D664 /* FoodColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */; };
 		1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */; };
 		1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68E2A07E41400EB6A18 /* PopupView.swift */; };
-		1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A37852A0A1A9B00C63FB0 /* DummView.swift */; };
 		1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */; };
 		1BD198F02A0C913200702151 /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198EF2A0C913200702151 /* Extension+Font.swift */; };
 		1BD198F72A0C970400702151 /* CurrentPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198F62A0C970400702151 /* CurrentPageModel.swift */; };
-		1BD198F92A0CF15E00702151 /* TasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198F82A0CF15E00702151 /* TasteView.swift */; };
-		1BD198FB2A0D23E100702151 /* NavigatingTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198FA2A0D23E100702151 /* NavigatingTestView.swift */; };
-		1BD198FD2A0DEE0200702151 /* FoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198FC2A0DEE0200702151 /* FoodImageView.swift */; };
+		1BD8881E2A0FC7D4002A4667 /* TasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6CD7B92A0FC6B7003A1B66 /* TasteView.swift */; };
+		1BD888202A0FC810002A4667 /* QuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198FA2A0D23E100702151 /* QuestView.swift */; };
+		1BD888212A0FC8A7002A4667 /* FoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198FC2A0DEE0200702151 /* FoodImageView.swift */; };
 		1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */; };
 		1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */; };
 		1BE15F4A2A0BEF15003EC65B /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -66,20 +68,19 @@
 		1B1D41662A02642B000C9B2B /* FoodResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultView.swift; sourceTree = "<group>"; };
 		1B1D41682A033325000C9B2B /* ChosenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenFood.swift; sourceTree = "<group>"; };
 		1B6471B82A09DCFE0083599D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		1B6CD7B92A0FC6B7003A1B66 /* TasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TasteView.swift; path = ../TasteView.swift; sourceTree = "<group>"; };
 		1B848D712A0206910099F726 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		1B92DED12A0201ED00AFB363 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodColorModel.swift; sourceTree = "<group>"; };
 		1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		1B99A68E2A07E41400EB6A18 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
-		1B9A37852A0A1A9B00C63FB0 /* DummView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummView.swift; sourceTree = "<group>"; };
 		1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodClassifier.mlmodel; sourceTree = "<group>"; };
 		1BD198EF2A0C913200702151 /* Extension+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Bold.ttf"; sourceTree = "<group>"; };
 		1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Black.ttf"; sourceTree = "<group>"; };
 		1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Regular.ttf"; sourceTree = "<group>"; };
 		1BD198F62A0C970400702151 /* CurrentPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPageModel.swift; sourceTree = "<group>"; };
-		1BD198F82A0CF15E00702151 /* TasteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasteView.swift; path = ../../../../../Downloads/TasteView.swift; sourceTree = "<group>"; };
-		1BD198FA2A0D23E100702151 /* NavigatingTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatingTestView.swift; sourceTree = "<group>"; };
+		1BD198FA2A0D23E100702151 /* QuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestView.swift; sourceTree = "<group>"; };
 		1BD198FC2A0DEE0200702151 /* FoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImageView.swift; sourceTree = "<group>"; };
 		1BDB8FC02A02256D0044A2DB /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		1BDB8FC22A0245DF0044A2DB /* FeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButton.swift; sourceTree = "<group>"; };
@@ -99,18 +100,18 @@
 		BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragonKitchenApp.swift; path = DragonKitchen/DragonKitchenApp.swift; sourceTree = SOURCE_ROOT; };
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DragonKitchen/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		BF65D7E42A0A32E100B44877 /* PaprikaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaprikaView.swift; path = DragonKitchen/Views/QuestHear/PaprikaView.swift; sourceTree = SOURCE_ROOT; };
-		BF65D7E62A0A32E100B44877 /* QuestHearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestHearView.swift; path = DragonKitchen/Views/QuestHear/QuestHearView.swift; sourceTree = SOURCE_ROOT; };
+		BF65D7E42A0A32E100B44877 /* PaprikaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaprikaView.swift; path = DragonKitchen/Views/Quest/QuestHear/PaprikaView.swift; sourceTree = SOURCE_ROOT; };
+		BF65D7E62A0A32E100B44877 /* QuestHearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestHearView.swift; path = DragonKitchen/Views/Quest/QuestHear/QuestHearView.swift; sourceTree = SOURCE_ROOT; };
 		BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = DragonKitchen/Models/QuestHear/AudioPlayer.swift; sourceTree = SOURCE_ROOT; };
 		BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecorder.swift; path = DragonKitchen/Models/QuestHear/AudioRecorder.swift; sourceTree = SOURCE_ROOT; };
-		BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressCircle.swift; path = DragonKitchen/Views/QuestHear/ProgressCircle.swift; sourceTree = SOURCE_ROOT; };
+		BF65D7F12A0B0FFC00B44877 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressCircle.swift; path = DragonKitchen/Views/Quest/QuestHear/ProgressCircle.swift; sourceTree = SOURCE_ROOT; };
 		BF939E972A0E2E20009E29E9 /* CustomCameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraPhotoView.swift; sourceTree = "<group>"; };
 		BF939E992A0E2E35009E29E9 /* MissionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCompleteView.swift; sourceTree = "<group>"; };
 		BF939E9B2A0E2E5F009E29E9 /* PolaroidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolaroidView.swift; sourceTree = "<group>"; };
 		BF939E9D2A0E2E95009E29E9 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 		BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
 		BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
-		DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestVIew.swift; path = DragonKitchen/Views/ColorQuestVIew.swift; sourceTree = SOURCE_ROOT; };
+		DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestVIew.swift; path = DragonKitchen/Views/Quest/ColorQuestVIew.swift; sourceTree = SOURCE_ROOT; };
 		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,15 +130,13 @@
 		1B1501142A0684BF00CA9502 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1BE1F0FE2A060FC40021BBF0 /* MainView.swift */,
-				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
-				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
-				DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */,
-				DAA445522A0BF969007F6B50 /* TextureQuestView.swift */,
 				6045F14A2A0BA561005B134B /* TitleView.swift */,
-				1BD198F82A0CF15E00702151 /* TasteView.swift */,
 				6045F14C2A0BCAAA005B134B /* SelectView.swift */,
-				BF65D7E32A0A32E100B44877 /* QuestHear */,
+				1BE1F0FE2A060FC40021BBF0 /* MainView.swift */,
+				1B99A68E2A07E41400EB6A18 /* PopupView.swift */,
+				1B1D41662A02642B000C9B2B /* FoodResultView.swift */,
+				1BD198FC2A0DEE0200702151 /* FoodImageView.swift */,
+				1B6CD7B72A0FC698003A1B66 /* Quest */,
 				BF939E962A0E2DB4009E29E9 /* PictureWithIngredient */,
 			);
 			path = Views;
@@ -159,6 +158,19 @@
 			path = ViewAssets;
 			sourceTree = "<group>";
 		};
+		1B6CD7B72A0FC698003A1B66 /* Quest */ = {
+			isa = PBXGroup;
+			children = (
+				1BD198FA2A0D23E100702151 /* QuestView.swift */,
+				DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */,
+				DAA445522A0BF969007F6B50 /* TextureQuestView.swift */,
+				1B6CD7B92A0FC6B7003A1B66 /* TasteView.swift */,
+				BF65D7E32A0A32E100B44877 /* QuestHear */,
+			);
+			name = Quest;
+			path = DragonKitchen/Views/Quest;
+			sourceTree = SOURCE_ROOT;
+		};
 		1B92DECC2A01E05100AFB363 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +180,7 @@
 				603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */,
 				1BD198F62A0C970400702151 /* CurrentPageModel.swift */,
 				1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */,
+				1B848D712A0206910099F726 /* Classifier.swift */,
 				BF65D7EA2A0A32F400B44877 /* QuestHear */,
 				BF939E9F2A0E2EAC009E29E9 /* PictureWithIngredient */,
 			);
@@ -177,10 +190,7 @@
 		1B9A37872A0A1F0400C63FB0 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				1B9A37852A0A1A9B00C63FB0 /* DummView.swift */,
 				6080550D2A08835E00A2F499 /* GageButton.swift */,
-				1BD198FA2A0D23E100702151 /* NavigatingTestView.swift */,
-				1BD198FC2A0DEE0200702151 /* FoodImageView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -234,11 +244,10 @@
 		BF07D25E2A00D18A00F9F225 /* DragonKitchen */ = {
 			isa = PBXGroup;
 			children = (
+				BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */,
 				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
 				1B92DECC2A01E05100AFB363 /* Models */,
-				BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */,
-				1B848D712A0206910099F726 /* Classifier.swift */,
 				1BE1F1002A060FCB0021BBF0 /* Util */,
 				BF07D2632A00D18B00F9F225 /* Assets.xcassets */,
 				1BE15F552A0BF19A003EC65B /* Fonts */,
@@ -361,7 +370,10 @@
 				1BE15F592A0BF342003EC65B /* (null) in Resources */,
 				1BE15F572A0BF33E003EC65B /* (null) in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
+				1B07F8E82A0FB4BC006C2691 /* CookieRun-Black.ttf in Resources */,
+				1B07F8EA2A0FB4C0006C2691 /* CookieRun-Bold.ttf in Resources */,
 				1BE15F582A0BF340003EC65B /* (null) in Resources */,
+				1B07F8EB2A0FB4C3006C2691 /* CookieRun-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,11 +400,8 @@
 				1BE15F512A0BF06D003EC65B /* (null) in Sources */,
 				BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */,
 				1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */,
-				1B9A37862A0A1A9B00C63FB0 /* DummView.swift in Sources */,
 				BF939E982A0E2E20009E29E9 /* CustomCameraPhotoView.swift in Sources */,
 				1BCD71502A05CE4A00AF907A /* FoodClassifier.mlmodel in Sources */,
-				1BD198F92A0CF15E00702151 /* TasteView.swift in Sources */,
-				1BD198FD2A0DEE0200702151 /* FoodImageView.swift in Sources */,
 				1BE1F1032A060FCB0021BBF0 /* Extension+UIscreen.swift in Sources */,
 				BF65D7E92A0A32E100B44877 /* QuestHearView.swift in Sources */,
 				BF939E9E2A0E2E95009E29E9 /* Extension+UIImage.swift in Sources */,
@@ -404,9 +413,10 @@
 				1B942A3C2A0EB28700B1D664 /* FoodColorModel.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
+				1BD888202A0FC810002A4667 /* QuestView.swift in Sources */,
+				1BD888212A0FC8A7002A4667 /* FoodImageView.swift in Sources */,
 				603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */,
 				1BE15F4A2A0BEF15003EC65B /* (null) in Sources */,
-				1BD198FB2A0D23E100702151 /* NavigatingTestView.swift in Sources */,
 				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
 				6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */,
 				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,
@@ -419,6 +429,7 @@
 				1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */,
 				1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */,
 				BF65D7E72A0A32E100B44877 /* PaprikaView.swift in Sources */,
+				1BD8881E2A0FC7D4002A4667 /* TasteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,7 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DragonKitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = DD8VYBJ73D;
+				DEVELOPMENT_TEAM = Q6S8GWB6BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonKitchen/Info.plist;
@@ -583,7 +594,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DragonKitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = DD8VYBJ73D;
+				DEVELOPMENT_TEAM = Q6S8GWB6BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonKitchen/Info.plist;

@@ -7,25 +7,25 @@
 
 import SwiftUI
 
-struct NavigatingTestView: View {
+struct QuestView: View {
     @EnvironmentObject var currentPage: CurrentPageModel
+    @State var isQuestCleared: [Bool] = Array(repeating: false, count: 5)
     var body: some View {
         ZStack{
             VStack{
-                NavigationBar(isCleared: .constant(true))
-                    .padding(.horizontal, UIScreen.width*0.1)
+                NavigationBar(isCleared: $isQuestCleared)
+                    .padding(.horizontal, UIScreen.width*0.07)
                     .ignoresSafeArea()
                 Spacer()
             }
-            .zIndex(1000)
+            .zIndex(1)
             switch currentPage.currentPage{
             case .eye:
-//                TasteView()
-                ColorQuestView()
+                ColorQuestView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
             case .hand:
-                TextureQuestView()
+                TextureQuestView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
             case .ear:
-                QuestHearView()
+                QuestHearView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
             case .mouth:
                 TasteView()
             default: Text("hi")
@@ -34,9 +34,9 @@ struct NavigatingTestView: View {
     }
 }
 
-struct NavigatingTestView_Previews: PreviewProvider {
+struct QuestView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigatingTestView()
+        QuestView()
             .environmentObject(CurrentPageModel())
             .environmentObject(ChosenFood())
             .environmentObject(ChosenDragon())

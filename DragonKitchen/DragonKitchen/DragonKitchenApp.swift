@@ -13,10 +13,12 @@ struct DragonKitchenApp: App {
         WindowGroup {
             TitleView()
 //            NavigatingTestView()
+//            FoodResultView()
                 .environmentObject(ChosenFood())
                 .environmentObject(ChosenDragon())
                 .environmentObject(gageVariables())
                 .environmentObject(CurrentPageModel())
+                .environmentObject(VegetableColor())
         }
     }
 }

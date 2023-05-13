@@ -14,7 +14,7 @@ struct QuestHearView: View {
     @State private var remainingSecond = 3
     @State private var isCounting = false
     @State private var progressValue: Float = 0.0
-    @State var isCleared: Bool = false
+    @Binding var isCleared: Bool
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {

@@ -36,7 +36,7 @@ struct RoundedButton: View {
             }
             .frame(width: UIScreen.width * widthScale, height: UIScreen.height * heightScale)
         }
-        .font(.cookierun(.regular))
+        .font(.cookierun(.regular, size: contentSize))
         .foregroundColor(contentColor)
     }
 }
