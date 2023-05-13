@@ -77,6 +77,10 @@ struct BookView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.vegiGreen)
                                     .frame(width: UIScreen.width * 0.15, height: UIScreen.height * 0.1)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
                                 Text(Ingredient.vegetable.title)
                                     .font(.cookierun(.regular))
                             }
@@ -87,6 +91,10 @@ struct BookView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.fruitRed)
                                     .frame(width: UIScreen.width * 0.15, height: UIScreen.height * 0.1)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
                                 Text(Ingredient.fruit.title)
                                     .font(.cookierun(.regular))
                             }
@@ -97,6 +105,10 @@ struct BookView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.meatYellow)
                                     .frame(width: UIScreen.width * 0.15, height: UIScreen.height * 0.1)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
                                 Text(Ingredient.meat.title)
                                     .font(.cookierun(.regular))
                             }
