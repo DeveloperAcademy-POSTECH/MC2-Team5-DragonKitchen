@@ -145,6 +145,7 @@
 				6045F14A2A0BA561005B134B /* TitleView.swift */,
 				BF12CD4E2A0F0F3400961C9B /* TasteView.swift */,
 				6045F14C2A0BCAAA005B134B /* SelectView.swift */,
+				BF95FE7C2A0FB762001A99F5 /* Book */,
 				BF65D7E32A0A32E100B44877 /* QuestHear */,
 				BF939E962A0E2DB4009E29E9 /* PictureWithIngredient */,
 			);
@@ -170,6 +171,7 @@
 		1B92DECC2A01E05100AFB363 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BFD088312A0F261200058816 /* BookModel.swift */,
 				1BCD714F2A05CE4A00AF907A /* FoodClassifier.mlmodel */,
 				6080550F2A0884B600A2F499 /* GageVariables.swift */,
 				1B1D41682A033325000C9B2B /* ChosenFood.swift */,
@@ -242,7 +244,6 @@
 		BF07D25E2A00D18A00F9F225 /* DragonKitchen */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0882E2A0F25C300058816 /* Book */,
 				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
 				1B92DECC2A01E05100AFB363 /* Models */,
@@ -302,10 +303,9 @@
 			path = PictureWithIngredient;
 			sourceTree = "<group>";
 		};
-		BFD0882E2A0F25C300058816 /* Book */ = {
+		BF95FE7C2A0FB762001A99F5 /* Book */ = {
 			isa = PBXGroup;
 			children = (
-				BFD088312A0F261200058816 /* BookModel.swift */,
 				BFD0883B2A0F2F6800058816 /* BookView.swift */,
 				BF95FE7A2A0FA33B001A99F5 /* IngredientView.swift */,
 				BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */,
