@@ -67,10 +67,8 @@ struct MainView: View {
                     HStack {
                         // 도감 이미지
                         VStack {
-                            
-                            Button {} label: {
+                            PushView(destination: BookVegetable()) {
                                 Image("Book")
-                               
                             }
                         }
 

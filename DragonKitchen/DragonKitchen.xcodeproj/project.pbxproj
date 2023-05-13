@@ -58,6 +58,11 @@
 		BF939E9E2A0E2E95009E29E9 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939E9D2A0E2E95009E29E9 /* Extension+UIImage.swift */; };
 		BF939EA12A0E2ED4009E29E9 /* CustomCameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */; };
 		BF939EA32A0E2EE8009E29E9 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */; };
+		BFD088302A0F25D400058816 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0882F2A0F25D400058816 /* Extension+View.swift */; };
+		BFD088322A0F261200058816 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088312A0F261200058816 /* BookModel.swift */; };
+		BFD088342A0F263600058816 /* BookVegetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088332A0F263600058816 /* BookVegetable.swift */; };
+		BFD088362A0F265800058816 /* BookFruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088352A0F265800058816 /* BookFruit.swift */; };
+		BFD088382A0F266200058816 /* BookMeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088372A0F266200058816 /* BookMeat.swift */; };
 		DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */; };
 		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +115,11 @@
 		BF939E9D2A0E2E95009E29E9 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 		BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
 		BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
+		BFD0882F2A0F25D400058816 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		BFD088312A0F261200058816 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		BFD088332A0F263600058816 /* BookVegetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVegetable.swift; sourceTree = "<group>"; };
+		BFD088352A0F265800058816 /* BookFruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFruit.swift; sourceTree = "<group>"; };
+		BFD088372A0F266200058816 /* BookMeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMeat.swift; sourceTree = "<group>"; };
 		DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestVIew.swift; path = DragonKitchen/Views/ColorQuestVIew.swift; sourceTree = SOURCE_ROOT; };
 		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +244,7 @@
 		BF07D25E2A00D18A00F9F225 /* DragonKitchen */ = {
 			isa = PBXGroup;
 			children = (
+				BFD0882E2A0F25C300058816 /* Book */,
 				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
 				1B92DECC2A01E05100AFB363 /* Models */,
@@ -291,6 +302,18 @@
 				BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */,
 			);
 			path = PictureWithIngredient;
+			sourceTree = "<group>";
+		};
+		BFD0882E2A0F25C300058816 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0882F2A0F25D400058816 /* Extension+View.swift */,
+				BFD088312A0F261200058816 /* BookModel.swift */,
+				BFD088332A0F263600058816 /* BookVegetable.swift */,
+				BFD088352A0F265800058816 /* BookFruit.swift */,
+				BFD088372A0F266200058816 /* BookMeat.swift */,
+			);
+			path = Book;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +429,8 @@
 				1B848D722A0206910099F726 /* Classifier.swift in Sources */,
 				603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */,
 				1BE15F4A2A0BEF15003EC65B /* (null) in Sources */,
+				BFD088302A0F25D400058816 /* Extension+View.swift in Sources */,
+				BFD088382A0F266200058816 /* BookMeat.swift in Sources */,
 				1BD198FB2A0D23E100702151 /* NavigatingTestView.swift in Sources */,
 				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
 				6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */,
@@ -413,12 +438,15 @@
 				1BE15F4F2A0BF045003EC65B /* (null) in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
+				BFD088342A0F263600058816 /* BookVegetable.swift in Sources */,
 				BF939E9A2A0E2E35009E29E9 /* MissionCompleteView.swift in Sources */,
 				BF65D7F22A0B0FFC00B44877 /* ProgressCircle.swift in Sources */,
 				1BDB8FC12A02256D0044A2DB /* ImageClassifier.swift in Sources */,
 				1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */,
 				1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */,
 				BF65D7E72A0A32E100B44877 /* PaprikaView.swift in Sources */,
+				BFD088362A0F265800058816 /* BookFruit.swift in Sources */,
+				BFD088322A0F261200058816 /* BookModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
