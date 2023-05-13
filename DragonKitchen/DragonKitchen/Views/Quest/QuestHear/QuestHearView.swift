@@ -50,19 +50,6 @@ struct QuestHearView: View {
                             RoundedButton(widthScale: 0.3, heightScale: 0.148, sfSymbolName: "arrow.counterclockwise", content: "다시 녹음하기", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
                                 .onTapGesture {
                                     isCleared = false
-                                    isCounting = true
-                                    self.audioRecorder.deleteRecording(url: recording)
-                                    self.audioRecorder.readyRecording()
-                                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-                                        isCounting = false
-                                        remainingSecond = 3
-                                        progressValue = 0.0
-                                    }
-                                }
-                            // TODO: 발표 때는 삭제
-                            Text("개발용 삭제 버튼")
-                                .onTapGesture {
-                                    isCleared = false
                                     self.audioRecorder.deleteRecording(url: recording)
                                 }
                         }
@@ -95,8 +82,8 @@ struct QuestHearView: View {
                         PaprikaView()
 
                         Text(remainingSecond > 0 ? "\(remainingSecond)" : "시작")
+                            .font(.cookierun(.regular, size: 60))
                             .foregroundColor(.white)
-                            .font(.largeTitle)
                             .onReceive(timer) { _ in
                                 if remainingSecond > 0 {
                                     remainingSecond -= 1

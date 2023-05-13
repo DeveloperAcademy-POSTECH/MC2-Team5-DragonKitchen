@@ -24,8 +24,12 @@ struct ColorQuestView: View {
                         switch chosenFood.chosenFood.0 {
                         case "paprika":
                             PaprikaImageView()
+                                .environmentObject(VegetableColor())
+                                .environmentObject(ChosenFood())
                         case "carrot":
                             CarrotImageView()
+                                .environmentObject(VegetableColor())
+                                .environmentObject(ChosenFood())
                         default:
                             Image("")
                         }

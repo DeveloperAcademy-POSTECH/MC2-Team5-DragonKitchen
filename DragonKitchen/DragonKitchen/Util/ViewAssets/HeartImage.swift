@@ -15,13 +15,16 @@ struct HeartImage: View{
     @State var heartColor: Color
     
     var body: some View{
-        Image(systemName: "heart.fill")
-            .resizable()
-            .scaledToFit()
-            .foregroundColor(heartColor)
-            .frame(width: heartWidth)
-            .offset(x: xOffset, y: yOffset)
-            .modifier(HeartModifier())
-            .padding()
+        ZStack{
+            Image(systemName: "heart.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(heartColor)
+                .frame(width: heartWidth)
+                .offset(x: xOffset, y: yOffset + 30)
+                .modifier(HeartModifier())
+                .shadow(color:heartColor ,radius: 4)
+                .padding()
+        }
     }
 }

@@ -42,7 +42,6 @@ struct CustomCameraPhotoView: View {
 
                                 Text("이 사진을 사용할까요?")
                                     .foregroundColor(.white)
-                                    .font(.title)
                                     .font(.cookierun(.regular))
 
                                 Spacer()
