@@ -23,7 +23,7 @@ struct IngredientView: View {
         VStack {
             Spacer()
 
-            Image(ingredientData.illust)
+            Image(ingredientData.picture != "noPicture" ? ingredientData.illust : ingredientData.illust + "GrayColor")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width:70, height: 70, alignment: .bottom)
