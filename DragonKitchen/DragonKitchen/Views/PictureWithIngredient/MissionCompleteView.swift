@@ -29,8 +29,7 @@ struct MissionCompleteView: View {
 
                     VStack {
                         Text("미션 성공!")
-                            .font(.system(size: 40))
-                            .font(.cookierun(.bold))
+                            .font(.cookierun(.bold, size: 50))
 
                         PushView(destination: MainView()
                             .environmentObject(ChosenFood())

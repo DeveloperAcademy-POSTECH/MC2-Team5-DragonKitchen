@@ -66,6 +66,9 @@
 		BF95FE752A0F8F3C001A99F5 /* Dizz.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE6F2A0F8F3C001A99F5 /* Dizz.gif */; };
 		BF95FE772A0F8F46001A99F5 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95FE762A0F8F46001A99F5 /* GIFView.swift */; };
 		BF95FE792A0F8F59001A99F5 /* NoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95FE782A0F8F59001A99F5 /* NoseView.swift */; };
+		BF95FE802A0FC610001A99F5 /* CookieRun-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */; };
+		BF95FE812A0FC615001A99F5 /* CookieRun-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */; };
+		BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */; };
 		DA763A0D2A0A4D96001A1EFC /* ColorQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestView.swift */; };
 		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
 /* End PBXBuildFile section */
@@ -394,9 +397,12 @@
 				1BE15F592A0BF342003EC65B /* (null) in Resources */,
 				1BE15F572A0BF33E003EC65B /* (null) in Resources */,
 				BF95FE722A0F8F3C001A99F5 /* Normal 2.gif in Resources */,
+				BF95FE802A0FC610001A99F5 /* CookieRun-Black.ttf in Resources */,
 				BF95FE712A0F8F3C001A99F5 /* Strange.gif in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
+				BF95FE812A0FC615001A99F5 /* CookieRun-Bold.ttf in Resources */,
 				1BE15F582A0BF340003EC65B /* (null) in Resources */,
+				BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */,
 				BF95FE742A0F8F3C001A99F5 /* Sad.gif in Resources */,
 				BF95FE732A0F8F3C001A99F5 /* Close.gif in Resources */,
 				BF95FE752A0F8F3C001A99F5 /* Dizz.gif in Resources */,
