@@ -81,9 +81,12 @@ struct BookView: View {
                         }
                     }
                 }
-                .overlay {
-                    BookPopUpView(isPresenting: $isPresenting, isClicked: $isClicked, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
+                if isClicked {
+                    Color.black.opacity(0.2).ignoresSafeArea()
                 }
+            }
+            .overlay {
+                BookPopUpView(isPresenting: $isPresenting, isClicked: $isClicked, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
             }
             
         }
