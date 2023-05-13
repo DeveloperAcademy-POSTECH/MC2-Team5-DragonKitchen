@@ -46,37 +46,37 @@ enum Ingredient {
         case .fruit:
             return [
                 IngredientData(name: "사과", illust: "apple", picture: "noPicture"),
-                IngredientData(name: "아보카도", illust: "avocado", picture: "bananaImage"),
-                IngredientData(name: "바나나", illust: "banana", picture: "watermelonImage"),
-                IngredientData(name: "블루베리", illust: "blueberry", picture: "grapeImage"),
-                IngredientData(name: "키위", illust: "kiwi", picture: "noPicture"),
-                IngredientData(name: "오렌지", illust: "orange", picture: "noPicture"),
-                IngredientData(name: "복숭아", illust: "peach", picture: "딸grapeImage"),
-                IngredientData(name: "딸기", illust: "strawberry", picture: "풋grapeImage")
+                IngredientData(name: "아보카도", illust: "avocado", picture: ""),
+                IngredientData(name: "바나나", illust: "banana", picture: ""),
+                IngredientData(name: "블루베리", illust: "blueberry", picture: ""),
+                IngredientData(name: "키위", illust: "kiwi", picture: ""),
+                IngredientData(name: "오렌지", illust: "orange", picture: ""),
+                IngredientData(name: "복숭아", illust: "peach", picture: ""),
+                IngredientData(name: "딸기", illust: "strawberry", picture: "")
             ]
         case .vegetable:
             return [
                 IngredientData(name: "완두콩", illust: "bean", picture: "noPicture"),
+                IngredientData(name: "파프리카", illust: "paprika", picture: "noPicture"),
                 IngredientData(name: "브로콜리", illust: "broccoli", picture: "noPicture"),
-                IngredientData(name: "양상추", illust: "cabbage", picture: "cabbage"),
+                IngredientData(name: "양상추", illust: "cabbage", picture: ""),
                 IngredientData(name: "당근", illust: "carrot", picture: "noPicture"),
                 IngredientData(name: "오이", illust: "cucumber", picture: "noPicture"),
                 IngredientData(name: "가지", illust: "eggplant", picture: "noPicture"),
-                IngredientData(name: "버섯", illust: "mushroom", picture: "c"),
-                IngredientData(name: "양파", illust: "onion", picture: "o"),
-                IngredientData(name: "파프리카", illust: "paprika", picture: "noPicture"),
+                IngredientData(name: "버섯", illust: "mushroom", picture: ""),
+                IngredientData(name: "양파", illust: "onion", picture: ""),
                 IngredientData(name: "토마토", illust: "tomato", picture: "noPicture")
             ]
         case .meat:
             return [
-                IngredientData(name: "치즈", illust: "cheese", picture: "appleImage"),
-                IngredientData(name: "닭고기", illust: "chicken", picture: "bananaImage"),
-                IngredientData(name: "조개", illust: "clam", picture: "watermelonImage"),
-                IngredientData(name: "물고기", illust: "Fish", picture: "grapeImage"),
-                IngredientData(name: "고기", illust: "meat", picture: "grapeImage"),
-                IngredientData(name: "우유", illust: "milk", picture: "grapeImage"),
-                IngredientData(name: "새우", illust: "shrimp", picture: "grapeImage"),
-                IngredientData(name: "오징어", illust: "squid", picture: "grapeImage"),
+                IngredientData(name: "치즈", illust: "cheese", picture: ""),
+                IngredientData(name: "닭고기", illust: "chicken", picture: ""),
+                IngredientData(name: "조개", illust: "clam", picture: ""),
+                IngredientData(name: "물고기", illust: "Fish", picture: ""),
+                IngredientData(name: "고기", illust: "meat", picture: ""),
+                IngredientData(name: "우유", illust: "milk", picture: ""),
+                IngredientData(name: "새우", illust: "shrimp", picture: ""),
+                IngredientData(name: "오징어", illust: "squid", picture: ""),
             ]
         }
     }
