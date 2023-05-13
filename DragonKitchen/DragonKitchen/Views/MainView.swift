@@ -65,9 +65,8 @@ struct MainView: View {
                 Spacer().frame(height: UIScreen.height * 0.3)
 
                     HStack {
-                        // 도감 이미지
                         VStack {
-                            PushView(destination: BookVegetable()) {
+                            PushView(destination: BookView()) {
                                 Image("Book")
                             }
                         }
