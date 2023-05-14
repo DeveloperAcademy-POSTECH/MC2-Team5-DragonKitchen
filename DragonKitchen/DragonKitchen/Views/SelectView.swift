@@ -22,8 +22,7 @@ struct SelectView: View {
         ZStack {
             Color.questBackgroundColor
                 .ignoresSafeArea()
-            VStack {
-                Spacer()
+            VStack(spacing: UIScreen.height*0.025) {
                 HStack {
                     Spacer().frame(width: UIScreen.width * 0.25)
                     Text("어떤 드래곤을 키울까요?")
@@ -34,7 +33,7 @@ struct SelectView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: buttonWidth)
-                            .offset(y: UIScreen.height * 0.04 + buttonYOffset)
+                            .offset(y: UIScreen.height * 0.01)
                     }
                     else {
                         PushView(destination: EggView()) {
@@ -42,12 +41,13 @@ struct SelectView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: buttonWidth)
-                                .offset(y: UIScreen.height * 0.04 + buttonYOffset)
+                                .offset(y: UIScreen.height * 0.01)
                         }
                     }
                 }
+                .padding(.top, UIScreen.height*0.04)
                 HStack {
-                    VStack {
+                    VStack(spacing: 5) {
                         Image("EggHiel")
                             .resizable()
                             .scaledToFit()
@@ -78,7 +78,7 @@ struct SelectView: View {
                             .font(.cookierun(.regular))
                     }
                     Spacer().frame(width: UIScreen.width * 0.11)
-                    VStack {
+                    VStack(spacing: 5) {
                         Image("EggPlu")
                             .resizable()
                             .scaledToFit()

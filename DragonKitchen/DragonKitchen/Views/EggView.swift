@@ -17,7 +17,6 @@ struct EggView: View {
         ZStack{
             Color.questBackgroundColor
                 .ignoresSafeArea()
-
             VStack{
                 Spacer()
                     .frame(height: UIScreen.height * 0.05)
@@ -28,7 +27,7 @@ struct EggView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: SelectView().buttonWidth)
-                            .offset(y: UIScreen.height * 0.01 + SelectView().buttonYOffset)
+                            .offset(y: UIScreen.height * 0.024)
                     }
                     else {
                         PushView(destination: MainView(), destinationId: "mainViewId"){
@@ -36,7 +35,7 @@ struct EggView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: SelectView().buttonWidth)
-                                .offset(y: UIScreen.height * 0.01 + SelectView().buttonYOffset)
+                                .offset(y: UIScreen.height * 0.024)
                             
                         }
                     }
@@ -85,5 +84,6 @@ struct EggView_Previews: PreviewProvider {
     static var previews: some View {
         EggView()
             .previewInterfaceOrientation(.landscapeRight)
+            .environmentObject(ChosenDragon())
     }
 }
