@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 struct QuestView: View {
     @EnvironmentObject var currentPage: CurrentPageModel
@@ -76,7 +77,9 @@ struct QuestView: View {
                         }
                     }
                 ZStack {
-                    RoundedButton(widthScale: 0.3, heightScale: 0.148, content: "좋아요!", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
+                    PushView(destination: CustomCameraPhotoView()) {
+                        RoundedButton(widthScale: 0.3, heightScale: 0.148, content: "좋아요!", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
+                    }
                 }
                 .padding(.top, isTastePopupActive ? UIScreen.height * 0.75 : UIScreen.height * 3)
             }

@@ -47,14 +47,14 @@ struct CustomCameraPhotoView: View {
                                 Spacer()
 
                                 PushView(destination: MissionCompleteView()) {
-                                    Image("CheckButton")
+                                    Image("checkButton")
                                         .resizable()
                                         .scaledToFit()
                                         .frame(height: 80)
                                         .padding(30)
                                 }
 
-                                Image("AgainButton")
+                                Image("againButton")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(height: 80)
@@ -84,7 +84,7 @@ struct CustomCameraPhotoView: View {
                         Spacer()
                     }
 
-                    Image("CameraButton")
+                    Image("cameraButton")
                         .resizable()
                         .scaledToFit()
                         .frame(height: 100)
