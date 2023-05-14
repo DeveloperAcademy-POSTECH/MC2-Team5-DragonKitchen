@@ -10,12 +10,13 @@ import NavigationStack
 
 struct BookView: View {
     @EnvironmentObject var chosenDragon: ChosenDragon
+    @EnvironmentObject var chosenFood: ChosenFood
     @State var ingredientModel: Ingredient = .vegetable
     @State var isPresenting: Bool = false
     @State var isClicked: Bool = false
     @State var selectedVegiIllust = ""
     @State var selectedVegiName = ""
-    @State var selectedPictureName = "noPicture"
+    @State var selectedPicture: UIImage? = nil
     
     let columns = [
         GridItem(.flexible(), spacing: 0),
@@ -25,7 +26,7 @@ struct BookView: View {
     ]
     
     var body: some View {
-        NavigationStackView(transitionType: .none) {
+//        NavigationStackView(transitionType: .none) {
             ZStack {
                 VStack {
                     HStack {
@@ -57,9 +58,9 @@ struct BookView: View {
                                                 .padding(5)
                                         }
                                         .onTapGesture {
-                                            selectedVegiName = ingredient.name
-                                            selectedPictureName = ingredient.picture
-                                            if selectedPictureName != "noPicture" {
+                                            if ingredient.name == chosenFood.chosenFood.1 {
+                                                selectedVegiName = ingredient.name
+                                                selectedPicture = chosenFood.pictureWithIngredient!
                                                 withAnimation(.easeInOut(duration: 0.3)) {
                                                     isClicked = true
                                                     isPresenting = true
@@ -128,9 +129,15 @@ struct BookView: View {
                 }
             }.background(.white)
             .overlay {
-                BookPopUpView(isPresenting: $isPresenting, isClicked: $isClicked, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
+                BookPopUpView(
+                    isPresenting: $isPresenting,
+                    isClicked: $isClicked,
+                    selectedVegiIllust: $selectedVegiIllust,
+                    selectedVegiName: $selectedVegiName,
+                    selectedPicture: $selectedPicture
+                )
             }
             
         }
-    }
+//    }
 }

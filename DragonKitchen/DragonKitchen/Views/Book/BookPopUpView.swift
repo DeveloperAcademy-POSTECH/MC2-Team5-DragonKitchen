@@ -13,6 +13,7 @@ struct BookPopUpView: View{
     @Binding var isClicked: Bool
     @Binding var selectedVegiIllust: String
     @Binding var selectedVegiName: String
+    @Binding var selectedPicture: UIImage?
     
     var body: some View{
         ZStack {
@@ -20,8 +21,10 @@ struct BookPopUpView: View{
                 Color.white.cornerRadius(20)
                 RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 2.0)
                 VStack(alignment: .center, spacing: 0) {
-                    Image("guide").resizable().scaledToFit().scaleEffect(0.7)
-                        .offset(y: -UIScreen.height * 0.02)
+                    if let picture = selectedPicture {
+                        Image(uiImage: picture).resizable().scaledToFit().scaleEffect(0.7)
+                            .offset(y: -UIScreen.height * 0.02)
+                    }
                     if chosenDragon.chosenDragon.1 == "이엘" {
                         Text("\(chosenDragon.chosenDragon.1)이와 \(selectedVegiName) 먹은 날!")
                             .multilineTextAlignment(.center)
