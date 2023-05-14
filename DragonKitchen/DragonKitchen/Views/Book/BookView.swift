@@ -30,6 +30,7 @@ struct BookView: View {
                     HStack {
                         Text("나의 먹이 도감")
                             .font(.cookierun(.bold, size: 45))
+                            .foregroundColor(.black)
                         
                         Spacer()
                         
@@ -83,6 +84,7 @@ struct BookView: View {
                                     )
                                 Text(Ingredient.vegetable.title)
                                     .font(.cookierun(.regular))
+                                    .foregroundColor(.black)
                             }
                             .onTapGesture {
                                 ingredientModel = .vegetable
@@ -97,6 +99,7 @@ struct BookView: View {
                                     )
                                 Text(Ingredient.fruit.title)
                                     .font(.cookierun(.regular))
+                                    .foregroundColor(.black)
                             }
                             .onTapGesture {
                                 ingredientModel = .fruit
@@ -111,6 +114,7 @@ struct BookView: View {
                                     )
                                 Text(Ingredient.meat.title)
                                     .font(.cookierun(.regular))
+                                    .foregroundColor(.black)
                             }
                             .onTapGesture {
                                 ingredientModel = .meat
@@ -121,7 +125,7 @@ struct BookView: View {
                 if isClicked {
                     Color.black.opacity(0.2).ignoresSafeArea()
                 }
-            }
+            }.background(.white)
             .overlay {
                 BookPopUpView(isPresenting: $isPresenting, isClicked: $isClicked, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
             }
