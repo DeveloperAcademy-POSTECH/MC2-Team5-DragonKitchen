@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BookPopUpView: View{
+    @EnvironmentObject var chosenDragon: ChosenDragon
     @Binding var isPresenting: Bool
     @Binding var isClicked: Bool
     @Binding var selectedVegiIllust: String
@@ -21,10 +22,18 @@ struct BookPopUpView: View{
                 VStack(alignment: .center, spacing: 0) {
                     Image("guide").resizable().scaledToFit().scaleEffect(0.7)
                         .offset(y: -UIScreen.height * 0.02)
-                    Text("이엘or진화랑 \(selectedVegiName)을 먹었어요!")
-                        .multilineTextAlignment(.center)
-                        .font(.cookierun(.regular))
-                        .padding(.bottom)
+                    if chosenDragon.chosenDragon.1 == "이엘" {
+                        Text("\(chosenDragon.chosenDragon.1)이랑 \(selectedVegiName)을 먹었어요!")
+                            .multilineTextAlignment(.center)
+                            .font(.cookierun(.regular))
+                            .padding(.bottom)
+                    } else {
+                        Text("\(chosenDragon.chosenDragon.1)랑 \(selectedVegiName)을 먹었어요!")
+                            .multilineTextAlignment(.center)
+                            .font(.cookierun(.regular))
+                            .padding(.bottom)
+                    }
+                    
                 }
                 .padding(.vertical, 15)
             }

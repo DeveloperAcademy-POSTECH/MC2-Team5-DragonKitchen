@@ -9,6 +9,7 @@ import SwiftUI
 import NavigationStack
 
 struct BookView: View {
+    @EnvironmentObject var chosenDragon: ChosenDragon
     @State var ingredientModel: Ingredient = .vegetable
     @State var isPresenting: Bool = false
     @State var isClicked: Bool = false
