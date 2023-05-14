@@ -47,6 +47,8 @@
 		60B719012A0C9C2500C7CA9C /* HeartImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B719002A0C9C2500C7CA9C /* HeartImage.swift */; };
 		60DBA2E72A10B7A8006575C3 /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DBA2E62A10B7A8006575C3 /* EggView.swift */; };
 		60DBA2EB2A10BDF6006575C3 /* Sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 60DBA2EA2A10BDF6006575C3 /* Sample.mp4 */; };
+		60DBA2EF2A10C759006575C3 /* EggPlu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 60DBA2ED2A10C759006575C3 /* EggPlu.mp4 */; };
+		60DBA2F02A10C759006575C3 /* EggHiel.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 60DBA2EE2A10C759006575C3 /* EggHiel.mp4 */; };
 		BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */; };
 		BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2632A00D18B00F9F225 /* Assets.xcassets */; };
 		BF12CD4F2A0F0F3400961C9B /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -114,6 +116,8 @@
 		60B719002A0C9C2500C7CA9C /* HeartImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartImage.swift; sourceTree = "<group>"; };
 		60DBA2E62A10B7A8006575C3 /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
 		60DBA2EA2A10BDF6006575C3 /* Sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sample.mp4; sourceTree = "<group>"; };
+		60DBA2ED2A10C759006575C3 /* EggPlu.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = EggPlu.mp4; sourceTree = "<group>"; };
+		60DBA2EE2A10C759006575C3 /* EggHiel.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = EggHiel.mp4; sourceTree = "<group>"; };
 		BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragonKitchenApp.swift; path = DragonKitchen/DragonKitchenApp.swift; sourceTree = SOURCE_ROOT; };
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DragonKitchen/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -261,6 +265,15 @@
 			path = "Extension ";
 			sourceTree = "<group>";
 		};
+		60DBA2EC2A10C738006575C3 /* EggVideo */ = {
+			isa = PBXGroup;
+			children = (
+				60DBA2EE2A10C759006575C3 /* EggHiel.mp4 */,
+				60DBA2ED2A10C759006575C3 /* EggPlu.mp4 */,
+			);
+			path = EggVideo;
+			sourceTree = "<group>";
+		};
 		BF07D2532A00D18A00F9F225 = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +327,7 @@
 		BF34B50F2A1095BA00085478 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60DBA2EC2A10C738006575C3 /* EggVideo */,
 				BF34B5112A1095DF00085478 /* Close.gif */,
 				BF34B5132A1095DF00085478 /* Dizz.gif */,
 				BF34B5152A1095DF00085478 /* Normal 2.gif */,
@@ -435,7 +449,9 @@
 				1B07F8E82A0FB4BC006C2691 /* CookieRun-Black.ttf in Resources */,
 				1B07F8EA2A0FB4C0006C2691 /* CookieRun-Bold.ttf in Resources */,
 				BF34B5172A1095DF00085478 /* Close.gif in Resources */,
+				60DBA2EF2A10C759006575C3 /* EggPlu.mp4 in Resources */,
 				BF34B5162A1095DF00085478 /* Sad.gif in Resources */,
+				60DBA2F02A10C759006575C3 /* EggHiel.mp4 in Resources */,
 				BF34B5192A1095DF00085478 /* Dizz.gif in Resources */,
 				60DBA2EB2A10BDF6006575C3 /* Sample.mp4 in Resources */,
 				BF34B51B2A1095DF00085478 /* Normal 2.gif in Resources */,
