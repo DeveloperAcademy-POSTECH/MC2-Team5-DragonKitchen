@@ -65,6 +65,7 @@ struct TasteView: View {
                 HStack {
                     RoundedButton(widthScale: 0.21, heightScale: 0.148, content: "\(foodInfo[0].1) 주기", isActive: isOn[0])
                         .onTapGesture {
+                            chosenFood.cooking = .raw
                             withAnimation(.easeIn) {
                                 isOn = [true, false, false]
                                 index = 1
@@ -72,6 +73,7 @@ struct TasteView: View {
                         }
                     RoundedButton(widthScale: 0.21, heightScale: 0.148, content: "\(foodInfo[1].1) 주기", isActive: isOn[1])
                         .onTapGesture {
+                            chosenFood.cooking = .toast
                             withAnimation(.easeIn) {
                                 isOn = [false, true, false]
                                 index = 2
@@ -79,6 +81,7 @@ struct TasteView: View {
                         }
                     RoundedButton(widthScale: 0.21, heightScale: 0.148, content: "\(foodInfo[2].1) 주기", isActive: isOn[2])
                         .onTapGesture {
+                            chosenFood.cooking = .fry
                             withAnimation(.easeIn) {
                                 isOn = [false, false, true]
                                 index = 3

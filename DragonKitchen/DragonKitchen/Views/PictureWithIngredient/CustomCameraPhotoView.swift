@@ -14,7 +14,8 @@ struct CustomCameraPhotoView: View {
     @State private var showingCustomCamera = true
     @State private var inputImage: UIImage?
     @State var didTapCapture: Bool = false
-    @EnvironmentObject var chosen: ChosenFood
+    @EnvironmentObject var chosenFood: ChosenFood
+    @EnvironmentObject var chosenDragon: ChosenDragon
 
     var body: some View {
         NavigationStackView(transitionType: .none) {
@@ -71,12 +72,12 @@ struct CustomCameraPhotoView: View {
             }
             .sheet(isPresented: $showingCustomCamera, onDismiss: loadImage) {
                 ZStack(alignment: .trailing) {
-                    CustomCameraRepresentable(image: self.$inputImage, didTapCapture: $didTapCapture, overlayImage: UIImage(named: "PhotoHiel")!)
+                    CustomCameraRepresentable(image: self.$inputImage, didTapCapture: $didTapCapture, overlayImage: UIImage(named: "photo" + chosenDragon.chosenDragon.0 + "_" + chosenFood.cooking.name)!)
                         .ignoresSafeArea()
 
                     // 카메라 촬영시 표시되는 캐릭터
                     HStack {
-                        Image(uiImage: UIImage(named: "PhotoHiel")!)
+                        Image(uiImage: UIImage(named: "photo" + chosenDragon.chosenDragon.0 + "_" + chosenFood.cooking.name)!)
                             .resizable()
                             .scaledToFit()
                             .offset(y: 20)
@@ -100,6 +101,6 @@ struct CustomCameraPhotoView: View {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
         let cropRect = CGRect(x: 0, y: 500, width: 5000, height: 1850)
-        chosen.pictureWithIngredient = inputImage.cropImage(toRect: cropRect)
+        chosenFood.pictureWithIngredient = inputImage.cropImage(toRect: cropRect)
     }
 }

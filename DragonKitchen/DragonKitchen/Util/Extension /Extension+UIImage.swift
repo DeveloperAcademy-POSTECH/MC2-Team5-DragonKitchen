@@ -18,8 +18,8 @@ extension UIImage {
 
         let width: CGFloat = 1700
         let height: CGFloat = 1750
-        let x = (canvasSize.width - image.size.width) / 2 - width + 130
-        let y = (canvasSize.height - image.size.height) / 2 - height / 2 + 130
+        let x = (canvasSize.width - image.size.width) / 2 - width + 310
+        let y = (canvasSize.height - image.size.height) / 2 - height / 2 + 345
         let size = CGSize(width: width, height: height)
         image.draw(in: CGRect(origin: CGPoint(x: x, y: y), size: size))
 
