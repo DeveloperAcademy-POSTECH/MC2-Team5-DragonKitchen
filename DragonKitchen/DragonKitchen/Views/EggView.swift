@@ -28,6 +28,7 @@ struct EggView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: SelectView().buttonWidth)
+                            .offset(y: UIScreen.height * 0.01)
                     }
                     else {
                         PushView(destination: MainView(), destinationId: "mainViewId"){
@@ -35,6 +36,7 @@ struct EggView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: SelectView().buttonWidth)
+                                .offset(y: UIScreen.height * 0.01)
                             
                         }
                     }
@@ -48,20 +50,21 @@ struct EggView: View {
                             .scaledToFit()
                     }
                     VideoPlayer(player: player)
-                        .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.7)
+                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.65)
                         .onAppear{
                             if player.currentItem == nil {
-                                let item = AVPlayerItem(url: Bundle.main.url(forResource: "Sample", withExtension: "mp4")!)
+                                let item = AVPlayerItem(url: Bundle.main.url(forResource: "Egg\(chosen.chosenDragon.0)", withExtension: "mp4")!)
                                 player.replaceCurrentItem(with: item)
                             }
                             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
                                 player.play()
                             })
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5, execute: {
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6.5, execute: {
                                 isDisappear = true
                             })
                         }
                         .opacity(isDisappear ? 0 : 1)
+                        .offset(y:UIScreen.height * -0.01)
                 }
             }
         }
