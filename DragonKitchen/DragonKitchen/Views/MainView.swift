@@ -89,7 +89,7 @@ struct MainView: View {
                             Color.buttonColor.cornerRadius(20)
                             RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 1.5).foregroundColor(.black)
                             Text("진화시키기")
-                                .font(.system(size: 15))
+                                .font(.cookierun(.regular, size: 15))
                                 .foregroundColor(.white)
                         }
                         .font(.cookierun(.regular))
@@ -99,9 +99,7 @@ struct MainView: View {
                         .offset(y: 2 * StatusView().statusYOffset)
                     }
 
-                    PushView(destination: GageButton()) {
-                        Text("test")
-                    }
+                    
                     Spacer().frame(width: UIScreen.width * 0.20)
                 }
                 Spacer().frame(height: UIScreen.height * 0.3)
