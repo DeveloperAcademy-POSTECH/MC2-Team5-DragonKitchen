@@ -9,12 +9,14 @@ import SwiftUI
 import NavigationStack
 
 struct BookView: View {
+    @EnvironmentObject var chosenDragon: ChosenDragon
+    @EnvironmentObject var chosenFood: ChosenFood
     @State var ingredientModel: Ingredient = .vegetable
     @State var isPresenting: Bool = false
     @State var isClicked: Bool = false
     @State var selectedVegiIllust = ""
     @State var selectedVegiName = ""
-    @State var selectedPictureName = "noPicture"
+    @State var selectedPicture: UIImage? = nil
     
     let columns = [
         GridItem(.flexible(), spacing: 0),
@@ -24,12 +26,13 @@ struct BookView: View {
     ]
     
     var body: some View {
-        NavigationStackView(transitionType: .none) {
+//        NavigationStackView(transitionType: .none) {
             ZStack {
                 VStack {
                     HStack {
                         Text("나의 먹이 도감")
                             .font(.cookierun(.bold, size: 45))
+                            .foregroundColor(.black)
                         
                         Spacer()
                         
@@ -55,9 +58,9 @@ struct BookView: View {
                                                 .padding(5)
                                         }
                                         .onTapGesture {
-                                            selectedVegiName = ingredient.name
-                                            selectedPictureName = ingredient.picture
-                                            if selectedPictureName != "noPicture" {
+                                            if ingredient.name == chosenFood.chosenFood.1 {
+                                                selectedVegiName = ingredient.name
+                                                selectedPicture = chosenFood.pictureWithIngredient!
                                                 withAnimation(.easeInOut(duration: 0.3)) {
                                                     isClicked = true
                                                     isPresenting = true
@@ -83,6 +86,7 @@ struct BookView: View {
                                     )
                                 Text(Ingredient.vegetable.title)
                                     .font(.cookierun(.regular))
+                                    .foregroundColor(.black)
                             }
                             .onTapGesture {
                                 ingredientModel = .vegetable
@@ -97,6 +101,7 @@ struct BookView: View {
                                     )
                                 Text(Ingredient.fruit.title)
                                     .font(.cookierun(.regular))
+                                    .foregroundColor(.black)
                             }
                             .onTapGesture {
                                 ingredientModel = .fruit
@@ -111,6 +116,7 @@ struct BookView: View {
                                     )
                                 Text(Ingredient.meat.title)
                                     .font(.cookierun(.regular))
+                                    .foregroundColor(.black)
                             }
                             .onTapGesture {
                                 ingredientModel = .meat
@@ -121,11 +127,17 @@ struct BookView: View {
                 if isClicked {
                     Color.black.opacity(0.2).ignoresSafeArea()
                 }
-            }
+            }.background(.white)
             .overlay {
-                BookPopUpView(isPresenting: $isPresenting, isClicked: $isClicked, selectedVegiIllust: $selectedVegiIllust, selectedVegiName: $selectedVegiName)
+                BookPopUpView(
+                    isPresenting: $isPresenting,
+                    isClicked: $isClicked,
+                    selectedVegiIllust: $selectedVegiIllust,
+                    selectedVegiName: $selectedVegiName,
+                    selectedPicture: $selectedPicture
+                )
             }
             
         }
-    }
+//    }
 }

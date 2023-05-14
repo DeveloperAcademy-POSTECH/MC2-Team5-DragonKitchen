@@ -71,12 +71,13 @@ struct CustomCameraPhotoView: View {
         }
         .sheet(isPresented: $showingCustomCamera, onDismiss: loadImage) {
             ZStack(alignment: .trailing) {
-                CustomCameraRepresentable(image: self.$inputImage, didTapCapture: $didTapCapture, overlayImage: UIImage(named: "photo" + chosenDragon.chosenDragon.0 + "_" + chosenFood.cooking.name)!)
+                CustomCameraRepresentable(image: self.$inputImage, didTapCapture: $didTapCapture, overlayImage: UIImage(named: "\(chosenFood.chosenFood.0)_\(chosenDragon.chosenDragon.0)_\(chosenFood.cooking.name)")!)
                     .ignoresSafeArea()
 
                 // 카메라 촬영시 표시되는 캐릭터
                 HStack {
-                    Image(uiImage: UIImage(named: "photo" + chosenDragon.chosenDragon.0 + "_" + chosenFood.cooking.name)!)
+                    Image(uiImage: UIImage(named:
+                        "\(chosenFood.chosenFood.0)_\(chosenDragon.chosenDragon.0)_\(chosenFood.cooking.name)")!)
                         .resizable()
                         .scaledToFit()
                         .offset(y: 20)
