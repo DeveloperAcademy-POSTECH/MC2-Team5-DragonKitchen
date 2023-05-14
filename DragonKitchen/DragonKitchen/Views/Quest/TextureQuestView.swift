@@ -10,7 +10,7 @@ import SwiftUI
 struct TextureQuestView: View {
     @State var selectedColor: Int = 0
     @Binding var isCleared: Bool
-    @State private var foodImage: String = "basketball_red"
+    @State private var foodImage: String = "paprika_basketball_red"
     @EnvironmentObject var chosen: ChosenFood // 시각에서 선택한 색을 불러오는 변수
 
     var body: some View {
@@ -67,7 +67,7 @@ struct TextureButton: View {
                     isCleared = true
                     selectedTexture = textures[index]
                     // 음식 이미지를 "재질_색" 으로 바꾸기
-                    foodImage = "\(selectedTexture)_\(color.chosenColor)"
+                    foodImage = "\(color.chosenFood.0)_\(selectedTexture)_\(color.chosenColor)"
                     selectedButton = index
                     // 질감 저장
                     for texture in FoodTexture.allCases {
