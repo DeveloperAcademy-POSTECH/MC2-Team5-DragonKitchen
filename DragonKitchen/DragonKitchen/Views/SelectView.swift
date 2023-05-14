@@ -35,7 +35,7 @@ struct SelectView: View {
                             .frame(width: buttonWidth)
                     }
                     else {
-                        PushView(destination: MainView(), destinationId: "mainViewId") {
+                        PushView(destination: EggView()) {
                             Image("GoButton")
                                 .resizable()
                                 .scaledToFit()
