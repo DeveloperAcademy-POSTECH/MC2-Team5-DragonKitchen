@@ -23,14 +23,16 @@ struct BookPopUpView: View{
                     Image("guide").resizable().scaledToFit().scaleEffect(0.7)
                         .offset(y: -UIScreen.height * 0.02)
                     if chosenDragon.chosenDragon.1 == "이엘" {
-                        Text("\(chosenDragon.chosenDragon.1)과 함께 \(selectedVegiName) 먹었어요!")
+                        Text("\(chosenDragon.chosenDragon.1)이와 \(selectedVegiName) 먹은 날!")
                             .multilineTextAlignment(.center)
                             .font(.cookierun(.regular))
                             .padding(.bottom)
+                            .padding(.bottom)
                     } else {
-                        Text("\(chosenDragon.chosenDragon.1)와 함께 \(selectedVegiName) 먹었어요!")
+                        Text("\(chosenDragon.chosenDragon.1)와 \(selectedVegiName) 먹은 날!")
                             .multilineTextAlignment(.center)
                             .font(.cookierun(.regular))
+                            .padding(.bottom)
                             .padding(.bottom)
                     }
                 }
