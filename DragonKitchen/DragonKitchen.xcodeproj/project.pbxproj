@@ -53,6 +53,12 @@
 		BF34B50C2A1094A400085478 /* PaprikaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B5092A1094A400085478 /* PaprikaView.swift */; };
 		BF34B50D2A1094A400085478 /* QuestHearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B50A2A1094A400085478 /* QuestHearView.swift */; };
 		BF34B50E2A1094A400085478 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B50B2A1094A400085478 /* ProgressCircle.swift */; };
+		BF34B5162A1095DF00085478 /* Sad.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF34B5102A1095DF00085478 /* Sad.gif */; };
+		BF34B5172A1095DF00085478 /* Close.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF34B5112A1095DF00085478 /* Close.gif */; };
+		BF34B5182A1095DF00085478 /* Smile.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF34B5122A1095DF00085478 /* Smile.gif */; };
+		BF34B5192A1095DF00085478 /* Dizz.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF34B5132A1095DF00085478 /* Dizz.gif */; };
+		BF34B51A2A1095DF00085478 /* Strange.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF34B5142A1095DF00085478 /* Strange.gif */; };
+		BF34B51B2A1095DF00085478 /* Normal 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF34B5152A1095DF00085478 /* Normal 2.gif */; };
 		BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */; };
 		BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */; };
 		BF939E982A0E2E20009E29E9 /* CustomCameraPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939E972A0E2E20009E29E9 /* CustomCameraPhotoView.swift */; };
@@ -66,7 +72,6 @@
 		BF95FE7B2A0FA33B001A99F5 /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95FE7A2A0FA33B001A99F5 /* IngredientView.swift */; };
 		BF95FE802A0FC610001A99F5 /* CookieRun-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */; };
 		BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */; };
-		BF95FE922A105425001A99F5 /* resource in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE912A105425001A99F5 /* resource */; };
 		BFD088322A0F261200058816 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD088312A0F261200058816 /* BookModel.swift */; };
 		BFD0883C2A0F2F6800058816 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883B2A0F2F6800058816 /* BookView.swift */; };
 		BFD088402A0F38AC00058816 /* BookPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */; };
@@ -113,6 +118,12 @@
 		BF34B5092A1094A400085478 /* PaprikaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaprikaView.swift; sourceTree = "<group>"; };
 		BF34B50A2A1094A400085478 /* QuestHearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestHearView.swift; sourceTree = "<group>"; };
 		BF34B50B2A1094A400085478 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
+		BF34B5102A1095DF00085478 /* Sad.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Sad.gif; sourceTree = "<group>"; };
+		BF34B5112A1095DF00085478 /* Close.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Close.gif; sourceTree = "<group>"; };
+		BF34B5122A1095DF00085478 /* Smile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Smile.gif; sourceTree = "<group>"; };
+		BF34B5132A1095DF00085478 /* Dizz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Dizz.gif; sourceTree = "<group>"; };
+		BF34B5142A1095DF00085478 /* Strange.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Strange.gif; sourceTree = "<group>"; };
+		BF34B5152A1095DF00085478 /* Normal 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Normal 2.gif"; sourceTree = "<group>"; };
 		BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = DragonKitchen/Models/QuestHear/AudioPlayer.swift; sourceTree = SOURCE_ROOT; };
 		BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecorder.swift; path = DragonKitchen/Models/QuestHear/AudioRecorder.swift; sourceTree = SOURCE_ROOT; };
 		BF939E972A0E2E20009E29E9 /* CustomCameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraPhotoView.swift; sourceTree = "<group>"; };
@@ -124,7 +135,6 @@
 		BF95FE762A0F8F46001A99F5 /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 		BF95FE782A0F8F59001A99F5 /* NoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoseView.swift; sourceTree = "<group>"; };
 		BF95FE7A2A0FA33B001A99F5 /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
-		BF95FE912A105425001A99F5 /* resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = resource; path = DragonKitchen/resource; sourceTree = SOURCE_ROOT; };
 		BFD088312A0F261200058816 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		BFD0883B2A0F2F6800058816 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		BFD0883F2A0F38AC00058816 /* BookPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPopUpView.swift; sourceTree = "<group>"; };
@@ -265,11 +275,11 @@
 			isa = PBXGroup;
 			children = (
 				BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */,
-				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
-				BF95FE912A105425001A99F5 /* resource */,
-				1BE1F1002A060FCB0021BBF0 /* Util */,
 				1B92DECC2A01E05100AFB363 /* Models */,
+				1BE1F1002A060FCB0021BBF0 /* Util */,
+				BF34B50F2A1095BA00085478 /* Resources */,
+				1B9A37872A0A1F0400C63FB0 /* Test */,
 				BF07D2632A00D18B00F9F225 /* Assets.xcassets */,
 				1BE15F552A0BF19A003EC65B /* Fonts */,
 				BF07D2652A00D18B00F9F225 /* Preview Content */,
@@ -293,6 +303,19 @@
 				BF34B50B2A1094A400085478 /* ProgressCircle.swift */,
 			);
 			path = QuestHear;
+			sourceTree = "<group>";
+		};
+		BF34B50F2A1095BA00085478 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF34B5112A1095DF00085478 /* Close.gif */,
+				BF34B5132A1095DF00085478 /* Dizz.gif */,
+				BF34B5152A1095DF00085478 /* Normal 2.gif */,
+				BF34B5102A1095DF00085478 /* Sad.gif */,
+				BF34B5122A1095DF00085478 /* Smile.gif */,
+				BF34B5142A1095DF00085478 /* Strange.gif */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		BF65D7EA2A0A32F400B44877 /* QuestHear */ = {
@@ -400,13 +423,18 @@
 				1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */,
 				1BE15F592A0BF342003EC65B /* (null) in Resources */,
 				1BE15F572A0BF33E003EC65B /* (null) in Resources */,
+				BF34B51A2A1095DF00085478 /* Strange.gif in Resources */,
 				BF95FE802A0FC610001A99F5 /* CookieRun-Black.ttf in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
 				1B07F8E82A0FB4BC006C2691 /* CookieRun-Black.ttf in Resources */,
 				1B07F8EA2A0FB4C0006C2691 /* CookieRun-Bold.ttf in Resources */,
+				BF34B5172A1095DF00085478 /* Close.gif in Resources */,
+				BF34B5162A1095DF00085478 /* Sad.gif in Resources */,
+				BF34B5192A1095DF00085478 /* Dizz.gif in Resources */,
+				BF34B51B2A1095DF00085478 /* Normal 2.gif in Resources */,
 				1BE15F582A0BF340003EC65B /* (null) in Resources */,
 				BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */,
-				BF95FE922A105425001A99F5 /* resource in Resources */,
+				BF34B5182A1095DF00085478 /* Smile.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,7 +626,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DragonKitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = Q6S8GWB6BP;
+				DEVELOPMENT_TEAM = DD8VYBJ73D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonKitchen/Info.plist;
@@ -634,7 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DragonKitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = Q6S8GWB6BP;
+				DEVELOPMENT_TEAM = DD8VYBJ73D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonKitchen/Info.plist;
