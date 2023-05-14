@@ -5,8 +5,8 @@
 //  Created by 박상원 on 2023/05/11.
 //
 
-import SwiftUI
 import NavigationStack
+import SwiftUI
 
 struct QuestView: View {
     @EnvironmentObject var currentPage: CurrentPageModel
@@ -15,18 +15,21 @@ struct QuestView: View {
     @State var isQuestCleared: [Bool] = Array(repeating: false, count: 5)
     @State var isTastePopupActive: Bool = false
     @State var isDimmed: Bool = false
+    @State var isQuestStarted: Bool = false
     @State var index: Int = 1
     @State var foodInfo: [(imageName: String, recipe: String)] = [("_raw", "생으로"), ("_toast", "구워"), ("_fry", "볶아")]
     var body: some View {
-        ZStack{
-            VStack{
-                NavigationBar(isCleared: $isQuestCleared, isPopupActive: $isTastePopupActive, isDimmed: $isDimmed)
-                    .padding(.horizontal, UIScreen.width*0.07)
-                    .ignoresSafeArea()
-                Spacer()
-            }
+        ZStack {
+            if isQuestStarted{
+                VStack {
+                    NavigationBar(isCleared: $isQuestCleared, isPopupActive: $isTastePopupActive, isDimmed: $isDimmed)
+                        .padding(.horizontal, UIScreen.width * 0.07)
+                        .ignoresSafeArea()
+                    Spacer()
+                }
             .zIndex(1)
-            switch currentPage.currentPage{
+            }
+            switch currentPage.currentPage {
             case .eye:
                 ColorQuestView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
             case .hand:
@@ -35,14 +38,22 @@ struct QuestView: View {
                 QuestHearView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
             case .nose:
                 NoseView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
-                    .onAppear{
+                    .onAppear {
                         isQuestCleared[3] = true
                     }
             case .mouth:
                 TasteView(index: $index, isPopupActive: $isTastePopupActive, isDimmed: $isDimmed, isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1], foodInfo: $foodInfo)
             }
-            if isDimmed{
+            if isDimmed {
                 Color.black.opacity(0.2).zIndex(2).ignoresSafeArea()
+            }
+            if !isQuestStarted {
+                FoodResultView()
+                    .onAppear {
+                        withAnimation(.easeIn(duration: 0.8).delay(3.0)) {
+                            isQuestStarted = true
+                        }
+                    }
             }
         }
         .overlay {
@@ -51,7 +62,7 @@ struct QuestView: View {
                     Color.white.cornerRadius(20)
                     RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 2.0)
                     VStack(alignment: .center, spacing: 0) {
-                        Text("\(chosenDragon.chosenDragon.1)에게 \(chosenFood.chosenFood.1)를 \(foodInfo[index - 1].1) 주고\n함께 사진을 찍어볼까요?")
+                        Text("\(chosenDragon.chosenDragon.1)\(chosenDragon.chosenDragon.0 == "Plu" ? "에게" : "이에게") \(chosenFood.chosenFood.1)\(chosenFood.chosenFood.0 == "paprika" ? "를" : "을") \(foodInfo[index - 1].1) 주고\n함께 사진을 찍어볼까요?")
                             .multilineTextAlignment(.center)
                             .font(.cookierun(.regular))
                             .padding(.top)

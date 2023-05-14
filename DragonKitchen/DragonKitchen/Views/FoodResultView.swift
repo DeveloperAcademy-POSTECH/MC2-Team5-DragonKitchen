@@ -10,10 +10,10 @@ import SwiftUI
 import Foundation
 
 struct FoodResultView: View {
-    @EnvironmentObject var chosen: ChosenFood
     @State private var zoomed = false
     @Namespace private var smooth
     @State private var paprikaOn = false
+    @EnvironmentObject var chosen: ChosenFood
     @EnvironmentObject private var navigationStack: NavigationStackCompat
 
     var body: some View {
@@ -26,7 +26,6 @@ struct FoodResultView: View {
                     .frame(width: 500)
                     .offset(y: 80)
                     .offset(x: paprikaOn ? -UIScreen.width : 0)
-//                    .opacity(paprikaOn ? 0.0 : 1.0)
                     .onAppear {
                         if !zoomed {
                             withAnimation(
@@ -41,24 +40,27 @@ struct FoodResultView: View {
                     }
                     .onChange(of: paprikaOn) { _ in
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                            self.navigationStack.push(QuestView())
+//                                self.navigationStack.push(QuestView())
                         }
                     }
                 if !zoomed {
                     ZStack {
-                        Image(chosen.chosenFood.0)
+                        Image(chosen.chosenFood.0+"Gray")
                             .resizable()
+                            .grayscale(1.0)
                             .matchedGeometryEffect(id: "morph", in: smooth)
                             .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
                     }
                 } else {
                     ZStack {
-                        Image(chosen.chosenFood.0)
+                        Image(chosen.chosenFood.0+"Gray")
                             .resizable()
+                            .grayscale(1.0)
                             .matchedGeometryEffect(id: "morph", in: smooth)
                             .scaledToFit()
-                            .frame(height: 200)
-                            .offset(y: zoomed ? 0 : -UIScreen.height * 1.8)
+                            .scaleEffect(0.675)
+                            .offset(y: zoomed ? 0 : -UIScreen.height * 1.9)
+                            .offset(x: paprikaOn ? -UIScreen.width*0.2 : 0, y: paprikaOn ? UIScreen.height*0.1 : 0)
                     }
                 }
             }
@@ -70,5 +72,10 @@ struct FoodResultView_Previews: PreviewProvider {
     static var previews: some View {
         FoodResultView()
             .environmentObject(ChosenFood())
+        QuestView()
+            .environmentObject(CurrentPageModel())
+            .environmentObject(ChosenFood())
+            .environmentObject(ChosenDragon())
+            .environmentObject(VegetableColor())
     }
 }
