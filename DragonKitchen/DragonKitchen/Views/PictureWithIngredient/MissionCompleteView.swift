@@ -9,6 +9,8 @@ import SwiftUI
 import NavigationStack
 
 struct MissionCompleteView: View {
+    @EnvironmentObject var gage: gageVariables
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -34,6 +36,11 @@ struct MissionCompleteView: View {
                         PushView(destination: MainView()) {
                             RoundedButton(widthScale: 0.25, heightScale: 0.148, sfSymbolName: "house.fill", content: "홈으로 나가기", contentSize: 23, contentColor: .buttonTextColor, isActive: true)
                                 .padding()
+                                .onAppear() {
+                                    gage.greenCount = 3
+                                    gage.turnGreen3 = true
+                                    gage.isEvolution = true
+                                }
                         }
                     }
                     .offset(y: 15)
