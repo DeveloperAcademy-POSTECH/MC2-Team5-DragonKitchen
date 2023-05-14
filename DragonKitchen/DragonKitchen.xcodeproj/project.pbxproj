@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B07F8E82A0FB4BC006C2691 /* CookieRun-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */; };
 		1B07F8EA2A0FB4C0006C2691 /* CookieRun-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */; };
 		1B1D41652A025D01000C9B2B /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 1B1D41642A025D01000C9B2B /* NavigationStack */; };
 		1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41662A02642B000C9B2B /* FoodResultView.swift */; };
 		1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D41682A033325000C9B2B /* ChosenFood.swift */; };
+		1B2CE97D2A11373C0055871C /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2CE97C2A11373C0055871C /* SoundModel.swift */; };
+		1B2CE9802A11374F0055871C /* SwiftySound in Frameworks */ = {isa = PBXBuildFile; productRef = 1B2CE97F2A11374F0055871C /* SwiftySound */; };
+		1B2CE9822A1138380055871C /* select_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B2CE9812A1138380055871C /* select_effect.mp3 */; };
 		1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6471B82A09DCFE0083599D /* NavigationBar.swift */; };
 		1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DED12A0201ED00AFB363 /* ImagePicker.swift */; };
 		1B942A3C2A0EB28700B1D664 /* FoodColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */; };
@@ -91,6 +93,8 @@
 /* Begin PBXFileReference section */
 		1B1D41662A02642B000C9B2B /* FoodResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultView.swift; sourceTree = "<group>"; };
 		1B1D41682A033325000C9B2B /* ChosenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenFood.swift; sourceTree = "<group>"; };
+		1B2CE97C2A11373C0055871C /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
+		1B2CE9812A1138380055871C /* select_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = select_effect.mp3; sourceTree = "<group>"; };
 		1B6471B82A09DCFE0083599D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		1B6CD7B92A0FC6B7003A1B66 /* TasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TasteView.swift; path = ../TasteView.swift; sourceTree = "<group>"; };
 		1B92DED12A0201ED00AFB363 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2CE9802A11374F0055871C /* SwiftySound in Frameworks */,
 				1B1D41652A025D01000C9B2B /* NavigationStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +237,7 @@
 				603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */,
 				1BD198F62A0C970400702151 /* CurrentPageModel.swift */,
 				1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */,
+				1B2CE97C2A11373C0055871C /* SoundModel.swift */,
 				BF65D7EA2A0A32F400B44877 /* QuestHear */,
 				BF939E9F2A0E2EAC009E29E9 /* PictureWithIngredient */,
 			);
@@ -339,6 +345,7 @@
 		BF34B50F2A1095BA00085478 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B2CE9812A1138380055871C /* select_effect.mp3 */,
 				BF34B52A2A111AD100085478 /* close_Plu.gif */,
 				BF34B5292A111AD100085478 /* dizz_Plu.gif */,
 				BF34B5282A111AD100085478 /* normal_Plu.gif */,
@@ -412,6 +419,7 @@
 			name = DragonKitchen;
 			packageProductDependencies = (
 				1B1D41642A025D01000C9B2B /* NavigationStack */,
+				1B2CE97F2A11374F0055871C /* SwiftySound */,
 			);
 			productName = DinoDina;
 			productReference = BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */;
@@ -443,6 +451,7 @@
 			mainGroup = BF07D2532A00D18A00F9F225;
 			packageReferences = (
 				1B1D41632A025D01000C9B2B /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+				1B2CE97E2A11374F0055871C /* XCRemoteSwiftPackageReference "SwiftySound" */,
 			);
 			productRefGroup = BF07D25D2A00D18A00F9F225 /* Products */;
 			projectDirPath = "";
@@ -475,6 +484,7 @@
 				BF34B5272A111AC900085478 /* normal_Hiel.gif in Resources */,
 				60DBA2FC2A1107E2006575C3 /* EggHiel.mp4 in Resources */,
 				BF34B5222A111AC900085478 /* sad_Hiel.gif in Resources */,
+				1B2CE9822A1138380055871C /* select_effect.mp3 in Resources */,
 				BF34B5322A111AD100085478 /* smile_Plu.gif in Resources */,
 				60DBA2EB2A10BDF6006575C3 /* Sample.mp4 in Resources */,
 				BF34B52E2A111AD100085478 /* normal_Plu.gif in Resources */,
@@ -498,6 +508,7 @@
 				6080550E2A08835E00A2F499 /* GageButton.swift in Sources */,
 				608055122A08D93100A2F499 /* StatusView.swift in Sources */,
 				BF34B50E2A1094A400085478 /* ProgressCircle.swift in Sources */,
+				1B2CE97D2A11373C0055871C /* SoundModel.swift in Sources */,
 				603036422A0B8A82004F4D0C /* HeartEffect.swift in Sources */,
 				BF12CD4F2A0F0F3400961C9B /* (null) in Sources */,
 				608055102A0884B600A2F499 /* GageVariables.swift in Sources */,
@@ -769,6 +780,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		1B2CE97E2A11374F0055871C /* XCRemoteSwiftPackageReference "SwiftySound" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamcichy/SwiftySound.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -776,6 +795,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1B1D41632A025D01000C9B2B /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
 			productName = NavigationStack;
+		};
+		1B2CE97F2A11374F0055871C /* SwiftySound */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B2CE97E2A11374F0055871C /* XCRemoteSwiftPackageReference "SwiftySound" */;
+			productName = SwiftySound;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

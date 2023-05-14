@@ -17,6 +17,7 @@ struct DragonKitchenApp: App {
                 .environmentObject(gageVariables())
                 .environmentObject(CurrentPageModel())
                 .environmentObject(VegetableColor())
+                .environmentObject(SoundEffect())
         }
     }
 }
