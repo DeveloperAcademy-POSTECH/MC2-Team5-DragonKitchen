@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PolaroidView: View {
-    @EnvironmentObject var chosen: ChosenFood
+    @EnvironmentObject var chosenFood: ChosenFood
+    @EnvironmentObject var chosenDragon: ChosenDragon
 
     var body: some View {
         ZStack {
@@ -16,14 +17,14 @@ struct PolaroidView: View {
                 .ignoresSafeArea()
 
             VStack {
-                if let image = chosen.pictureWithIngredient {
+                if let image = chosenFood.pictureWithIngredient {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
                         .padding(30)
                 }
 
-                Text("이엘이랑 파프리카를 먹었어요!")
+                Text(chosenDragon.chosenDragon.1 + (chosenDragon.chosenDragon.1 == "이엘" ? "이랑 " : "랑 ") + chosenFood.chosenFood.1 + (chosenFood.chosenFood.1 == "파프리카" ? "를" : "을") + " 먹었어요!")
                     .font(.cookierun(.regular))
                     .offset(y: -20)
             }

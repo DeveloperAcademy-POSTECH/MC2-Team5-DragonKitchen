@@ -33,6 +33,7 @@ struct SelectView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: buttonWidth)
+                            .offset(y: UIScreen.height * 0.04)
                     }
                     else {
                         PushView(destination: EggView()) {
@@ -40,6 +41,7 @@ struct SelectView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: buttonWidth)
+                                .offset(y: UIScreen.height * 0.04)
                         }
                     }
                 }
