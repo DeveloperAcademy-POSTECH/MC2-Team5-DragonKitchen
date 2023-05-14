@@ -49,6 +49,7 @@
 		BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */; };
 		BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2632A00D18B00F9F225 /* Assets.xcassets */; };
 		BF12CD4F2A0F0F3400961C9B /* (null) in Sources */ = {isa = PBXBuildFile; };
+		BF34B4F42A108AF700085478 /* ColorQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B4F32A108AF700085478 /* ColorQuestView.swift */; };
 		BF65D7E72A0A32E100B44877 /* PaprikaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7E42A0A32E100B44877 /* PaprikaView.swift */; };
 		BF65D7E92A0A32E100B44877 /* QuestHearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7E62A0A32E100B44877 /* QuestHearView.swift */; };
 		BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */; };
@@ -64,9 +65,7 @@
 		BF95FE792A0F8F59001A99F5 /* NoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95FE782A0F8F59001A99F5 /* NoseView.swift */; };
 		BF95FE802A0FC610001A99F5 /* CookieRun-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */; };
 		BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */; };
-		DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */; };
 		BF95FE922A105425001A99F5 /* resource in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE912A105425001A99F5 /* resource */; };
-		DA763A0D2A0A4D96001A1EFC /* ColorQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestView.swift */; };
 		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +105,7 @@
 		BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragonKitchenApp.swift; path = DragonKitchen/DragonKitchenApp.swift; sourceTree = SOURCE_ROOT; };
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DragonKitchen/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		BF34B4F32A108AF700085478 /* ColorQuestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorQuestView.swift; sourceTree = "<group>"; };
 		BF65D7E42A0A32E100B44877 /* PaprikaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaprikaView.swift; path = DragonKitchen/Views/Quest/QuestHear/PaprikaView.swift; sourceTree = SOURCE_ROOT; };
 		BF65D7E62A0A32E100B44877 /* QuestHearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestHearView.swift; path = DragonKitchen/Views/Quest/QuestHear/QuestHearView.swift; sourceTree = SOURCE_ROOT; };
 		BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = DragonKitchen/Models/QuestHear/AudioPlayer.swift; sourceTree = SOURCE_ROOT; };
@@ -120,7 +120,6 @@
 		BF95FE762A0F8F46001A99F5 /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 		BF95FE782A0F8F59001A99F5 /* NoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoseView.swift; sourceTree = "<group>"; };
 		BF95FE912A105425001A99F5 /* resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = resource; path = DragonKitchen/resource; sourceTree = SOURCE_ROOT; };
-		DA763A0C2A0A4D96001A1EFC /* ColorQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestView.swift; path = DragonKitchen/Views/ColorQuestView.swift; sourceTree = SOURCE_ROOT; };
 		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,7 +172,7 @@
 			children = (
 				1BD198FA2A0D23E100702151 /* QuestView.swift */,
 				1B6CD7B92A0FC6B7003A1B66 /* TasteView.swift */,
-				DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */,
+				BF34B4F32A108AF700085478 /* ColorQuestView.swift */,
 				DAA445522A0BF969007F6B50 /* TextureQuestView.swift */,
 				BF95FE782A0F8F59001A99F5 /* NoseView.swift */,
 				BF65D7E32A0A32E100B44877 /* QuestHear */,
@@ -191,7 +190,6 @@
 				603D81572A0BDC5A00335FF8 /* ChosenDragon.swift */,
 				1BD198F62A0C970400702151 /* CurrentPageModel.swift */,
 				1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */,
-				1B848D712A0206910099F726 /* Classifier.swift */,
 				BF65D7EA2A0A32F400B44877 /* QuestHear */,
 				BF939E9F2A0E2EAC009E29E9 /* PictureWithIngredient */,
 			);
@@ -258,7 +256,6 @@
 				BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */,
 				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
-				1B92DECC2A01E05100AFB363 /* Models */,
 				1B848D712A0206910099F726 /* Classifier.swift */,
 				BF95FE912A105425001A99F5 /* resource */,
 				1BE1F1002A060FCB0021BBF0 /* Util */,
@@ -427,7 +424,7 @@
 				DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */,
 				6045F14B2A0BA561005B134B /* TitleView.swift in Sources */,
 				BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */,
-				DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */,
+				BF34B4F42A108AF700085478 /* ColorQuestView.swift in Sources */,
 				1B942A3C2A0EB28700B1D664 /* FoodColorModel.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1BD888232A1001AB002A4667 /* FoodClassifier.mlmodel in Sources */,
