@@ -46,13 +46,13 @@ enum Ingredient {
         case .fruit:
             return [
                 IngredientData(name: "사과", illust: "apple", picture: "noPicture"),
-                IngredientData(name: "아보카도", illust: "avocado", picture: ""),
+                IngredientData(name: "아보카도", illust: "avocado", picture: "noPicture"),
                 IngredientData(name: "바나나", illust: "banana", picture: ""),
                 IngredientData(name: "블루베리", illust: "blueberry", picture: ""),
                 IngredientData(name: "키위", illust: "kiwi", picture: ""),
                 IngredientData(name: "오렌지", illust: "orange", picture: ""),
                 IngredientData(name: "복숭아", illust: "peach", picture: ""),
-                IngredientData(name: "딸기", illust: "strawberry", picture: "")
+                IngredientData(name: "딸기", illust: "strawberry", picture: "noPicture")
             ]
         case .vegetable:
             return [
@@ -61,19 +61,19 @@ enum Ingredient {
                 IngredientData(name: "브로콜리", illust: "broccoli", picture: "noPicture"),
                 IngredientData(name: "양상추", illust: "cabbage", picture: ""),
                 IngredientData(name: "당근", illust: "carrot", picture: "noPicture"),
-                IngredientData(name: "오이", illust: "cucumber", picture: "noPicture"),
+                IngredientData(name: "오이", illust: "cucumber", picture: ""),
                 IngredientData(name: "가지", illust: "eggplant", picture: "noPicture"),
-                IngredientData(name: "버섯", illust: "mushroom", picture: ""),
-                IngredientData(name: "양파", illust: "onion", picture: ""),
+                IngredientData(name: "버섯", illust: "mushroom", picture: "noPicture"),
+                IngredientData(name: "양파", illust: "onion", picture: "noPicture"),
                 IngredientData(name: "토마토", illust: "tomato", picture: "noPicture")
             ]
         case .meat:
             return [
-                IngredientData(name: "치즈", illust: "cheese", picture: ""),
+                IngredientData(name: "치즈", illust: "cheese", picture: "noPicture"),
                 IngredientData(name: "닭고기", illust: "chicken", picture: ""),
-                IngredientData(name: "조개", illust: "clam", picture: ""),
-                IngredientData(name: "물고기", illust: "Fish", picture: ""),
-                IngredientData(name: "고기", illust: "meat", picture: ""),
+                IngredientData(name: "조개", illust: "clam", picture: "noPicture"),
+                IngredientData(name: "물고기", illust: "fish", picture: "noPicture"),
+                IngredientData(name: "고기", illust: "meat", picture: "noPicture"),
                 IngredientData(name: "우유", illust: "milk", picture: ""),
                 IngredientData(name: "새우", illust: "shrimp", picture: ""),
                 IngredientData(name: "오징어", illust: "squid", picture: ""),

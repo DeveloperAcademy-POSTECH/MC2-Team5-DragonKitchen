@@ -24,7 +24,7 @@ struct PolaroidView: View {
                         .padding(30)
                 }
 
-                Text(chosenDragon.chosenDragon.1 + (chosenDragon.chosenDragon.1 == "이엘" ? "이랑" : "랑") + " 파프리카를 먹었어요!")
+                Text(chosenDragon.chosenDragon.1 + (chosenDragon.chosenDragon.1 == "이엘" ? "이랑 " : "랑 ") + chosenFood.chosenFood.1 + (chosenFood.chosenFood.1 == "파프리카" ? "를" : "을") + " 먹었어요!")
                     .font(.cookierun(.regular))
                     .offset(y: -20)
             }
