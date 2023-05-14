@@ -7,14 +7,18 @@
 
 import NavigationStack
 import SwiftUI
+import Foundation
 
 struct FoodResultView: View {
     @EnvironmentObject var chosen: ChosenFood
     @State private var zoomed = false
     @Namespace private var smooth
     @State private var paprikaOn = false
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
+
     var body: some View {
-        VStack {
+        ZStack {
+            Color.questBackgroundColor.ignoresSafeArea()
             ZStack {
                 Image("Doma")
                     .resizable()
@@ -22,6 +26,7 @@ struct FoodResultView: View {
                     .frame(width: 500)
                     .offset(y: 80)
                     .offset(x: paprikaOn ? -UIScreen.width : 0)
+//                    .opacity(paprikaOn ? 0.0 : 1.0)
                     .onAppear {
                         if !zoomed {
                             withAnimation(
@@ -32,6 +37,11 @@ struct FoodResultView: View {
                             withAnimation(.easeIn(duration: 1.5).delay(0.8)) {
                                 paprikaOn = true
                             }
+                        }
+                    }
+                    .onChange(of: paprikaOn) { _ in
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                            self.navigationStack.push(QuestView())
                         }
                     }
                 if !zoomed {

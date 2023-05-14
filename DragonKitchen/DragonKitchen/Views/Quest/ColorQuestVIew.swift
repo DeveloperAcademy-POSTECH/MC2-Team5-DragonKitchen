@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ColorQuestView: View {
-    @State var isCleared: Bool = false
+    @Binding var isCleared: Bool
     @EnvironmentObject var chosenFood: ChosenFood
 
     var body: some View {
@@ -16,7 +16,6 @@ struct ColorQuestView: View {
             Image("tableBG1")
                 .resizable()
                 .ignoresSafeArea()
-
             VStack {
                 Spacer()
                 HStack(spacing: UIScreen.width * 0.05) {
@@ -25,12 +24,8 @@ struct ColorQuestView: View {
                         switch chosenFood.chosenFood.0 {
                         case "paprika":
                             PaprikaImageView()
-                                .environmentObject(VegetableColor())
-                                .environmentObject(ChosenFood())
                         case "carrot":
                             CarrotImageView()
-                                .environmentObject(VegetableColor())
-                                .environmentObject(ChosenFood())
                         default:
                             Image("")
                         }
@@ -51,8 +46,7 @@ struct ColorButton: View {
     @EnvironmentObject var chosen: ChosenFood // 선택한 색상을 저장해두는 변수
     @EnvironmentObject var foodColor: VegetableColor
 
-    let colors: [Color] = [PaprikaColor().red.3, PaprikaColor().green.3, PaprikaColor().burgundy.3, PaprikaColor().orange.3, PaprikaColor().yellow.3, PaprikaColor().brown.3]
-
+    let colors: [Color] = [.paprikaRed, .paprikaGreen, .paprikaBurgundy, .paprikaOrange, .paprikaYellow, .paprikaBrown]
     var body: some View {
         LazyVGrid(
             columns: [
@@ -66,8 +60,9 @@ struct ColorButton: View {
                 Button(action: {
                     isCleared = true
                     selectedButton = index
-
+                    print("clickeD!\(index)")
                     if index == 0 { // 첫번째 버튼 : 빨강
+                        chosen.chosenColor = "red"
                         switch chosen.chosenFood.0 {
                         case "paprika":
                             foodColor.paprikaColor = PaprikaColor().red
@@ -77,6 +72,7 @@ struct ColorButton: View {
                         }
                     }
                     else if index == 1 { // 두번째 버튼 : 초록
+                        chosen.chosenColor = "green"
                         switch chosen.chosenFood.0 {
                         case "paprika":
                             foodColor.paprikaColor = PaprikaColor().green
@@ -86,6 +82,7 @@ struct ColorButton: View {
                         }
                     }
                     else if index == 2 { // 세번째 버튼 : 버건디
+                        chosen.chosenColor = "burgundy"
                         switch chosen.chosenFood.0 {
                         case "paprika":
                             foodColor.paprikaColor = PaprikaColor().burgundy
@@ -95,6 +92,7 @@ struct ColorButton: View {
                         }
                     }
                     else if index == 3 { // 네번째 버튼 : 주황
+                        chosen.chosenColor = "orange"
                         switch chosen.chosenFood.0 {
                         case "paprika":
                             foodColor.paprikaColor = PaprikaColor().orange
@@ -104,6 +102,7 @@ struct ColorButton: View {
                         }
                     }
                     else if index == 4 { // 다섯번째 버튼 : 노랑
+                        chosen.chosenColor = "yellow"
                         switch chosen.chosenFood.0 {
                         case "paprika":
                             foodColor.paprikaColor = PaprikaColor().yellow
@@ -113,6 +112,7 @@ struct ColorButton: View {
                         }
                     }
                     else { // 여섯번째 버튼 : 갈색
+                        chosen.chosenColor = "brown"
                         switch chosen.chosenFood.0 {
                         case "paprika":
                             foodColor.paprikaColor = PaprikaColor().brown
@@ -131,14 +131,13 @@ struct ColorButton: View {
                 }
             }
         } // 색상 버튼 위치 조정
-        .padding(.trailing, UIScreen.width / 15)
-        .padding(.bottom, UIScreen.height / 30)
     }
 }
 
 struct ColorQuestView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorQuestView().previewInterfaceOrientation(.landscapeRight)
+        ColorQuestView(isCleared: .constant(false))
+            .previewInterfaceOrientation(.landscapeRight)
             .environmentObject(VegetableColor())
             .environmentObject(ChosenFood())
     }

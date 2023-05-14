@@ -40,28 +40,20 @@ struct PaprikaImageView: View {
                 Image("\(food.chosenFood.0)_shadow")
                     .resizable()
                     .renderingMode(.template).foregroundColor(colors.paprikaColor.shadow)
+                Image("\(food.chosenFood.0)_body")
+                    .resizable()
+                    .renderingMode(.template).foregroundColor(colors.paprikaColor.body)
                 Image("\(food.chosenFood.0)_stem")
                     .resizable()
                     .renderingMode(.template).foregroundColor(colors.paprikaColor.stem)
                 Image("\(food.chosenFood.0)_stemHead")
                     .resizable()
                     .renderingMode(.template).foregroundColor(colors.paprikaColor.stemHead)
-                Image("\(food.chosenFood.0)_body")
-                    .resizable()
-                    .renderingMode(.template).foregroundColor(colors.paprikaColor.body)
                 Image("\(food.chosenFood.0)_pattern")
                     .resizable()
                     .renderingMode(.template).foregroundColor(colors.paprikaColor.pattern)
             }
             .scaledToFit()
         }
-    }
-}
-
-struct CarrotTestView_Previews: PreviewProvider {
-    static var previews: some View {
-        CarrotImageView()
-            .environmentObject(VegetableColor())
-            .environmentObject(ChosenFood())
     }
 }

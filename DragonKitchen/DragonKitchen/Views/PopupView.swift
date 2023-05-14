@@ -25,9 +25,9 @@ struct PopupView: View {
                 Color.white.cornerRadius(20)
                 RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 2.0)
                 VStack(alignment: .center, spacing: 0) {
-                    Text("내가 가진 식재료의 사진을 찍어\n\(chosenDragon.chosenDragon.1)에게 맛있는 밥을 줄까요?")
+                    Text("내가 가진 식재료의 사진을 찍어\n\(chosenDragon.chosenDragon.1)에게 맛있는 밥을 만들어 줄까요?")
                         .multilineTextAlignment(.center)
-                        .font(.cookierun(.regular))
+                        .font(.cookierun(.regular, size: 24))
                         .padding(.top)
                     Image("guide").resizable().scaledToFit().scaleEffect(0.7)
                         .offset(y: -UIScreen.height * 0.02)

@@ -5,27 +5,25 @@
 //  Created by 김기영 on 2023/05/10.
 //
 
-import SwiftUI
 import NavigationStack
+import SwiftUI
 
 struct TitleView: View {
     var body: some View {
         NavigationStackView(transitionType: .none) {
-            ZStack{
+            ZStack {
                 Image("TitleBackground")
                     .resizable()
                     .ignoresSafeArea()
-                VStack{
+                VStack {
                     Image("Title")
                         .resizable()
                         .frame(width: UIScreen.width * 0.5, height: UIScreen.height * 0.4)
                         .padding()
-                    PushView(destination:SelectView()){
-                            RoundedButton(widthScale: 0.2, heightScale: 0.12, content: "시작하기", contentSize: 15, contentColor: .buttonTextColor , isActive: true)
+                    PushView(destination: SelectView()) {
+                        RoundedButton(widthScale: 0.2, heightScale: 0.12, content: "시작하기", contentSize: 15, contentColor: .buttonTextColor, isActive: true)
                     }
-                    
                 }
-                
             }
         }
     }

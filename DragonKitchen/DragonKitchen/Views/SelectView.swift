@@ -26,8 +26,7 @@ struct SelectView: View {
                 HStack {
                     Spacer().frame(width: UIScreen.width * 0.25)
                     Text("어떤 드래곤을 키울까요?")
-                        .font(.system(size: 35))
-                        .font(.cookierun(.regular))
+                        .font(.cookierun(.regular, size: 35))
                     Spacer()
                     if chosen.chosenDragon == ("", "") {
                         Image("DisabledGoButton")
@@ -36,7 +35,7 @@ struct SelectView: View {
                             .frame(width: buttonWidth)
                     }
                     else {
-                        PushView(destination: MainView()) {
+                        PushView(destination: MainView(), destinationId: "mainViewId") {
                             Image("GoButton")
                                 .resizable()
                                 .scaledToFit()
@@ -74,9 +73,7 @@ struct SelectView: View {
                                 
                             }
                         Text("플루")
-                            .font(.system(size: 25))
                             .font(.cookierun(.regular))
-//
                     }
                     Spacer().frame(width: UIScreen.width * 0.11)
                     VStack {
@@ -107,13 +104,11 @@ struct SelectView: View {
                                 //User Test 용 코드 끝
                             }
                         Text("이엘")
-                            .font(.system(size: 25))
                             .font(.cookierun(.regular))
-//
                     }
                 }
             }
-            .font(.cookierun(.regular))
+            .foregroundColor(.black)
         }
     }
 }

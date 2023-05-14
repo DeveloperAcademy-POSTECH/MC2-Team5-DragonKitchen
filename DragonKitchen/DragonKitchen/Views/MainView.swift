@@ -9,7 +9,6 @@ import NavigationStack
 import SwiftUI
 
 struct MainView: View {
-
     @EnvironmentObject var gageVar: gageVariables
     @EnvironmentObject var chosen: ChosenDragon
     @State var heartNum: Int = 0
@@ -19,7 +18,6 @@ struct MainView: View {
     @State var isClicked: Bool = false
 
     var body: some View {
-        
         ZStack {
             Image("MainBackground")
                 .resizable()
@@ -32,37 +30,34 @@ struct MainView: View {
                     HeartImage(xOffset: 15, yOffset: -140, heartColor: .fruitRed)
                     HeartImage(xOffset: 25, yOffset: -100, heartColor: .red)
                     HeartImage(xOffset: 10, yOffset: -90, heartColor: .fruitRed)
-
                 }
-//                             공룡이미지 탭하는 경우 하트 뿅뿅
+                //                             공룡이미지 탭하는 경우 하트 뿅뿅
                 Image("Standing\(chosen.chosenDragon.0)") // 킹룡짱룡 위치
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.width * 0.4)
-                            ////                                   .minimumScaleFactor(0.1)
-                                .onTapGesture {
-                                    heartNum += 1
-                                }
-                                .shadow(color:.buttonColor ,radius:gageVar.isEvolution ? 15 : 0)
-                                .opacity(gageVar.isTransform ? 0 : 1)
-                                .scaleEffect(gageVar.isTransform ? 0 : 1)
-                                .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
-                                .offset(y: UIScreen.height * 0.15)
-                           
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: UIScreen.width * 0.4)
+                    ////                                   .minimumScaleFactor(0.1)
+                    .onTapGesture {
+                        heartNum += 1
+                    }
+                    .shadow(color: .buttonColor, radius: gageVar.isEvolution ? 15 : 0)
+                    .opacity(gageVar.isTransform ? 0 : 1)
+                    .scaleEffect(gageVar.isTransform ? 0 : 1)
+                    .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
+                    .offset(y: UIScreen.height * 0.15)
+
                 Image("Final\(chosen.chosenDragon.0)") // 킹룡짱룡 위치
                     .resizable()
                     .scaledToFit()
                     .frame(width: UIScreen.width * 0.6)
-                            ////                                    .minimumScaleFactor(0.1)
-                                .onTapGesture {
-                                    heartNum += 1
-                                }
-                                .opacity(gageVar.isTransform ? 1 : 0)
-                                .scaleEffect(gageVar.isTransform ? 1.1 : 0)
-                                .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
-                                .offset(x:UIScreen.width * -0.02 ,y: UIScreen.height * 0.1)
-                
-
+                    ////                                    .minimumScaleFactor(0.1)
+                    .onTapGesture {
+                        heartNum += 1
+                    }
+                    .opacity(gageVar.isTransform ? 1 : 0)
+                    .scaleEffect(gageVar.isTransform ? 1.1 : 0)
+                    .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
+                    .offset(x: UIScreen.width * -0.02, y: UIScreen.height * 0.1)
             }
             VStack {
                 Spacer().frame(height: UIScreen.height * 0.025)
@@ -71,7 +66,6 @@ struct MainView: View {
                         .offset(x: UIScreen.width * 0.13)
                     Button {
                         if gageVar.isEvolution {
-
                             gageVar.isTransform = true
                             gageVar.turnGreen1 = false
                             gageVar.turnGreen2 = false
@@ -88,12 +82,9 @@ struct MainView: View {
                             gageVar.isEvolution = false
                             chosen.levelCount += 1
                         }
-                        else {
-                            
-
-                        }
-                        
-                    } label: {
+                        else {}
+                    }
+                label: {
                         ZStack {
                             Color.buttonColor.cornerRadius(20)
                             RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 1.5).foregroundColor(.black)
@@ -106,39 +97,28 @@ struct MainView: View {
                         .shadow(radius: 5)
                         .padding([.top, .leading], 10)
                         .offset(y: 2 * StatusView().statusYOffset)
-//                        RoundedButton(widthScale: 0.1, heightScale: 0.08, content: "진화", contentSize: 15, contentColor: .white, isActive: gageVar.isEvolution)
                     }
-                   
 
-                    PushView(destination: GageButton()){
+                    PushView(destination: GageButton()) {
                         Text("test")
                     }
                     Spacer().frame(width: UIScreen.width * 0.20)
                 }
                 Spacer().frame(height: UIScreen.height * 0.3)
-                
-                    
-                    HStack {
-                        // 도감 이미지
-                        VStack {
-                            
-                            Button {} label: {
-                                Image("Book")
-                                
-                            }
-                        }
-                        
-                        
-                        Spacer().frame(width: UIScreen.width*0.53)
-                        
-                        // 먹이주는 곳
-                        FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
-                    } // 도감, 공룡, 먹이 내용 들어가는 스택
-                    
-                
-                        
+
+                // 도감, 먹이 버튼 들어가는 스택
+                HStack(alignment: .bottom) {
+                    // 도감 이미지
+                    Button {} label: {
+                        Image("Book")
+                    }
+                    Spacer()
+                    // 먹이주는 곳
+                    FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
+                        .padding(.bottom, UIScreen.height * 0.02)
+                }
+                .padding(.horizontal, UIScreen.width * 0.03)
             }
-          
             if isClicked {
                 Color.black.opacity(0.2).ignoresSafeArea()
             }
