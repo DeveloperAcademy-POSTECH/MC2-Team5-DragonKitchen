@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct PaprikaView: View {
+    @EnvironmentObject var chosenFood: ChosenFood
+
     var body: some View {
-        Image("paprika")
+        Image(chosenFood.texture.name + "_" + chosenFood.chosenColor)
             .resizable()
             .scaledToFit()
             .frame(height: 111)

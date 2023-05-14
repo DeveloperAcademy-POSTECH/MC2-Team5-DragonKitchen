@@ -11,8 +11,35 @@ import SwiftUI
 class ChosenFood: ObservableObject {
     @Published var chosenFood: (String, String) = ("", "")
     @Published var chosenColor: String = ""
+    @Published var texture: FoodTexture = .basketball
     @Published var cooking: Cooking = .raw
     @Published var pictureWithIngredient: UIImage?
+}
+
+enum FoodTexture: CaseIterable {
+    case basketball
+    case glass
+    case sand
+    case golf
+    case wood
+    case wool
+
+    var name: String {
+        switch self {
+        case .basketball:
+            return "basketball"
+        case .glass:
+            return "glass"
+        case .sand:
+            return "sand"
+        case .golf:
+            return "golf"
+        case .wood:
+            return "wood"
+        case .wool:
+            return "wool"
+        }
+    }
 }
 
 enum Cooking {

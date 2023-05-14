@@ -69,6 +69,12 @@ struct TextureButton: View {
                     // 음식 이미지를 "재질_색" 으로 바꾸기
                     foodImage = "\(selectedTexture)_\(color.chosenColor)"
                     selectedButton = index
+                    // 질감 저장
+                    for texture in FoodTexture.allCases {
+                        if texture.name == textures[index] {
+                            color.texture = texture
+                        }
+                    }
                 }) {
                     // 색상 버튼 모양
                     Image(textures[index])
