@@ -38,11 +38,6 @@ struct FoodResultView: View {
                             }
                         }
                     }
-                    .onChange(of: paprikaOn) { _ in
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-//                                self.navigationStack.push(QuestView())
-                        }
-                    }
                 if !zoomed {
                     ZStack {
                         Image(chosen.chosenFood.0+"Gray")
@@ -72,10 +67,5 @@ struct FoodResultView_Previews: PreviewProvider {
     static var previews: some View {
         FoodResultView()
             .environmentObject(ChosenFood())
-        QuestView()
-            .environmentObject(CurrentPageModel())
-            .environmentObject(ChosenFood())
-            .environmentObject(ChosenDragon())
-            .environmentObject(VegetableColor())
     }
 }

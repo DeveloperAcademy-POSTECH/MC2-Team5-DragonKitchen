@@ -24,7 +24,7 @@ struct TasteView: View {
             VStack {
                 HStack(spacing: 0) {
                     // 생으로 주기
-                    Image(chosenFood.chosenFood.0 + "_" + foodInfo[0].0)
+                    Image(foodInfo[0].imageName)
                         .resizable()
                         .scaledToFit()
                         .offset(x: -UIScreen.width * 0.21)
@@ -36,7 +36,7 @@ struct TasteView: View {
                             }
                         }
                     // 구워 주기
-                    Image(chosenFood.chosenFood.0 + "_" + foodInfo[1].0)
+                    Image(foodInfo[1].imageName)
                         .resizable()
                         .scaledToFit()
                         .opacity(isOn[1] ? 1 : 0.3)
@@ -47,7 +47,7 @@ struct TasteView: View {
                             }
                         }
                     // 볶아 주기
-                    Image(chosenFood.chosenFood.0 + "_" + foodInfo[2].0)
+                    Image(foodInfo[2].imageName)
                         .resizable()
                         .scaledToFit()
                         .offset(x: UIScreen.width * 0.21)
