@@ -141,7 +141,7 @@
 		BF939EA02A0E2ED4009E29E9 /* CustomCameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraRepresentable.swift; sourceTree = "<group>"; };
 		BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		BF95FE762A0F8F46001A99F5 /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
-		BF95FE782A0F8F59001A99F5 /* NoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoseView.swift; sourceTree = "<group>"; };
+		BF95FE782A0F8F59001A99F5 /* NoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoseView.swift; path = DragonKitchen/Views/Quest/NoseView.swift; sourceTree = SOURCE_ROOT; };
 		BF95FE7A2A0FA33B001A99F5 /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
 		BFD088312A0F261200058816 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		BFD0883B2A0F2F6800058816 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
@@ -407,7 +407,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					BF07D25B2A00D18A00F9F225 = {
 						CreatedOnToolsVersion = 14.2;
@@ -446,7 +446,6 @@
 				BF34B51A2A1095DF00085478 /* Strange.gif in Resources */,
 				BF95FE802A0FC610001A99F5 /* CookieRun-Black.ttf in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
-				1B07F8E82A0FB4BC006C2691 /* CookieRun-Black.ttf in Resources */,
 				1B07F8EA2A0FB4C0006C2691 /* CookieRun-Bold.ttf in Resources */,
 				BF34B5172A1095DF00085478 /* Close.gif in Resources */,
 				60DBA2EF2A10C759006575C3 /* EggPlu.mp4 in Resources */,
@@ -650,7 +649,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DragonKitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = DD8VYBJ73D;
+				DEVELOPMENT_TEAM = Q6S8GWB6BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonKitchen/Info.plist;
@@ -686,7 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DragonKitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = DD8VYBJ73D;
+				DEVELOPMENT_TEAM = Q6S8GWB6BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonKitchen/Info.plist;

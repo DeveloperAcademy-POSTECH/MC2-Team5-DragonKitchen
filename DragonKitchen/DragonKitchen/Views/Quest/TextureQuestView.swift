@@ -32,8 +32,7 @@ struct TextureQuestView: View {
                     Image(foodImage)
                         .resizable()
                         .scaledToFit()
-                        .scaleEffect(0.82)
-                        .padding(.leading, 20)
+                        .scaleEffect(0.8)
                     }
                     // 색상 버튼 6개
                     TextureButton(isCleared: $isCleared, foodImage: $foodImage)

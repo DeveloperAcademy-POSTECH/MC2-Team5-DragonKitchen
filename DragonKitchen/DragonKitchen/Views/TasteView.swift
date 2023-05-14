@@ -13,9 +13,9 @@ struct TasteView: View {
     @Binding var isPopupActive: Bool
     @Binding var isDimmed: Bool
     @Binding var isCleared: Bool
+    @Binding var foodInfo: [(imageName: String, recipe: String)]
     @EnvironmentObject var chosenDragon: ChosenDragon
     @EnvironmentObject var chosenFood: ChosenFood
-    @Binding var foodInfo: [(imageName: String, recipe: String)]
     var body: some View {
         ZStack {
             Image("tableBG2")
@@ -93,10 +93,8 @@ struct TasteView: View {
         }
         .gesture(
             DragGesture().onEnded { value in
-                print("dragged!!")
                 let direction = self.detectDirection(value: value)
                 if direction == .left {
-                    print("left dragged")
                     withAnimation(.easeIn) {
                         if !(index == 1) {
                             index -= 1
@@ -109,8 +107,6 @@ struct TasteView: View {
                     }
                 }
                 if direction == .right {
-                    print("right  dragged")
-
                     withAnimation(.easeIn) {
                         if !(index == 3) {
                             index += 1

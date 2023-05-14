@@ -12,6 +12,8 @@ struct NavigationBar: View {
     @State var page: Int = 1
     @State var pageText: Int = 1
     @State var isOn = [true, false, false, false, false]
+    @State var foodTransition = [("는", "은"), ("를", "을"), ("로", "으로")]
+    @State var dragonTransition = [("는", "은"), ("를", "을"), ("로", "으로")]
     @Binding var isCleared: [Bool]
     @Binding var isPopupActive: Bool
     @Binding var isDimmed: Bool
@@ -19,7 +21,6 @@ struct NavigationBar: View {
     @EnvironmentObject var chosenDragon: ChosenDragon
     @EnvironmentObject var chosenFood: ChosenFood
     @EnvironmentObject private var navigationStack: NavigationStackCompat
-
     var body: some View {
         HStack(alignment: .top) {
             Image("BackButton")
@@ -53,12 +54,12 @@ struct NavigationBar: View {
                         .offset(y: -UIScreen.height * 0.1)
                     Group {
                         switch CurrentPage.currentPage {
-                        case .eye: Text("\(chosenFood.chosenFood.1)는 무슨 색인가요?").lineLimit(1)
-                        case .hand: Text("\(chosenFood.chosenFood.1)를 만졌을 때 어떤 느낌인가요?").lineLimit(1)
-                        case .ear: Text("\(chosenFood.chosenFood.1)로 어떤 소리를 낼 수 있을까요?")
+                        case .eye: Text("\(chosenFood.chosenFood.1)\(chosenFood.chosenFood.0 == "paprika" ? foodTransition[0].0 : foodTransition[0].1) 무슨 색인가요?").lineLimit(1)
+                        case .hand: Text("\(chosenFood.chosenFood.1)\(chosenFood.chosenFood.0 == "paprika" ? foodTransition[1].0 : foodTransition[1].1) 만졌을 때 어떤 느낌인가요?").lineLimit(1)
+                        case .ear: Text("\(chosenFood.chosenFood.1)\(chosenFood.chosenFood.0 == "paprika" ? foodTransition[2].0 : foodTransition[2].1) 어떤 소리를 낼 수 있을까요?")
                             .lineLimit(1)
                         case .nose:
-                            Text("\(chosenFood.chosenFood.1)의 냄새를 맡고\n\(chosenDragon.chosenDragon.1)은 어떤 표정을 지을까요?")
+                            Text("\(chosenFood.chosenFood.1)의 냄새를 맡고\n\(chosenDragon.chosenDragon.1)\(chosenDragon.chosenDragon.0 == "Plu" ? dragonTransition[0].0 : dragonTransition[0].1) 어떤 표정을 지을까요?")
                                 .multilineTextAlignment(.center)
                         case .mouth: Text("\(chosenDragon.chosenDragon.1)에게 어떤 \(chosenFood.chosenFood.1) 요리를 줄까요?")
                         }
@@ -100,8 +101,6 @@ struct NavigationBar: View {
                             }
                         }
                     }
-//                    isDimmed = true
-                    
                 }
         }
         .padding(.top, 30)
