@@ -13,9 +13,9 @@ struct TasteView: View {
     @Binding var isPopupActive: Bool
     @Binding var isDimmed: Bool
     @Binding var isCleared: Bool
+    @Binding var foodInfo: [(imageName: String, recipe: String)]
     @EnvironmentObject var chosenDragon: ChosenDragon
     @EnvironmentObject var chosenFood: ChosenFood
-    @Binding var foodInfo: [(imageName: String, recipe: String)]
     var body: some View {
         ZStack {
             Image("tableBG2")
@@ -24,7 +24,7 @@ struct TasteView: View {
             VStack {
                 HStack(spacing: 0) {
                     // 생으로 주기
-                    Image(foodInfo[0].0)
+                    Image(chosenFood.chosenFood.0 + "_" + foodInfo[0].0)
                         .resizable()
                         .scaledToFit()
                         .offset(x: -UIScreen.width * 0.21)
@@ -36,7 +36,7 @@ struct TasteView: View {
                             }
                         }
                     // 구워 주기
-                    Image(foodInfo[1].0)
+                    Image(chosenFood.chosenFood.0 + "_" + foodInfo[1].0)
                         .resizable()
                         .scaledToFit()
                         .opacity(isOn[1] ? 1 : 0.3)
@@ -47,7 +47,7 @@ struct TasteView: View {
                             }
                         }
                     // 볶아 주기
-                    Image(foodInfo[2].0)
+                    Image(chosenFood.chosenFood.0 + "_" + foodInfo[2].0)
                         .resizable()
                         .scaledToFit()
                         .offset(x: UIScreen.width * 0.21)
@@ -93,10 +93,8 @@ struct TasteView: View {
         }
         .gesture(
             DragGesture().onEnded { value in
-                print("dragged!!")
                 let direction = self.detectDirection(value: value)
                 if direction == .left {
-                    print("left dragged")
                     withAnimation(.easeIn) {
                         if !(index == 1) {
                             index -= 1
@@ -109,8 +107,6 @@ struct TasteView: View {
                     }
                 }
                 if direction == .right {
-                    print("right  dragged")
-
                     withAnimation(.easeIn) {
                         if !(index == 3) {
                             index += 1

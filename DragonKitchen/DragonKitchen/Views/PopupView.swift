@@ -72,12 +72,12 @@ struct PopupView: View {
                         case "potato": chosen.chosenFood.1 = "감자"
                         default: chosen.chosenFood.1 = "파프리카"
                         }
+                        self.navigationStack.push(QuestView())
                     }
                 }
         }
-        .onChange(of: chosen.chosenFood.0) { _ in
-            self.navigationStack.push(FoodResultView())
-        }
+//        .onChange(of: chosen.chosenFood.0) { _ in
+//        }
     }
 }
 
