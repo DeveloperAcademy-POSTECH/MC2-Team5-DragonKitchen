@@ -65,6 +65,8 @@
 		BF95FE802A0FC610001A99F5 /* CookieRun-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */; };
 		BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD198F32A0C914C00702151 /* CookieRun-Regular.ttf */; };
 		DA763A0D2A0A4D96001A1EFC /* ColorQuestVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */; };
+		BF95FE922A105425001A99F5 /* resource in Resources */ = {isa = PBXBuildFile; fileRef = BF95FE912A105425001A99F5 /* resource */; };
+		DA763A0D2A0A4D96001A1EFC /* ColorQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA763A0C2A0A4D96001A1EFC /* ColorQuestView.swift */; };
 		DAA445532A0BF969007F6B50 /* TextureQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA445522A0BF969007F6B50 /* TextureQuestView.swift */; };
 /* End PBXBuildFile section */
 
@@ -117,7 +119,8 @@
 		BF939EA22A0E2EE8009E29E9 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		BF95FE762A0F8F46001A99F5 /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 		BF95FE782A0F8F59001A99F5 /* NoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoseView.swift; sourceTree = "<group>"; };
-		DA763A0C2A0A4D96001A1EFC /* ColorQuestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestVIew.swift; path = DragonKitchen/Views/Quest/ColorQuestVIew.swift; sourceTree = SOURCE_ROOT; };
+		BF95FE912A105425001A99F5 /* resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = resource; path = DragonKitchen/resource; sourceTree = SOURCE_ROOT; };
+		DA763A0C2A0A4D96001A1EFC /* ColorQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorQuestView.swift; path = DragonKitchen/Views/ColorQuestView.swift; sourceTree = SOURCE_ROOT; };
 		DAA445522A0BF969007F6B50 /* TextureQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureQuestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,6 +258,9 @@
 				BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */,
 				1B9A37872A0A1F0400C63FB0 /* Test */,
 				1B1501142A0684BF00CA9502 /* Views */,
+				1B92DECC2A01E05100AFB363 /* Models */,
+				1B848D712A0206910099F726 /* Classifier.swift */,
+				BF95FE912A105425001A99F5 /* resource */,
 				1BE1F1002A060FCB0021BBF0 /* Util */,
 				1B92DECC2A01E05100AFB363 /* Models */,
 				BF07D2632A00D18B00F9F225 /* Assets.xcassets */,
@@ -383,6 +389,7 @@
 				1B07F8EA2A0FB4C0006C2691 /* CookieRun-Bold.ttf in Resources */,
 				1BE15F582A0BF340003EC65B /* (null) in Resources */,
 				BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */,
+				BF95FE922A105425001A99F5 /* resource in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
