@@ -38,6 +38,7 @@ struct QuestHearView: View {
                                 .scaledToFit()
 
                             PaprikaView()
+                                .offset(x: -15)
                         }
                         VStack {
                             RoundedButton(widthScale: 0.3, heightScale: 0.148, sfSymbolName: "speaker.wave.2", content: "들어보기", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
@@ -72,6 +73,7 @@ struct QuestHearView: View {
                             .frame(height: 182)
 
                         PaprikaView()
+                            .offset(x: -15)
                     }
                     // 카운트다운 중일 때
                 } else if isCounting {
@@ -82,6 +84,7 @@ struct QuestHearView: View {
                             .frame(height: 182)
 
                         PaprikaView()
+                            .offset(x: -15)
 
                         Text(remainingSecond > 0 ? "\(remainingSecond)" : "시작")
                             .font(.cookierun(.regular, size: 60))
@@ -102,6 +105,7 @@ struct QuestHearView: View {
                             .shadow(color: .gray, radius: 10)
 
                         PaprikaView()
+                            .offset(x: -15)
                             .onTapGesture {
                                 guard checkMicrophonePermission() else {
                                     askMicroPhonePermission()

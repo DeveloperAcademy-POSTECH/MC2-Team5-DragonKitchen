@@ -58,17 +58,17 @@ struct SelectView: View {
                                 isPluGlow = true
                                 chosen.chosenDragon = ("Plu", "플루")
                                 //User Test 용 코드
-//                                gageVar.turnRed1 = true
-//                                gageVar.turnRed2 = true
-//                                gageVar.turnRed3 = true
-//                                gageVar.turnOrange1 = true
-//                                gageVar.turnOrange2 = true
-//                                gageVar.turnOrange3 = true
-//                                gageVar.turnGreen1 = true
-//                                gageVar.turnGreen2 = true
-//                                gageVar.greenCount = 2
-//                                gageVar.redCount = 3
-//                                gageVar.orangeCount = 3
+                                gageVar.turnRed1 = true
+                                gageVar.turnRed2 = true
+                                gageVar.turnRed3 = true
+                                gageVar.turnOrange1 = true
+                                gageVar.turnOrange2 = true
+                                gageVar.turnOrange3 = true
+                                gageVar.turnGreen1 = true
+                                gageVar.turnGreen2 = true
+                                gageVar.greenCount = 2
+                                gageVar.redCount = 3
+                                gageVar.orangeCount = 3
                                 //User Test 용 코드 끝
                                 
                             }
@@ -90,17 +90,17 @@ struct SelectView: View {
                                 isHielGlow = true
                                 chosen.chosenDragon = ("Hiel", "이엘")
                                 //User Test 용 코드
-//                                gageVar.turnRed1 = true
-//                                gageVar.turnRed2 = true
-//                                gageVar.turnRed3 = true
-//                                gageVar.turnOrange1 = true
-//                                gageVar.turnOrange2 = true
-//                                gageVar.turnOrange3 = true
-//                                gageVar.turnGreen1 = true
-//                                gageVar.turnGreen2 = true
-//                                gageVar.greenCount = 2
-//                                gageVar.redCount = 3
-//                                gageVar.orangeCount = 3
+                                gageVar.turnRed1 = true
+                                gageVar.turnRed2 = true
+                                gageVar.turnRed3 = true
+                                gageVar.turnOrange1 = true
+                                gageVar.turnOrange2 = true
+                                gageVar.turnOrange3 = true
+                                gageVar.turnGreen1 = true
+                                gageVar.turnGreen2 = true
+                                gageVar.greenCount = 2
+                                gageVar.redCount = 3
+                                gageVar.orangeCount = 3
                                 //User Test 용 코드 끝
                             }
                         Text("이엘")
