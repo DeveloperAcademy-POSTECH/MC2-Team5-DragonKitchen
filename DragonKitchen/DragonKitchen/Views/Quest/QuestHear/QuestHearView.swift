@@ -42,9 +42,11 @@ struct QuestHearView: View {
                         VStack {
                             RoundedButton(widthScale: 0.3, heightScale: 0.148, sfSymbolName: "speaker.wave.2", content: "들어보기", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
                                 .padding()
+                                .onAppear() {
+                                    isCleared = true
+                                }
                                 .onTapGesture {
                                     self.audioPlayer.startPlayback(audio: recording)
-                                    isCleared = true
                                 }
 
                             RoundedButton(widthScale: 0.3, heightScale: 0.148, sfSymbolName: "arrow.counterclockwise", content: "다시 녹음하기", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
