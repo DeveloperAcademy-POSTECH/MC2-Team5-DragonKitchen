@@ -13,7 +13,7 @@ struct NavigationBar: View {
     @State var pageText: Int = 1
     @State var isOn = [true, false, false, false, false]
     @State var foodTransition = [("는", "은"), ("를", "을"), ("로", "으로")]
-    @State var dragonTransition = [("는", "은"), ("를", "을"), ("로", "으로")]
+    @State var dragonTransition = [("는", "은"), ("에게", "이에게"), ("로", "으로")]
     @Binding var isCleared: [Bool]
     @Binding var isPopupActive: Bool
     @Binding var isDimmed: Bool
@@ -61,7 +61,7 @@ struct NavigationBar: View {
                         case .nose:
                             Text("\(chosenFood.chosenFood.1)의 냄새를 맡고\n\(chosenDragon.chosenDragon.1)\(chosenDragon.chosenDragon.0 == "Plu" ? dragonTransition[0].0 : dragonTransition[0].1) 어떤 표정을 지을까요?")
                                 .multilineTextAlignment(.center)
-                        case .mouth: Text("\(chosenDragon.chosenDragon.1)에게 어떤 \(chosenFood.chosenFood.1) 요리를 줄까요?")
+                        case .mouth: Text("\(chosenDragon.chosenDragon.1)\(chosenDragon.chosenDragon.0 == "Plu" ? dragonTransition[1].0 : dragonTransition[1].1) 어떤 \(chosenFood.chosenFood.1) 요리를 줄까요?")
                         }
                     }
                     .foregroundColor(.black)
