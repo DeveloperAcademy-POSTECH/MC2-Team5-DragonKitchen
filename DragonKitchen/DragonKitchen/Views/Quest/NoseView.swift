@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct NoseView: View {
-    let images = ["Normal 2", "Smile", "Close", "Dizz", "Sad", "Strange"]
+    let images = ["normal", "smile", "close", "dizz", "sad", "strange"]
 
     @State private var currentImageIndex = 0
     @State var isImageVisible = false
     @State private var isAnimating = false
     @Binding var isCleared: Bool
+    @EnvironmentObject var chosenDragon: ChosenDragon
 
     var body: some View {
         ZStack {
             Color.questBackgroundColor
                 .ignoresSafeArea()
             ZStack {
-                GIFView(name: images[currentImageIndex])
+                GIFView(name: "\(images[currentImageIndex])_\(chosenDragon.chosenDragon.0)")
                     .frame(width: 620)
                     .position(x: UIScreen.width * 0.45, y: UIScreen.height * 0.65)
             }
