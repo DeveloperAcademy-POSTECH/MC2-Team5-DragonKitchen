@@ -45,6 +45,8 @@
 		608055122A08D93100A2F499 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608055112A08D93100A2F499 /* StatusView.swift */; };
 		609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */; };
 		60B719012A0C9C2500C7CA9C /* HeartImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B719002A0C9C2500C7CA9C /* HeartImage.swift */; };
+		60DBA2E72A10B7A8006575C3 /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DBA2E62A10B7A8006575C3 /* EggView.swift */; };
+		60DBA2EB2A10BDF6006575C3 /* Sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 60DBA2EA2A10BDF6006575C3 /* Sample.mp4 */; };
 		BF07D2602A00D18A00F9F225 /* DragonKitchenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */; };
 		BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF07D2632A00D18B00F9F225 /* Assets.xcassets */; };
 		BF12CD4F2A0F0F3400961C9B /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -110,6 +112,8 @@
 		608055112A08D93100A2F499 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		609E68A32A07CE4F00C0A0BE /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		60B719002A0C9C2500C7CA9C /* HeartImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartImage.swift; sourceTree = "<group>"; };
+		60DBA2E62A10B7A8006575C3 /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
+		60DBA2EA2A10BDF6006575C3 /* Sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sample.mp4; sourceTree = "<group>"; };
 		BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF07D25F2A00D18A00F9F225 /* DragonKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragonKitchenApp.swift; path = DragonKitchen/DragonKitchenApp.swift; sourceTree = SOURCE_ROOT; };
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DragonKitchen/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -164,6 +168,7 @@
 				BF95FE762A0F8F46001A99F5 /* GIFView.swift */,
 				6045F14A2A0BA561005B134B /* TitleView.swift */,
 				6045F14C2A0BCAAA005B134B /* SelectView.swift */,
+				60DBA2E62A10B7A8006575C3 /* EggView.swift */,
 				BF95FE7C2A0FB762001A99F5 /* Book */,
 				BF939E962A0E2DB4009E29E9 /* PictureWithIngredient */,
 			);
@@ -220,6 +225,7 @@
 		1B9A37872A0A1F0400C63FB0 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				60DBA2EA2A10BDF6006575C3 /* Sample.mp4 */,
 				6080550D2A08835E00A2F499 /* GageButton.swift */,
 			);
 			path = Test;
@@ -431,6 +437,7 @@
 				BF34B5172A1095DF00085478 /* Close.gif in Resources */,
 				BF34B5162A1095DF00085478 /* Sad.gif in Resources */,
 				BF34B5192A1095DF00085478 /* Dizz.gif in Resources */,
+				60DBA2EB2A10BDF6006575C3 /* Sample.mp4 in Resources */,
 				BF34B51B2A1095DF00085478 /* Normal 2.gif in Resources */,
 				1BE15F582A0BF340003EC65B /* (null) in Resources */,
 				BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */,
@@ -489,6 +496,7 @@
 				6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */,
 				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,
 				1BE15F4F2A0BF045003EC65B /* (null) in Sources */,
+				60DBA2E72A10B7A8006575C3 /* EggView.swift in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
 				BF939E9A2A0E2E35009E29E9 /* MissionCompleteView.swift in Sources */,
