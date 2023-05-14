@@ -50,9 +50,9 @@
 		BF12CD4F2A0F0F3400961C9B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		BF34B4F42A108AF700085478 /* ColorQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B4F32A108AF700085478 /* ColorQuestView.swift */; };
 		BF34B4F62A108B4400085478 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B4F52A108B4400085478 /* Classifier.swift */; };
-		BF34B4FD2A108EC500085478 /* QuestHearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B4FA2A108EC500085478 /* QuestHearView.swift */; };
-		BF34B4FE2A108EC500085478 /* PaprikaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B4FB2A108EC500085478 /* PaprikaView.swift */; };
-		BF34B4FF2A108EC500085478 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B4FC2A108EC500085478 /* ProgressCircle.swift */; };
+		BF34B50C2A1094A400085478 /* PaprikaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B5092A1094A400085478 /* PaprikaView.swift */; };
+		BF34B50D2A1094A400085478 /* QuestHearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B50A2A1094A400085478 /* QuestHearView.swift */; };
+		BF34B50E2A1094A400085478 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34B50B2A1094A400085478 /* ProgressCircle.swift */; };
 		BF65D7ED2A0A32F400B44877 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */; };
 		BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */; };
 		BF939E982A0E2E20009E29E9 /* CustomCameraPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF939E972A0E2E20009E29E9 /* CustomCameraPhotoView.swift */; };
@@ -110,9 +110,9 @@
 		BF07D2632A00D18B00F9F225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DragonKitchen/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		BF34B4F32A108AF700085478 /* ColorQuestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorQuestView.swift; sourceTree = "<group>"; };
 		BF34B4F52A108B4400085478 /* Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
-		BF34B4FA2A108EC500085478 /* QuestHearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestHearView.swift; path = DragonKitchen/Views/Quest/QuestHear/QuestHearView.swift; sourceTree = SOURCE_ROOT; };
-		BF34B4FB2A108EC500085478 /* PaprikaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaprikaView.swift; path = DragonKitchen/Views/Quest/QuestHear/PaprikaView.swift; sourceTree = SOURCE_ROOT; };
-		BF34B4FC2A108EC500085478 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressCircle.swift; path = DragonKitchen/Views/Quest/QuestHear/ProgressCircle.swift; sourceTree = SOURCE_ROOT; };
+		BF34B5092A1094A400085478 /* PaprikaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaprikaView.swift; sourceTree = "<group>"; };
+		BF34B50A2A1094A400085478 /* QuestHearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestHearView.swift; sourceTree = "<group>"; };
+		BF34B50B2A1094A400085478 /* ProgressCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
 		BF65D7EB2A0A32F400B44877 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = DragonKitchen/Models/QuestHear/AudioPlayer.swift; sourceTree = SOURCE_ROOT; };
 		BF65D7EC2A0A32F400B44877 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecorder.swift; path = DragonKitchen/Models/QuestHear/AudioRecorder.swift; sourceTree = SOURCE_ROOT; };
 		BF939E972A0E2E20009E29E9 /* CustomCameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraPhotoView.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		1B6CD7B72A0FC698003A1B66 /* Quest */ = {
 			isa = PBXGroup;
 			children = (
-				BF34B4F92A108EB100085478 /* Hear */,
+				BF34B5082A1094A400085478 /* QuestHear */,
 				1BD198FA2A0D23E100702151 /* QuestView.swift */,
 				1B6CD7B92A0FC6B7003A1B66 /* TasteView.swift */,
 				BF34B4F32A108AF700085478 /* ColorQuestView.swift */,
@@ -285,14 +285,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BF34B4F92A108EB100085478 /* Hear */ = {
+		BF34B5082A1094A400085478 /* QuestHear */ = {
 			isa = PBXGroup;
 			children = (
-				BF34B4FB2A108EC500085478 /* PaprikaView.swift */,
-				BF34B4FC2A108EC500085478 /* ProgressCircle.swift */,
-				BF34B4FA2A108EC500085478 /* QuestHearView.swift */,
+				BF34B5092A1094A400085478 /* PaprikaView.swift */,
+				BF34B50A2A1094A400085478 /* QuestHearView.swift */,
+				BF34B50B2A1094A400085478 /* ProgressCircle.swift */,
 			);
-			path = Hear;
+			path = QuestHear;
 			sourceTree = "<group>";
 		};
 		BF65D7EA2A0A32F400B44877 /* QuestHear */ = {
@@ -423,12 +423,13 @@
 				BFD0883C2A0F2F6800058816 /* BookView.swift in Sources */,
 				6080550E2A08835E00A2F499 /* GageButton.swift in Sources */,
 				608055122A08D93100A2F499 /* StatusView.swift in Sources */,
-				BF34B4FF2A108EC500085478 /* ProgressCircle.swift in Sources */,
+				BF34B50E2A1094A400085478 /* ProgressCircle.swift in Sources */,
 				603036422A0B8A82004F4D0C /* HeartEffect.swift in Sources */,
 				BF12CD4F2A0F0F3400961C9B /* (null) in Sources */,
 				608055102A0884B600A2F499 /* GageVariables.swift in Sources */,
 				603036402A0B8A70004F4D0C /* HeartModifier.swift in Sources */,
 				1BD198F72A0C970400702151 /* CurrentPageModel.swift in Sources */,
+				BF34B50D2A1094A400085478 /* QuestHearView.swift in Sources */,
 				1BD198F02A0C913200702151 /* Extension+Font.swift in Sources */,
 				BF65D7EE2A0A32F400B44877 /* AudioRecorder.swift in Sources */,
 				BF95FE792A0F8F59001A99F5 /* NoseView.swift in Sources */,
@@ -449,12 +450,12 @@
 				1B942A3C2A0EB28700B1D664 /* FoodColorModel.swift in Sources */,
 				1B1D41692A033325000C9B2B /* ChosenFood.swift in Sources */,
 				1BD888232A1001AB002A4667 /* FoodClassifier.mlmodel in Sources */,
-				BF34B4FD2A108EC500085478 /* QuestHearView.swift in Sources */,
 				1BD888202A0FC810002A4667 /* QuestView.swift in Sources */,
 				1BD888212A0FC8A7002A4667 /* FoodImageView.swift in Sources */,
 				603D81582A0BDC5A00335FF8 /* ChosenDragon.swift in Sources */,
 				1BE15F4A2A0BEF15003EC65B /* (null) in Sources */,
 				BF34B4F62A108B4400085478 /* Classifier.swift in Sources */,
+				BF34B50C2A1094A400085478 /* PaprikaView.swift in Sources */,
 				BF95FE7B2A0FA33B001A99F5 /* IngredientView.swift in Sources */,
 				609E68A42A07CE4F00C0A0BE /* Extension+Color.swift in Sources */,
 				6045F14D2A0BCAAA005B134B /* SelectView.swift in Sources */,
@@ -469,7 +470,6 @@
 				1BD8881E2A0FC7D4002A4667 /* TasteView.swift in Sources */,
 				BFD088402A0F38AC00058816 /* BookPopUpView.swift in Sources */,
 				BFD088322A0F261200058816 /* BookModel.swift in Sources */,
-				BF34B4FE2A108EC500085478 /* PaprikaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
