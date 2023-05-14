@@ -109,7 +109,7 @@ struct MainView: View {
                 // 도감, 먹이 버튼 들어가는 스택
                 HStack(alignment: .bottom) {
                     // 도감 이미지
-                    Button {} label: {
+                    PushView(destination: BookView()) {
                         Image("Book")
                     }
                     Spacer()
