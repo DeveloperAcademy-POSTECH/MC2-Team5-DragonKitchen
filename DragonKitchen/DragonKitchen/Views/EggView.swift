@@ -28,7 +28,7 @@ struct EggView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: SelectView().buttonWidth)
-                            .offset(y: UIScreen.height * 0.01)
+                            .offset(y: UIScreen.height * 0.01 + SelectView().buttonYOffset)
                     }
                     else {
                         PushView(destination: MainView(), destinationId: "mainViewId"){
@@ -36,7 +36,7 @@ struct EggView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: SelectView().buttonWidth)
-                                .offset(y: UIScreen.height * 0.01)
+                                .offset(y: UIScreen.height * 0.01 + SelectView().buttonYOffset)
                             
                         }
                     }
@@ -65,6 +65,16 @@ struct EggView: View {
                         }
                         .opacity(isDisappear ? 0 : 1)
                         .offset(y:UIScreen.height * -0.01)
+                    Rectangle()
+                        .foregroundColor(.questBackgroundColor)
+                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.15)
+                        .opacity(isDisappear ? 0 : 1)
+                        .offset(y:UIScreen.height * -0.33)
+                    Rectangle()
+                        .foregroundColor(.questBackgroundColor)
+                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.15)
+                        .opacity(isDisappear ? 0 : 1)
+                        .offset(y:UIScreen.height * 0.33)
                 }
             }
         }

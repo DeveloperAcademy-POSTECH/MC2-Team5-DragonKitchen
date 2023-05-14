@@ -16,7 +16,8 @@ struct SelectView: View {
     @State var isPluGray = false
     @State var isHielGlow = false
     @State var isPluGlow = false
-    @State var buttonWidth = UIScreen.width * 0.075
+    @State var buttonWidth = UIScreen.width * 0.078
+    @State var buttonYOffset = UIScreen.height * 0.05
     var body: some View {
         ZStack {
             Color.questBackgroundColor
@@ -33,7 +34,7 @@ struct SelectView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: buttonWidth)
-                            .offset(y: UIScreen.height * 0.04)
+                            .offset(y: UIScreen.height * 0.04 + buttonYOffset)
                     }
                     else {
                         PushView(destination: EggView()) {
@@ -41,7 +42,7 @@ struct SelectView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: buttonWidth)
-                                .offset(y: UIScreen.height * 0.04)
+                                .offset(y: UIScreen.height * 0.04 + buttonYOffset)
                         }
                     }
                 }
