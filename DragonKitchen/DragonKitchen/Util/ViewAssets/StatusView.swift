@@ -55,8 +55,12 @@ struct StatusView: View {
                
                     HStack(spacing: 5) { // 녹색게이지칸스택
 //                        Image(systemName: "carrot")
-                        Text("🥕")
-                            .font(.system(size: 25))
+//                        Text("🥕")
+//                            .font(.system(size: 25))
+                        Image("carrot")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25)
                         
 //                            Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 //                                .foregroundColor(.black)
@@ -99,8 +103,12 @@ struct StatusView: View {
 
                     HStack(spacing: 5) { // 빨강 게이지 스택
 //                        Image(systemName: "hare")
-                        Text("🍎")
-                            .font(.system(size: 25))
+//                        Text("🍎")
+//                            .font(.system(size: 25))
+                        Image("apple")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25)
                         
 //                            Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
 ////                                            .foregroundColor(.fruitRed)
@@ -143,8 +151,12 @@ struct StatusView: View {
 
                     HStack(spacing: 5) { // 오렌지 게이지 스택
 //                        Image(systemName: "fish")
-                        Text("🍖")
-                            .font(.system(size: 25))
+//                        Text("🍖")
+//                            .font(.system(size: 25))
+                        Image("meat")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25)
                         ZStack {
 
 //                            Rectangle().frame(width: gageWidthOut, height: gageHeightOut)
