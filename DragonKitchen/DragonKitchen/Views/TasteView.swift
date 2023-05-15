@@ -101,7 +101,9 @@ struct TasteView: View {
                         }
                         switch index {
                         case 1: isOn = [true, false, false]
+                            chosenFood.cooking = .raw
                         case 2: isOn = [false, true, false]
+                            chosenFood.cooking = .toast
                         default: break
                         }
                     }
@@ -113,7 +115,9 @@ struct TasteView: View {
                         }
                         switch index {
                         case 2: isOn = [false, true, false]
+                            chosenFood.cooking = .toast
                         case 3: isOn = [false, false, true]
+                            chosenFood.cooking = .fry
                         default: break
                         }
                     }
