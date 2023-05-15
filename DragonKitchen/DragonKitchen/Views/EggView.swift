@@ -64,6 +64,7 @@ struct EggView: View {
                             })
                         }
                         .opacity(isDisappear ? 0 : 1)
+                        .disabled(true)
                         .offset(y:UIScreen.height * -0.01)
                     Rectangle()
                         .foregroundColor(.questBackgroundColor)
