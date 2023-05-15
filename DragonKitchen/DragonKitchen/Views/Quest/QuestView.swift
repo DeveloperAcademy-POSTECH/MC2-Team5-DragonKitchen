@@ -21,15 +21,21 @@ struct QuestView: View {
     @State var foodInfo: [(imageName: String, recipe: String)] = [("_raw", "생으로"), ("_toast", "구워"), ("_fry", "볶아")]
     var body: some View {
         ZStack {
-            if isQuestStarted{
+            if isQuestStarted {
                 VStack {
                     NavigationBar(isCleared: $isQuestCleared, isPopupActive: $isTastePopupActive, isDimmed: $isDimmed)
                         .padding(.horizontal, UIScreen.width * 0.07)
                         .ignoresSafeArea()
                     Spacer()
                 }
-            .zIndex(1)
+                .onAppear {
+                    if currentPage.currentPage == .mouth {
+                        currentPage.currentPage = .eye
+                    }
+                }
+                .zIndex(1)
             }
+
             switch currentPage.currentPage {
             case .eye:
                 ColorQuestView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
@@ -37,10 +43,10 @@ struct QuestView: View {
                 TextureQuestView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
             case .ear:
                 QuestHearView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
-                    .onAppear{
+                    .onAppear {
                         sound.erevBgm.pause()
                     }
-                    .onDisappear{
+                    .onDisappear {
                         sound.erevBgm.resume()
                     }
             case .nose:
@@ -50,9 +56,6 @@ struct QuestView: View {
                     }
             case .mouth:
                 TasteView(index: $index, isPopupActive: $isTastePopupActive, isDimmed: $isDimmed, isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1], foodInfo: $foodInfo)
-                    .onDisappear{
-                        currentPage.currentPage = .eye
-                    }
             }
             if isDimmed {
                 Color.black.opacity(0.2).zIndex(2).ignoresSafeArea()
@@ -76,7 +79,7 @@ struct QuestView: View {
                             .multilineTextAlignment(.center)
                             .font(.cookierun(.regular))
                             .padding(.top)
-                        Image(foodInfo[index - 1].0)
+                        Image(chosenFood.chosenFood.0 + foodInfo[index - 1].0)
                             .resizable()
                             .scaledToFit()
                             .scaleEffect(0.65)

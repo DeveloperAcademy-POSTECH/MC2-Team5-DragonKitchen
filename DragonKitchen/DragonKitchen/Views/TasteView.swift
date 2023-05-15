@@ -24,7 +24,7 @@ struct TasteView: View {
             VStack {
                 HStack(spacing: 0) {
                     // 생으로 주기
-                    Image(foodInfo[0].imageName)
+                    Image(chosenFood.chosenFood.0 + foodInfo[0].imageName)
                         .resizable()
                         .scaledToFit()
                         .offset(x: -UIScreen.width * 0.21)
@@ -36,7 +36,7 @@ struct TasteView: View {
                             }
                         }
                     // 구워 주기
-                    Image(foodInfo[1].imageName)
+                    Image(chosenFood.chosenFood.0 + foodInfo[1].imageName)
                         .resizable()
                         .scaledToFit()
                         .opacity(isOn[1] ? 1 : 0.3)
@@ -47,7 +47,7 @@ struct TasteView: View {
                             }
                         }
                     // 볶아 주기
-                    Image(foodInfo[2].imageName)
+                    Image(chosenFood.chosenFood.0 + foodInfo[2].imageName)
                         .resizable()
                         .scaledToFit()
                         .offset(x: UIScreen.width * 0.21)
@@ -91,6 +91,10 @@ struct TasteView: View {
             }
             .padding(.top, UIScreen.height * 0.25)
         }
+        .onAppear{
+            isOn = [true, false, false]
+            index = 1
+        }
         .gesture(
             DragGesture().onEnded { value in
                 let direction = self.detectDirection(value: value)
@@ -125,7 +129,6 @@ struct TasteView: View {
             }
         )
         .onAppear {
-            foodInfo = foodInfo.map { (imageName: chosenFood.chosenFood.0 + $0.imageName, recipe: $0.recipe) }
             isCleared = true
         }
         .ignoresSafeArea()
