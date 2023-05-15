@@ -26,7 +26,6 @@ struct BookView: View {
     ]
     
     var body: some View {
-//        NavigationStackView(transitionType: .none) {
             ZStack {
                 VStack {
                     HStack {
@@ -141,5 +140,4 @@ struct BookView: View {
             }
             
         }
-//    }
 }
