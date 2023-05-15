@@ -49,6 +49,9 @@ struct QuestHearView: View {
                                 .onTapGesture {
                                     self.audioPlayer.startPlayback(audio: recording)
                                 }
+                                .onDisappear {
+                                    self.audioRecorder.deleteRecording(url: recording)
+                                }
 
                             RoundedButton(widthScale: 0.3, heightScale: 0.148, sfSymbolName: "arrow.counterclockwise", content: "다시 녹음하기", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
                                 .onTapGesture {
