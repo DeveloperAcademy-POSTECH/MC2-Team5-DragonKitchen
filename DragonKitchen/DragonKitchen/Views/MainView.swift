@@ -95,6 +95,7 @@ struct MainView: View {
                         .font(.cookierun(.regular))
                         .frame(width: UIScreen.width * 0.1, height: UIScreen.height * 0.08)
                         .shadow(radius: 5)
+                        .opacity(gageVar.isTransform ? 0 : 1)
                         .padding([.top, .leading], 10)
                         .offset(y: 2 * StatusView().statusYOffset)
                     }
