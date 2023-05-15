@@ -12,6 +12,7 @@ struct QuestView: View {
     @EnvironmentObject var currentPage: CurrentPageModel
     @EnvironmentObject var chosenDragon: ChosenDragon
     @EnvironmentObject var chosenFood: ChosenFood
+    @EnvironmentObject var sound: SoundEffect
     @State var isQuestCleared: [Bool] = Array(repeating: false, count: 5)
     @State var isTastePopupActive: Bool = false
     @State var isDimmed: Bool = false
@@ -36,6 +37,12 @@ struct QuestView: View {
                 TextureQuestView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
             case .ear:
                 QuestHearView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
+                    .onAppear{
+                        sound.erevBgm.pause()
+                    }
+                    .onDisappear{
+                        sound.erevBgm.resume()
+                    }
             case .nose:
                 NoseView(isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1])
                     .onAppear {
