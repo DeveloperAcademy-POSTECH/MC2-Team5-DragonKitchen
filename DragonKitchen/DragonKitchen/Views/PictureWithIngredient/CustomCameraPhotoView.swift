@@ -46,14 +46,6 @@ struct CustomCameraPhotoView: View {
 
                             Spacer()
 
-                            PushView(destination: MissionCompleteView()) {
-                                Image("checkButton")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 80)
-                                    .padding(30)
-                            }
-
                             Image("againButton")
                                 .resizable()
                                 .scaledToFit()
@@ -61,6 +53,14 @@ struct CustomCameraPhotoView: View {
                                 .onTapGesture {
                                     self.showingCustomCamera = true
                                 }
+
+                            PushView(destination: MissionCompleteView()) {
+                                Image("checkButton")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 80)
+                                    .padding(30)
+                            }
                             Spacer()
                         }
                     }
