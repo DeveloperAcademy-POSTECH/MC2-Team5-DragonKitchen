@@ -11,6 +11,7 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var gageVar: gageVariables
     @EnvironmentObject var chosen: ChosenDragon
+    @ObservedObject var audioRecorder = AudioRecorder()
     @State var heartNum: Int = 0
     let heartXOffset: CGFloat = -120
     @State var isPresenting: Bool = false
@@ -23,6 +24,12 @@ struct MainView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
+                .onAppear {
+                    if let recording = audioRecorder.recordingFile {
+                        self.audioRecorder.deleteRecording(url: recording)
+                    }
+                }
+
             // 공룡터치시 하트나오는 ForEach
             ZStack {
                 ForEach(0 ..< 2 * heartNum, id: \.self) { _ in
