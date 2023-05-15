@@ -44,6 +44,7 @@ struct EggView: View {
                     VStack{
                         Text("안녕! 내 이름은 \(chosen.chosenDragon.1)!!")
                             .font(.cookierun(.regular))
+                            .foregroundColor(.black )
                         Image("Standing\(chosen.chosenDragon.0)")
                             .resizable()
                             .scaledToFit()

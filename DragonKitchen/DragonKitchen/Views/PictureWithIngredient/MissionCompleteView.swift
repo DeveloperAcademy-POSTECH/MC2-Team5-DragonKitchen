@@ -32,6 +32,7 @@ struct MissionCompleteView: View {
                     VStack {
                         Text("미션 성공!")
                             .font(.cookierun(.bold, size: 50))
+                            .foregroundColor(.black)
 
                         PushView(destination: MainView()) {
                             RoundedButton(widthScale: 0.25, heightScale: 0.148, sfSymbolName: "house.fill", content: "홈으로 나가기", contentSize: 23, contentColor: .buttonTextColor, isActive: true)
