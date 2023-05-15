@@ -13,7 +13,7 @@ struct IngredientView: View {
     var ingredient: Ingredient
 
     var body: some View {
-        if ingredientData.name == chosenFood.chosenFood.1 {
+        if ingredientData.name == chosenFood.chosenFood.1 && chosenFood.pictureWithIngredient != nil {
             RoundedRectangle(cornerRadius: 10)
                 .fill(ingredient.color)
                 .opacity(0.15)

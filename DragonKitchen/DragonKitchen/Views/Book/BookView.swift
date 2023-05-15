@@ -59,11 +59,13 @@ struct BookView: View {
                                         }
                                         .onTapGesture {
                                             if ingredient.name == chosenFood.chosenFood.1 {
-                                                selectedVegiName = ingredient.name
-                                                selectedPicture = chosenFood.pictureWithIngredient!
-                                                withAnimation(.easeInOut(duration: 0.3)) {
-                                                    isClicked = true
-                                                    isPresenting = true
+                                                if let picture = chosenFood.pictureWithIngredient {
+                                                    selectedVegiName = ingredient.name
+                                                    selectedPicture = picture
+                                                    withAnimation(.easeInOut(duration: 0.3)) {
+                                                        isClicked = true
+                                                        isPresenting = true
+                                                    }
                                                 }
                                             }
                                         }
