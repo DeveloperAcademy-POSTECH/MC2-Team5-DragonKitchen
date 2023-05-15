@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 class ChosenFood: ObservableObject {
-    @Published var chosenFood: (String, String) = ("", "")
+    // 파프리카만 나오도록 변경
+    @Published var chosenFood: (String, String) = ("paprika", "파프리카")
     @Published var chosenColor: String = ""
     @Published var texture: FoodTexture = .basketball
     @Published var cooking: Cooking = .raw

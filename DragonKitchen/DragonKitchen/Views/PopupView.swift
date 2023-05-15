@@ -64,20 +64,20 @@ struct PopupView: View {
                 .onDisappear {
                     if uiImage != nil {
                         classifier.detect(uiImage: uiImage!)
-                        chosen.chosenFood.0 = classifier.imageClass!
+                        //UT용 파프리카만 나오도록 변경
+//                        chosen.chosenFood.0 = classifier.imageClass!
                         switch chosen.chosenFood.0 {
                         case "paprika": chosen.chosenFood.1 = "파프리카"
-                        case "carrot": chosen.chosenFood.1 = "당근"
-                        case "chicken": chosen.chosenFood.1 = "닭가슴살"
-                        case "potato": chosen.chosenFood.1 = "감자"
+                        // UT용 파프리카만 나오도록 변경
+//                        case "carrot": chosen.chosenFood.1 = "당근"
+//                        case "chicken": chosen.chosenFood.1 = "닭가슴살"
+//                        case "potato": chosen.chosenFood.1 = "감자"
                         default: chosen.chosenFood.1 = "파프리카"
                         }
                         self.navigationStack.push(QuestView())
                     }
                 }
         }
-//        .onChange(of: chosen.chosenFood.0) { _ in
-//        }
     }
 }
 
