@@ -50,6 +50,9 @@ struct QuestView: View {
                     }
             case .mouth:
                 TasteView(index: $index, isPopupActive: $isTastePopupActive, isDimmed: $isDimmed, isCleared: $isQuestCleared[currentPage.currentPage.rawValue - 1], foodInfo: $foodInfo)
+                    .onDisappear{
+                        currentPage.currentPage = .eye
+                    }
             }
             if isDimmed {
                 Color.black.opacity(0.2).zIndex(2).ignoresSafeArea()
@@ -84,9 +87,9 @@ struct QuestView: View {
                 .padding(.top, isTastePopupActive ? 0 : UIScreen.height * 3)
 
                 Image(systemName: "xmark")
-                    .font(.system(size: 28, weight: .ultraLight))
-                    .padding(.leading, UIScreen.width * 0.53)
-                    .padding(.top, isTastePopupActive ? -UIScreen.height * 0.35 : UIScreen.height * 3)
+                    .font(.system(size: 28, weight: .regular))
+                    .padding(.leading, UIScreen.width * 0.52)
+                    .padding(.top, isTastePopupActive ? -UIScreen.height * 0.33 : UIScreen.height * 3)
                     .foregroundColor(Color(red: 153 / 255, green: 153 / 255, blue: 153 / 255))
                     .onTapGesture {
                         isDimmed = false

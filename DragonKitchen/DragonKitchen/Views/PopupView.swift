@@ -38,9 +38,9 @@ struct PopupView: View {
             .padding(.top, isPresenting ? 0 : UIScreen.height * 3)
 
             Image(systemName: "xmark")
-                .font(.system(size: 28, weight: .ultraLight))
-                .padding(.leading, UIScreen.width * 0.53)
-                .padding(.top, isPresenting ? -UIScreen.height * 0.35 : UIScreen.height * 3)
+                .font(.system(size: 28, weight: .regular))
+                .padding(.leading, UIScreen.width * 0.52)
+                .padding(.top, isPresenting ? -UIScreen.height * 0.33 : UIScreen.height * 3)
                 .foregroundColor(Color(red: 153 / 255, green: 153 / 255, blue: 153 / 255))
                 .onTapGesture {
                     withAnimation(.easeIn(duration: 0.3)) {
