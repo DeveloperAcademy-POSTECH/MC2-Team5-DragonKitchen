@@ -37,9 +37,9 @@ struct BookView: View {
                         Text("나의 먹이 도감")
                             .font(.cookierun(.bold, size: 45))
                             .foregroundColor(.black)
-
+                        
                         Spacer()
-
+                        
                         PushView(destination: MainView()) {
                             Image("BackButton")
                                 .resizable()
@@ -50,10 +50,10 @@ struct BookView: View {
                     .padding()
                 }
                 .frame(height: UIScreen.height * 0.2)
-
+                
                 HStack {
                     Spacer()
-
+                    
                     ScrollView(showsIndicators: false, content: {
                         VStack(alignment: .center) {
                             LazyVGrid(columns: columns, alignment: .leading) {
@@ -80,9 +80,9 @@ struct BookView: View {
                         }
                     })
                     .frame(width: 500)
-
+                    
                     Spacer()
-
+                    
                     VStack {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
@@ -145,6 +145,5 @@ struct BookView: View {
                     selectedPicture: $selectedPicture
                 )
             }
-
     }
 }

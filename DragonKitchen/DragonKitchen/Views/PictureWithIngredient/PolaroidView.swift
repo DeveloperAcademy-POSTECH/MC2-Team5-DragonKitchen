@@ -35,5 +35,7 @@ struct PolaroidView: View {
 struct PolaroidView_Previews: PreviewProvider {
     static var previews: some View {
         PolaroidView()
+            .environmentObject(ChosenDragon())
+            .environmentObject(ChosenFood())
     }
 }

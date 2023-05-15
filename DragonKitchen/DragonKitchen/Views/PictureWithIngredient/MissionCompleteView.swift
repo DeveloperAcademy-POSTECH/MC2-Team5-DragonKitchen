@@ -54,5 +54,8 @@ struct MissionCompleteView: View {
 struct MissionCompleteView_Previews: PreviewProvider {
     static var previews: some View {
         MissionCompleteView()
+            .environmentObject(ChosenFood())
+            .environmentObject(ChosenDragon())
+            .environmentObject(gageVariables())
     }
 }

@@ -63,7 +63,7 @@ struct QuestView: View {
             if !isQuestStarted {
                 FoodResultView()
                     .onAppear {
-                        withAnimation(.easeIn(duration: 0.8).delay(3.0)) {
+                        withAnimation(.easeIn(duration: 0.8).delay(2.2)) {
                             isQuestStarted = true
                         }
                     }
