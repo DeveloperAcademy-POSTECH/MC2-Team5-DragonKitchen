@@ -14,7 +14,7 @@ class ChosenFood: ObservableObject {
     @Published var chosenColor: String = ""
     @Published var texture: FoodTexture = .basketball
     @Published var cooking: Cooking = .raw
-    @Published var pictureWithIngredient: UIImage?
+    @Published var pictureWithIngredient: UIImage? = nil
 }
 
 enum FoodTexture: CaseIterable {
