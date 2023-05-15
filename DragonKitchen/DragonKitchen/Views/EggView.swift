@@ -22,14 +22,14 @@ struct EggView: View {
                     .frame(height: UIScreen.height * 0.05)
                 HStack{
                     Spacer()
-                    if isDisappear == false {
-                        Image("DisabledGoButton")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: SelectView().buttonWidth)
-                            .offset(y: UIScreen.height * 0.024)
-                    }
-                    else {
+//                    if isDisappear == false {
+//                        Image("DisabledGoButton")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: SelectView().buttonWidth)
+//                            .offset(y: UIScreen.height * 0.024)
+//                    }
+//                    else {
                         PushView(destination: MainView(), destinationId: "mainViewId"){
                             Image("GoButton")
                                 .resizable()
@@ -37,7 +37,7 @@ struct EggView: View {
                                 .frame(width: SelectView().buttonWidth)
                                 .offset(y: UIScreen.height * 0.024)
                             
-                        }
+//                        }
                     }
                 }
                 ZStack{
