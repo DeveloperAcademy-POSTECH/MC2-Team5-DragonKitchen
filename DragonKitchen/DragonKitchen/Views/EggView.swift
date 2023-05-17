@@ -17,6 +17,7 @@ struct EggView: View {
         ZStack{
             Color.questBackgroundColor
                 .ignoresSafeArea()
+            
             VStack{
                 Spacer()
                     .frame(height: UIScreen.height * 0.05)
@@ -49,35 +50,36 @@ struct EggView: View {
                             .resizable()
                             .scaledToFit()
                     }
-                    VideoPlayer(player: player)
-                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.65)
-                        .onAppear{
-                            if player.currentItem == nil {
-                                let item = AVPlayerItem(url: Bundle.main.url(forResource: "Egg\(chosen.chosenDragon.0)", withExtension: "mp4")!)
-                                player.replaceCurrentItem(with: item)
-                            }
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
-                                player.play()
-                            })
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6.5, execute: {
-                                isDisappear = true
-                            })
-                        }
-                        .opacity(isDisappear ? 0 : 1)
-                        .disabled(true)
-                        .offset(y:UIScreen.height * -0.01)
-                    Rectangle()
-                        .foregroundColor(.questBackgroundColor)
-                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.15)
-                        .opacity(isDisappear ? 0 : 1)
-                        .offset(y:UIScreen.height * -0.33)
-                    Rectangle()
-                        .foregroundColor(.questBackgroundColor)
-                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.15)
-                        .opacity(isDisappear ? 0 : 1)
-                        .offset(y:UIScreen.height * 0.33)
+                    
+//                    Rectangle()
+//                        .foregroundColor(.questBackgroundColor)
+//                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.15)
+//                        .opacity(isDisappear ? 0 : 1)
+//                        .offset(y:UIScreen.height * -0.33)
+//                    Rectangle()
+//                        .foregroundColor(.questBackgroundColor)
+//                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.15)
+//                        .opacity(isDisappear ? 0 : 1)
+//                        .offset(y:UIScreen.height * 0.33)
                 }
             }
+            VideoPlayer(player: player)
+                .frame(width: UIScreen.width * 0.615, height: UIScreen.height)
+                .onAppear{
+                    if player.currentItem == nil {
+                        let item = AVPlayerItem(url: Bundle.main.url(forResource: "Egg\(chosen.chosenDragon.0)", withExtension: "mp4")!)
+                        player.replaceCurrentItem(with: item)
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                        player.play()
+                    })
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6.5, execute: {
+                        isDisappear = true
+                    })
+                }
+                .opacity(isDisappear ? 0 : 1)
+                .disabled(true)
+                .offset(y:UIScreen.height * 0.05)
         }
     }
 }
