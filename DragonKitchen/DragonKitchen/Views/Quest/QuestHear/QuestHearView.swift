@@ -9,6 +9,7 @@ import AVFoundation
 import SwiftUI
 
 struct QuestHearView: View {
+    @EnvironmentObject var chosenFood: ChosenFood
     @ObservedObject var audioRecorder = AudioRecorder()
     @ObservedObject var audioPlayer = AudioPlayer()
     @State private var remainingSecond = 3
@@ -79,6 +80,11 @@ struct QuestHearView: View {
 
                         QuestHearIngredientView()
                             .offset(x: -15)
+
+                        Text(chosenFood.chosenFood.1 + (chosenFood.chosenFood.1 == "파프리카" ? "를" : "을") + " 두들겨보세요!!")
+                            .font(.cookierun(.regular, size: 28))
+                            .foregroundColor(.black)
+                            .position(x: UIScreen.width * 0.75, y: UIScreen.height * 0.2)
                     }
                     // 카운트다운 중일 때
                 } else if isCounting {
