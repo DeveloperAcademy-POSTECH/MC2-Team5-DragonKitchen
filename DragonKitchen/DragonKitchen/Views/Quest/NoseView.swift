@@ -15,6 +15,7 @@ struct NoseView: View {
     @State private var isAnimating = false
     @Binding var isCleared: Bool
     @EnvironmentObject var chosenDragon: ChosenDragon
+    @EnvironmentObject var sound: SoundEffect
 
     var body: some View {
         ZStack {
@@ -26,6 +27,7 @@ struct NoseView: View {
                     .position(x: UIScreen.width * 0.45, y: UIScreen.height * 0.65)
             }
             .onTapGesture {
+                sound.buttonEffect.play()
                 currentImageIndex += currentImageIndex == images.count - 1 ? -(images.count - 1) : 1
                 self.isImageVisible = false
             }

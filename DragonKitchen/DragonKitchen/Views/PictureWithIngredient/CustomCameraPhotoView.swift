@@ -16,6 +16,7 @@ struct CustomCameraPhotoView: View {
     @State var didTapCapture: Bool = false
     @EnvironmentObject var chosenFood: ChosenFood
     @EnvironmentObject var chosenDragon: ChosenDragon
+    @EnvironmentObject var sound: SoundEffect
 
     var body: some View {
         ZStack {
@@ -52,6 +53,7 @@ struct CustomCameraPhotoView: View {
                                 .frame(height: 80)
                                 .onTapGesture {
                                     self.showingCustomCamera = true
+                                    sound.buttonEffect.play()
                                 }
 
                             PushView(destination: MissionCompleteView()) {
@@ -61,6 +63,9 @@ struct CustomCameraPhotoView: View {
                                     .frame(height: 80)
                                     .padding(30)
                             }
+                            .simultaneousGesture(TapGesture().onEnded{
+                                sound.buttonEffect.play()
+                            })
                             Spacer()
                         }
                     }

@@ -11,6 +11,7 @@ import NavigationStack
 struct BookView: View {
     @EnvironmentObject var chosenDragon: ChosenDragon
     @EnvironmentObject var chosenFood: ChosenFood
+    @EnvironmentObject var sound: SoundEffect
     @State var ingredientModel: Ingredient = .vegetable
     @State var isPresenting: Bool = false
     @State var isClicked: Bool = false
@@ -41,11 +42,15 @@ struct BookView: View {
                         Spacer()
                         
                         PushView(destination: MainView()) {
-                            Image("BackButton")
+                            Image("HomeButton")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.width * 0.078)
+                                .offset(y: UIScreen.height * 0.01)
                         }
+                        .simultaneousGesture(TapGesture().onEnded{
+                            sound.navEffect.play()
+                        })
                     }
                     .padding()
                 }
@@ -74,6 +79,7 @@ struct BookView: View {
                                         }
                                     }
                                     .onTapGesture {
+                                        sound.buttonEffect.play()
                                         if ingredient.name == chosenFood.chosenFood.1 {
                                             if let picture = chosenFood.pictureWithIngredient {
                                                 selectedVegiName = ingredient.name
@@ -107,6 +113,7 @@ struct BookView: View {
                                 .foregroundColor(.black)
                         }
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             ingredientModel = .vegetable
                         }
                         ZStack {
@@ -122,6 +129,7 @@ struct BookView: View {
                                 .foregroundColor(.black)
                         }
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             ingredientModel = .fruit
                         }
                         ZStack {
@@ -137,6 +145,7 @@ struct BookView: View {
                                 .foregroundColor(.black)
                         }
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             ingredientModel = .meat
                         }
                     }

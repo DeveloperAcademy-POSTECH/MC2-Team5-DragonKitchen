@@ -10,6 +10,7 @@ import SwiftUI
 
 struct QuestHearView: View {
     @EnvironmentObject var chosenFood: ChosenFood
+    @EnvironmentObject var sound: SoundEffect
     @ObservedObject var audioRecorder = AudioRecorder()
     @ObservedObject var audioPlayer = AudioPlayer()
     @State private var remainingSecond = 3
@@ -50,6 +51,7 @@ struct QuestHearView: View {
                                     isCleared = true
                                 }
                                 .onTapGesture {
+                                    sound.buttonEffect.play()
                                     self.audioPlayer.startPlayback(audio: recording)
                                 }
                                 .onDisappear {
@@ -58,6 +60,7 @@ struct QuestHearView: View {
 
                             RoundedButton(widthScale: 0.3, heightScale: 0.148, sfSymbolName: "arrow.counterclockwise", content: "다시 녹음하기", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
                                 .onTapGesture {
+                                    sound.buttonEffect.play()
                                     isCleared = false
                                     self.audioRecorder.deleteRecording(url: recording)
                                 }

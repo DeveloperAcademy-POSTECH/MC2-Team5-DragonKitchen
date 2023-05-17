@@ -15,6 +15,7 @@ struct FoodResultView: View {
     @State private var paprikaOn = false
     @EnvironmentObject var chosen: ChosenFood
     @EnvironmentObject private var navigationStack: NavigationStackCompat
+    @EnvironmentObject private var sound: SoundEffect
 
     var body: some View {
         ZStack {
@@ -27,6 +28,7 @@ struct FoodResultView: View {
                     .offset(y: 80)
                     .offset(x: paprikaOn ? -UIScreen.width : 0)
                     .onAppear {
+                        sound.fallEffect.play()
                         if !zoomed {
                             withAnimation(
                                 .interpolatingSpring(mass: 1, stiffness: 100, damping: 10, initialVelocity: 0.4)

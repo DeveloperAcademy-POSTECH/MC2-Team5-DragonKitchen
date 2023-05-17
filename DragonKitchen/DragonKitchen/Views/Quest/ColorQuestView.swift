@@ -45,6 +45,7 @@ struct ColorButton: View {
     @State var selectedButton: Int?
     @EnvironmentObject var chosen: ChosenFood // 선택한 색상을 저장해두는 변수
     @EnvironmentObject var foodColor: VegetableColor
+    @EnvironmentObject var sound: SoundEffect
 
     let colors: [Color] = [.paprikaRed, .paprikaGreen, .paprikaBurgundy, .paprikaOrange, .paprikaYellow, .paprikaBrown]
     var body: some View {
@@ -58,6 +59,7 @@ struct ColorButton: View {
         ) {
             ForEach(colors.indices, id: \.self) { index in
                 Button(action: {
+                    sound.buttonEffect.play()
                     isCleared = true
                     selectedButton = index
                     print("clickeD!\(index)")

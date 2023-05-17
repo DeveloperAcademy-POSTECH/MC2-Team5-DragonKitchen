@@ -18,7 +18,9 @@ struct PopupView: View {
     @EnvironmentObject var chosen: ChosenFood
     @EnvironmentObject private var navigationStack: NavigationStackCompat
     @EnvironmentObject var chosenDragon: ChosenDragon
-
+    @EnvironmentObject var navigateModel: NavigateModel
+    @EnvironmentObject var sound: SoundEffect
+    
     var body: some View {
         ZStack {
             ZStack {
@@ -43,6 +45,7 @@ struct PopupView: View {
                 .padding(.top, isPresenting ? -UIScreen.height * 0.33 : UIScreen.height * 3)
                 .foregroundColor(Color(red: 153 / 255, green: 153 / 255, blue: 153 / 255))
                 .onTapGesture {
+                    sound.dishCloseEffect.play()
                     withAnimation(.easeIn(duration: 0.3)) {
                         isClicked = false
                         isPresenting = false
@@ -52,6 +55,7 @@ struct PopupView: View {
                 RoundedButton(widthScale: 0.3, heightScale: 0.148, content: "좋아요!", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
             }
             .onTapGesture {
+                sound.buttonEffect.play()
                 isCameraPresenting = true
             }
             .padding(.top, isPresenting ? UIScreen.height * 0.75 : UIScreen.height * 3)
@@ -63,6 +67,8 @@ struct PopupView: View {
                 .edgesIgnoringSafeArea(.all)
                 .onDisappear {
                     if uiImage != nil {
+                        navigateModel.navigateFood = false
+                        navigateModel.isArrowAnimating = false
                         classifier.detect(uiImage: uiImage!)
                         // UT용 파프리카만 나오도록 변경
                         chosen.chosenFood.0 = classifier.imageClass!
@@ -96,5 +102,6 @@ struct PopupView_Previews: PreviewProvider {
         PopupView(isPresenting: .constant(true), isClicked: .constant(false), classifier: ImageClassifier())
             .environmentObject(ChosenFood())
             .environmentObject(ChosenDragon())
+            .environmentObject(NavigateModel())
     }
 }

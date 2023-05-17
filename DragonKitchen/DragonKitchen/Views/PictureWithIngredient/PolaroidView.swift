@@ -16,17 +16,20 @@ struct PolaroidView: View {
             Color.white
                 .ignoresSafeArea()
 
-            VStack {
+            VStack(spacing: 0) {
                 if let image = chosenFood.pictureWithIngredient {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .padding(30)
+                        .padding([.horizontal, .top], 20)
+//                        .padding(.horizontal, UIScreen.width * 0.01)
                 }
 
-                Text(chosenDragon.chosenDragon.1 + (chosenDragon.chosenDragon.1 == "이엘" ? "이랑 " : "랑 ") + chosenFood.chosenFood.1 + (chosenFood.chosenFood.1 == "파프리카" ? "를" : "을") + " 먹었어요!")
+                Text(chosenDragon.chosenDragon.1 + (chosenDragon.chosenDragon.1 == "이엘" ? "이에게 " : "에게 ") + chosenFood.chosenFood.1 + (chosenFood.chosenFood.1 == "파프리카" ? "를" : "을") + " 주었어요!")
                     .font(.cookierun(.regular))
-                    .offset(y: -20)
+                    .foregroundColor(.black)
+                    .padding(.top, 15)
+                Spacer()
             }
         }
     }

@@ -16,6 +16,7 @@ struct TasteView: View {
     @Binding var foodInfo: [(imageName: String, recipe: String)]
     @EnvironmentObject var chosenDragon: ChosenDragon
     @EnvironmentObject var chosenFood: ChosenFood
+    @EnvironmentObject var sound: SoundEffect
     var body: some View {
         ZStack {
             Image("tableBG2")
@@ -30,6 +31,7 @@ struct TasteView: View {
                         .offset(x: -UIScreen.width * 0.21)
                         .opacity(isOn[0] ? 1 : 0.3)
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             withAnimation(.easeIn) {
                                 isOn = [true, false, false]
                                 index = 1
@@ -41,6 +43,7 @@ struct TasteView: View {
                         .scaledToFit()
                         .opacity(isOn[1] ? 1 : 0.3)
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             withAnimation(.easeIn) {
                                 isOn = [false, true, false]
                                 index = 2
@@ -53,6 +56,7 @@ struct TasteView: View {
                         .offset(x: UIScreen.width * 0.21)
                         .opacity(isOn[2] ? 1 : 0.3)
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             withAnimation(.easeIn) {
                                 isOn = [false, false, true]
                                 index = 3
@@ -65,6 +69,7 @@ struct TasteView: View {
                 HStack {
                     RoundedButton(widthScale: 0.21, heightScale: 0.148, content: "\(foodInfo[0].1) 주기", isActive: isOn[0])
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             chosenFood.cooking = .raw
                             withAnimation(.easeIn) {
                                 isOn = [true, false, false]
@@ -73,6 +78,7 @@ struct TasteView: View {
                         }
                     RoundedButton(widthScale: 0.21, heightScale: 0.148, content: "\(foodInfo[1].1) 주기", isActive: isOn[1])
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             chosenFood.cooking = .toast
                             withAnimation(.easeIn) {
                                 isOn = [false, true, false]
@@ -81,6 +87,7 @@ struct TasteView: View {
                         }
                     RoundedButton(widthScale: 0.21, heightScale: 0.148, content: "\(foodInfo[2].1) 주기", isActive: isOn[2])
                         .onTapGesture {
+                            sound.buttonEffect.play()
                             chosenFood.cooking = .fry
                             withAnimation(.easeIn) {
                                 isOn = [false, false, true]
@@ -91,7 +98,7 @@ struct TasteView: View {
             }
             .padding(.top, UIScreen.height * 0.25)
         }
-        .onAppear{
+        .onAppear {
             isOn = [true, false, false]
             index = 1
         }

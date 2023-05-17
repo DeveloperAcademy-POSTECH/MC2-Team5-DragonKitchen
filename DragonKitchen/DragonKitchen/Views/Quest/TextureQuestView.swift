@@ -10,7 +10,7 @@ import SwiftUI
 struct TextureQuestView: View {
     @State var selectedColor: Int = 0
     @Binding var isCleared: Bool
-    @State private var foodImage: String = "paprika_basketball_red"
+    @State private var foodImage: String = ""
     @EnvironmentObject var chosen: ChosenFood // 시각에서 선택한 색을 불러오는 변수
 
     var body: some View {
@@ -29,7 +29,7 @@ struct TextureQuestView: View {
                         default: PaprikaImageView().scaleEffect(0.8)
                         }
                     } else {
-                    Image(foodImage)
+                        Image(foodImage)
                         .resizable()
                         .scaledToFit()
                         .scaleEffect(0.8)
@@ -48,6 +48,7 @@ struct TextureButton: View {
     @State var selectedButton: Int?
     @Binding var foodImage: String
     @EnvironmentObject var color: ChosenFood // 시각에서 선택한 색을 불러오는 변수
+    @EnvironmentObject var sound: SoundEffect
     @State var selectedTexture: String = ""
 
     let textures: [String] = ["basketball", "glass", "sand", "golf", "wood", "wool"]
@@ -63,6 +64,7 @@ struct TextureButton: View {
         ) { // 색상버튼 여섯 개의 동작
             ForEach(textures.indices, id: \.self) { index in
                 Button(action: {
+                    sound.buttonEffect.play()
                     isCleared = true
                     selectedTexture = textures[index]
                     // 음식 이미지를 "재질_색" 으로 바꾸기

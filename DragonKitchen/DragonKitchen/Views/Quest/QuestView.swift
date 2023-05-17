@@ -95,6 +95,7 @@ struct QuestView: View {
                     .padding(.top, isTastePopupActive ? -UIScreen.height * 0.33 : UIScreen.height * 3)
                     .foregroundColor(Color(red: 153 / 255, green: 153 / 255, blue: 153 / 255))
                     .onTapGesture {
+                        sound.buttonEffect.play()
                         isDimmed = false
                         withAnimation(.easeIn(duration: 0.3)) {
                             isTastePopupActive = false
@@ -104,6 +105,9 @@ struct QuestView: View {
                     PushView(destination: CustomCameraPhotoView()) {
                         RoundedButton(widthScale: 0.3, heightScale: 0.148, content: "좋아요!", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
                     }
+                    .simultaneousGesture(TapGesture().onEnded{
+                        sound.buttonEffect.play()
+                    })
                 }
                 .padding(.top, isTastePopupActive ? UIScreen.height * 0.75 : UIScreen.height * 3)
             }

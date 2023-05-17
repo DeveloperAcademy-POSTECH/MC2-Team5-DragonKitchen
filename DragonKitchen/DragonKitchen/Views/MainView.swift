@@ -11,12 +11,15 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var gageVar: gageVariables
     @EnvironmentObject var chosen: ChosenDragon
+    @EnvironmentObject var navigate: NavigateModel
+    @EnvironmentObject var sound: SoundEffect
     @ObservedObject var audioRecorder = AudioRecorder()
     @State var heartNum: Int = 0
     let heartXOffset: CGFloat = -120
     @State var isPresenting: Bool = false
     @State var isCameraPresenting: Bool = false
     @State var isClicked: Bool = false
+    @State var timer: Timer?
 
     var body: some View {
         ZStack {
@@ -38,13 +41,13 @@ struct MainView: View {
                     HeartImage(xOffset: 25, yOffset: -100, heartColor: .red)
                     HeartImage(xOffset: 10, yOffset: -90, heartColor: .fruitRed)
                 }
-                //                             공룡이미지 탭하는 경우 하트 뿅뿅
+//              공룡이미지 탭하는 경우 하트 뿅뿅
                 Image("Standing\(chosen.chosenDragon.0)") // 킹룡짱룡 위치
                     .resizable()
                     .scaledToFit()
-                    .frame(width: UIScreen.width * 0.4)
-                    ////                                   .minimumScaleFactor(0.1)
+                    .frame(width: UIScreen.width * 0.5)
                     .onTapGesture {
+                        sound.heartEffect.play()
                         heartNum += 1
                     }
                     .shadow(color: .buttonColor, radius: gageVar.isEvolution ? 15 : 0)
@@ -56,22 +59,19 @@ struct MainView: View {
                 Image("Final\(chosen.chosenDragon.0)") // 킹룡짱룡 위치
                     .resizable()
                     .scaledToFit()
-                    .frame(width: UIScreen.width * 0.6)
-                    ////                                    .minimumScaleFactor(0.1)
+                    .frame(width: UIScreen.width * 0.9)
                     .onTapGesture {
+                        sound.evolHeartEffect.play()
                         heartNum += 1
                     }
                     .opacity(gageVar.isTransform ? 1 : 0)
                     .scaleEffect(gageVar.isTransform ? 1.1 : 0)
                     .animation(.easeOut.repeatCount(5), value: gageVar.isTransform)
                     .offset(x: UIScreen.width * -0.02, y: UIScreen.height * 0.1)
-            }
-            VStack {
-                Spacer().frame(height: UIScreen.height * 0.025)
-                HStack {
-                    StatusView(gageVar: _gageVar)
-                        .offset(x: UIScreen.width * 0.13)
+                if gageVar.isEvolution {
                     Button {
+//                        sound.buttonEffect.play()
+                        sound.evolEffect.play()
                         if gageVar.isEvolution {
                             gageVar.isTransform = true
                             gageVar.turnGreen1 = false
@@ -89,26 +89,27 @@ struct MainView: View {
                             gageVar.isEvolution = false
                             chosen.levelCount += 1
                         }
-                        else {}
-                    }
-                label: {
+                    } label: {
                         ZStack {
                             Color.buttonColor.cornerRadius(20)
-                            RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 1.5).foregroundColor(.black)
-                            Text("진화시키기")
-                                .font(.cookierun(.regular, size: 15))
+                            RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 1).foregroundColor(.black)
+                            Text("진화하기")
+                                .font(.cookierun(.regular, size: 24))
                                 .foregroundColor(.white)
                         }
                         .font(.cookierun(.regular))
-                        .frame(width: UIScreen.width * 0.1, height: UIScreen.height * 0.08)
+                        .frame(width: UIScreen.width * 0.2, height: UIScreen.height * 0.13)
                         .shadow(radius: 5)
                         .opacity(gageVar.isTransform ? 0 : 1)
-                        .padding([.top, .leading], 10)
-                        .offset(y: 2 * StatusView().statusYOffset)
                     }
-
-                    
-                    Spacer().frame(width: UIScreen.width * 0.20)
+                    .offset(y: UIScreen.height * 0.38)
+                }
+            }
+            VStack {
+                Spacer().frame(height: UIScreen.height * 0.025)
+                HStack {
+                    StatusView(gageVar: _gageVar)
+                        .offset(x: -UIScreen.width * 0.05)
                 }
                 Spacer().frame(height: UIScreen.height * 0.3)
 
@@ -116,12 +117,40 @@ struct MainView: View {
                 HStack(alignment: .bottom) {
                     // 도감 이미지
                     PushView(destination: BookView()) {
-                        Image("Book")
+                        ZStack {
+                            if navigate.navigateBook {
+                                Image("BookArrow")
+                                    .offset(x: navigate.isArrowAnimating ? UIScreen.width * 0.075 : UIScreen.width * 0.07, y: navigate.isArrowAnimating ? -UIScreen.height * 0.23 : -UIScreen.height * 0.21)
+                                    .animation(.linear(duration: 0.4).repeatForever(), value: navigate.isArrowAnimating)
+                            }
+                            Image("Book")
+                            Text("도감")
+                                .font(.cookierun(.regular))
+                                .foregroundColor(.black)
+                        }
                     }
+                    .simultaneousGesture(TapGesture().onEnded {
+                        sound.navEffect.play()
+                        navigate.isArrowAnimating = false
+                        navigate.navigateBook = false
+                    })
                     Spacer()
+                        .onAppear {
+                            navigate.isArrowAnimating = true
+                        }
                     // 먹이주는 곳
-                    FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
-                        .padding(.bottom, UIScreen.height * 0.02)
+                    ZStack {
+                        if navigate.navigateFood {
+                            Image("NavigatingArrow")
+                                .offset(x: navigate.isArrowAnimating ? -UIScreen.width * 0.07 : -UIScreen.width * 0.065, y: navigate.isArrowAnimating ? -UIScreen.height * 0.14 : -UIScreen.height * 0.13)
+                                .animation(.linear(duration: 0.4).repeatForever(), value: navigate.isArrowAnimating)
+                        }
+                        FeedButton(isPresenting: $isPresenting, isClicked: $isClicked)
+                            .padding(.bottom, UIScreen.height * 0.02)
+                            .simultaneousGesture(TapGesture().onEnded {
+                                sound.dishOpenEffect.play()
+                            })
+                    }
                 }
                 .padding(.horizontal, UIScreen.width * 0.03)
             }
@@ -141,5 +170,6 @@ struct MainView_Previews: PreviewProvider {
             .environmentObject(ChosenFood())
             .environmentObject(gageVariables())
             .environmentObject(ChosenDragon())
+            .environmentObject(NavigateModel())
     }
 }

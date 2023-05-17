@@ -5,81 +5,72 @@
 //  Created by 김기영 on 2023/05/14.
 //
 
-import SwiftUI
 import AVKit
 import NavigationStack
+import SwiftUI
 
 struct EggView: View {
-    @EnvironmentObject var chosen : ChosenDragon
+    @EnvironmentObject var chosen: ChosenDragon
+    @EnvironmentObject var sound: SoundEffect
+    @EnvironmentObject private var navigationStack: NavigationStackCompat
+
     let player = AVPlayer()
     @State var isDisappear = false
     var body: some View {
-        ZStack{
+        ZStack {
             Color.questBackgroundColor
                 .ignoresSafeArea()
-            
-            VStack{
-                Spacer()
-                    .frame(height: UIScreen.height * 0.05)
-                HStack{
-                    Spacer()
-//                    if isDisappear == false {
-//                        Image("DisabledGoButton")
-//                            .resizable()
-//                            .scaledToFit()
-//                            .frame(width: SelectView().buttonWidth)
-//                            .offset(y: UIScreen.height * 0.024)
-//                    }
-//                    else {
-                        PushView(destination: MainView(), destinationId: "mainViewId"){
-                            Image("GoButton")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: SelectView().buttonWidth)
-                                .offset(y: UIScreen.height * 0.024)
-                            
-//                        }
-                    }
+                .onAppear{
+                    player.isMuted = true
                 }
-                ZStack{
-                    VStack{
+
+            VStack {
+                Spacer()
+                    .frame(height: UIScreen.height * 0.16)
+                ZStack {
+                    VStack(spacing: 0) {
                         Text("안녕! 내 이름은 \(chosen.chosenDragon.1)!!")
-                            .font(.cookierun(.regular))
-                            .foregroundColor(.black )
+                            .font(.cookierun(.regular, size: 30))
+                            .foregroundColor(.black)
                         Image("Standing\(chosen.chosenDragon.0)")
                             .resizable()
                             .scaledToFit()
+                            .scaleEffect(1.2)
+                            .offset(y: -UIScreen.height * 0.05)
                     }
-                    
-//                    Rectangle()
-//                        .foregroundColor(.questBackgroundColor)
-//                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.15)
-//                        .opacity(isDisappear ? 0 : 1)
-//                        .offset(y:UIScreen.height * -0.33)
-//                    Rectangle()
-//                        .foregroundColor(.questBackgroundColor)
-//                        .frame(width: UIScreen.width * 0.4, height: UIScreen.height * 0.15)
-//                        .opacity(isDisappear ? 0 : 1)
-//                        .offset(y:UIScreen.height * 0.33)
                 }
             }
-            VideoPlayer(player: player)
-                .frame(width: UIScreen.width * 0.615, height: UIScreen.height)
-                .onAppear{
-                    if player.currentItem == nil {
-                        let item = AVPlayerItem(url: Bundle.main.url(forResource: "Egg\(chosen.chosenDragon.0)", withExtension: "mp4")!)
-                        player.replaceCurrentItem(with: item)
+            ZStack {
+                VideoPlayer(player: player)
+                    .frame(width: UIScreen.width * 0.615, height: UIScreen.height)
+                    .onAppear {
+                        if player.currentItem == nil {
+                            let item = AVPlayerItem(url: Bundle.main.url(forResource: "Egg\(chosen.chosenDragon.0)", withExtension: "mp4")!)
+                            player.replaceCurrentItem(with: item)
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                            player.play()
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6.5) {
+                            isDisappear = true
+                            sound.eggOutEffect.play()
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 8.0) {
+                            navigationStack.push(MainView(), withId: "mainViewId")
+                        }
                     }
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
-                        player.play()
-                    })
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6.5, execute: {
-                        isDisappear = true
-                    })
+                    .opacity(isDisappear ? 0 : 1)
+                    .disabled(true)
+                    .offset(y: UIScreen.height * 0.05)
+                VStack {
+                    Rectangle().frame(height: UIScreen.height * 0.1)
+                        .foregroundColor(.questBackgroundColor)
+                    Spacer()
                 }
-                .opacity(isDisappear ? 0 : 1)
-                .disabled(true)
-                .offset(y:UIScreen.height * 0.05)
+            }
+            .onAppear{
+                sound.eggEffect.play()
+            }
         }
     }
 }

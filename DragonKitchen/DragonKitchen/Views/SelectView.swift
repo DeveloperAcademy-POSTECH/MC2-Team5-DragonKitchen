@@ -12,6 +12,7 @@ struct SelectView: View {
     let eggWidth = UIScreen.width * 0.21
     @EnvironmentObject var chosen: ChosenDragon
     @EnvironmentObject var gageVar: gageVariables
+    @EnvironmentObject var sound: SoundEffect
     @State var isHielGray = false
     @State var isPluGray = false
     @State var isHielGlow = false
@@ -43,6 +44,9 @@ struct SelectView: View {
                                 .frame(width: buttonWidth)
                                 .offset(y: UIScreen.height * 0.01)
                         }
+                        .simultaneousGesture(TapGesture().onEnded{
+                            sound.navEffect.play()
+                        })
                     }
                 }
                 .padding(.top, UIScreen.height*0.04)
@@ -53,9 +57,10 @@ struct SelectView: View {
                             .scaledToFit()
                             .frame(width: eggWidth)
                             .shadow(color: isHielGray ? .clear : .buttonColor, radius: isHielGlow ? 10 : 0)
-                            .animation(.easeInOut.repeatForever(), value: isHielGlow)
+                            .animation(.easeInOut(duration: 0.8).repeatForever(), value: isHielGlow)
                             .grayscale(isHielGray ? 1 : 0)
                             .onTapGesture {
+                                sound.buttonEffect.play()
                                 isPluGray = true
                                 isHielGray = false
                                 isHielGlow = true
@@ -84,9 +89,10 @@ struct SelectView: View {
                             .scaledToFit()
                             .frame(width: eggWidth)
                             .shadow(color: isPluGray ? .clear : .buttonColor, radius: isPluGlow ? 10 : 0)
-                            .animation(.easeInOut.repeatForever(), value: isPluGlow)
+                            .animation(.easeInOut(duration: 0.8).repeatForever(), value: isPluGlow)
                             .grayscale(isPluGray ? 1 : 0)
                             .onTapGesture {
+                                sound.buttonEffect.play()
                                 isHielGray = true
                                 isPluGray = false
                                 isPluGlow = true

@@ -16,10 +16,24 @@
 		1B2CE9822A1138380055871C /* select_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B2CE9812A1138380055871C /* select_effect.mp3 */; };
 		1B2CE9882A11BB5E0055871C /* Erev.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B2CE9872A11BB5E0055871C /* Erev.mp3 */; };
 		1B6471B92A09DCFE0083599D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6471B82A09DCFE0083599D /* NavigationBar.swift */; };
+		1B8605D22A155205001EA909 /* dish_open_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605CF2A155205001EA909 /* dish_open_effect.mp3 */; };
+		1B8605D32A155205001EA909 /* button_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605D02A155205001EA909 /* button_effect.mp3 */; };
+		1B8605D42A155205001EA909 /* dish_close_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605D12A155205001EA909 /* dish_close_effect.mp3 */; };
+		1B8605D72A155221001EA909 /* heart_effect1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605D52A155221001EA909 /* heart_effect1.mp3 */; };
+		1B8605D82A155221001EA909 /* heart_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605D62A155221001EA909 /* heart_effect.mp3 */; };
+		1B8605DA2A155225001EA909 /* evolution_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605D92A155225001EA909 /* evolution_effect.mp3 */; };
+		1B8605DC2A15522F001EA909 /* egg_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605DB2A15522F001EA909 /* egg_effect.mp3 */; };
+		1B8605DE2A1553B3001EA909 /* egg_out_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605DD2A1553B2001EA909 /* egg_out_effect.mp3 */; };
+		1B8605E02A1554F7001EA909 /* fall_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605DF2A1554F7001EA909 /* fall_effect.mp3 */; };
+		1B8605E22A155848001EA909 /* mission_end_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605E12A155848001EA909 /* mission_end_effect.mp3 */; };
+		1B8605E62A155A6B001EA909 /* book_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605E52A155A6B001EA909 /* book_effect.mp3 */; };
+		1B8605E82A155AEF001EA909 /* nav_effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8605E72A155AEF001EA909 /* nav_effect.mp3 */; };
 		1B92DED22A0201ED00AFB363 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DED12A0201ED00AFB363 /* ImagePicker.swift */; };
 		1B942A3C2A0EB28700B1D664 /* FoodColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */; };
 		1B99A68D2A07AFC400EB6A18 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */; };
 		1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99A68E2A07E41400EB6A18 /* PopupView.swift */; };
+		1B99BB992A153C6900FF9158 /* NavigateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99BB982A153C6900FF9158 /* NavigateModel.swift */; };
+		1B99BB9E2A15448B00FF9158 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1B99BB9D2A15448B00FF9158 /* ConfettiSwiftUI */; };
 		1BD198F02A0C913200702151 /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198EF2A0C913200702151 /* Extension+Font.swift */; };
 		1BD198F72A0C970400702151 /* CurrentPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD198F62A0C970400702151 /* CurrentPageModel.swift */; };
 		1BD8881E2A0FC7D4002A4667 /* TasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6CD7B92A0FC6B7003A1B66 /* TasteView.swift */; };
@@ -99,10 +113,23 @@
 		1B2CE9872A11BB5E0055871C /* Erev.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Erev.mp3; sourceTree = "<group>"; };
 		1B6471B82A09DCFE0083599D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		1B6CD7B92A0FC6B7003A1B66 /* TasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TasteView.swift; path = ../TasteView.swift; sourceTree = "<group>"; };
+		1B8605CF2A155205001EA909 /* dish_open_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dish_open_effect.mp3; sourceTree = "<group>"; };
+		1B8605D02A155205001EA909 /* button_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button_effect.mp3; sourceTree = "<group>"; };
+		1B8605D12A155205001EA909 /* dish_close_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dish_close_effect.mp3; sourceTree = "<group>"; };
+		1B8605D52A155221001EA909 /* heart_effect1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heart_effect1.mp3; sourceTree = "<group>"; };
+		1B8605D62A155221001EA909 /* heart_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heart_effect.mp3; sourceTree = "<group>"; };
+		1B8605D92A155225001EA909 /* evolution_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = evolution_effect.mp3; sourceTree = "<group>"; };
+		1B8605DB2A15522F001EA909 /* egg_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = egg_effect.mp3; sourceTree = "<group>"; };
+		1B8605DD2A1553B2001EA909 /* egg_out_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = egg_out_effect.mp3; sourceTree = "<group>"; };
+		1B8605DF2A1554F7001EA909 /* fall_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fall_effect.mp3; sourceTree = "<group>"; };
+		1B8605E12A155848001EA909 /* mission_end_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mission_end_effect.mp3; sourceTree = "<group>"; };
+		1B8605E52A155A6B001EA909 /* book_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book_effect.mp3; sourceTree = "<group>"; };
+		1B8605E72A155AEF001EA909 /* nav_effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nav_effect.mp3; sourceTree = "<group>"; };
 		1B92DED12A0201ED00AFB363 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodColorModel.swift; sourceTree = "<group>"; };
 		1B99A68C2A07AFC400EB6A18 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		1B99A68E2A07E41400EB6A18 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		1B99BB982A153C6900FF9158 /* NavigateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateModel.swift; sourceTree = "<group>"; };
 		1BD198EF2A0C913200702151 /* Extension+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1BD198F12A0C914C00702151 /* CookieRun-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Bold.ttf"; sourceTree = "<group>"; };
 		1BD198F22A0C914C00702151 /* CookieRun-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Black.ttf"; sourceTree = "<group>"; };
@@ -172,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B99BB9E2A15448B00FF9158 /* ConfettiSwiftUI in Frameworks */,
 				1B2CE9802A11374F0055871C /* SwiftySound in Frameworks */,
 				1B1D41652A025D01000C9B2B /* NavigationStack in Frameworks */,
 			);
@@ -240,6 +268,7 @@
 				1BD198F62A0C970400702151 /* CurrentPageModel.swift */,
 				1B942A3B2A0EB28700B1D664 /* FoodColorModel.swift */,
 				1B2CE97C2A11373C0055871C /* SoundModel.swift */,
+				1B99BB982A153C6900FF9158 /* NavigateModel.swift */,
 				BF65D7EA2A0A32F400B44877 /* QuestHear */,
 				BF939E9F2A0E2EAC009E29E9 /* PictureWithIngredient */,
 			);
@@ -347,6 +376,18 @@
 		BF34B50F2A1095BA00085478 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B8605E52A155A6B001EA909 /* book_effect.mp3 */,
+				1B8605DF2A1554F7001EA909 /* fall_effect.mp3 */,
+				1B8605DD2A1553B2001EA909 /* egg_out_effect.mp3 */,
+				1B8605DB2A15522F001EA909 /* egg_effect.mp3 */,
+				1B8605E72A155AEF001EA909 /* nav_effect.mp3 */,
+				1B8605D62A155221001EA909 /* heart_effect.mp3 */,
+				1B8605E12A155848001EA909 /* mission_end_effect.mp3 */,
+				1B8605D92A155225001EA909 /* evolution_effect.mp3 */,
+				1B8605D52A155221001EA909 /* heart_effect1.mp3 */,
+				1B8605D02A155205001EA909 /* button_effect.mp3 */,
+				1B8605D12A155205001EA909 /* dish_close_effect.mp3 */,
+				1B8605CF2A155205001EA909 /* dish_open_effect.mp3 */,
 				1B2CE9812A1138380055871C /* select_effect.mp3 */,
 				BF34B52A2A111AD100085478 /* close_Plu.gif */,
 				BF34B5292A111AD100085478 /* dizz_Plu.gif */,
@@ -423,6 +464,7 @@
 			packageProductDependencies = (
 				1B1D41642A025D01000C9B2B /* NavigationStack */,
 				1B2CE97F2A11374F0055871C /* SwiftySound */,
+				1B99BB9D2A15448B00FF9158 /* ConfettiSwiftUI */,
 			);
 			productName = DinoDina;
 			productReference = BF07D25C2A00D18A00F9F225 /* DragonKitchen.app */;
@@ -456,6 +498,7 @@
 			packageReferences = (
 				1B1D41632A025D01000C9B2B /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 				1B2CE97E2A11374F0055871C /* XCRemoteSwiftPackageReference "SwiftySound" */,
+				1B99BB9C2A15448B00FF9158 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = BF07D25D2A00D18A00F9F225 /* Products */;
 			projectDirPath = "";
@@ -473,29 +516,41 @@
 			files = (
 				1BE1F1092A06101C0021BBF0 /* Preview Assets.xcassets in Resources */,
 				BF34B5262A111AC900085478 /* dizz_Hiel.gif in Resources */,
+				1B8605E62A155A6B001EA909 /* book_effect.mp3 in Resources */,
 				1BE15F592A0BF342003EC65B /* (null) in Resources */,
 				BF34B5242A111AC900085478 /* smile_Hiel.gif in Resources */,
+				1B8605E22A155848001EA909 /* mission_end_effect.mp3 in Resources */,
 				1BE15F572A0BF33E003EC65B /* (null) in Resources */,
 				BF34B5312A111AD100085478 /* sad_Plu.gif in Resources */,
 				BF95FE802A0FC610001A99F5 /* CookieRun-Black.ttf in Resources */,
 				BF34B5332A111AD100085478 /* strange_Plu.gif in Resources */,
+				1B8605E02A1554F7001EA909 /* fall_effect.mp3 in Resources */,
 				BF07D2642A00D18B00F9F225 /* Assets.xcassets in Resources */,
 				1B07F8EA2A0FB4C0006C2691 /* CookieRun-Bold.ttf in Resources */,
 				BF34B52F2A111AD100085478 /* dizz_Plu.gif in Resources */,
+				1B8605E82A155AEF001EA909 /* nav_effect.mp3 in Resources */,
+				1B8605DA2A155225001EA909 /* evolution_effect.mp3 in Resources */,
+				1B8605DC2A15522F001EA909 /* egg_effect.mp3 in Resources */,
 				60DBA2FB2A1107E2006575C3 /* EggPlu.mp4 in Resources */,
 				BF34B5252A111AC900085478 /* strange_Hiel.gif in Resources */,
+				1B8605DE2A1553B3001EA909 /* egg_out_effect.mp3 in Resources */,
 				BF34B5302A111AD100085478 /* close_Plu.gif in Resources */,
 				BF34B5272A111AC900085478 /* normal_Hiel.gif in Resources */,
 				60DBA2FC2A1107E2006575C3 /* EggHiel.mp4 in Resources */,
+				1B8605D42A155205001EA909 /* dish_close_effect.mp3 in Resources */,
 				BF34B5222A111AC900085478 /* sad_Hiel.gif in Resources */,
+				1B8605D82A155221001EA909 /* heart_effect.mp3 in Resources */,
 				1B2CE9882A11BB5E0055871C /* Erev.mp3 in Resources */,
 				1B2CE9822A1138380055871C /* select_effect.mp3 in Resources */,
 				BF34B5322A111AD100085478 /* smile_Plu.gif in Resources */,
 				60DBA2EB2A10BDF6006575C3 /* Sample.mp4 in Resources */,
+				1B8605D72A155221001EA909 /* heart_effect1.mp3 in Resources */,
+				1B8605D22A155205001EA909 /* dish_open_effect.mp3 in Resources */,
 				BF34B52E2A111AD100085478 /* normal_Plu.gif in Resources */,
 				1BE15F582A0BF340003EC65B /* (null) in Resources */,
 				BF95FE822A0FC618001A99F5 /* CookieRun-Regular.ttf in Resources */,
 				BF34B5232A111AC900085478 /* close_Hiel.gif in Resources */,
+				1B8605D32A155205001EA909 /* button_effect.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +607,7 @@
 				1B99A68F2A07E41400EB6A18 /* PopupView.swift in Sources */,
 				1BE15F4F2A0BF045003EC65B /* (null) in Sources */,
 				60DBA2E72A10B7A8006575C3 /* EggView.swift in Sources */,
+				1B99BB992A153C6900FF9158 /* NavigateModel.swift in Sources */,
 				1BDB8FC32A0245DF0044A2DB /* FeedButton.swift in Sources */,
 				1B1D41672A02642B000C9B2B /* FoodResultView.swift in Sources */,
 				BF939E9A2A0E2E35009E29E9 /* MissionCompleteView.swift in Sources */,
@@ -691,7 +747,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DragonKitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = DD8VYBJ73D;
+				DEVELOPMENT_TEAM = Q6S8GWB6BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonKitchen/Info.plist;
@@ -708,7 +764,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhunhe.DinoDina;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zunhe.DragonKitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -727,7 +783,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DragonKitchen/Preview Content\"";
-				DEVELOPMENT_TEAM = DD8VYBJ73D;
+				DEVELOPMENT_TEAM = Q6S8GWB6BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonKitchen/Info.plist;
@@ -744,7 +800,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhunhe.DinoDina;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zunhe.DragonKitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -795,6 +851,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		1B99BB9C2A15448B00FF9158 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -807,6 +871,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1B2CE97E2A11374F0055871C /* XCRemoteSwiftPackageReference "SwiftySound" */;
 			productName = SwiftySound;
+		};
+		1B99BB9D2A15448B00FF9158 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B99BB9C2A15448B00FF9158 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

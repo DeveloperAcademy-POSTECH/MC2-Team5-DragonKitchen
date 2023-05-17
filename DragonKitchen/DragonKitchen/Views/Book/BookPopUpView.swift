@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BookPopUpView: View{
     @EnvironmentObject var chosenDragon: ChosenDragon
+    @EnvironmentObject var sound: SoundEffect
     @Binding var isPresenting: Bool
     @Binding var isClicked: Bool
     @Binding var selectedVegiIllust: String
@@ -50,6 +51,7 @@ struct BookPopUpView: View{
                 RoundedButton(widthScale: 0.3, heightScale: 0.148, content: "확인!", contentSize: 25, contentColor: .buttonTextColor, isActive: true)
             }
             .onTapGesture {
+                sound.buttonEffect.play()
                 isClicked = false
                 isPresenting = false
             }
