@@ -64,15 +64,25 @@ struct PopupView: View {
                 .onDisappear {
                     if uiImage != nil {
                         classifier.detect(uiImage: uiImage!)
-                        //UT용 파프리카만 나오도록 변경
-//                        chosen.chosenFood.0 = classifier.imageClass!
-                        switch chosen.chosenFood.0 {
-                        case "paprika": chosen.chosenFood.1 = "파프리카"
                         // UT용 파프리카만 나오도록 변경
-//                        case "carrot": chosen.chosenFood.1 = "당근"
-//                        case "chicken": chosen.chosenFood.1 = "닭가슴살"
-//                        case "potato": chosen.chosenFood.1 = "감자"
-                        default: chosen.chosenFood.1 = "파프리카"
+                        chosen.chosenFood.0 = classifier.imageClass!
+                        switch chosen.chosenFood.0 {
+                        case "paprika":
+                            chosen.chosenFood.1 = "파프리카"
+                        case "carrot":
+                            chosen.chosenFood.1 = "당근"
+                            // 닭가슴살일 때 당근으로 저장
+                        case "chicken":
+                            chosen.chosenFood.0 = "carrot"
+                            chosen.chosenFood.1 = "당근"
+                            // 가지일 때 파프리카로 저장
+                        case "eggplant":
+                            chosen.chosenFood.0 = "paprika"
+                            chosen.chosenFood.1 = "파프리카"
+                            // 기본 파프리카로 저장
+                        default:
+                            chosen.chosenFood.0 = "paprika"
+                            chosen.chosenFood.1 = "파프리카"
                         }
                         self.navigationStack.push(QuestView())
                     }

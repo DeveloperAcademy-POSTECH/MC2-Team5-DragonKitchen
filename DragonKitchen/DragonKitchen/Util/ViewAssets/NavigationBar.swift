@@ -14,6 +14,7 @@ struct NavigationBar: View {
     @State var isOn = [true, false, false, false, false]
     @State var foodTransition = [("는", "은"), ("를", "을"), ("로", "으로")]
     @State var dragonTransition = [("는", "은"), ("에게", "이에게"), ("로", "으로")]
+    @State var isButtonAnimating = false
     @Binding var isCleared: [Bool]
     @Binding var isPopupActive: Bool
     @Binding var isDimmed: Bool
@@ -72,36 +73,55 @@ struct NavigationBar: View {
             .font(.cookierun(.regular, size: 28))
             .frame(width: UIScreen.width * 0.6, height: 80)
             Spacer()
+                .onAppear {
+                    if isCleared[CurrentPage.currentPage.rawValue-1]{
+                        Timer.scheduledTimer(withTimeInterval: 1.4, repeats: true) { _ in
+                            withAnimation(.easeIn(duration: 0.2)) {
+                                isButtonAnimating = true
+                            }
+                            withAnimation(.easeIn(duration: 0.2).delay(0.2)) {
+                                isButtonAnimating = false
+                            }
+                            withAnimation(.easeIn(duration: 0.2).delay(0.4)) {
+                                isButtonAnimating = true
+                            }
+                            withAnimation(.easeIn(duration: 0.2).delay(0.6)) {
+                                isButtonAnimating = false
+                            }
+                        }
+                    }
+            }
             Image(isCleared[CurrentPage.currentPage.rawValue - 1] ? "GoButton" : "DisabledGoButton")
                 .resizable()
                 .scaledToFit()
                 .frame(width: UIScreen.width * 0.078)
-                .onTapGesture {
-                    if isCleared[CurrentPage.currentPage.rawValue - 1] {
-                        switch CurrentPage.currentPage.rawValue {
-                        case 1: CurrentPage.currentPage = .hand
-                        case 2: CurrentPage.currentPage = .ear
-                        case 3: CurrentPage.currentPage = .nose
-                        case 4: CurrentPage.currentPage = .mouth
-                        case 5:
-                            isDimmed = true
-                            withAnimation(.linear(duration: 0.3)) {
-                                isPopupActive = true
-                            }
-                        default:
-                            break
+                .offset(x: isButtonAnimating ? UIScreen.width * 0.01 : 0)
+            .onTapGesture {
+                if isCleared[CurrentPage.currentPage.rawValue - 1] {
+                    switch CurrentPage.currentPage.rawValue {
+                    case 1: CurrentPage.currentPage = .hand
+                    case 2: CurrentPage.currentPage = .ear
+                    case 3: CurrentPage.currentPage = .nose
+                    case 4: CurrentPage.currentPage = .mouth
+                    case 5:
+                        isDimmed = true
+                        withAnimation(.linear(duration: 0.3)) {
+                            isPopupActive = true
                         }
-                        if isCleared[0] {
-                            withAnimation(.easeInOut(duration: 0.5)) {
-                                if page == 5 {
-                                } else {
-                                    page += 1
-                                    isOn[page - 1] = true
-                                }
+                    default:
+                        break
+                    }
+                    if isCleared[0] {
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            if page == 5 {
+                            } else {
+                                page += 1
+                                isOn[page - 1] = true
                             }
                         }
                     }
                 }
+            }
         }
         .padding(.top, 30)
     }
