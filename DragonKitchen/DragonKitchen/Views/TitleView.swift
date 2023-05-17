@@ -31,6 +31,7 @@ struct TitleView: View {
             }
             .onAppear{
                 sound.erevBgm.play(numberOfLoops: -1)
+                sound.navEffect.volume = 0.2
 //                sound.buttonSelect.volume = 0.3
             }
         }
