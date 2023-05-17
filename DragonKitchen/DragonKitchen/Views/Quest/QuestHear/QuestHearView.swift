@@ -14,7 +14,7 @@ struct QuestHearView: View {
     @State private var remainingSecond = 3
     @State private var isCounting = false
     @State private var progressValue: Float = 0.0
-    @State private var isImageVisible = true
+    @State private var isGuidingImagePresented = true
     @State private var isAnimating = false
     @Binding var isCleared: Bool
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -112,10 +112,10 @@ struct QuestHearView: View {
                         QuestHearIngredientView()
                             .offset(x: -15)
                             .onAppear {
-                                self.isImageVisible = true
+                                self.isGuidingImagePresented = true
                             }
                             .onDisappear {
-                                self.isImageVisible = false
+                                self.isGuidingImagePresented = false
                             }
                             .onTapGesture {
                                 guard checkMicrophonePermission() else {
@@ -125,7 +125,7 @@ struct QuestHearView: View {
                                 self.tappedButton()
                             }
 
-                        if isImageVisible {
+                        if isGuidingImagePresented {
                             Image("touch")
                                 .resizable()
                                 .scaledToFit()
