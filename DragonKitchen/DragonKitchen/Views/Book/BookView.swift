@@ -62,6 +62,16 @@ struct BookView: View {
                                         IngredientView(ingredientData: ingredient, ingredient: ingredientModel)
                                             .frame(height: UIScreen.height * 0.37)
                                             .padding(5)
+
+                                        if ingredient.name == chosenFood.chosenFood.1 && chosenFood.pictureWithIngredient != nil {
+                                            Text("NEW")
+                                                .font(.cookierun(.bold, size: 15))
+                                                .padding(EdgeInsets(top: 3, leading: 15, bottom: 3, trailing: 15))
+                                                .background(.red)
+                                                .cornerRadius(15)
+                                                .foregroundColor(.white)
+                                                .offset(x: -UIScreen.width * 0.04, y: -UIScreen.height * 0.16)
+                                        }
                                     }
                                     .onTapGesture {
                                         if ingredient.name == chosenFood.chosenFood.1 {
