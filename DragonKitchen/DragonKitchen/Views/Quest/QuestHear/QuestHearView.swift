@@ -14,6 +14,8 @@ struct QuestHearView: View {
     @State private var remainingSecond = 3
     @State private var isCounting = false
     @State private var progressValue: Float = 0.0
+    @State private var isImageVisible = true
+    @State private var isAnimating = false
     @Binding var isCleared: Bool
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -37,7 +39,7 @@ struct QuestHearView: View {
                                 .frame(height: 182)
                                 .scaledToFit()
 
-                            PaprikaView()
+                            QuestHearIngredientView()
                                 .offset(x: -15)
                         }
                         VStack {
@@ -75,7 +77,7 @@ struct QuestHearView: View {
                             .scaledToFit()
                             .frame(height: 182)
 
-                        PaprikaView()
+                        QuestHearIngredientView()
                             .offset(x: -15)
                     }
                     // 카운트다운 중일 때
@@ -86,7 +88,7 @@ struct QuestHearView: View {
                             .scaledToFit()
                             .frame(height: 182)
 
-                        PaprikaView()
+                        QuestHearIngredientView()
                             .offset(x: -15)
 
                         Text(remainingSecond > 0 ? "\(remainingSecond)" : "시작")
@@ -107,8 +109,14 @@ struct QuestHearView: View {
                             .scaledToFit()
                             .shadow(color: .gray, radius: 10)
 
-                        PaprikaView()
+                        QuestHearIngredientView()
                             .offset(x: -15)
+                            .onAppear {
+                                self.isImageVisible = true
+                            }
+                            .onDisappear {
+                                self.isImageVisible = false
+                            }
                             .onTapGesture {
                                 guard checkMicrophonePermission() else {
                                     askMicroPhonePermission()
@@ -116,6 +124,23 @@ struct QuestHearView: View {
                                 }
                                 self.tappedButton()
                             }
+
+                        if isImageVisible {
+                            Image("touch")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 140)
+                                .position(x: UIScreen.width * 0.6, y: UIScreen.height * 0.5)
+                                .opacity(isAnimating ? 1.0 : 0.0)
+                                .animation(Animation.easeOut(duration: 0.5).repeatForever())
+                                .onAppear {
+                                    self.isAnimating = true
+                                }
+                                .onDisappear {
+                                    self.isAnimating = false
+                                }
+                                .transition(.opacity)
+                        }
                     }
                 }
             }

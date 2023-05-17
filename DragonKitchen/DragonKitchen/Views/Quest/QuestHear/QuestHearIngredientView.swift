@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PaprikaView: View {
+struct QuestHearIngredientView: View {
     @EnvironmentObject var chosenFood: ChosenFood
 
     var body: some View {
@@ -20,6 +20,6 @@ struct PaprikaView: View {
 
 struct TomatoView_Previews: PreviewProvider {
     static var previews: some View {
-        PaprikaView()
+        QuestHearIngredientView()
     }
 }
